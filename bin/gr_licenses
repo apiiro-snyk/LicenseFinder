@@ -1,0 +1,148 @@
+#!/bin/bash
+scandir=${GR_HOME}/LicenseFinder/scans/$(date +'%Y%m%d')
+mkdir -p ${scandir}
+
+default_list=true
+default_projects="
+  $(ls ${GR_HOME}/*/{bin,script}/rails | sed -e '/\*/d' -e 's;/\(bin\|script\)/.*$;;g')
+  bain
+  jubilee
+  daas
+  dollar
+  "
+
+# dollar requires hand-work besides what this script can do. See the confluence page.
+
+license_finder_report="--format=csv --columns=name version licenses license_links summary homepage"
+
+function usage() {
+    echo << EOF
+Usage: ${0} [-?] <project directory> <project directory> <project directory>
+Directory list defaults to '${default_projects}'" ;
+EOF
+    exit 1
+}
+
+while [ $# -gt 0 ] ; do
+  case $1 in
+  -h | -?)
+    usage
+    ;;
+  -*)
+    usage
+    ;;
+  *)
+    projects="${projects} ${GR_HOME}/$1"
+    ;;
+  esac
+  shift
+done
+
+if [ -z "${projects}" ] ; then
+  projects=${default_projects}
+fi
+
+function make_csv() {
+  local basename=${1%.txt}
+  sed -n -e '/<csv_start>/,/<csv_end>/p' "${basename}.txt" |\
+    sed -e '/^<csv.*>/d' -e '/^LicenseFinder::/d' |\
+    sort >"${basename}.csv"
+}
+
+function default_setup() {
+  # We need to install the packages into the docker container so the dependencies
+  # can be chased. It'd be a nice addition to the dockerized LicenseFinder to leverage
+  # its packaging discovery system here.
+
+  if [[ -f Gemfile || -f gems.rb ]] ; then
+    get_packages="${get_packages}${get_packages:+ &&} bundle install"
+  fi
+
+  if [[ -f requirements.txt ]] ; then
+    get_packages="${get_packages}${get_packages:+ &&} pip install -r requirements.txt"
+  fi
+
+  if [[ -f package.json ]] ; then
+    get_packages="${get_packages}${get_packages:+ &&} yarn"
+  fi
+}
+
+# Jubilee is really more than one project, but this captures the stuff that I think
+# we're using in topk. Note that it doesn't go after all the stuff in Hadoop or Spark;
+# there are lots of aborted little projects in there that prevent --recursive from working.
+function jubilee_license_finder() {
+  echo "license_finder report ${license_finder_report}"
+}
+
+function banyan_get_packages() {
+  echo "bundle install && yarn && cd client && npm install && cd .."
+}
+
+# Simply couldn't get npm all the way right in banyan, so can't run
+# --recursive. List seems comprehensive after doing this.
+function banyan_license_finder() {
+  echo "license_finder report ${license_finder_report} &&
+    cd client &&
+    license_finder report ${license_finder_report}
+    "
+}
+
+function default_get_packages() {
+  # We need to install the packages into the docker container so the dependencies
+  # can be chased. It'd be a nice addition to the dockerized LicenseFinder to leverage
+  # its packaging discovery system here.
+  local get_packages
+
+  if [[ -f Gemfile || -f gems.rb ]] ; then
+    get_packages="${get_packages}${get_packages:+ &&} bundle install"
+  fi
+
+  if [[ -f requirements.txt ]] ; then
+    get_packages="${get_packages}${get_packages:+ &&} pip install -r requirements.txt"
+  fi
+
+  if [[ -f package.json ]] ; then
+    get_packages="${get_packages}${get_packages:+ &&} yarn"
+  fi
+  echo $get_packages
+}
+
+function default_license_finder() {
+   echo "license_finder report --recursive ${license_finder_report}"
+}
+
+function dispatch() {
+  project=$1
+  method=$2
+  shift
+  shift
+
+  if type -t ${project}_${method} >/dev/null ; then
+    ${project}_${method} $@
+  else
+    default_${method} $@
+  fi
+}
+
+main() {
+  for project_directory in $projects ; do
+    cd ${project_directory}
+    local project=$(basename $PWD)
+
+    local get_packages="$(dispatch ${project} get_packages)"
+    local license_finder="$(dispatch ${project} license_finder)"
+
+    dlf "
+      ${get_packages} &&
+      echo '<csv_start>' &&
+      ${license_finder}
+      echo '<csv_end>'
+      " | tee ${scandir}/${project}.txt
+
+    make_csv "${scandir}/${project}.txt"
+  done
+}
+
+where_was_i="${PWD}"
+main
+cd "${where_was_i}"

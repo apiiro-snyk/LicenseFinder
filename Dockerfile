@@ -95,6 +95,15 @@ RUN bash -lc "gem update --system && gem install bundler"
 RUN apt-get install -y python-dev && \
 	pip install conan
 
+# install libraries that most services will need, even to bundle or its equivalent
+RUN apt-get install -y  mysql-client postgresql-client libmysqlclient-dev libxml2-dev libpq-dev
+
+# more libraries our services rely on
+RUN apt-get install -y  libmagickwand-dev imagemagick libdmtx-dev rng-tools memcached facter
+
+# and
+RUN apt-get install -y  libmagic-dev
+
 # install license_finder
 COPY . /LicenseFinder
 RUN bash -lc "cd /LicenseFinder && bundle install -j4 && rake install"

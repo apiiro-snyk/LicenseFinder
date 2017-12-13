@@ -1,6 +1,27 @@
 #!/bin/bash
+#IMAGE=licensefinder/license_finder
+# Dammit, tag it.
+IMAGE=43c4b7a946bb
+NOLOGIN=true
+
+# Set to true to stop debugging
+while [ $# -gt 0 ] ; do
+  case $1 in
+  -x) NOLOGIN=bash ;;
+  -? | -h) echo "Usage: ${0} [-x] [-?] some command for the container" ;;
+  *) break ;;
+  esac
+  shift
+done
+
 if `which docker > /dev/null`; then
-  docker run -v $PWD:/scan -it licensefinder/license_finder /bin/bash -lc "cd /scan && `echo $@`"
+  docker run \
+    -v $PWD:/scan \
+    -v ~/.ssh/docker_ssh:/root/.ssh \
+    -v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK) \
+    -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK \
+    -it ${IMAGE} /bin/bash \
+    -lc "cd /scan && $(echo $@) && ${NOLOGIN}"
 else
   echo "You do not have docker installed. Please install it:"
   echo "    https://docs.docker.com/engine/installation/"
