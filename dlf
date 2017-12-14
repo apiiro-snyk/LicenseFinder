@@ -1,18 +1,29 @@
 #!/bin/bash
-#IMAGE=licensefinder/license_finder
-# Dammit, tag it.
-IMAGE=43c4b7a946bb
+IMAGE=grandrounds/license_finder
 NOLOGIN=true
 
-# Set to true to stop debugging
 while [ $# -gt 0 ] ; do
   case $1 in
   -x) NOLOGIN=bash ;;
-  -? | -h) echo "Usage: ${0} [-x] [-?] some command for the container" ;;
+  -? | -h) echo "Usage: ${0} [-x] [-?] some command for the container" ; exit 1;;
   *) break ;;
   esac
   shift
 done
+
+if [[ ! -d ~/.ssh/docker_ssh ]] ; then
+  cat <<-ERR
+    You must set up a ~/.ssh/docker_ssh directory with your ssh private key
+    available in it, so bundler (and its ilk) can pull private gems into the
+    docker container for analysis.  In Linux, it must be owned by *root*,
+    permissioned 0700, and have your private key in a file owned by *root* with
+    mode 0600.
+
+    This may not be necessary in MacOS (you may be able to just map your ~/.ssh
+    to the container's /root/.ssh); modify $0 accordingly if that proves true.
+ERR
+  exit 1
+fi
 
 if `which docker > /dev/null`; then
   docker run \
