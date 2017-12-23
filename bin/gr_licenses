@@ -1,4 +1,27 @@
 #!/bin/bash
+#
+# Scans every production repo for its libraries and what licenses they provide.
+# By default, provides a report (.csv) for each repo. Can take a while, since
+# it does the analysis in a docker container, where it needs to bundle (and
+# yarn client, and pip -r...) the repo first.
+#
+# Some repos are more difficult than others.  See the confluence page to
+# get details of all the special cases.
+#
+# The report is based on ../policy/dependency_decisions.yml; if you need to
+# work with that, the best thing to do at the moment is to use `dlf
+# "license_finder -p && bash"` to get into a Docker container with the product
+# in question, then use license_finder's commands to add licenses, whitelist
+# them, or approve individual libraries.
+#
+# There is a companion Confluence page https://grandrounds.atlassian.net/wiki/x/F4C9DQ
+#
+# Dollar's Java code is too
+# difficult to do at all right now. LicenseFinder doesn't do `ivy`, *and* `ivy`
+# doesn't report many licenses -- sometimes because the packages used are so
+# old, and sometimes because `ivy` doesn't seem to be getting everything maven has.
+# repos.)
+#
 scandir=${GR_HOME}/LicenseFinder/scans/$(date +'%Y%m%d')
 mkdir -p ${scandir}
 
@@ -11,9 +34,7 @@ default_projects="
   dollar
   "
 
-# dollar requires hand-work besides what this script can do. See the confluence page.
-
-license_finder_report="--format=csv --columns=name version licenses license_links summary homepage"
+license_finder_report="--format=csv --decisions_file=/policy/dependency_decisions.yml --columns=name version licenses approved license_links summary homepage"
 
 function usage() {
     echo << EOF
@@ -49,32 +70,17 @@ function make_csv() {
     sort >"${basename}.csv"
 }
 
-function default_setup() {
-  # We need to install the packages into the docker container so the dependencies
-  # can be chased. It'd be a nice addition to the dockerized LicenseFinder to leverage
-  # its packaging discovery system here.
-
-  if [[ -f Gemfile || -f gems.rb ]] ; then
-    get_packages="${get_packages}${get_packages:+ &&} bundle install"
-  fi
-
-  if [[ -f requirements.txt ]] ; then
-    get_packages="${get_packages}${get_packages:+ &&} pip install -r requirements.txt"
-  fi
-
-  if [[ -f package.json ]] ; then
-    get_packages="${get_packages}${get_packages:+ &&} yarn"
-  fi
-}
-
-# Jubilee is really more than one project, but this captures the stuff that I think
-# we're using in topk. Note that it doesn't go after all the stuff in Hadoop or Spark;
-# there are lots of aborted little projects in there that prevent --recursive from working.
+# Jubilee is really more than one project, but this captures the stuff that I
+# think we're using in topk;  there are lots of aborted little projects in
+# there that prevent --recursive from working.  Also: it doesn't go after all
+# the stuff in Hadoop or Spark; they have their own conclusive/inclusive
+# license files (of dozens of contributions), so I decided to review and
+# approve those separately.
 function jubilee_license_finder() {
-  echo "license_finder report ${license_finder_report}"
+  echo "license_finder report -p ${license_finder_report}"
 }
 
-function banyan_get_packages() {
+function banyan_prepare() {
   echo "bundle install && yarn && cd client && npm install && cd .."
 }
 
@@ -87,28 +93,12 @@ function banyan_license_finder() {
     "
 }
 
-function default_get_packages() {
-  # We need to install the packages into the docker container so the dependencies
-  # can be chased. It'd be a nice addition to the dockerized LicenseFinder to leverage
-  # its packaging discovery system here.
-  local get_packages
-
-  if [[ -f Gemfile || -f gems.rb ]] ; then
-    get_packages="${get_packages}${get_packages:+ &&} bundle install"
-  fi
-
-  if [[ -f requirements.txt ]] ; then
-    get_packages="${get_packages}${get_packages:+ &&} pip install -r requirements.txt"
-  fi
-
-  if [[ -f package.json ]] ; then
-    get_packages="${get_packages}${get_packages:+ &&} yarn"
-  fi
-  echo $get_packages
+function default_prepare() {
+  echo "true"
 }
 
 function default_license_finder() {
-   echo "license_finder report --recursive ${license_finder_report}"
+   echo "license_finder report -p --recursive ${license_finder_report}"
 }
 
 function dispatch() {
@@ -129,11 +119,11 @@ main() {
     cd ${project_directory}
     local project=$(basename $PWD)
 
-    local get_packages="$(dispatch ${project} get_packages)"
+    local prepare="$(dispatch ${project} prepare)"
     local license_finder="$(dispatch ${project} license_finder)"
 
     dlf "
-      ${get_packages} &&
+      ${prepare} &&
       echo '<csv_start>' &&
       ${license_finder}
       echo '<csv_end>'

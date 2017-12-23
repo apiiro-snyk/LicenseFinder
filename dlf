@@ -28,6 +28,7 @@ fi
 if `which docker > /dev/null`; then
   docker run \
     -v $PWD:/scan \
+    -v ${GR_HOME}/LicenseFinder/policy:/policy \
     -v ~/.ssh/docker_ssh:/root/.ssh \
     -v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK) \
     -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK \

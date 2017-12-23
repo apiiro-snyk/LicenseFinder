@@ -1,0 +1,35 @@
+activesupport,5.1.3,MIT,http://opensource.org/licenses/mit-license,A toolkit of support libraries and Ruby core extensions extracted from the Rails framework.,http://rubyonrails.org
+aws-sdk,2.7.11,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby,http://github.com/aws/aws-sdk-ruby
+aws-sdk-core,2.7.11,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Core,http://github.com/aws/aws-sdk-ruby
+aws-sdk-resources,2.7.11,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Resources,http://github.com/aws/aws-sdk-ruby
+aws-sdk-v1,1.67.0,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby V1,http://aws.amazon.com/sdkforruby
+aws-sigv4,1.0.0,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS Signature Version 4 library.,http://github.com/aws/aws-sdk-ruby
+bundler,1.16.0,MIT,http://opensource.org/licenses/mit-license,The best way to manage your application's dependencies,http://bundler.io
+byebug,9.0.6,Simplified BSD,http://opensource.org/licenses/bsd-license,Ruby 2.0 fast debugger - base + CLI,http://github.com/deivid-rodriguez/byebug
+capistrano,2.15.9,MIT,http://opensource.org/licenses/mit-license,Capistrano - Welcome to easy deployment with Ruby over SSH,http://github.com/capistrano/capistrano
+coderay,1.1.1,MIT,http://opensource.org/licenses/mit-license,Fast syntax highlighting for selected languages.,http://coderay.rubychan.de
+concurrent-ruby,1.0.5,MIT,http://opensource.org/licenses/mit-license,"Modern concurrency tools for Ruby. Inspired by Erlang, Clojure, Scala, Haskell, F#, C#, Java, and classic concurrency patterns.",http://www.concurrent-ruby.com
+facter,2.5.1,unknown,"","Facter, a system inventory tool",https://github.com/puppetlabs/facter
+git,1.3.0,MIT,http://opensource.org/licenses/mit-license,"Ruby/Git is a Ruby library that can be used to create, read and manipulate Git repositories by wrapping system calls to the git binary.",http://github.com/schacon/ruby-git
+grnds-service,0.6.0,Copyright 2015-2016 Grand Rounds Inc. All rights reserved.,"",Microservice communication channel configuration and wrappers for those channels,https://github.com/ConsultingMD/grnds-service
+highline,1.7.8,ruby,http://www.ruby-lang.org/en/LICENSE.txt,HighLine is a high-level command-line IO library.,https://github.com/JEG2/highline
+httparty,0.15.6,MIT,http://opensource.org/licenses/mit-license,"Makes http fun! Also, makes consuming restful web services dead easy.",http://jnunemaker.github.com/httparty
+i18n,0.8.6,MIT,http://opensource.org/licenses/mit-license,New wave Internationalization support for Ruby,http://github.com/svenfuchs/i18n
+jmespath,1.3.1,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,JMESPath - Ruby Edition,http://github.com/trevorrowe/jmespath.rb
+json,1.8.6,ruby,http://www.ruby-lang.org/en/LICENSE.txt,JSON Implementation for Ruby,http://flori.github.com/json
+method_source,0.8.2,MIT,http://opensource.org/licenses/mit-license,retrieve the sourcecode for a method,http://banisterfiend.wordpress.com
+mini_portile2,2.2.0,MIT,http://opensource.org/licenses/mit-license,Simplistic port-like solution for developers,http://github.com/flavorjones/mini_portile
+minitest,5.10.3,MIT,http://opensource.org/licenses/mit-license,"minitest provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking",https://github.com/seattlerb/minitest
+multi_xml,0.6.0,MIT,http://opensource.org/licenses/mit-license,A generic swappable back-end for XML parsing,https://github.com/sferik/multi_xml
+net-scp,1.2.1,MIT,http://opensource.org/licenses/mit-license,A pure Ruby implementation of the SCP client protocol,https://github.com/net-ssh/net-scp
+net-sftp,2.1.2,MIT,http://opensource.org/licenses/mit-license,A pure Ruby implementation of the SFTP client protocol,https://github.com/net-ssh/net-sftp
+net-ssh,3.2.0,MIT,http://opensource.org/licenses/mit-license,Net::SSH: a pure-Ruby implementation of the SSH2 client protocol.,https://github.com/net-ssh/net-ssh
+net-ssh-gateway,1.2.0,MIT,http://opensource.org/licenses/mit-license,A simple library to assist in establishing tunneled Net::SSH connections,https://github.com/net-ssh/net-scp
+nokogiri,1.8.0,MIT,http://opensource.org/licenses/mit-license,"Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser",http://nokogiri.org
+pry,0.10.4,MIT,http://opensource.org/licenses/mit-license,An IRB alternative and runtime developer console,http://pryrepl.org
+pry-byebug,3.4.1,MIT,http://opensource.org/licenses/mit-license,Fast debugging with Pry.,https://github.com/deivid-rodriguez/pry-byebug
+rake,11.3.0,MIT,http://opensource.org/licenses/mit-license,Rake is a Make-like program implemented in Ruby,https://github.com/ruby/rake
+rvm-capistrano,1.5.6,MIT,http://opensource.org/licenses/mit-license,RVM / Capistrano Integration Gem,https://github.com/wayneeseguin/rvm-capistrano
+slop,3.6.0,MIT,http://opensource.org/licenses/mit-license,Simple Lightweight Option Parsing,http://github.com/leejarvis/slop
+thread_safe,0.3.6,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,Thread-safe collections and utilities for Ruby,https://github.com/ruby-concurrency/thread_safe
+tzinfo,1.2.3,MIT,http://opensource.org/licenses/mit-license,Daylight savings aware timezone library,http://tzinfo.github.io

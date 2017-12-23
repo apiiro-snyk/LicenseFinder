@@ -1,0 +1,107 @@
+Required ruby-2.3.1 is not installed.
+To install do: 'rvm install "ruby-2.3.1"'
+[33mDon't run Bundler as root. Bundler can ask for sudo if it is needed, and
+installing your bundle as root will break this application for all non-root
+users on this machine.[0m
+Fetching gem metadata from https://rubygems.org/...........
+Fetching git@github.com:ConsultingMD/service.git
+[32mFetching rake 11.3.0[0m
+[32mInstalling rake 11.3.0[0m
+[32mFetching concurrent-ruby 1.0.5[0m
+[32mInstalling concurrent-ruby 1.0.5[0m
+[32mFetching i18n 0.8.6[0m
+[32mInstalling i18n 0.8.6[0m
+[32mFetching minitest 5.10.3[0m
+[32mInstalling minitest 5.10.3[0m
+[32mFetching thread_safe 0.3.6[0m
+[32mInstalling thread_safe 0.3.6[0m
+[32mFetching tzinfo 1.2.3[0m
+[32mInstalling tzinfo 1.2.3[0m
+[32mFetching activesupport 5.1.3[0m
+[32mInstalling activesupport 5.1.3[0m
+[32mFetching aws-sigv4 1.0.0[0m
+[32mInstalling aws-sigv4 1.0.0[0m
+[32mFetching jmespath 1.3.1[0m
+[32mInstalling jmespath 1.3.1[0m
+[32mFetching aws-sdk-core 2.7.11[0m
+[32mInstalling aws-sdk-core 2.7.11[0m
+[32mFetching aws-sdk-resources 2.7.11[0m
+[32mInstalling aws-sdk-resources 2.7.11[0m
+[32mFetching aws-sdk 2.7.11[0m
+[32mInstalling aws-sdk 2.7.11[0m
+[32mFetching json 1.8.6[0m
+[32mInstalling json 1.8.6 with native extensions[0m
+[32mFetching mini_portile2 2.2.0[0m
+[32mInstalling mini_portile2 2.2.0[0m
+[32mFetching nokogiri 1.8.0[0m
+[32mInstalling nokogiri 1.8.0 with native extensions[0m
+[32mFetching aws-sdk-v1 1.67.0[0m
+[32mInstalling aws-sdk-v1 1.67.0[0m
+Using bundler 1.16.0
+[32mFetching byebug 9.0.6[0m
+[32mInstalling byebug 9.0.6 with native extensions[0m
+[32mFetching highline 1.7.8[0m
+[32mInstalling highline 1.7.8[0m
+[32mFetching net-ssh 3.2.0[0m
+[32mInstalling net-ssh 3.2.0[0m
+[32mFetching net-scp 1.2.1[0m
+[32mInstalling net-scp 1.2.1[0m
+[32mFetching net-sftp 2.1.2[0m
+[32mInstalling net-sftp 2.1.2[0m
+[32mFetching net-ssh-gateway 1.2.0[0m
+[32mInstalling net-ssh-gateway 1.2.0[0m
+[32mFetching capistrano 2.15.9[0m
+[32mInstalling capistrano 2.15.9[0m
+[32mFetching coderay 1.1.1[0m
+[32mInstalling coderay 1.1.1[0m
+[32mFetching facter 2.5.1[0m
+[32mInstalling facter 2.5.1[0m
+[32mFetching git 1.3.0[0m
+[32mInstalling git 1.3.0[0m
+Using multi_xml 0.6.0
+Using httparty 0.15.6
+Using grnds-service 0.6.0 from git@github.com:ConsultingMD/service.git (at master@ea554c3)
+[32mFetching method_source 0.8.2[0m
+[32mInstalling method_source 0.8.2[0m
+[32mFetching slop 3.6.0[0m
+[32mInstalling slop 3.6.0[0m
+[32mFetching pry 0.10.4[0m
+[32mInstalling pry 0.10.4[0m
+[32mFetching pry-byebug 3.4.1[0m
+[32mInstalling pry-byebug 3.4.1[0m
+[32mFetching rvm-capistrano 1.5.6[0m
+[32mInstalling rvm-capistrano 1.5.6[0m
+[32mBundle complete! 8 Gemfile dependencies, 35 gems now installed.[0m
+[32mUse `bundle info [gemname]` to see where a bundled gem is installed.[0m
+<csv_start>
+LicenseFinder::Bundler: [32mis active[0m
+LicenseFinder::Maven: [32mis active[0m
+^C/usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/open3.rb:271:in `value': Interrupt
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/open3.rb:271:in `block in capture3'
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/open3.rb:205:in `popen_run'
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/open3.rb:95:in `popen3'
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/open3.rb:258:in `capture3'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/shared_helpers/cmd.rb:7:in `run'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/package_managers/maven.rb:17:in `block in current_packages'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/package_managers/maven.rb:17:in `chdir'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/package_managers/maven.rb:17:in `current_packages'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/package_manager.rb:105:in `current_packages_with_relations'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/package_manager.rb:28:in `each'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/package_manager.rb:28:in `flat_map'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/package_manager.rb:28:in `active_packages'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/core.rb:77:in `current_packages'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/core.rb:72:in `decision_applier'
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/forwardable.rb:223:in `acknowledged'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/license_aggregator.rb:44:in `block in aggregate_packages'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/license_aggregator.rb:42:in `each'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/license_aggregator.rb:42:in `flat_map'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/license_aggregator.rb:42:in `aggregate_packages'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/license_aggregator.rb:9:in `dependencies'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/lib/license_finder/cli/main.rb:112:in `report'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/thor-0.20.0/lib/thor/command.rb:27:in `run'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/thor-0.20.0/lib/thor/invocation.rb:126:in `invoke_command'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/thor-0.20.0/lib/thor.rb:387:in `dispatch'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/thor-0.20.0/lib/thor/base.rb:466:in `start'
+	from /usr/local/rvm/gems/ruby-2.4.1/gems/license_finder-4.0.2/bin/license_finder:5:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.4.1/bin/license_finder:23:in `load'
+	from /usr/local/rvm/gems/ruby-2.4.1/bin/license_finder:23:in `<main>'
