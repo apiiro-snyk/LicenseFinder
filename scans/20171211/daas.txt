@@ -1,2 +1,0 @@
-/bin/bash: -c: line 0: syntax error near unexpected token `&&'
-/bin/bash: -c: line 0: `cd /scan && && echo '<csv_start>' && license_finder report --recursive --format=csv --columns=name version licenses license_links summary homepage && echo '<csv_end>' && true'
