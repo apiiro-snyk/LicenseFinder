@@ -16,11 +16,13 @@
 #
 # There is a companion Confluence page https://grandrounds.atlassian.net/wiki/x/F4C9DQ
 #
-# Dollar's Java code is too
-# difficult to do at all right now. LicenseFinder doesn't do `ivy`, *and* `ivy`
-# doesn't report many licenses -- sometimes because the packages used are so
-# old, and sometimes because `ivy` doesn't seem to be getting everything maven has.
-# repos.)
+# Dollar's Java code is too difficult to do at all right now. LicenseFinder
+# doesn't do `ivy`, *and* `ivy` doesn't report many licenses -- sometimes
+# because the packages used are so old, and sometimes because `ivy` doesn't
+# seem to be getting everything maven has.
+#
+# Does *NOT* synchronize master in the repos in question; it just uses whatever
+# clone you have.
 #
 scandir=${GR_HOME}/LicenseFinder/scans/$(date +'%Y%m%d')
 mkdir -p ${scandir}
@@ -32,6 +34,7 @@ default_projects="
   jubilee
   daas
   dollar
+  reflex
   "
 
 license_finder_report="--format=csv --decisions_file=/policy/dependency_decisions.yml --columns=name version licenses approved license_links summary homepage"
@@ -77,6 +80,11 @@ function make_csv() {
 # license files (of dozens of contributions), so I decided to review and
 # approve those separately.
 function jubilee_license_finder() {
+  echo "license_finder report -p ${license_finder_report}"
+}
+
+# Reflex fails to find some dependencies in --recursive mode.
+function reflex_license_finder() {
   echo "license_finder report -p ${license_finder_report}"
 }
 

@@ -651,3 +651,129 @@
     :why: aka LGPL-2.1+
     :versions: []
     :when: 2017-12-21 21:22:03.742690618 Z
+- - :whitelist
+  - MIT/X11
+  - :who: 
+    :why: Essentially equivalent to MIT
+    :versions: []
+    :when: 2017-12-23 00:31:45.363203335 Z
+- - :approve
+  - entities
+  - :who: 
+    :why: actually BSD 2-clause
+    :versions: []
+    :when: 2017-12-23 00:33:54.174373152 Z
+- - :license
+  - dateformat
+  - MIT
+  - :who: 
+    :why: As stated at Github now (cannot find 1.0 versions, but MIT is implied in
+      existing comments)
+    :versions: []
+    :when: 2017-12-23 00:36:09.286824738 Z
+- - :license
+  - domelementtype
+  - BSD 2-clause
+  - :who: 
+    :why: As stated at Github now
+    :versions: []
+    :when: 2017-12-23 00:37:42.688394937 Z
+- - :license
+  - domhandler
+  - BSD 2-clause
+  - :who: 
+    :why: As stated at Github now
+    :versions: []
+    :when: 2017-12-23 00:38:35.351117171 Z
+- - :license
+  - domutils
+  - BSD 2-clause
+  - :who: 
+    :why: As stated at Github now
+    :versions: []
+    :when: 2017-12-23 00:39:26.580232722 Z
+- - :license
+  - shelljs
+  - BSD 3-clause
+  - :who: 
+    :why: All versions
+    :versions: []
+    :when: 2017-12-23 00:43:46.167160062 Z
+- - :license
+  - formatio
+  - BSD 3-clause
+  - :who: 
+    :why: https://github.com/busterjs/formatio/blob/master/LICENSE
+    :versions: []
+    :when: 2017-12-23 00:44:31.300833618 Z
+- - :license
+  - uglify-js
+  - BSD 2-clause
+  - :who: 
+    :why: https://github.com/mishoo/UglifyJS2/blob/master/LICENSE
+    :versions: []
+    :when: 2017-12-23 00:48:55.170140022 Z
+- - :whitelist
+  - Apache v2
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2017-12-23 00:51:14.264133263 Z
+- - :ignore_group
+  - dev
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2018-01-02 19:14:53.426434607 Z
+- - :ignore_group
+  - devDependencies
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2018-01-02 19:15:48.396991722 Z
+- - :ignore_group
+  - optionalDependencies
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2018-01-02 19:19:45.633320478 Z
+- - :whitelist
+  - Unlicense*
+  - :who: 
+    :why: Yet another public-domain license
+    :versions: []
+    :when: 2018-01-02 19:48:09.859211720 Z
+- - :whitelist
+  - Apache, Version 2.0
+  - :who: 
+    :why: Yet another public-domain license
+    :versions: []
+    :when: 2018-01-02 19:48:51.476680927 Z
+- - :whitelist
+  - CC0-1.0
+  - :who: 
+    :why: Yet another public-domain license
+    :versions: []
+    :when: 2018-01-02 19:49:49.073714644 Z
+- - :license
+  - qs
+  - BSD 3-Clause
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2018-01-02 20:02:37.231078571 Z
+- - :license
+  - colors
+  - MIT
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2018-01-02 20:04:21.357783276 Z
+- - :license
+  - metro-bundler
+  - BSD 3-Clause
+  - :who: 
+    :why: 
+    :versions:
+    - 0.20.3
+    :when: 2018-01-02 20:05:55.813492697 Z
