@@ -9,4 +9,5 @@ tmp/
 features/fixtures/maven-wrapper/target
 features/fixtures/build
 features/fixtures/target
+scans/*/*.txt
 *~
