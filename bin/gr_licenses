@@ -133,7 +133,7 @@ main() {
     dlf "
       ${prepare} &&
       echo '<csv_start>' &&
-      ${license_finder}
+      ${license_finder} &&
       echo '<csv_end>'
       " | tee ${scandir}/${project}.txt
 
