@@ -41,16 +41,34 @@ license_finder_report="--format=csv --decisions_file=/policy/dependency_decision
 
 function usage() {
     cat << EOF
-Usage: ${0} [-?] <project directory> <project directory> <project directory>
+Usage: ${0} [options] <project directory> <project directory> <project directory>
+
+Options:
+
+-h, -?   Output usage information
+-s3      Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
+
 Directory list defaults to '${default_projects}'" ;
 EOF
     exit 1
+}
+
+function s3_init() {
+  aws_environment=${1:-${AWS_ENVIRONMENT}}
+
+  if [[ -z $aws_environment ]]; then
+      echo No environment. Use aws-environment.
+      exit 1
+  fi
 }
 
 while [ $# -gt 0 ] ; do
   case $1 in
   -h | -?)
     usage
+    ;;
+  -s3)
+    s3_init
     ;;
   -*)
     usage
@@ -67,10 +85,20 @@ if [ -z "${projects}" ] ; then
 fi
 
 function make_csv() {
-  local basename=${1%.txt}
-  sed -n -e '/<csv_start>/,/<csv_end>/p' "${basename}.txt" |\
+  sed -n -e '/<csv_start>/,/<csv_end>/p' "$1.txt" |\
     sed -e '/^<csv.*>/d' -e '/^LicenseFinder::/d' |\
-    sort >"${basename}.csv"
+    sort >"$1.csv"
+}
+
+function s3_upload() {
+  if [ -n "${aws_environment}" ] ; then
+    # TODO: upload json or html instead of csv
+    local path="$1.csv"
+    local filename="$2.csv"
+    aws s3 rm s3://grnds-${aws_environment}-licenses/${filename} > /dev/null 2>&1
+    aws s3 cp ${path} s3://grnds-${aws_environment}-licenses --acl public-read && \
+    echo "Scan result uploaded to https://grnds-${aws_environment}-licenses.s3.amazonaws.com/${filename}"
+  fi
 }
 
 # Jubilee is really more than one project, but this captures the stuff that I
@@ -137,7 +165,9 @@ main() {
       echo '<csv_end>'
       " | tee ${scandir}/${project}.txt
 
-    make_csv "${scandir}/${project}.txt"
+    local basename="${scandir}/${project}"
+    make_csv ${basename}
+    s3_upload ${basename} ${project}
   done
 }
 
