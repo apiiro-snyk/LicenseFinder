@@ -94,7 +94,7 @@ function make_csv_or_html() {
   # Remove result tags and debug info,
   # Sort if format is csv
   sed -n -e '/<result>/,/<\/result>/p' "$1.txt" |\
-    sed -e '/^<result>/d' -e '/^<\/result>/d' -e '/^LicenseFinder::/d' |\
+    sed -e '/^<\/?result>/d' -e '/^LicenseFinder::/d' |\
     (test $default_format == "csv" && sort || cat) > "$1.$default_format"
 }
 
