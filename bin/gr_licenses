@@ -28,7 +28,6 @@ scandir=${GR_HOME}/LicenseFinder/scans/$(date +'%Y%m%d')
 mkdir -p ${scandir}
 
 default_list=true
-default_format="csv"
 default_projects="
   $(ls ${GR_HOME}/*/{bin,script}/rails | sed -e '/\*/d' -e 's;/\(bin\|script\)/.*$;;g')
   bain
@@ -38,6 +37,8 @@ default_projects="
   reflex
   "
 
+license_finder_report="--format=csv --decisions_file=/policy/dependency_decisions.yml --columns=name version licenses approved license_links summary homepage"
+
 function usage() {
     cat << EOF
 Usage: ${0} [options] <project directory> <project directory> <project directory>
@@ -45,8 +46,7 @@ Usage: ${0} [options] <project directory> <project directory> <project directory
 Options:
 
 -h, -?   Output usage information
---s3     Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
---html   Use html format for report (default is csv).
+-s3      Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
 
 Directory list defaults to '${default_projects}'" ;
 EOF
@@ -67,11 +67,8 @@ while [ $# -gt 0 ] ; do
   -h | -?)
     usage
     ;;
-  --s3)
+  -s3)
     s3_init
-    ;;
-  --html)
-    default_format="html"
     ;;
   -*)
     usage
@@ -83,25 +80,21 @@ while [ $# -gt 0 ] ; do
   shift
 done
 
-license_finder_report="--format=$default_format --decisions_file=/policy/dependency_decisions.yml --columns=name version licenses approved license_links summary homepage"
-
 if [ -z "${projects}" ] ; then
   projects=${default_projects}
 fi
 
-function make_csv_or_html() {
-  # Remove everything before and after result tags,
-  # Remove result tags and debug info,
-  # Sort if format is csv
-  sed -n -e '/<result>/,/<\/result>/p' "$1.txt" |\
-    sed -e '/^<\/?result>/d' -e '/^LicenseFinder::/d' |\
-    (test $default_format == "csv" && sort || cat) > "$1.$default_format"
+function make_csv() {
+  sed -n -e '/<csv_start>/,/<csv_end>/p' "$1.txt" |\
+    sed -e '/^<csv.*>/d' -e '/^LicenseFinder::/d' |\
+    sort >"$1.csv"
 }
 
 function s3_upload() {
   if [ -n "${aws_environment}" ] ; then
-    local path="$1.$default_format"
-    local filename="$2.$default_format"
+    # TODO: upload json or html instead of csv
+    local path="$1.csv"
+    local filename="$2.csv"
     aws s3 rm s3://grnds-${aws_environment}-licenses/${filename} > /dev/null 2>&1
     aws s3 cp ${path} s3://grnds-${aws_environment}-licenses --acl public-read && \
     echo "Scan result uploaded to https://grnds-${aws_environment}-licenses.s3.amazonaws.com/${filename}"
@@ -167,13 +160,13 @@ main() {
 
     dlf "
       ${prepare} &&
-      echo '<result>' &&
+      echo '<csv_start>' &&
       ${license_finder} &&
-      echo '</result>'
+      echo '<csv_end>'
       " | tee ${scandir}/${project}.txt
 
     local basename="${scandir}/${project}"
-    make_csv_or_html ${basename}
+    make_csv ${basename}
     s3_upload ${basename} ${project}
   done
 }
