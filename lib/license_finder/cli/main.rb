@@ -13,6 +13,7 @@ module LicenseFinder
       FORMATS = {
         'text' => TextReport,
         'html' => HtmlReport,
+        'license-page' => LicensePageReport,
         'markdown' => MarkdownReport,
         'csv' => CsvReport
       }.freeze

@@ -44,9 +44,10 @@ Usage: ${0} [options] <project directory> <project directory> <project directory
 
 Options:
 
--h, -?   Output usage information
---s3     Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
---html   Use html format for report (default is csv).
+-h, -?           Output usage information
+--s3             Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
+--html           Use html format for report (default is csv).
+--license-page   Use license page format for report (default is csv).
 
 Directory list defaults to '${default_projects}'" ;
 EOF
@@ -72,6 +73,9 @@ while [ $# -gt 0 ] ; do
     ;;
   --html)
     format="html"
+    ;;
+  --license-page)
+    format="license-page"
     ;;
   -*)
     usage
