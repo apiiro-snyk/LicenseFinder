@@ -2,19 +2,19 @@
 - - :whitelist
   - MIT
   - :who: rick@grnds.com
-    :why: 
+    :why: Fully open, no attribution required
     :versions: []
     :when: 2017-12-14 01:44:44.274531086 Z
 - - :whitelist
   - ruby
   - :who: rick@grnds.com
-    :why: 
+    :why: Fully open, no attribution required
     :versions: []
     :when: 2017-12-14 01:44:46.932766861 Z
 - - :whitelist
   - Apache v2.0
   - :who: rick@grnds.com
-    :why: 
+    :why: Fully open, no attribution required
     :versions: []
     :when: 2017-12-14 01:44:54.134439867 Z
 - - :whitelist
@@ -382,263 +382,263 @@
     :when: 2017-12-19 00:52:29.155984177 Z
 - - :whitelist
   - Public domain
-  - :who: 
+  - :who: rick@grnds.com
     :why: Public domain works in US
     :versions: []
     :when: 2017-12-19 01:20:18.812463991 Z
 - - :approve
   - wsgiref
-  - :who: 
+  - :who: rick@grnds.com
     :why: PSF is an approved Open Source Foundation license
     :versions: []
     :when: 2017-12-19 01:23:56.232456919 Z
 - - :license
   - capistrano-deploytags
   - Simplified BSD
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-19 01:28:16.447184368 Z
 - - :whitelist
   - CDDL + GPLv2 with classpath exception
-  - :who: 
+  - :who: rick@grnds.com
     :why: We choose CDDL side
     :versions: []
     :when: 2017-12-19 01:35:11.347193902 Z
 - - :whitelist
   - New BSD License
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka 3-clause BSD
     :versions: []
     :when: 2017-12-19 01:36:27.903949426 Z
 - - :whitelist
   - BSD 3-Clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: classic OSI license
     :versions: []
     :when: 2017-12-19 01:37:17.848665806 Z
 - - :whitelist
   - Apache 2.0 License
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka Apache 2.0
     :versions: []
     :when: 2017-12-19 01:37:43.853201421 Z
 - - :whitelist
   - The MIT License (MIT)
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka MIT
     :versions: []
     :when: 2017-12-19 01:38:06.640657669 Z
 - - :whitelist
   - Eclipse Public License 1.0
-  - :who: 
+  - :who: rick@grnds.com
     :why: No redistribution required, modifications allowed, OSI approved
     :versions: []
     :when: 2017-12-19 01:40:01.078186170 Z
 - - :whitelist
   - CDDL+GPL License
-  - :who: 
+  - :who: rick@grnds.com
     :why: The + means "or"; we choose the CDDL
     :versions: []
     :when: 2017-12-19 01:41:52.377409484 Z
 - - :whitelist
   - CDDL 1.1, GPL2 w/ CPE
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka CDDL + GPL2 with classpath exception
     :versions: []
     :when: 2017-12-19 01:46:26.930495202 Z
 - - :whitelist
   - Apache Software License - Version 2.0, Eclipse Public License - Version 1.0
-  - :who: 
+  - :who: rick@grnds.com
     :why: Either would be fine for our use, we choose Apache generally
     :versions: []
     :when: 2017-12-19 01:47:41.450336145 Z
 - - :whitelist
   - The BSD 3-Clause License
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka BSD 3-Clause
     :versions: []
     :when: 2017-12-19 01:48:17.576933186 Z
 - - :whitelist
   - New BSD license
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka BSD 3-Clause
     :versions: []
     :when: 2017-12-19 01:48:40.783846401 Z
 - - :whitelist
   - The New BSD license
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka BSD 3-Clause
     :versions: []
     :when: 2017-12-19 01:48:57.735266809 Z
 - - :whitelist
   - BSD 3-clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka BSD 3-Clause
     :versions: []
     :when: 2017-12-19 01:49:11.131277483 Z
 - - :whitelist
   - Eclipse Public License - v 1.0, GNU Lesser General Public License
-  - :who: 
+  - :who: rick@grnds.com
     :why: We choose the Eclipse Public License
     :versions: []
     :when: 2017-12-19 01:49:46.104157771 Z
 - - :whitelist
   - ASL
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka Apache Software License 2.0 (Apache 2.0)
     :versions: []
     :when: 2017-12-19 01:50:48.220488865 Z
 - - :whitelist
   - The New BSD License
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka BSD 3-Clause
     :versions: []
     :when: 2017-12-19 01:51:41.939889472 Z
 - - :whitelist
   - Apache Software License - Version 2.0, Eclipse Public License - Version 1.0
-  - :who: 
+  - :who: rick@grnds.com
     :why: we choose Apache 2.0
     :versions: []
     :when: 2017-12-19 01:52:28.583112900 Z
 - - :whitelist
   - The JSON License
-  - :who: 
+  - :who: rick@grnds.com
     :why: We do good, not evil
     :versions: []
     :when: 2017-12-20 18:17:34.980935253 Z
 - - :whitelist
   - Apache Software License - Version 2.0
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka Apache 2.0
     :versions: []
     :when: 2017-12-20 18:19:51.498923503 Z
 - - :whitelist
   - CDDL 1.1
-  - :who: 
+  - :who: rick@grnds.com
     :why: OSI approved, mixable
     :versions: []
     :when: 2017-12-20 18:21:13.734808232 Z
 - - :whitelist
   - Apache Software Licenses
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka Apache, ASL
     :versions: []
     :when: 2017-12-20 18:21:52.514806832 Z
 - - :whitelist
   - Eclipse Public License - v 1.0
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-20 18:22:37.951999838 Z
 - - :whitelist
   - Common Public License - v 1.0
-  - :who: 
+  - :who: rick@grnds.com
     :why: IBM OSI-approved permissive license
     :versions: []
     :when: 2017-12-20 18:24:06.203825427 Z
 - - :whitelist
   - CC0 1.0 Universal
-  - :who: 
+  - :who: rick@grnds.com
     :why: Public-domain equivalent
     :versions: []
     :when: 2017-12-20 18:25:55.706760835 Z
 - - :license
   - oro
   - ASL
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-20 18:27:05.345770522 Z
 - - :license
   - zookeeper
   - Apache 2.0
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-20 18:27:59.859883841 Z
 - - :license
   - xbean-asm5-shaded
   - Apache 2.0
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-20 18:28:51.858349464 Z
 - - :license
   - blankslate
   - MIT
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-20 18:51:52.846103508 Z
 - - :license
   - enumerable-lazy
   - MIT
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-20 18:55:33.517868029 Z
 - - :whitelist
   - Copyright 2016 Grand Rounds Inc. All rights reserved.
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-21 00:40:54.181549409 Z
 - - :whitelist
   - Ruby 1.8
-  - :who: 
+  - :who: rick@grnds.com
     :why: Allows distribution under the BSD 2-clause license
     :versions: []
     :when: 2017-12-21 00:43:25.348182256 Z
 - - :whitelist
   - Copyright (c) 2016 Grand Rounds Inc, all rights reserved
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-21 00:46:48.174929537 Z
 - - :license
   - qpdf
   - MIT
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-21 01:01:48.574557099 Z
 - - :whitelist
   - LGPL-2.1
-  - :who: 
+  - :who: rick@grnds.com
     :why: Our work is a 'work that uses the library' by Clause 5
     :versions: []
     :when: 2017-12-21 01:02:47.920422707 Z
 - - :approve
   - newrelic_rpm
-  - :who: 
+  - :who: rick@grnds.com
     :why: License allows redistribution to our own sites
     :versions: []
     :when: 2017-12-21 01:31:25.225252922 Z
 - - :approve
   - ttfunk
-  - :who: 
+  - :who: rick@grnds.com
     :why: Nonstandard license allows our use under clause 1 and clause 4
     :versions: []
     :when: 2017-12-21 01:34:43.436062402 Z
 - - :license
   - rgeo
   - BSD 3-clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-21 01:37:28.762178125 Z
 - - :license
   - rgeo-activerecord
   - BSD 3-clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-21 01:38:43.261943219 Z
 - - :approve
   - grnds-paparazzo
   - &1
-    :who: 
+    :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-21 01:39:44.845792426 Z
@@ -647,26 +647,26 @@
   - *1
 - - :whitelist
   - LGPLv2+
-  - :who: 
+  - :who: rick@grnds.com
     :why: aka LGPL-2.1+
     :versions: []
     :when: 2017-12-21 21:22:03.742690618 Z
 - - :whitelist
   - MIT/X11
-  - :who: 
+  - :who: rick@grnds.com
     :why: Essentially equivalent to MIT
     :versions: []
     :when: 2017-12-23 00:31:45.363203335 Z
 - - :approve
   - entities
-  - :who: 
+  - :who: rick@grnds.com
     :why: actually BSD 2-clause
     :versions: []
     :when: 2017-12-23 00:33:54.174373152 Z
 - - :license
   - dateformat
   - MIT
-  - :who: 
+  - :who: rick@grnds.com
     :why: As stated at Github now (cannot find 1.0 versions, but MIT is implied in
       existing comments)
     :versions: []
@@ -674,106 +674,113 @@
 - - :license
   - domelementtype
   - BSD 2-clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: As stated at Github now
     :versions: []
     :when: 2017-12-23 00:37:42.688394937 Z
 - - :license
   - domhandler
   - BSD 2-clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: As stated at Github now
     :versions: []
     :when: 2017-12-23 00:38:35.351117171 Z
 - - :license
   - domutils
   - BSD 2-clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: As stated at Github now
     :versions: []
     :when: 2017-12-23 00:39:26.580232722 Z
 - - :license
   - shelljs
   - BSD 3-clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: All versions
     :versions: []
     :when: 2017-12-23 00:43:46.167160062 Z
 - - :license
   - formatio
   - BSD 3-clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: https://github.com/busterjs/formatio/blob/master/LICENSE
     :versions: []
     :when: 2017-12-23 00:44:31.300833618 Z
 - - :license
   - uglify-js
   - BSD 2-clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: https://github.com/mishoo/UglifyJS2/blob/master/LICENSE
     :versions: []
     :when: 2017-12-23 00:48:55.170140022 Z
 - - :whitelist
   - Apache v2
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2017-12-23 00:51:14.264133263 Z
 - - :ignore_group
   - dev
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2018-01-02 19:14:53.426434607 Z
 - - :ignore_group
   - devDependencies
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2018-01-02 19:15:48.396991722 Z
 - - :ignore_group
   - optionalDependencies
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2018-01-02 19:19:45.633320478 Z
 - - :whitelist
   - Unlicense*
-  - :who: 
+  - :who: rick@grnds.com
     :why: Yet another public-domain license
     :versions: []
     :when: 2018-01-02 19:48:09.859211720 Z
 - - :whitelist
   - Apache, Version 2.0
-  - :who: 
+  - :who: rick@grnds.com
     :why: Yet another public-domain license
     :versions: []
     :when: 2018-01-02 19:48:51.476680927 Z
 - - :whitelist
   - CC0-1.0
-  - :who: 
+  - :who: rick@grnds.com
     :why: Yet another public-domain license
     :versions: []
     :when: 2018-01-02 19:49:49.073714644 Z
 - - :license
   - qs
   - BSD 3-Clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2018-01-02 20:02:37.231078571 Z
 - - :license
   - colors
   - MIT
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions: []
     :when: 2018-01-02 20:04:21.357783276 Z
 - - :license
   - metro-bundler
   - BSD 3-Clause
-  - :who: 
+  - :who: rick@grnds.com
     :why: 
     :versions:
     - 0.20.3
     :when: 2018-01-02 20:05:55.813492697 Z
+- - :whitelist
+  - Mozilla Public License 2.0
+  - :who: rick@grnds.com
+    :why: We do not modify; if we did, we would modify using public github forks so
+      staying conformant
+    :versions: []
+    :when: 2018-01-23 22:01:21.197872489 Z
