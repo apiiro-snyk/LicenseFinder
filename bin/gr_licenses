@@ -40,7 +40,7 @@ default_projects="
 license_finder_report="--format=csv --decisions_file=/policy/dependency_decisions.yml --columns=name version licenses approved license_links summary homepage"
 
 function usage() {
-    echo << EOF
+    cat << EOF
 Usage: ${0} [-?] <project directory> <project directory> <project directory>
 Directory list defaults to '${default_projects}'" ;
 EOF
@@ -133,7 +133,7 @@ main() {
     dlf "
       ${prepare} &&
       echo '<csv_start>' &&
-      ${license_finder}
+      ${license_finder} &&
       echo '<csv_end>'
       " | tee ${scandir}/${project}.txt
 
