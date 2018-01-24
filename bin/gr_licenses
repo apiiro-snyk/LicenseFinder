@@ -1,0 +1,146 @@
+#!/bin/bash
+#
+# Scans every production repo for its libraries and what licenses they provide.
+# By default, provides a report (.csv) for each repo. Can take a while, since
+# it does the analysis in a docker container, where it needs to bundle (and
+# yarn client, and pip -r...) the repo first.
+#
+# Some repos are more difficult than others.  See the confluence page to
+# get details of all the special cases.
+#
+# The report is based on ../policy/dependency_decisions.yml; if you need to
+# work with that, the best thing to do at the moment is to use `dlf
+# "license_finder -p && bash"` to get into a Docker container with the product
+# in question, then use license_finder's commands to add licenses, whitelist
+# them, or approve individual libraries.
+#
+# There is a companion Confluence page https://grandrounds.atlassian.net/wiki/x/F4C9DQ
+#
+# Dollar's Java code is too difficult to do at all right now. LicenseFinder
+# doesn't do `ivy`, *and* `ivy` doesn't report many licenses -- sometimes
+# because the packages used are so old, and sometimes because `ivy` doesn't
+# seem to be getting everything maven has.
+#
+# Does *NOT* synchronize master in the repos in question; it just uses whatever
+# clone you have.
+#
+scandir=${GR_HOME}/LicenseFinder/scans/$(date +'%Y%m%d')
+mkdir -p ${scandir}
+
+default_list=true
+default_projects="
+  $(ls ${GR_HOME}/*/{bin,script}/rails | sed -e '/\*/d' -e 's;/\(bin\|script\)/.*$;;g')
+  bain
+  jubilee
+  daas
+  dollar
+  reflex
+  "
+
+license_finder_report="--format=csv --decisions_file=/policy/dependency_decisions.yml --columns=name version licenses approved license_links summary homepage"
+
+function usage() {
+    cat << EOF
+Usage: ${0} [-?] <project directory> <project directory> <project directory>
+Directory list defaults to '${default_projects}'" ;
+EOF
+    exit 1
+}
+
+while [ $# -gt 0 ] ; do
+  case $1 in
+  -h | -?)
+    usage
+    ;;
+  -*)
+    usage
+    ;;
+  *)
+    projects="${projects} ${GR_HOME}/$1"
+    ;;
+  esac
+  shift
+done
+
+if [ -z "${projects}" ] ; then
+  projects=${default_projects}
+fi
+
+function make_csv() {
+  local basename=${1%.txt}
+  sed -n -e '/<csv_start>/,/<csv_end>/p' "${basename}.txt" |\
+    sed -e '/^<csv.*>/d' -e '/^LicenseFinder::/d' |\
+    sort >"${basename}.csv"
+}
+
+# Jubilee is really more than one project, but this captures the stuff that I
+# think we're using in topk;  there are lots of aborted little projects in
+# there that prevent --recursive from working.  Also: it doesn't go after all
+# the stuff in Hadoop or Spark; they have their own conclusive/inclusive
+# license files (of dozens of contributions), so I decided to review and
+# approve those separately.
+function jubilee_license_finder() {
+  echo "license_finder report -p ${license_finder_report}"
+}
+
+# Reflex fails to find some dependencies in --recursive mode.
+function reflex_license_finder() {
+  echo "license_finder report -p ${license_finder_report}"
+}
+
+function banyan_prepare() {
+  echo "bundle install && yarn && cd client && npm install && cd .."
+}
+
+# Simply couldn't get npm all the way right in banyan, so can't run
+# --recursive. List seems comprehensive after doing this.
+function banyan_license_finder() {
+  echo "license_finder report ${license_finder_report} &&
+    cd client &&
+    license_finder report ${license_finder_report}
+    "
+}
+
+function default_prepare() {
+  echo "true"
+}
+
+function default_license_finder() {
+   echo "license_finder report -p --recursive ${license_finder_report}"
+}
+
+function dispatch() {
+  project=$1
+  method=$2
+  shift
+  shift
+
+  if type -t ${project}_${method} >/dev/null ; then
+    ${project}_${method} $@
+  else
+    default_${method} $@
+  fi
+}
+
+main() {
+  for project_directory in $projects ; do
+    cd ${project_directory}
+    local project=$(basename $PWD)
+
+    local prepare="$(dispatch ${project} prepare)"
+    local license_finder="$(dispatch ${project} license_finder)"
+
+    dlf "
+      ${prepare} &&
+      echo '<csv_start>' &&
+      ${license_finder} &&
+      echo '<csv_end>'
+      " | tee ${scandir}/${project}.txt
+
+    make_csv "${scandir}/${project}.txt"
+  done
+}
+
+where_was_i="${PWD}"
+main
+cd "${where_was_i}"

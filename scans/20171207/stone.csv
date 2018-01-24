@@ -1,0 +1,159 @@
+actionmailer,4.2.8,MIT,http://opensource.org/licenses/mit-license,"Email composition, delivery, and receiving framework (part of Rails).",http://www.rubyonrails.org
+actionpack,4.2.8,MIT,http://opensource.org/licenses/mit-license,Web-flow and rendering framework putting the VC in MVC (part of Rails).,http://www.rubyonrails.org
+actionview,4.2.8,MIT,http://opensource.org/licenses/mit-license,Rendering framework putting the V in MVC (part of Rails).,http://www.rubyonrails.org
+activejob,4.2.8,MIT,http://opensource.org/licenses/mit-license,Job framework with pluggable queues.,http://www.rubyonrails.org
+activemodel,4.2.8,MIT,http://opensource.org/licenses/mit-license,A toolkit for building modeling frameworks (part of Rails).,http://www.rubyonrails.org
+activerecord,4.2.8,MIT,http://opensource.org/licenses/mit-license,Object-relational mapper framework (part of Rails).,http://www.rubyonrails.org
+activesupport,4.2.8,MIT,http://opensource.org/licenses/mit-license,A toolkit of support libraries and Ruby core extensions extracted from the Rails framework.,http://www.rubyonrails.org
+addressable,2.5.0,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,URI Implementation,https://github.com/sporkmonger/addressable
+arel,6.0.4,MIT,http://opensource.org/licenses/mit-license,Arel Really Exasperates Logicians  Arel is a SQL AST manager for Ruby,https://github.com/rails/arel
+awesome_print,1.7.0,MIT,http://opensource.org/licenses/mit-license,Pretty print Ruby objects with proper indentation and colors,https://github.com/awesome-print/awesome_print
+aws-record,1.0.2,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS Record library for Amazon DynamoDB,http://github.com/aws/aws-sdk-ruby-record
+aws-sdk,2.9.41,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby,http://github.com/aws/aws-sdk-ruby
+aws-sdk-core,2.9.41,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Core,http://github.com/aws/aws-sdk-ruby
+aws-sdk-resources,2.9.41,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Resources,http://github.com/aws/aws-sdk-ruby
+aws-sdk-v1,1.67.0,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby V1,http://aws.amazon.com/sdkforruby
+aws-sigv4,1.0.0,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS Signature Version 4 library.,http://github.com/aws/aws-sdk-ruby
+axiom-types,0.1.1,MIT,http://opensource.org/licenses/mit-license,Abstract types for logic programming,https://github.com/dkubb/axiom-types
+bloom-filter,0.2.2,MIT,http://opensource.org/licenses/mit-license,A fast Bloom Filter library for Ruby.,http://github.com/deepfryed/bloom-filter
+builder,3.2.3,MIT,http://opensource.org/licenses/mit-license,Builders for MarkUp.,http://onestepback.org
+bundler,1.16.0,MIT,http://opensource.org/licenses/mit-license,The best way to manage your application's dependencies,http://bundler.io
+byebug,9.0.6,Simplified BSD,http://opensource.org/licenses/bsd-license,Ruby 2.0 fast debugger - base + CLI,http://github.com/deivid-rodriguez/byebug
+capistrano,2.15.7,MIT,http://opensource.org/licenses/mit-license,Capistrano - Welcome to easy deployment with Ruby over SSH,http://github.com/capistrano/capistrano
+capistrano-deploytags,0.9.2,unknown,"","Add dated, environment-specific tags to your git repo at each deployment.",http://github.com/mydrive/capistrano-deploytags
+capistrano-ext,1.2.1,MIT,http://opensource.org/licenses/mit-license,Useful task libraries and methods for Capistrano,http://www.capify.org
+coderay,1.1.1,MIT,http://opensource.org/licenses/mit-license,Fast syntax highlighting for selected languages.,http://coderay.rubychan.de
+coercible,1.0.0,MIT,http://opensource.org/licenses/mit-license,"Powerful, flexible and configurable coercion library. And nothing more.",https://github.com/solnic/coercible
+colorize,0.8.1,GPL-2.0,"",Ruby gem for colorizing text using ANSI escape sequences.,http://github.com/fazibear/colorize
+concurrent-ruby,1.0.5,MIT,http://opensource.org/licenses/mit-license,"Modern concurrency tools for Ruby. Inspired by Erlang, Clojure, Scala, Haskell, F#, C#, Java, and classic concurrency patterns.",http://www.concurrent-ruby.com
+crack,0.4.3,MIT,http://opensource.org/licenses/mit-license,"Really simple JSON and XML parsing, ripped from Merb and Rails.",http://github.com/jnunemaker/crack
+csvlint,0.3.3,MIT,http://opensource.org/licenses/mit-license,CSV Validator,""
+database_cleaner,1.5.3,MIT,http://opensource.org/licenses/mit-license,Strategies for cleaning databases.  Can be used to ensure a clean state for testing.,http://github.com/DatabaseCleaner/database_cleaner
+delayed_job,4.1.2,MIT,http://opensource.org/licenses/mit-license,Database-backed asynchronous priority queue system -- Extracted from Shopify,http://github.com/collectiveidea/delayed_job
+delayed_job_active_record,4.1.1,MIT,http://opensource.org/licenses/mit-license,ActiveRecord backend for DelayedJob,http://github.com/collectiveidea/delayed_job_active_record
+delayed_job_web,1.4,MIT,http://opensource.org/licenses/mit-license,Web interface for delayed_job inspired by resque,https://github.com/ejschmitt/delayed_job_web
+descendants_tracker,0.0.4,MIT,http://opensource.org/licenses/mit-license,Module that adds descendant tracking to a class,https://github.com/dkubb/descendants_tracker
+diff-lcs,1.2.5,"MIT,Perl Artistic v2,GNU GPL v2","http://opensource.org/licenses/mit-license,,",Diff::LCS computes the difference between two Enumerable sequences using the McIlroy-Hunt longest common subsequence (LCS) algorithm,http://diff-lcs.rubyforge.org/
+docile,1.1.5,MIT,http://opensource.org/licenses/mit-license,Docile keeps your Ruby DSLs tame and well-behaved,https://ms-ati.github.io/docile/
+dynasore,0.1.1,MIT,http://opensource.org/licenses/mit-license,Rails-ish configuration and add-ons for aws-record,https://github.com/ConsultingMD/dynasore
+equalizer,0.0.11,MIT,http://opensource.org/licenses/mit-license,"Module to define equality, equivalence and inspection methods",https://github.com/dkubb/equalizer
+erubis,2.7.0,MIT,http://opensource.org/licenses/mit-license,a fast and extensible eRuby implementation which supports multi-language,http://www.kuwata-lab.com/erubis/
+escape_utils,1.2.1,MIT,http://opensource.org/licenses/mit-license,Faster string escaping routines for your web apps,https://github.com/brianmario/escape_utils
+ethon,0.10.1,MIT,http://opensource.org/licenses/mit-license,Libcurl wrapper.,https://github.com/typhoeus/ethon
+excon,0.58.0,MIT,http://opensource.org/licenses/mit-license,"speed, persistence, http(s)",https://github.com/excon/excon
+facter,2.4.6,unknown,"","Facter, a system inventory tool",https://github.com/puppetlabs/facter
+factory_girl,4.7.0,MIT,http://opensource.org/licenses/mit-license,factory_girl provides a framework and DSL for defining and using model instance factories.,https://github.com/thoughtbot/factory_girl
+factory_girl_rails,4.7.0,MIT,http://opensource.org/licenses/mit-license,factory_girl_rails provides integration between factory_girl and rails 3,http://github.com/thoughtbot/factory_girl_rails
+faker,1.8.4,MIT,http://opensource.org/licenses/mit-license,Easily generate fake data,https://github.com/stympy/faker
+ffi,1.9.14,New BSD,http://opensource.org/licenses/BSD-3-Clause,Ruby FFI,http://wiki.github.com/ffi/ffi
+flipper,0.10.2,MIT,http://opensource.org/licenses/mit-license,Feature flipper for ANYTHING,https://github.com/jnunemaker/flipper
+flipper-active_record,0.10.2,MIT,http://opensource.org/licenses/mit-license,ActiveRecord adapter for Flipper,https://github.com/jnunemaker/flipper
+fog-aws,1.4.1,MIT,http://opensource.org/licenses/mit-license,Module for the 'fog' gem to support Amazon Web Services.,https://github.com/fog/fog-aws
+fog-core,1.45.0,MIT,http://opensource.org/licenses/mit-license,Shared classes and tests for fog providers and services.,https://github.com/fog/fog-core
+fog-json,1.0.2,MIT,http://opensource.org/licenses/mit-license,JSON parsing for fog providers,http://github.com/fog/fog-json
+fog-xml,0.1.3,MIT,http://opensource.org/licenses/mit-license,XML parsing for fog providers,https://github.com/fog/fog-xml
+formatador,0.2.5,MIT,http://opensource.org/licenses/mit-license,Ruby STDOUT text formatting,http://github.com/geemus/formatador
+git,1.3.0,MIT,http://opensource.org/licenses/mit-license,"Ruby/Git is a Ruby library that can be used to create, read and manipulate Git repositories by wrapping system calls to the git binary.",http://github.com/schacon/ruby-git
+globalid,0.4.0,MIT,http://opensource.org/licenses/mit-license,Refer to any model with a URI: gid://app/class/id,http://www.rubyonrails.org
+gpgme,2.0.12,LGPL-2.1+,"",Ruby binding of GPGME.,http://github.com/ueno/ruby-gpgme
+grape,0.18.0,MIT,http://opensource.org/licenses/mit-license,A simple Ruby framework for building REST-like APIs.,https://github.com/ruby-grape/grape
+grape-middleware-logger,1.7.1,MIT,http://opensource.org/licenses/mit-license,A logger for the Grape framework,https://github.com/ridiculous/grape-middleware-logger
+grape-roar,0.3.0,MIT,http://opensource.org/licenses/mit-license,Enable Resource-Oriented Architectures in Grape API DSL,http://github.com/dblock/grape-roar
+grape-swagger,0.25.2,MIT,http://opensource.org/licenses/mit-license,Add auto generated documentation to your Grape API that can be displayed with Swagger.,https://github.com/ruby-grape/grape-swagger
+grape-swagger-rails,0.3.0,MIT,http://opensource.org/licenses/mit-license,Swagger UI as Rails Engine for grape-swagger gem,https://github.com/ruby-grape/grape-swagger-rails
+grape-swagger-representable,0.1.3,MIT,http://opensource.org/licenses/mit-license,Grape swagger adapter to support representable object parsing,https://github.com/Bugagazavr/grape-swagger-representable
+grnds-deploy,0.0.2,MIT,http://opensource.org/licenses/mit-license,Deployment Gem for Grnds applications.  Ensures proper integration with security endpoints.,https://github.com/ConsultingMD/grnds-status
+grnds-ediot,0.2.0,"Copyright (c) 2016 Grand Rounds Inc, all rights reserved","",EDI Online Transformer,https://github.com/ConsultingMD/ediot
+grnds-file_encryption,0.2,Copyright 2016 Grand Rounds Inc. All rights reserved.,"",Encrypt and decrypt files with GPG and streaming.,https://github.com/ConsultingMD/file-encryption
+grnds-service,0.6.0,Copyright 2015-2016 Grand Rounds Inc. All rights reserved.,"",Microservice communication channel configuration and wrappers for those channels,https://github.com/ConsultingMD/grnds-service
+grnds-service-messaging,0.0.1,Copyright 2015-2017 Grand Rounds Inc. All rights reserved,"",Inter-service message-oriented transport services for Grand Rounds (Rails) applications,https://github.com/ConsultingMD/grnds-messaging
+grnds-sso,0.0.5,MIT,http://opensource.org/licenses/mit-license,SSO for Grand Rounds,""
+hashdiff,0.3.6,MIT,http://opensource.org/licenses/mit-license,HashDiff is a diff lib to compute the smallest difference between two hashes.,https://github.com/liufengyun/hashdiff
+hashie,3.4.6,MIT,http://opensource.org/licenses/mit-license,Your friendly neighborhood hash library.,https://github.com/intridea/hashie
+heroic-sns,1.1.3,Apache,"",Lightweight Rack middleware for AWS SNS endpoints,https://github.com/benzado/heroic-sns
+highline,1.7.8,ruby,http://www.ruby-lang.org/en/LICENSE.txt,HighLine is a high-level command-line IO library.,https://github.com/JEG2/highline
+httparty,0.15.6,MIT,http://opensource.org/licenses/mit-license,"Makes http fun! Also, makes consuming restful web services dead easy.",http://jnunemaker.github.com/httparty
+i18n,0.8.4,MIT,http://opensource.org/licenses/mit-license,New wave Internationalization support for Ruby,http://github.com/svenfuchs/i18n
+ice_nine,0.11.2,MIT,http://opensource.org/licenses/mit-license,Deep Freeze Ruby Objects,https://github.com/dkubb/ice_nine
+ipaddress,0.8.3,MIT,http://opensource.org/licenses/mit-license,IPv4/IPv6 address manipulation library,https://github.com/bluemonk/ipaddress
+jbuilder,2.6.1,MIT,http://opensource.org/licenses/mit-license,Create JSON structures via a Builder-style DSL,https://github.com/rails/jbuilder
+jmespath,1.3.1,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,JMESPath - Ruby Edition,http://github.com/trevorrowe/jmespath.rb
+jquery-rails,4.2.1,MIT,http://opensource.org/licenses/mit-license,Use jQuery with Rails 4+,https://github.com/rails/jquery-rails
+jquery-ui-rails,4.2.1,MIT,http://opensource.org/licenses/mit-license,jQuery UI packaged for the Rails asset pipeline,https://github.com/joliss/jquery-ui-rails
+json,1.8.6,ruby,http://www.ruby-lang.org/en/LICENSE.txt,JSON Implementation for Ruby,http://flori.github.com/json
+kgio,2.10.0,LGPL-2.1+,"","kinder, gentler I/O for Ruby",http://bogomips.org/kgio/
+little-plugger,1.1.4,MIT,http://opensource.org/licenses/mit-license,LittlePlugger is a module that provides Gem based plugin management.,http://gemcutter.org/gems/little-plugger
+logging,2.1.0,MIT,http://opensource.org/licenses/mit-license,A flexible and extendable logging library for Ruby,http://rubygems.org/gems/logging
+loofah,2.0.3,MIT,http://opensource.org/licenses/mit-license,Loofah is a general library for manipulating and transforming HTML/XML documents and fragments,https://github.com/flavorjones/loofah
+mail,2.6.6,MIT,http://opensource.org/licenses/mit-license,"Mail provides a nice Ruby DSL for making, sending and reading emails.",https://github.com/mikel/mail
+method_source,0.8.2,MIT,http://opensource.org/licenses/mit-license,retrieve the sourcecode for a method,http://banisterfiend.wordpress.com
+mime-types,3.1,MIT,http://opensource.org/licenses/mit-license,The mime-types library provides a library and registry for information about MIME content type definitions,https://github.com/mime-types/ruby-mime-types/
+mime-types-data,3.2016.0521,MIT,http://opensource.org/licenses/mit-license,mime-types-data provides a registry for information about MIME media type definitions,https://github.com/mime-types/mime-types-data/
+mini_portile2,2.1.0,MIT,http://opensource.org/licenses/mit-license,Simplistic port-like solution for developers,http://github.com/flavorjones/mini_portile
+minitest,5.10.2,MIT,http://opensource.org/licenses/mit-license,"minitest provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking",https://github.com/seattlerb/minitest
+multi_json,1.12.1,MIT,http://opensource.org/licenses/mit-license,A common interface to multiple JSON libraries.,http://github.com/intridea/multi_json
+multi_xml,0.6.0,MIT,http://opensource.org/licenses/mit-license,A generic swappable back-end for XML parsing,https://github.com/sferik/multi_xml
+mustermann,0.4.0,MIT,http://opensource.org/licenses/mit-license,use patterns like regular expressions,https://github.com/rkh/mustermann
+mustermann-grape,0.4.0,MIT,http://opensource.org/licenses/mit-license,Grape syntax for Mustermann,https://github.com/rkh/mustermann
+mysql2,0.4.5,MIT,http://opensource.org/licenses/mit-license,"A simple, fast Mysql library for Ruby, binding to libmysql",http://github.com/brianmario/mysql2
+net-http-persistent,2.9.4,MIT,http://opensource.org/licenses/mit-license,Manages persistent connections using Net::HTTP plus a speed fix for Ruby 1.8,http://docs.seattlerb.org/net-http-persistent
+net-scp,1.2.1,MIT,http://opensource.org/licenses/mit-license,A pure Ruby implementation of the SCP client protocol,https://github.com/net-ssh/net-scp
+net-sftp,2.1.2,MIT,http://opensource.org/licenses/mit-license,A pure Ruby implementation of the SFTP client protocol,https://github.com/net-ssh/net-sftp
+net-ssh,3.2.0,MIT,http://opensource.org/licenses/mit-license,Net::SSH: a pure-Ruby implementation of the SSH2 client protocol.,https://github.com/net-ssh/net-ssh
+net-ssh-gateway,1.2.0,MIT,http://opensource.org/licenses/mit-license,A simple library to assist in establishing tunneled Net::SSH connections,https://github.com/net-ssh/net-scp
+nokogiri,1.7.2,MIT,http://opensource.org/licenses/mit-license,"Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser",http://nokogiri.org
+open_uri_redirections,0.2.1,MIT,http://opensource.org/licenses/mit-license,OpenURI patch to allow redirections between HTTP and HTTPS,https://github.com/jaimeiniesta/open_uri_redirections
+parallel,1.10.0,MIT,http://opensource.org/licenses/mit-license,Run any kind of code in parallel processes,https://github.com/grosser/parallel
+parallel_tests,2.10.0,MIT,http://opensource.org/licenses/mit-license,Run Test::Unit / RSpec / Cucumber / Spinach in parallel,http://github.com/grosser/parallel_tests
+pry,0.10.4,MIT,http://opensource.org/licenses/mit-license,An IRB alternative and runtime developer console,http://pryrepl.org
+pry-byebug,3.4.2,MIT,http://opensource.org/licenses/mit-license,Fast debugging with Pry.,https://github.com/deivid-rodriguez/pry-byebug
+public_suffix,2.0.4,MIT,http://opensource.org/licenses/mit-license,Domain name parser based on the Public Suffix List.,https://simonecarletti.com/code/publicsuffix-ruby
+rack,1.6.8,MIT,http://opensource.org/licenses/mit-license,a modular Ruby webserver interface,http://rack.github.io/
+rack-accept,0.4.5,MIT,http://opensource.org/licenses/mit-license,HTTP Accept* for Ruby/Rack,http://mjijackson.github.com/rack-accept
+rack-protection,1.5.3,MIT,http://opensource.org/licenses/mit-license,You should use protection!,http://github.com/rkh/rack-protection
+rack-test,0.6.3,MIT,http://opensource.org/licenses/mit-license,Simple testing API built on Rack,http://github.com/brynary/rack-test
+rails,4.2.8,MIT,http://opensource.org/licenses/mit-license,Full-stack web application framework.,http://www.rubyonrails.org
+rails-deprecated_sanitizer,1.0.3,MIT,http://opensource.org/licenses/mit-license,Deprecated sanitizer API extracted from Action View.,https://github.com/rails/rails-deprecated_sanitizer
+rails-dom-testing,1.0.8,MIT,http://opensource.org/licenses/mit-license,Dom and Selector assertions for Rails applications,https://github.com/rails/rails-dom-testing
+rails-html-sanitizer,1.0.3,MIT,http://opensource.org/licenses/mit-license,This gem is responsible to sanitize HTML fragments in Rails applications.,https://github.com/rails/rails-html-sanitizer
+railties,4.2.8,MIT,http://opensource.org/licenses/mit-license,"Tools for creating, working with, and running Rails applications.",http://www.rubyonrails.org
+raindrops,0.17.0,LGPL-2.1+,"",real-time stats for preforking Rack servers,https://bogomips.org/raindrops/
+rake,12.0.0,MIT,http://opensource.org/licenses/mit-license,Rake is a Make-like program implemented in Ruby,https://github.com/ruby/rake
+rdoc,4.3.0,ruby,http://www.ruby-lang.org/en/LICENSE.txt,RDoc produces HTML and command-line documentation for Ruby projects,http://docs.seattlerb.org/rdoc
+representable,2.3.0,MIT,http://opensource.org/licenses/mit-license,"Renders and parses JSON/XML/YAML documents from and to Ruby objects. Includes plain properties, collections, nesting, coercion and more.",https://github.com/apotonick/representable/
+roar,1.0.4,MIT,http://opensource.org/licenses/mit-license,Parse and render REST API documents using representers.,http://rubygems.org/gems/roar
+rollbar,2.13.3,MIT,http://opensource.org/licenses/mit-license,Reports exceptions to Rollbar,https://rollbar.com
+rspec-core,3.5.4,MIT,http://opensource.org/licenses/mit-license,rspec-core-3.5.4,https://github.com/rspec/rspec-core
+rspec-expectations,3.5.0,MIT,http://opensource.org/licenses/mit-license,rspec-expectations-3.5.0,https://github.com/rspec/rspec-expectations
+rspec-json_expectations,1.4.0,MIT,http://opensource.org/licenses/mit-license,Set of matchers and helpers to allow you test your APIs responses like a pro.,https://github.com/waterlink/rspec-json_expectations
+rspec-mocks,3.5.0,MIT,http://opensource.org/licenses/mit-license,rspec-mocks-3.5.0,https://github.com/rspec/rspec-mocks
+rspec-rails,3.5.2,MIT,http://opensource.org/licenses/mit-license,RSpec for Rails,https://github.com/rspec/rspec-rails
+rspec-support,3.5.0,MIT,http://opensource.org/licenses/mit-license,rspec-support-3.5.0,https://github.com/rspec/rspec-support
+rspec_junit_formatter,0.3.0,MIT,http://opensource.org/licenses/mit-license,RSpec JUnit XML formatter,http://github.com/sj26/rspec_junit_formatter
+ruby-filemagic,0.7.1,ruby,http://www.ruby-lang.org/en/LICENSE.txt,Ruby bindings to the magic(4) library,http://github.com/blackwinter/ruby-filemagic
+rubyzip,1.2.1,Simplified BSD,http://opensource.org/licenses/bsd-license,rubyzip is a ruby module for reading and writing zip files,http://github.com/rubyzip/rubyzip
+rvm-capistrano,1.5.6,MIT,http://opensource.org/licenses/mit-license,RVM / Capistrano Integration Gem,https://github.com/wayneeseguin/rvm-capistrano
+safe_yaml,1.0.4,MIT,http://opensource.org/licenses/mit-license,SameYAML provides an alternative implementation of YAML.load suitable for accepting user input in Ruby applications.,https://github.com/dtao/safe_yaml
+sdoc,0.4.2,MIT,http://opensource.org/licenses/mit-license,rdoc html with javascript search index.,https://github.com/zzak/sdoc
+simplecov,0.12.0,MIT,http://opensource.org/licenses/mit-license,Code coverage for Ruby 1.9+ with a powerful configuration library and automatic merging of coverage across test suites,http://github.com/colszowka/simplecov
+simplecov-html,0.10.0,MIT,http://opensource.org/licenses/mit-license,Default HTML formatter for SimpleCov code coverage tool for ruby 1.9+,https://github.com/colszowka/simplecov-html
+sinatra,1.4.8,MIT,http://opensource.org/licenses/mit-license,Classy web-development dressed in a DSL,http://www.sinatrarb.com/
+slither,0.99.4,MIT,http://opensource.org/licenses/mit-license,"A simple, clean DSL for describing, writing, and parsing fixed-width text files",http://github.com/ryanwood/slither
+slop,3.6.0,MIT,http://opensource.org/licenses/mit-license,Simple Lightweight Option Parsing,http://github.com/leejarvis/slop
+smarter_csv,1.0.17,"MIT,GPL-2","http://opensource.org/licenses/mit-license,","Ruby Gem for smarter importing of CSV Files (and CSV-like files), with lots of optional features, e.g. chunked processing for huge CSV files",https://github.com/tilo/smarter_csv
+sprockets,3.7.1,MIT,http://opensource.org/licenses/mit-license,Rack-based asset packaging system,https://github.com/rails/sprockets
+sprockets-rails,3.2.0,MIT,http://opensource.org/licenses/mit-license,Sprockets Rails integration,https://github.com/rails/sprockets-rails
+thor,0.19.4,MIT,http://opensource.org/licenses/mit-license,Thor is a toolkit for building powerful command-line interfaces.,http://whatisthor.com/
+thread_safe,0.3.6,Apache 2.0,http://www.apache.org/licenses/LICENSE-2.0.txt,Thread-safe collections and utilities for Ruby,https://github.com/ruby-concurrency/thread_safe
+tilt,2.0.7,MIT,http://opensource.org/licenses/mit-license,Generic interface to multiple Ruby template engines,http://github.com/rtomayko/tilt/
+tool,0.2.3,MIT,http://opensource.org/licenses/mit-license,general purpose library,https://github.com/rkh/tool
+transproc,0.4.1,MIT,http://opensource.org/licenses/mit-license,Transform Ruby objects in functional style,http://solnic.github.io/transproc/
+turbolinks,5.0.1,MIT,http://opensource.org/licenses/mit-license,Turbolinks makes navigating your web application faster,https://github.com/turbolinks/turbolinks
+turbolinks-source,5.0.0,MIT,http://opensource.org/licenses/mit-license,Turbolinks JavaScript assets,https://github.com/turbolinks/turbolinks-source-gem
+typhoeus,1.1.2,MIT,http://opensource.org/licenses/mit-license,Parallel HTTP library on top of libcurl multi.,https://github.com/typhoeus/typhoeus
+tzinfo,1.2.3,MIT,http://opensource.org/licenses/mit-license,Daylight savings aware timezone library,http://tzinfo.github.io
+uber,0.0.15,MIT,http://opensource.org/licenses/mit-license,"Gem-authoring tools like class method inheritance in modules, dynamic options and more.",https://github.com/apotonick/uber
+unicorn,5.2.0,"GPL-2.0+,Ruby-1.8",",",Rack HTTP server for fast clients and Unix,https://bogomips.org/unicorn/
+uri_template,0.7.0,MIT,http://opensource.org/licenses/mit-license,A templating system for URIs.,http://github.com/hannesg/uri_template
+virtus,1.0.5,MIT,http://opensource.org/licenses/mit-license,Attributes on Steroids for Plain Old Ruby Objects,https://github.com/solnic/virtus
+webmock,3.0.1,MIT,http://opensource.org/licenses/mit-license,Library for stubbing HTTP requests in Ruby.,http://github.com/bblimke/webmock
