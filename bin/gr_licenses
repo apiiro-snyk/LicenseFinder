@@ -28,6 +28,7 @@ scandir=${GR_HOME}/LicenseFinder/scans/$(date +'%Y%m%d')
 mkdir -p ${scandir}
 
 default_list=true
+format="csv"
 default_projects="
   $(ls ${GR_HOME}/*/{bin,script}/rails | sed -e '/\*/d' -e 's;/\(bin\|script\)/.*$;;g')
   bain
@@ -37,20 +38,40 @@ default_projects="
   reflex
   "
 
-license_finder_report="--format=csv --decisions_file=/policy/dependency_decisions.yml --columns=name version licenses approved license_links summary homepage"
-
 function usage() {
     cat << EOF
-Usage: ${0} [-?] <project directory> <project directory> <project directory>
+Usage: ${0} [options] <project directory> <project directory> <project directory>
+
+Options:
+
+-h, -?   Output usage information
+--s3     Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
+--html   Use html format for report (default is csv).
+
 Directory list defaults to '${default_projects}'" ;
 EOF
     exit 1
+}
+
+function s3_init() {
+  aws_environment=${1:-${AWS_ENVIRONMENT}}
+
+  if [[ -z $aws_environment ]]; then
+      echo No environment. Use aws-environment.
+      exit 1
+  fi
 }
 
 while [ $# -gt 0 ] ; do
   case $1 in
   -h | -?)
     usage
+    ;;
+  --s3)
+    s3_init
+    ;;
+  --html)
+    format="html"
     ;;
   -*)
     usage
@@ -62,15 +83,28 @@ while [ $# -gt 0 ] ; do
   shift
 done
 
+license_finder_report="--format=$format --decisions_file=/policy/dependency_decisions.yml --columns=name version licenses approved license_links summary homepage"
+
 if [ -z "${projects}" ] ; then
   projects=${default_projects}
 fi
 
-function make_csv() {
-  local basename=${1%.txt}
-  sed -n -e '/<csv_start>/,/<csv_end>/p' "${basename}.txt" |\
-    sed -e '/^<csv.*>/d' -e '/^LicenseFinder::/d' |\
-    sort >"${basename}.csv"
+function make_csv_or_html() {
+  # Remove everything before and after result tags,
+  # Remove result tags and debug info,
+  # Sort if format is csv
+  sed -n -e '/<result>/,/<\/result>/p' "$1.txt" |\
+    sed -e '/^<result>/d' -e '/^<\/result>/d' -e '/^LicenseFinder::/d' |\
+    (test $format == "csv" && sort || cat) > "$1.$format"
+}
+
+function s3_upload() {
+  if [ -n "${aws_environment}" ] ; then
+    local path="$1.$format"
+    local filename="$2.$format"
+    aws s3 cp ${path} s3://grnds-${aws_environment}-licenses --acl public-read && \
+    echo "Scan result uploaded to https://grnds-${aws_environment}-licenses.s3.amazonaws.com/${filename}"
+  fi
 }
 
 # Jubilee is really more than one project, but this captures the stuff that I
@@ -132,12 +166,14 @@ main() {
 
     dlf "
       ${prepare} &&
-      echo '<csv_start>' &&
+      echo '<result>' &&
       ${license_finder} &&
-      echo '<csv_end>'
+      echo '</result>'
       " | tee ${scandir}/${project}.txt
 
-    make_csv "${scandir}/${project}.txt"
+    local basename="${scandir}/${project}"
+    make_csv_or_html ${basename}
+    s3_upload ${basename} ${project}
   done
 }
 
