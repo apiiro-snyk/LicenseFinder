@@ -27,16 +27,30 @@
 scandir=${GR_HOME}/LicenseFinder/scans/$(date +'%Y%m%d')
 mkdir -p ${scandir}
 
+function rails_apps() {
+  local rails=$(ls ${GR_HOME}/*/{bin,script}/rails | sed -e '/\*/d' -e 's;/\(bin\|script\)/.*$;;g')
+  apps=''
+  for app in $rails ; do
+    if [ -f ${app}/*.gemspec ] ; then
+      continue
+    fi
+    apps="${app} ${apps}"
+  done
+  echo $apps
+}
+
+function other_apps() {
+  others="bain daas dollar jubilee reflex"
+  apps=''
+  for app in $others ; do
+    apps="${GR_HOME}/${app} ${apps}"
+  done
+  echo $apps
+}
+
 default_list=true
 format="csv"
-default_projects="
-  $(ls ${GR_HOME}/*/{bin,script}/rails | sed -e '/\*/d' -e 's;/\(bin\|script\)/.*$;;g')
-  bain
-  jubilee
-  daas
-  dollar
-  reflex
-  "
+default_projects="$(rails_apps) $(other_apps)"
 
 function usage() {
     cat << EOF
