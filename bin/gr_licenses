@@ -29,6 +29,7 @@ mkdir -p ${scandir}
 
 default_list=true
 format="csv"
+report_file_extension="csv"
 default_projects="
   $(ls ${GR_HOME}/*/{bin,script}/rails | sed -e '/\*/d' -e 's;/\(bin\|script\)/.*$;;g')
   bain
@@ -73,9 +74,11 @@ while [ $# -gt 0 ] ; do
     ;;
   --html)
     format="html"
+    report_file_extension="html"
     ;;
   --license-page)
     format="license-page"
+    report_file_extension="html"
     ;;
   -*)
     usage
@@ -99,13 +102,13 @@ function make_csv_or_html() {
   # Sort if format is csv
   sed -n -e '/<result>/,/<\/result>/p' "$1.txt" |\
     sed -e '/^<result>/d' -e '/^<\/result>/d' -e '/^LicenseFinder::/d' |\
-    (test $format == "csv" && sort || cat) > "$1.$format"
+    (test $format == "csv" && sort || cat) > "$1.$report_file_extension"
 }
 
 function s3_upload() {
   if [ -n "${aws_environment}" ] ; then
-    local path="$1.$format"
-    local filename="$2.$format"
+    local path="$1.$report_file_extension"
+    local filename="$2.$report_file_extension"
     aws s3 cp ${path} s3://grnds-${aws_environment}-licenses --acl public-read && \
     echo "Scan result uploaded to https://grnds-${aws_environment}-licenses.s3.amazonaws.com/${filename}"
   fi
