@@ -118,7 +118,11 @@ module LicenseFinder
 
       def report
         finder = LicenseAggregator.new(config, aggregate_paths)
-        report = report_of(finder.dependencies)
+        report = report_of(
+          filter_proprietary(
+            finder.dependencies
+          )
+        )
         save? ? save_report(report, config.save_file) : say(report)
       end
 
@@ -175,6 +179,20 @@ module LicenseFinder
 
       def save?
         !!config.save_file
+      end
+
+      # Filter out proprietary dependencies (for license page only)
+      def filter_proprietary(dependencies)
+        return dependencies unless config.format == 'license-page'
+
+        dependencies.reject do |dep|
+          # Reject something we know about, so dependency should be either whitelisted or approved
+          if dep.whitelisted? || dep.approved?
+            name = dep.name
+            license = (dep.license_names_from_spec || [''])[0]
+            (license =~ /grand rounds/i) || (name == 'graphql-pro') || name.start_with?('grnds-')
+          end
+        end
       end
     end
   end
