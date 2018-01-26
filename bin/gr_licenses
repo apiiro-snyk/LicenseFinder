@@ -51,6 +51,7 @@ function other_apps() {
 default_list=true
 format="csv"
 default_projects="$(rails_apps) $(other_apps)"
+report_file_extension="csv"
 
 function usage() {
     cat << EOF
@@ -58,13 +59,17 @@ Usage: ${0} [options] <project name> <project name> <project name>
 
 Options:
 
--h, -?, --help   Output usage information
---s3             Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
---html           Use html format for report (default is csv).
+-h, -?, --help        Output usage information
+--s3                  Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
 
-Project name will automatically be prepended with your GR_HOME
+Use one of the following flags to specify report format:
 
-Project directories to scan defaults to '${default_projects}'" ;
+--compliance-report   Use csv format for report (default).
+--html                Use html format for report.
+--license-page        Use license page format for report (with commercial licenses filtered out).
+
+Project directories to scan defaults to:
+$(echo $default_projects | tr ' ' '\012')
 EOF
     exit 1
 }
@@ -86,8 +91,17 @@ while [ $# -gt 0 ] ; do
   --s3)
     s3_init
     ;;
+  --compliance-report)
+    format="csv"
+    report_file_extension="csv"
+    ;;
   --html)
     format="html"
+    report_file_extension="html"
+    ;;
+  --license-page)
+    format="license-page"
+    report_file_extension="html"
     ;;
   -*)
     usage
@@ -111,7 +125,7 @@ function make_csv_or_html() {
   # Sort if format is csv
   sed -n -e '/<result>/,/<\/result>/p' "$1.txt" |\
     sed -e '/^<result>/d' -e '/^<\/result>/d' -e '/^LicenseFinder::/d' |\
-    (test $format == "csv" && sort || cat) > "$1.$format"
+    (test $format == "csv" && sort || cat) > "$1.$report_file_extension"
 }
 
 function s3_name() {
@@ -121,9 +135,9 @@ function s3_name() {
 
 function s3_upload() {
   if [ -n "${aws_environment}" ] ; then
-    local path="$1.$format"
-    local filename="$2.$format"
-    local s3_name="$(s3_name $filename).$format"
+    local path="$1.$report_file_extension"
+    local filename="$2.$report_file_extension"
+    local s3_name="$(s3_name $filename).$report_file_extension"
     aws s3 cp "${path}" "s3://grnds-${aws_environment}-licenses/${s3_name}" --acl public-read && \
       echo "Scan result for '$2' uploaded to https://grnds-${aws_environment}-licenses.s3.amazonaws.com/${s3_name}"
   fi
