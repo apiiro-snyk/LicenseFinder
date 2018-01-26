@@ -29,6 +29,7 @@ mkdir -p ${scandir}
 
 default_list=true
 format="csv"
+report_file_extension="csv"
 default_projects="
   $(ls ${GR_HOME}/*/{bin,script}/rails | sed -e '/\*/d' -e 's;/\(bin\|script\)/.*$;;g')
   bain
@@ -44,9 +45,14 @@ Usage: ${0} [options] <project directory> <project directory> <project directory
 
 Options:
 
--h, -?   Output usage information
---s3     Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
---html   Use html format for report (default is csv).
+-h, -?                Output usage information
+--s3                  Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
+
+Use one of the following flags to specify report format:
+
+--compliance-report   Use csv format for report (default).
+--html                Use html format for report.
+--license-page        Use license page format for report (with commercial licenses filtered out).
 
 Directory list defaults to '${default_projects}'" ;
 EOF
@@ -70,8 +76,17 @@ while [ $# -gt 0 ] ; do
   --s3)
     s3_init
     ;;
+  --compliance-report)
+    format="csv"
+    report_file_extension="csv"
+    ;;
   --html)
     format="html"
+    report_file_extension="html"
+    ;;
+  --license-page)
+    format="license-page"
+    report_file_extension="html"
     ;;
   -*)
     usage
@@ -95,13 +110,13 @@ function make_csv_or_html() {
   # Sort if format is csv
   sed -n -e '/<result>/,/<\/result>/p' "$1.txt" |\
     sed -e '/^<result>/d' -e '/^<\/result>/d' -e '/^LicenseFinder::/d' |\
-    (test $format == "csv" && sort || cat) > "$1.$format"
+    (test $format == "csv" && sort || cat) > "$1.$report_file_extension"
 }
 
 function s3_upload() {
   if [ -n "${aws_environment}" ] ; then
-    local path="$1.$format"
-    local filename="$2.$format"
+    local path="$1.$report_file_extension"
+    local filename="$2.$report_file_extension"
     aws s3 cp ${path} s3://grnds-${aws_environment}-licenses --acl public-read && \
     echo "Scan result uploaded to https://grnds-${aws_environment}-licenses.s3.amazonaws.com/${filename}"
   fi
