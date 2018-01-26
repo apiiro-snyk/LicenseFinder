@@ -27,25 +27,39 @@
 scandir=${GR_HOME}/LicenseFinder/scans/$(date +'%Y%m%d')
 mkdir -p ${scandir}
 
+function rails_apps() {
+  local rails=$(ls ${GR_HOME}/*/{bin,script}/rails | sed -e '/\*/d' -e 's;/\(bin\|script\)/.*$;;g')
+  apps=''
+  for app in $rails ; do
+    if [ -f ${app}/*.gemspec ] ; then
+      continue
+    fi
+    apps="${app} ${apps}"
+  done
+  echo $apps
+}
+
+function other_apps() {
+  others="bain daas dollar jubilee reflex"
+  apps=''
+  for app in $others ; do
+    apps="${GR_HOME}/${app} ${apps}"
+  done
+  echo $apps
+}
+
 default_list=true
 format="csv"
+default_projects="$(rails_apps) $(other_apps)"
 report_file_extension="csv"
-default_projects="
-  $(ls ${GR_HOME}/*/{bin,script}/rails | sed -e '/\*/d' -e 's;/\(bin\|script\)/.*$;;g')
-  bain
-  jubilee
-  daas
-  dollar
-  reflex
-  "
 
 function usage() {
     cat << EOF
-Usage: ${0} [options] <project directory> <project directory> <project directory>
+Usage: ${0} [options] <project name> <project name> <project name>
 
 Options:
 
--h, -?                Output usage information
+-h, -?, --help        Output usage information
 --s3                  Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
 
 Use one of the following flags to specify report format:
@@ -54,7 +68,8 @@ Use one of the following flags to specify report format:
 --html                Use html format for report.
 --license-page        Use license page format for report (with commercial licenses filtered out).
 
-Directory list defaults to '${default_projects}'" ;
+Project directories to scan defaults to:
+$(echo $default_projects | tr ' ' '\012')
 EOF
     exit 1
 }
@@ -70,7 +85,7 @@ function s3_init() {
 
 while [ $# -gt 0 ] ; do
   case $1 in
-  -h | -?)
+  -h | -? | --help)
     usage
     ;;
   --s3)
@@ -113,12 +128,18 @@ function make_csv_or_html() {
     (test $format == "csv" && sort || cat) > "$1.$report_file_extension"
 }
 
+function s3_name() {
+  local filename=$(basename ${1?'Missing filename argument to s3_name'})
+  echo $filename | openssl md5 | cut -d' ' -f2
+}
+
 function s3_upload() {
   if [ -n "${aws_environment}" ] ; then
     local path="$1.$report_file_extension"
     local filename="$2.$report_file_extension"
-    aws s3 cp ${path} s3://grnds-${aws_environment}-licenses --acl public-read && \
-    echo "Scan result uploaded to https://grnds-${aws_environment}-licenses.s3.amazonaws.com/${filename}"
+    local s3_name="$(s3_name $filename).$report_file_extension"
+    aws s3 cp "${path}" "s3://grnds-${aws_environment}-licenses/${s3_name}" --acl public-read && \
+      echo "Scan result for '$2' uploaded to https://grnds-${aws_environment}-licenses.s3.amazonaws.com/${s3_name}"
   fi
 }
 
