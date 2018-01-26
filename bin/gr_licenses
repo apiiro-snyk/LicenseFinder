@@ -162,6 +162,14 @@ function banyan_prepare() {
   echo "bundle install && yarn && cd client && npm install && cd .."
 }
 
+function bain_prepare() {
+  echo "rm -f Gemfile* && pip install -r requirements.txt"
+}
+
+function bain_license_finder() {
+  echo "license_finder report ${license_finder_report}"
+}
+
 # Simply couldn't get npm all the way right in banyan, so can't run
 # --recursive. List seems comprehensive after doing this.
 function banyan_license_finder() {
