@@ -1,5 +1,23 @@
 #!/bin/bash
-IMAGE=grandrounds/license_finder
+IMAGE="pivotal/license_finder"
+
+function bash_directory() {
+  local SOURCE="${BASH_SOURCE[0]}"
+  local DIR
+
+  while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+    DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+    SOURCE="$(readlink "$SOURCE")"
+    [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+  done
+  ( cd -P "$( dirname "$SOURCE" )" && pwd )
+}
+
+DOCKER_TAG_FILE="$(bash_directory)/config/docker_tag"
+if [ -f $DOCKER_TAG_FILE ] ; then
+  IMAGE=`cat $DOCKER_TAG_FILE`
+fi
+
 NOLOGIN=true
 
 while [ $# -gt 0 ] ; do
