@@ -171,6 +171,12 @@ function banyan_license_finder() {
     "
 }
 
+# Don't use `--recursive` for "black".
+# See https://www.pivotaltracker.com/n/projects/1554097/stories/154689192
+function black_license_finder() {
+   echo "license_finder report -p ${license_finder_report}"
+}
+
 function default_prepare() {
   echo "true"
 }
