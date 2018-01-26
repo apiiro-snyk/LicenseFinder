@@ -1,7 +1,7 @@
 * [Data Warehouse](https://grnds-development-licenses.s3.amazonaws.com/bac0681660334aa81b6dfa56db348b75.html)
 * [Provider Service](https://grnds-development-licenses.s3.amazonaws.com/ab4b152c6dba51f9736a0869de306a8d.html)
 * [Document Handler](https://grnds-development-licenses.s3.amazonaws.com/2d831c8622d9efe4030da1edafdf2285.html)
-* [Member Information Service'](https://grnds-development-licenses.s3.amazonaws.com/13f5158254686e14c50f497fc8f39bfe.html)
+* [Member Information Service](https://grnds-development-licenses.s3.amazonaws.com/13f5158254686e14c50f497fc8f39bfe.html)
 * [Scheduling Service](https://grnds-development-licenses.s3.amazonaws.com/cedd1c313b6221bff4f483e07e340b76.html)
 * [Care Service](https://grnds-development-licenses.s3.amazonaws.com/0c51b026708114d6d32c68f48c9a0b53.html)
 * [Notification Service](https://grnds-development-licenses.s3.amazonaws.com/1c31c92010acfb3c87cf4da394041fb2.html)
