@@ -116,7 +116,7 @@ function make_csv_or_html() {
 
 function s3_name() {
   local filename=$(basename ${1?'Missing filename argument to s3_name'})
-  echo filename | openssl md5 | cut -d' ' -f2
+  echo $filename | openssl md5 | cut -d' ' -f2
 }
 
 function s3_upload() {
