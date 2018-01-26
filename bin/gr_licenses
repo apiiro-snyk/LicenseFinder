@@ -54,15 +54,17 @@ default_projects="$(rails_apps) $(other_apps)"
 
 function usage() {
     cat << EOF
-Usage: ${0} [options] <project directory> <project directory> <project directory>
+Usage: ${0} [options] <project name> <project name> <project name>
 
 Options:
 
--h, -?   Output usage information
---s3     Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
---html   Use html format for report (default is csv).
+-h, -?, --help   Output usage information
+--s3             Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
+--html           Use html format for report (default is csv).
 
-Directory list defaults to '${default_projects}'" ;
+Project name will automatically be prepended with your GR_HOME
+
+Project directories to scan defaults to '${default_projects}'" ;
 EOF
     exit 1
 }
@@ -78,7 +80,7 @@ function s3_init() {
 
 while [ $# -gt 0 ] ; do
   case $1 in
-  -h | -?)
+  -h | -? | --help)
     usage
     ;;
   --s3)
@@ -112,12 +114,18 @@ function make_csv_or_html() {
     (test $format == "csv" && sort || cat) > "$1.$format"
 }
 
+function s3_name() {
+  local filename=$(basename ${1?'Missing filename argument to s3_name'})
+  echo filename | openssl md5 | cut -d' ' -f2
+}
+
 function s3_upload() {
   if [ -n "${aws_environment}" ] ; then
     local path="$1.$format"
     local filename="$2.$format"
-    aws s3 cp ${path} s3://grnds-${aws_environment}-licenses --acl public-read && \
-    echo "Scan result uploaded to https://grnds-${aws_environment}-licenses.s3.amazonaws.com/${filename}"
+    local s3_name="$(s3_name $filename).$format"
+    aws s3 cp "${path}" "s3://grnds-${aws_environment}-licenses/${s3_name}" --acl public-read && \
+      echo "Scan result for '$2' uploaded to https://grnds-${aws_environment}-licenses.s3.amazonaws.com/${s3_name}"
   fi
 }
 
