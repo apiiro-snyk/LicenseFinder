@@ -20,10 +20,9 @@
           <% if dependency.approved_manually? -%>
             <p>
             <%= license_links(dependency) %>
-              manually approved
               <span class="badge badge-success">&#x2713;</span>
             </p>
-            <p><%= dependency.manual_approval.why %></p>
+            <p><%= dependency.manual_approval.why.sub(':copy:','&copy;') %></p>
             <small>
               <% if dependency.manual_approval.who -%>
                 <%= dependency.manual_approval.who %>,
@@ -33,13 +32,12 @@
           <% elsif dependency.whitelisted? -%>
             <p>
               <%= license_links(dependency) %>
-              whitelisted
               <span class="badge badge-success">&#x2713;</span>
             </p>
           <% else -%>
             <p>
             <%= license_links(dependency) %>
-            unapproved
+            In Progress
             <span class="badge badge-important">&#x2717;</span>
             </p>
           <% end -%>

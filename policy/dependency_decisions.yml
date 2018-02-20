@@ -133,7 +133,7 @@
 - - :approve
   - rdoc
   - :who: rick@grnds.com
-    :why: rdoc license allows free commercial use
+    :why: License allows free commercial use
     :versions: []
     :when: 2017-12-14 02:25:34.228905005 Z
 - - :license
@@ -167,8 +167,7 @@
 - - :approve
   - skylight
   - :who: rick@grnds.com
-    :why: Commercial license allows distribution onto all our instances as long as
-      we deliver the LICENSE.md file, which we do
+    :why: Commercial
     :versions: []
     :when: 2017-12-14 02:31:43.753467546 Z
 - - :license
@@ -188,7 +187,7 @@
 - - :approve
   - unicorn
   - :who: rick@grnds.com
-    :why: We use under the Ruby 1.8 license
+    :why: Ruby 1.8 license
     :versions: []
     :when: 2017-12-14 02:36:58.639601704 Z
 - - :license
@@ -201,55 +200,55 @@
 - - :approve
   - gr_send_with_us
   - :who: rick@grnds.com
-    :why: It's our code & copyright
+    :why: ":copy: Grand Rounds"
     :versions: []
     :when: 2017-12-14 02:38:50.429297398 Z
 - - :approve
   - grnds-fax
   - :who: rick@grnds.com
-    :why: It's our code & copyright
+    :why: ":copy: Grand Rounds"
     :versions: []
     :when: 2017-12-14 02:39:51.425165669 Z
 - - :approve
   - grnds-imperial
   - :who: rick@grnds.com
-    :why: It's our code & copyright
+    :why: ":copy: Grand Rounds"
     :versions: []
     :when: 2017-12-14 02:39:51.828393093 Z
 - - :approve
   - grnds-journal
   - :who: rick@grnds.com
-    :why: It's our code & copyright
+    :why: ":copy: Grand Rounds"
     :versions: []
     :when: 2017-12-14 02:39:52.235776351 Z
 - - :approve
   - grnds-service-messaging
   - :who: rick@grnds.com
-    :why: It's our code & copyright
+    :why: ":copy: Grand Rounds"
     :versions: []
     :when: 2017-12-14 02:39:52.654908655 Z
 - - :approve
   - grnds-status
   - :who: rick@grnds.com
-    :why: It's our code & copyright
+    :why: ":copy: Grand Rounds"
     :versions: []
     :when: 2017-12-14 02:39:53.080977145 Z
 - - :approve
   - grnds-search
   - :who: rick@grnds.com
-    :why: It's our code & copyright
+    :why: ":copy: Grand Rounds"
     :versions: []
     :when: 2017-12-14 02:39:53.500565075 Z
 - - :approve
   - grnds-service
   - :who: rick@grnds.com
-    :why: It's our code & copyright
+    :why: ":copy: Grand Rounds"
     :versions: []
     :when: 2017-12-14 02:40:50.482217743 Z
 - - :approve
   - grnds_search
   - :who: rick@grnds.com
-    :why: It's our code & copyright
+    :why: ":copy: Grand Rounds"
     :versions: []
     :when: 2017-12-14 02:41:00.257723194 Z
 - - :whitelist
@@ -335,7 +334,7 @@
 - - :approve
   - harmony-reflect
   - :who: rick@grnds.com
-    :why: Apache 2.0 is our choice; MPL would be fine, though
+    :why: Apache 2.0 is our choice
     :versions: []
     :when: 2017-12-19 00:38:50.236040626 Z
 - - :whitelist
@@ -359,13 +358,13 @@
 - - :approve
   - sntp
   - :who: rick@grnds.com
-    :why: Appears to be BSD 3-clause with list of contributors
+    :why: BSD 3-clause
     :versions: []
     :when: 2017-12-19 00:41:34.138807043 Z
 - - :approve
   - spdx-expression-parse
   - :who: rick@grnds.com
-    :why: Actually licensed under MIT terms alone, according to npm page
+    :why: MIT, according to npm page
     :versions: []
     :when: 2017-12-19 00:46:08.854613426 Z
 - - :whitelist
@@ -377,7 +376,7 @@
 - - :approve
   - ua-parser-js
   - :who: rick@grnds.com
-    :why: We choose MIT
+    :why: MIT is our choice
     :versions: []
     :when: 2017-12-19 00:52:29.155984177 Z
 - - :whitelist
@@ -389,7 +388,7 @@
 - - :approve
   - wsgiref
   - :who: rick@grnds.com
-    :why: PSF is an approved Open Source Foundation license
+    :why: PSF is our choice
     :versions: []
     :when: 2017-12-19 01:23:56.232456919 Z
 - - :license
@@ -612,13 +611,13 @@
 - - :approve
   - newrelic_rpm
   - :who: rick@grnds.com
-    :why: License allows redistribution to our own sites
+    :why: Commercial
     :versions: []
     :when: 2017-12-21 01:31:25.225252922 Z
 - - :approve
   - ttfunk
   - :who: rick@grnds.com
-    :why: Nonstandard license allows our use under clause 1 and clause 4
+    :why: Allows our use under clause 1 and clause 4
     :versions: []
     :when: 2017-12-21 01:34:43.436062402 Z
 - - :license
@@ -637,14 +636,10 @@
     :when: 2017-12-21 01:38:43.261943219 Z
 - - :approve
   - grnds-paparazzo
-  - &1
-    :who: rick@grnds.com
-    :why: 
+  - :who: rick@grnds.com
+    :why: ":copy: Grand Rounds"
     :versions: []
     :when: 2017-12-21 01:39:44.845792426 Z
-- - :approve
-  - Grand Rounds holds the copyright
-  - *1
 - - :whitelist
   - LGPLv2+
   - :who: rick@grnds.com
@@ -654,13 +649,13 @@
 - - :whitelist
   - MIT/X11
   - :who: rick@grnds.com
-    :why: Essentially equivalent to MIT
+    :why: Equivalent to MIT
     :versions: []
     :when: 2017-12-23 00:31:45.363203335 Z
 - - :approve
   - entities
   - :who: rick@grnds.com
-    :why: actually BSD 2-clause
+    :why: BSD 2-clause
     :versions: []
     :when: 2017-12-23 00:33:54.174373152 Z
 - - :license
