@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../support/feature_helper'
 
 describe 'HTML report' do
@@ -12,11 +14,11 @@ describe 'HTML report' do
     gem_name = 'a_gem'
     gem_group = 'test'
     gem_attributes = {
-      license:     'MIT',
-      summary:     'gem is cool',
+      license: 'MIT',
+      summary: 'gem is cool',
       description: 'seriously',
-      version:     '0.0.1',
-      homepage:    'http://a_gem.github.com'
+      version: '0.0.1',
+      homepage: 'http://a-gem.github.com'
     }
 
     project = developer.create_ruby_app
@@ -35,9 +37,9 @@ describe 'HTML report' do
 
   specify 'shows approval status of dependencies' do
     developer.create_empty_project
-    developer.execute_command 'license_finder dependencies add gpl_dep GPL'
-    developer.execute_command 'license_finder dependencies add mit_dep MIT'
-    developer.execute_command 'license_finder whitelist add MIT'
+    developer.execute_command 'license_finder dependencies add gpl_dep GPL 1.2'
+    developer.execute_command 'license_finder dependencies add mit_dep MIT 2.3'
+    developer.execute_command 'license_finder permitted_licenses add MIT'
 
     html = product_owner.view_html
     expect(html).to be_unapproved 'gpl_dep'

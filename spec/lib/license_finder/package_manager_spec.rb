@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
+require 'fakefs/spec_helpers'
 
 module LicenseFinder
   describe PackageManager do
@@ -7,8 +10,8 @@ module LicenseFinder
     describe '#current_packages_with_relations' do
       it "sets packages' parents" do
         grandparent = Package.new('grandparent', nil, children: ['parent'])
-        parent      = Package.new('parent',      nil, children: ['child'])
-        child       = Package.new('child')
+        parent = Package.new('parent', nil, children: ['child'])
+        child = Package.new('child')
 
         pm = described_class.new
         allow(pm).to receive(:current_packages) { [grandparent, parent, child] }
@@ -19,126 +22,76 @@ module LicenseFinder
                                                                           ['parent'].to_set
                                                                         ])
       end
+
+      context 'when --prepare-no-fail flag is set' do
+        let(:subject) { described_class.new(logger: logger, prepare_no_fail: true) }
+
+        it 'does not throw an error when current packages fails' do
+          allow(subject).to receive(:current_package).and_raise
+          expect { subject.current_packages_with_relations }.to_not raise_error
+        end
+      end
     end
 
     describe '.package_management_command' do
       it 'defaults to nil' do
-        expect(LicenseFinder::PackageManager.package_management_command).to be_nil
+        expect(subject.package_management_command).to be_nil
       end
     end
 
     describe '.installed?' do
       context 'package_management_command is nil' do
         before do
-          allow(LicenseFinder::PackageManager).to receive(:package_management_command).and_return(nil)
+          allow(subject).to receive(:package_management_command).and_return(nil)
         end
 
         it 'returns true' do
-          expect(LicenseFinder::PackageManager.installed?).to be_truthy
+          expect(subject.installed?).to be_truthy
         end
       end
 
       context 'package_management_command exists' do
         before do
-          allow(LicenseFinder::PackageManager).to receive(:package_management_command).and_return('foobar')
-          allow(LicenseFinder::PackageManager).to receive(:command_exists?).with('foobar').and_return(true)
+          allow(subject).to receive(:package_management_command).and_return('foobar')
+          allow(subject).to receive(:command_exists?).with('foobar').and_return(true)
         end
 
         it 'returns true' do
-          expect(LicenseFinder::PackageManager.installed?).to be_truthy
+          expect(subject.installed?).to be_truthy
         end
       end
 
       context 'package_management_command does not exist' do
         before do
-          allow(LicenseFinder::PackageManager).to receive(:package_management_command).and_return('foobar')
-          allow(LicenseFinder::PackageManager).to receive(:command_exists?).with('foobar').and_return(false)
+          allow(subject).to receive(:package_management_command).and_return('foobar')
+          allow(subject).to receive(:command_exists?).with('foobar').and_return(false)
         end
 
         it 'returns false' do
-          expect(LicenseFinder::PackageManager.installed?(logger)).to be_falsey
-        end
-      end
-    end
-
-    describe '.active_package_managers' do
-      it 'should return active package managers' do
-        bundler = double(:bundler, active?: true)
-        allow(Bundler).to receive(:new).and_return bundler
-        expect(LicenseFinder::PackageManager.active_package_managers(logger: logger, project_path: Pathname.new(''))).to include bundler
-      end
-
-      it 'should log active states of package managers' do
-        bundler = double(:bundler, active?: true)
-        allow(Bundler).to receive(:new).and_return bundler
-        expect(logger).to receive(:info).with(Bundler, 'is active', color: :green)
-
-        LicenseFinder::PackageManager.active_package_managers(logger: logger, project_path: Pathname.new(''))
-      end
-
-      it 'should log inactive states of package managers' do
-        bundler = double(:bundler, active?: true)
-        allow(Bundler).to receive(:new).and_return bundler
-        inactive_managers = LicenseFinder::PackageManager.package_managers - [Bundler]
-
-        inactive_managers.each do |pm|
-          expect(logger).to receive(:debug).with(pm, 'is not active', color: :red)
-        end
-
-        LicenseFinder::PackageManager.active_package_managers(logger: logger, project_path: Pathname.new(''))
-      end
-
-      it 'should exclude GoVendor when Gvt is active' do
-        gvt = Gvt.new
-        allow(Gvt).to receive(:new).and_return gvt
-        allow(gvt).to receive(:active?).and_return true
-        govendor = Go15VendorExperiment.new
-        allow(Go15VendorExperiment).to receive(:new).and_return govendor
-        allow(govendor).to receive(:active?).and_return true
-        expect(LicenseFinder::PackageManager.active_package_managers(logger: logger, project_path: Pathname.new(''))).to include gvt
-        expect(LicenseFinder::PackageManager.active_package_managers(logger: logger, project_path: Pathname.new(''))).not_to include govendor
-      end
-
-      context 'when there are no active package managers' do
-        it 'should show and appropriate error message' do
-          bundler = double(:bundler, active?: false, class: Bundler)
-          allow(Bundler).to receive(:new).and_return bundler
-          expect(logger).to receive(:info).with('License Finder', 'No active and installed package managers found for project.', color: :red)
-          LicenseFinder::PackageManager.active_package_managers(logger: logger, project_path: Pathname.new(''))
-        end
-      end
-    end
-
-    describe '.active_packages' do
-      before do
-        bundler = double(:bundler, active?: true, class: Bundler)
-        allow(Bundler).to receive(:new).and_return bundler
-        allow(bundler).to receive(:current_packages_with_relations)
-        allow(Bundler).to receive(:package_management_command).and_return 'command'
-      end
-
-      context 'when package manager is installed' do
-        it 'should log all active packages' do
-          allow(Bundler).to receive(:command_exists?).and_return true
-          expect(logger).to receive(:debug).with(Bundler, 'is installed', color: :green)
-          expect(LicenseFinder::PackageManager.active_packages(logger: logger, project_path: Pathname.new(''))).to_not be_nil
-        end
-      end
-
-      context 'when package manager is NOT installed' do
-        it 'should log all active packages' do
-          allow(Bundler).to receive(:command_exists?).and_return false
-          expect(logger).to receive(:info).with(Bundler, 'is active', color: :green)
-          expect(logger).to receive(:info).with(Bundler, 'is not installed', color: :red)
-          expect(LicenseFinder::PackageManager.active_packages(logger: logger, project_path: Pathname.new(''))).to_not be_nil
+          expect(subject.installed?(logger)).to be_falsey
         end
       end
     end
 
     describe '#prepare' do
       context 'when there is a prepare_command' do
+        let(:prepare_error) { /Prepare command .* failed/ }
+        let(:project_path) { '/path/to/project' }
+        let(:log_directory) { '/path/to/project/logs/project' }
+        let(:log_file_path) { File.join(log_directory, 'prepare_errors.log') }
+        let(:quiet_logger) { double(:logger) }
+        let(:subject) { described_class.new logger: quiet_logger, project_path: project_path, log_directory: log_directory }
+
         before do
-          allow(described_class).to receive(:prepare_command).and_return('sh commands')
+          FakeFS.activate!
+          FileUtils.mkdir_p project_path
+          allow(subject).to receive(:prepare_command).and_return('sh commands')
+          allow(subject).to receive(:prepare_command).and_return('sh commands')
+        end
+
+        after do
+          FakeFS.clear!
+          FakeFS.deactivate!
         end
 
         it 'succeeds when prepare command runs successfully' do
@@ -148,12 +101,66 @@ module LicenseFinder
         end
 
         it 'logs warning and exception when prepare command runs into failure' do
-          logger = double(:logger)
           expect(SharedHelpers::Cmd).to receive(:run).with('sh commands').and_return(['output', 'failure error msg', cmd_failure])
-          expect(logger).to receive(:info).with('sh commands', 'did not succeed.', color: :red)
-          expect(logger).to receive(:info).with('sh commands', 'failure error msg', color: :red)
-          subject = described_class.new logger: logger
-          expect { subject.prepare }.to_not raise_error
+          expect(quiet_logger).to receive(:info).with('sh commands', 'did not succeed.', color: :red)
+          expect(quiet_logger).to receive(:info).with('sh commands', 'failure error msg', color: :red)
+          expect { subject.prepare }.to raise_error(prepare_error)
+        end
+
+        describe 'logging prepare errors into log file' do
+          let(:subject) { described_class.new logger: logger, project_path: project_path, log_directory: log_directory }
+          let(:error_msg) { "Prepare command \"sh commands\" failed with:\nfailure error msg\n\n" }
+
+          before do
+            expect(SharedHelpers::Cmd).to receive(:run).with('sh commands').and_return(['output', 'failure error msg', cmd_failure])
+          end
+
+          it 'logs package manager failure messages in log file for package manager' do
+            expect { subject.prepare }.to raise_error(prepare_error)
+            expect(File.read(log_file_path)).to eq error_msg
+          end
+
+          it 'discards previous logs and starts logging new logs' do
+            FileUtils.mkdir_p log_directory
+            File.open(log_file_path, 'w') { |f| f.write('previous logs') }
+            expect { subject.prepare }.to raise_error(prepare_error)
+            expect(File.read(log_file_path)).to eq error_msg
+          end
+
+          it 'uses default package_management_command as the file name' do
+            expect { subject.prepare }.to raise_error(prepare_error)
+            expect(File.exist?(log_file_path))
+          end
+
+          it 'uses defined package_management_command as the file name' do
+            allow(subject).to receive(:package_management_command).and_return('foobar')
+            expect { subject.prepare }.to raise_error(prepare_error)
+            expect(File.exist?(File.join(log_directory, 'prepare_foobar.log'))).to be_truthy
+          end
+
+          context 'when prepare command has whitespaces and slashes in it' do
+            before do
+              allow(subject).to receive(:package_management_command)
+                                          .and_return('mono /usr/local/bin/nuget.exe')
+            end
+
+            let(:log_file_path) { File.join(log_directory, 'prepare_mono_usrlocalbinnuget.exe.log') }
+
+            it 'creates log files with whitespaces replaced by underscores and slashes removed' do
+              expect { subject.prepare }.to raise_error(prepare_error)
+              expect(File.read(log_file_path)).to eq error_msg
+            end
+          end
+        end
+
+        context 'with prepare_no_fail' do
+          let(:subject) { described_class.new logger: logger, prepare_no_fail: true, project_path: project_path, log_directory: log_directory }
+
+          it 'should not throw an error when prepare_command fails' do
+            expect(SharedHelpers::Cmd).to receive(:run).with('sh commands')
+                                            .and_return(['output', 'failure error msg', cmd_failure])
+            expect { subject.prepare }.to_not raise_error
+          end
         end
       end
 
@@ -163,8 +170,25 @@ module LicenseFinder
           expect(logger).to receive(:debug).with(described_class, 'no prepare step provided', color: :red)
           expect(SharedHelpers::Cmd).to_not receive(:run).with('sh commands')
 
-          subject = described_class.new logger: logger
+          subject = described_class.new(logger: logger)
           subject.prepare
+        end
+      end
+    end
+
+    describe '.project_root?' do
+      let(:subject) { described_class.new }
+
+      context 'when active? is true' do
+        it 'returns true' do
+          allow(subject).to receive(:active?).and_return(true)
+          expect(subject.project_root?).to be_truthy
+        end
+      end
+      context 'when active? is false' do
+        it 'returns false' do
+          allow(subject).to receive(:active?).and_return(false)
+          expect(subject.project_root?).to be_falsey
         end
       end
     end

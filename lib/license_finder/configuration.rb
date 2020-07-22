@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'platform'
 
 module LicenseFinder
@@ -16,7 +18,51 @@ module LicenseFinder
 
     def valid_project_path?
       return project_path.exist? if get(:project_path)
+
       true
+    end
+
+    def elixir_command
+      get(:elixir_command) || 'elixir'
+    end
+
+    def mix_command
+      get(:mix_command) || 'mix'
+    end
+
+    def merge(other_hash)
+      dup_with other_hash
+    end
+
+    def rebar_deps_dir
+      path = get(:rebar_deps_dir) || '_build/default/lib'
+      project_path.join(path).expand_path
+    end
+
+    def mix_deps_dir
+      path = get(:mix_deps_dir) || 'deps'
+      project_path.join(path).expand_path
+    end
+
+    def decisions_file_path
+      path = File.join(project_path, 'doc/dependency_decisions.yml') unless project_path.nil?
+      path = get(:decisions_file) unless get(:decisions_file).nil?
+      path = 'doc/dependency_decisions.yml' if path.nil?
+      Pathname.new(path)
+    end
+
+    def log_directory
+      path = get(:log_directory) || 'lf_logs'
+
+      if (aggregate_paths || recursive) && project_path == ''
+        Pathname(path).expand_path
+      else
+        project_path.join(path).expand_path
+      end
+    end
+
+    def project_path
+      Pathname(path_prefix).expand_path
     end
 
     def logger_mode
@@ -47,39 +93,24 @@ module LicenseFinder
       get(:pip_requirements_path)
     end
 
+    def python_version
+      get(:python_version)
+    end
+
     def rebar_command
       get(:rebar_command)
     end
 
-    def mix_command
-      get(:mix_command) || 'mix'
-    end
-
-    def merge(other_hash)
-      dup_with other_hash
-    end
-
-    def rebar_deps_dir
-      path = get(:rebar_deps_dir) || 'deps'
-      project_path.join(path).expand_path
-    end
-
-    def mix_deps_dir
-      path = get(:mix_deps_dir) || 'deps'
-      project_path.join(path).expand_path
-    end
-
-    def decisions_file_path
-      path = get(:decisions_file) || 'doc/dependency_decisions.yml'
-      project_path.join(path).expand_path
-    end
-
-    def project_path
-      Pathname(path_prefix).expand_path
-    end
-
     def prepare
-      get(:prepare)
+      get(:prepare) || prepare_no_fail
+    end
+
+    def prepare_no_fail
+      get(:prepare_no_fail)
+    end
+
+    def write_headers
+      get(:write_headers)
     end
 
     def save_file
@@ -101,6 +132,14 @@ module LicenseFinder
     def columns
       get(:columns)
     end
+
+    def sbt_include_groups
+      get(:sbt_include_groups)
+    end
+
+    attr_writer :strict_matching
+
+    attr_reader :strict_matching
 
     protected
 

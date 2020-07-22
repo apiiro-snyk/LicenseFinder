@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 module LicenseFinder
   class ProjectFinder
-    def initialize(main_project_path)
-      @package_managers = LicenseFinder::PackageManager.package_managers
+    def initialize(main_project_path, strict_matching = false)
+      @package_managers = LicenseFinder::Scanner::PACKAGE_MANAGERS
+      @strict_matching = strict_matching
       @main_project_path = main_project_path
     end
 
@@ -20,7 +23,6 @@ module LicenseFinder
       is_active_project = active_project?(potential_project_path)
       return unless is_active_project
 
-      remove_nested(potential_project_path, all_paths)
       potential_project_path.to_s
     end
 
@@ -32,6 +34,7 @@ module LicenseFinder
 
     def remove_nested(pathname, paths)
       return if project_root?(pathname)
+
       paths.reject! { |path| nested_path?(path, pathname) }
     end
 
@@ -40,9 +43,11 @@ module LicenseFinder
     end
 
     def active_project?(project_path)
-      active_project = @package_managers.map do |pm|
-        pm.new(project_path: project_path).active?
+      active_project = @package_managers.map do |pm_class|
+        pm = pm_class.new(project_path: project_path, strict_matching: @strict_matching)
+        pm.active?
       end
+
       active_project.include?(true)
     end
 

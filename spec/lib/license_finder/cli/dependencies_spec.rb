@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module LicenseFinder
@@ -22,18 +24,16 @@ module LicenseFinder
           expect(subject.decisions.licenses_of('js_dep')).to eq [License.find_by_name('MIT')].to_set
         end
 
-        it 'does not require a version' do
-          silence_stdout do
+        it 'does require a version' do
+          expect do
             subject.add('js_dep', 'MIT')
-          end
-          package = subject.decisions.packages.first
-          expect(package.version).to be_nil
+          end.to raise_error(ArgumentError)
         end
 
         it 'has an --approve option to approve the added dependency' do
           subject.options = { approve: true, who: 'Julian', why: 'We really need this' }
           silence_stdout do
-            subject.add('js_dep', 'MIT')
+            subject.add('js_dep', 'MIT', '1.2.3')
           end
           approval = subject.decisions.approval_of('js_dep')
           expect(approval.who).to eq 'Julian'
@@ -43,19 +43,28 @@ module LicenseFinder
         it 'has an --approve option to approve the added dependency & version combination' do
           subject.options = { approve: true, who: 'Julian', why: 'We really need this', version: '1.0.0.RELEASE' }
           silence_stdout do
-            subject.add('js_dep', 'MIT')
+            subject.add('js_dep', 'MIT', '1.2.3')
           end
           approval = subject.decisions.approval_of('js_dep', '1.0.0.RELEASE')
           expect(approval.who).to eq 'Julian'
           expect(approval.why).to eq 'We really need this'
           expect(approval.safe_versions).to eq ['1.0.0.RELEASE']
         end
+
+        it 'has a --homepage=HOMEPAGE option to add a homepage to the added dependency' do
+          subject.options = { homepage: 'some-homepage' }
+          silence_stdout do
+            subject.add('js_dep', 'MIT', '1.2.3')
+          end
+          homepage = subject.decisions.homepage_of('js_dep')
+          expect(homepage).to eq 'some-homepage'
+        end
       end
 
       describe 'remove' do
         it 'removes a dependency' do
           silence_stdout do
-            subject.add('js_dep', 'MIT')
+            subject.add('js_dep', 'MIT', '1.2.3')
             subject.remove('js_dep')
           end
           expect(subject.decisions.packages).to be_empty

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module LicenseFinder
@@ -6,11 +8,13 @@ module LicenseFinder
     let(:configuration) { LicenseFinder::Configuration.new(options, {}) }
     let(:license_finder) { described_class.new(configuration) }
     let(:pathname) { Pathname.pwd + Pathname(options[:project_path]) }
+    let(:scanner) { Scanner.new }
 
     before do
       allow(logger).to receive(LicenseFinder::Logger::MODE_INFO)
       allow(logger).to receive(LicenseFinder::Logger::MODE_DEBUG)
       allow(Logger).to receive(:new).and_return(logger)
+      allow(Scanner).to receive(:new).and_return(scanner)
     end
 
     describe '#unapproved' do
@@ -37,11 +41,14 @@ module LicenseFinder
           maven_include_groups: nil,
           maven_options: nil,
           pip_requirements_path: nil,
+          python_version: nil,
           rebar_command: configuration.rebar_command,
           rebar_deps_dir: configuration.rebar_deps_dir,
           mix_command: configuration.mix_command,
           mix_deps_dir: configuration.mix_deps_dir,
-          prepare: configuration.prepare
+          prepare: configuration.prepare,
+          prepare_no_fail: nil,
+          sbt_include_groups: nil
         }
       end
 
@@ -53,7 +60,7 @@ module LicenseFinder
       end
 
       it 'passes through options when fetching current packages' do
-        expect(PackageManager).to receive(:active_packages).with(package_options).and_return([])
+        expect(scanner).to receive(:active_packages).and_return([])
         license_finder.unapproved
       end
     end

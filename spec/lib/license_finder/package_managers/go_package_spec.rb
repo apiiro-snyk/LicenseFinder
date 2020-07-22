@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module LicenseFinder
@@ -28,6 +30,17 @@ module LicenseFinder
       let(:options) { super().merge('InstallPath' => '/Go/vendor/src/github.com/pivotal/spec_name') }
 
       its(:install_path) { should == '/Go/vendor/src/github.com/pivotal/spec_name' }
+    end
+
+    context 'when the version includes +incompatible string' do
+      let(:options) do
+        {
+          'ImportPath' => 'github.com/pivotal/spec_name',
+          'Rev' => '4326c3435332d06b410a2672d28d1343c4059fae+incompatible'
+        }
+      end
+
+      its(:version) { should == '4326c3435332d06b410a2672d28d1343c4059fae' }
     end
   end
 end

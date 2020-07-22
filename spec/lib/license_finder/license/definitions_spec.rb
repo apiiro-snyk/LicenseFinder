@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe LicenseFinder::License::Definitions do
@@ -19,6 +21,12 @@ end
 describe LicenseFinder::License, 'BSD' do
   it 'should be recognized' do |_e|
     expect(described_class.find_by_name('BSD').url).to be
+  end
+end
+
+describe LicenseFinder::License, 'cc01' do
+  it 'should be recognized' do |_e|
+    expect(described_class.find_by_name('CC0 1.0').url).to be
   end
 end
 
@@ -146,6 +154,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   end
 end
 
+describe LicenseFinder::License, 'OFL' do
+  it 'should be recognized' do
+    expect(described_class.find_by_name('OFL').url).to be
+  end
+end
+
 describe LicenseFinder::License, 'Python' do
   it 'should be recognized' do
     expect(described_class.find_by_name('Python').url).to be
@@ -173,5 +187,21 @@ end
 describe LicenseFinder::License, 'SimplifiedBSD' do
   it 'should be recognized' do
     expect(described_class.find_by_name('SimplifiedBSD').url).to be
+  end
+end
+
+describe LicenseFinder::License, 'WTFPL' do
+  it 'should be recognized' do
+    expect(described_class.find_by_name('WTFPL').name).to eq('WTFPL')
+    expect(described_class.find_by_name('WTFPL').url).to be
+    expect(described_class.find_by_name('WTFPL V2').url).to be
+    expect(described_class.find_by_name('Do What The Fuck You Want To Public License').url).to be
+  end
+end
+
+describe LicenseFinder::License, '0BSD' do
+  it 'should be recognized' do
+    expect(described_class.find_by_name('0BSD').url).to be
+    expect(described_class.find_by_name('Zero-Clause BSD').url).to be
   end
 end

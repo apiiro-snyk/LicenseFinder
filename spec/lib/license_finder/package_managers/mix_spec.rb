@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module LicenseFinder
@@ -45,9 +47,10 @@ module LicenseFinder
 
       it 'lists all the current packages' do
         allow(SharedHelpers::Cmd).to receive(:run).with('mix deps').and_return([output, '', cmd_success])
+        allow(SharedHelpers::Cmd).to receive(:run).with(/elixir -e/).and_return(['[["fs", "MIT"]]', '', cmd_success])
 
         current_packages = subject.current_packages
-        expect(current_packages.map(&:name)).to eq(['fs', 'gettext', 'uuid-refknown', 'uuid'])
+        expect(current_packages.map(&:name)).to eq(%w[fs gettext uuid-refknown uuid])
         expect(current_packages.map(&:version)).to eq(['0.9.2', '0.12.1', '15bd767', 'the dependency is not available, run "mix deps.get"'])
         expect(current_packages.map(&:install_path)).to eq([Pathname('deps/fs'), Pathname('deps/gettext'), Pathname('deps/uuid-refknown'), Pathname('deps/uuid')])
       end
@@ -62,7 +65,7 @@ module LicenseFinder
         allow(SharedHelpers::Cmd).to receive(:run).with(/mixfoo/).and_return([output, '', cmd_success])
 
         current_packages = mix.current_packages
-        expect(current_packages.map(&:name)).to eq(['fs', 'gettext', 'uuid-refknown', 'uuid'])
+        expect(current_packages.map(&:name)).to eq(%w[fs gettext uuid-refknown uuid])
       end
 
       it 'uses custom mix_deps_dir, if provided' do
@@ -72,11 +75,20 @@ module LicenseFinder
         current_packages = mix.current_packages
         expect(current_packages.map(&:install_path)).to eq([Pathname('foo/fs'), Pathname('foo/gettext'), Pathname('foo/uuid-refknown'), Pathname('foo/uuid')])
       end
+
+      context 'when there are no packages' do
+        it 'should return empty array of packages' do
+          allow(SharedHelpers::Cmd).to receive(:run).with('mix deps').and_return(['', '', cmd_success])
+
+          current_packages = subject.current_packages
+          expect(current_packages).to eq([])
+        end
+      end
     end
 
     describe '.prepare_command' do
       it 'returns the correct prepare method' do
-        expect(described_class.prepare_command).to eq('mix deps.get')
+        expect(subject.prepare_command).to eq('mix deps.get')
       end
     end
   end

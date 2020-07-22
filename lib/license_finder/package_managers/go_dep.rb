@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 
 module LicenseFinder
@@ -8,27 +10,19 @@ module LicenseFinder
     end
 
     def current_packages
-      json = JSON.parse(detected_package_path.read)
+      packages_from_json(detected_package_path.read)
       # godep includes subpackages as a seperate dependency, we can de-dup that
+    end
 
-      dependencies_info = json['Deps'].map do |dep_json|
-        {
-          'Homepage' => homepage(dep_json),
-          'ImportPath' => import_path(dep_json),
-          'InstallPath' => dep_json['InstallPath'],
-          'Rev' => dep_json['Rev']
-        }
-      end
-      dependencies_info.uniq.map do |info|
-        GoPackage.from_dependency(info, install_prefix, @full_version)
-      end
+    def self.takes_priority_over
+      Go15VendorExperiment
     end
 
     def possible_package_paths
       [project_path.join('Godeps/Godeps.json')]
     end
 
-    def self.package_management_command
+    def package_management_command
       'godep'
     end
 
@@ -47,15 +41,33 @@ module LicenseFinder
       project_path.join('Godeps/_workspace')
     end
 
-    def homepage(dependency_json)
-      import_path dependency_json
-    end
+    def packages_from_json(json_string)
+      all_packages = JSON.parse(json_string)['Deps']
 
-    def import_path(dependency_json)
-      import_path = dependency_json['ImportPath']
-      return import_path unless import_path.include?('github.com')
+      return [] unless all_packages
 
-      import_path.split('/')[0..2].join('/')
+      packages_grouped_by_revision = all_packages.group_by { |package| package['Rev'] }
+      result = []
+
+      packages_grouped_by_revision.each do |_sha, packages_in_group|
+        all_paths_in_group = packages_in_group.map { |p| p['ImportPath'] }
+        common_paths = CommonPathHelper.longest_common_paths(all_paths_in_group)
+        package_info = packages_in_group.first
+
+        common_paths.each do |common_path|
+          dependency_info_hash = {
+            'Homepage' => common_path,
+            'ImportPath' => common_path,
+            'InstallPath' => package_info['InstallPath'],
+            'Rev' => package_info['Rev']
+          }
+
+          result << GoPackage.from_dependency(dependency_info_hash,
+                                              install_prefix,
+                                              @full_version)
+        end
+      end
+      result
     end
   end
 end

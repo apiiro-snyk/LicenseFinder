@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require_relative '../../support/feature_helper'
 
 describe 'Manually Approved Dependencies' do
   # As a developer
-  # I want to approve dependencies without whitelisting their licenses
+  # I want to approve dependencies without permitting their licenses
   # So that my business can track individual dependencies which it has approved
 
   let(:developer) { LicenseFinder::TestingDSL::User.new }

@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 module LicenseFinder
   class DecisionApplier
     def initialize(options)
       @decisions = options.fetch(:decisions)
-      @all_packages = decisions.packages + options.fetch(:packages)
+      @all_packages = options.fetch(:packages).to_set + @decisions.packages.to_set
       @acknowledged = apply_decisions
     end
 
@@ -12,8 +14,8 @@ module LicenseFinder
       acknowledged.reject(&:approved?)
     end
 
-    def blacklisted
-      acknowledged.select(&:blacklisted?)
+    def restricted
+      acknowledged.select(&:restricted?)
     end
 
     def any_packages?
@@ -26,9 +28,14 @@ module LicenseFinder
 
     def apply_decisions
       all_packages
-        .map { |package| with_decided_licenses(package) }
-        .map { |package| with_approval(package) }
         .reject { |package| ignored?(package) }
+        .map do |package|
+          with_homepage(
+            with_approval(
+              with_decided_licenses(package)
+            )
+          )
+        end
     end
 
     def ignored?(package)
@@ -43,13 +50,19 @@ module LicenseFinder
       package
     end
 
+    def with_homepage(package)
+      homepage = decisions.homepage_of(package.name)
+      package.homepage = homepage if homepage
+      package
+    end
+
     def with_approval(package)
-      if package.licenses.all? { |license| decisions.blacklisted?(license) }
-        package.blacklisted!
+      if package.licenses.all? { |license| decisions.restricted?(license) }
+        package.restricted!
       elsif decisions.approved?(package.name, package.version)
         package.approved_manually!(decisions.approval_of(package.name, package.version))
-      elsif package.licenses.any? { |license| decisions.whitelisted?(license) }
-        package.whitelisted!
+      elsif package.licenses.any? { |license| decisions.permitted?(license) }
+        package.permitted!
       end
       package
     end

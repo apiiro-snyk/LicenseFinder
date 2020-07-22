@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 require 'xmlsimple'
-require_relative 'maven_dependency_finder'
+require 'license_finder/package_utils/maven_dependency_finder'
 
 module LicenseFinder
   class Maven < PackageManager
@@ -42,10 +44,22 @@ module LicenseFinder
       File.exist?(File.join(project_path, wrapper)) ? wrapper : maven
     end
 
-    private
-
     def possible_package_paths
       [project_path.join('pom.xml')]
+    end
+
+    def project_root?
+      active? && root_module?
+    end
+
+    private
+
+    def root_module?
+      command = "#{package_management_command} help:evaluate -Dexpression=project.parent -q -DforceStdout"
+      stdout, _stderr, status = Dir.chdir(project_path) { Cmd.run(command) }
+      raise "Command '#{command}' failed to execute in #{project_path}: #{stdout}" unless status.success?
+
+      stdout.include?('null object or invalid expression')
     end
   end
 end

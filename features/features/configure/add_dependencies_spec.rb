@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../support/feature_helper'
 
 describe 'Manually Added Dependencies' do
@@ -23,8 +25,15 @@ describe 'Manually Added Dependencies' do
     expect(developer).not_to be_seeing 'manual_dep'
   end
 
+  specify 'can be simultaneously homepaged' do
+    developer.execute_command 'license_finder dependencies add manual Whatever 1.2 --homepage=some-homepage'
+
+    developer.run_license_finder(nil, '--columns="name" "homepage"')
+    expect(developer).to be_seeing 'manual, some-homepage'
+  end
+
   specify 'appear in the CLI' do
-    developer.execute_command 'license_finder dependencies add manual_dep Whatever'
+    developer.execute_command 'license_finder dependencies add manual_dep Whatever 1.2'
     expect(developer).to be_seeing 'manual_dep'
 
     developer.execute_command 'license_finder dependencies list'

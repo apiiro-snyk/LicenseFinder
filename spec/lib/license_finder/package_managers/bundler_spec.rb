@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module LicenseFinder
@@ -25,14 +27,28 @@ module LicenseFinder
     end
 
     describe '.prepare_command' do
-      it 'returns the correct prepare method' do
-        expect(described_class.prepare_command).to eq('bundle install')
+      before do
+        allow(SecureRandom).to receive(:uuid).and_return('some-path')
+      end
+
+      context 'with ignored groups' do
+        subject { Bundler.new(ignored_groups: Set.new(%w[dev test]), project_path: Pathname.new('.'), definition: definition) }
+        it 'returns the correct prepare method' do
+          expect(subject.prepare_command).to eq('bundle install --without dev test --path lf-bundler-gems-some-path')
+        end
+      end
+
+      context 'without ignored groups' do
+        subject { Bundler.new(ignored_groups: Set.new, project_path: Pathname.new('.'), definition: definition) }
+        it 'returns the correct prepare method' do
+          expect(subject.prepare_command).to eq('bundle install  --path lf-bundler-gems-some-path')
+        end
       end
     end
 
     describe '.current_packages' do
       subject do
-        Bundler.new(ignored_groups: %w[dev test], definition: definition).current_packages
+        Bundler.new(ignored_groups: Set.new(%w[dev test]), project_path: Pathname.new('.'), definition: definition).current_packages
       end
 
       it 'should have 2 dependencies' do
@@ -51,6 +67,33 @@ module LicenseFinder
           gem1 = subject.first
 
           expect(gem1.children).to eq(['gem2'])
+        end
+      end
+    end
+
+    describe 'specifying a custom gemfile' do
+      let(:custom_gemfile) { fixture_path('custom_gemfile') }
+
+      subject do
+        Bundler.new(project_path: custom_gemfile, ignored_groups: Set.new(%w[dev test]))
+      end
+
+      it 'defaults to Gemfile/Gemfile.lock' do
+        expect(::Bundler::Definition).to receive(:build).with(custom_gemfile.join('Gemfile'), custom_gemfile.join('Gemfile.lock'), nil).and_return(definition)
+        expect(subject.current_packages).to_not be_empty
+      end
+
+      context 'with the BUNDLE_GEMFILE environment variable set' do
+        around do |example|
+          old_var = ENV['BUNDLE_GEMFILE']
+          ENV['BUNDLE_GEMFILE'] = 'Gemfile-other'
+          example.run
+          ENV['BUNDLE_GEMFILE'] = old_var
+        end
+
+        it 'uses the BUNDLE_GEMFILE variable to identify the gemfile' do
+          expect(::Bundler::Definition).to receive(:build).with(custom_gemfile.join('Gemfile-other'), custom_gemfile.join('Gemfile-other.lock'), nil).and_return(definition)
+          expect(subject.current_packages).to_not be_empty
         end
       end
     end

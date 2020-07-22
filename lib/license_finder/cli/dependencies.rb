@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module LicenseFinder
   module CLI
     class Dependencies < Base
@@ -5,13 +7,16 @@ module LicenseFinder
       include MakesDecisions
 
       method_option :approve, type: :boolean, desc: 'Approve the added dependency'
+      method_option :homepage, type: :string, desc: 'Source of the added dependency'
+
       auditable
-      desc 'add DEPENDENCY LICENSE [VERSION] [--approve]', 'Add a dependency that is not managed by a package manager, optionally approving it at the same time'
-      def add(name, license, version = nil)
+      desc 'add DEPENDENCY LICENSE VERSION [--homepage=HOMEPAGE] [--approve]', 'Add a dependency that is not managed by a package manager, optionally approving it at the same time'
+      def add(name, license, version)
         modifying do
           decisions
             .add_package(name, version, txn)
             .license(name, license, txn)
+          decisions.homepage(name, options[:homepage], txn) if options[:homepage]
           decisions.approve(name, txn) if options[:approve]
         end
         if options[:approve]

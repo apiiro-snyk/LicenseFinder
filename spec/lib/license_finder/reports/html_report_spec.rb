@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'capybara'
 
@@ -66,8 +68,8 @@ module LicenseFinder
         end
       end
 
-      context 'when the dependency is whitelisted' do
-        before { dependency.whitelisted! }
+      context 'when the dependency is permitted' do
+        before { dependency.permitted! }
 
         it 'should show approved dependencies without action items' do
           is_expected.to have_selector '.approved'

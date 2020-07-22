@@ -3,17 +3,19 @@ require 'csv'
 module LicenseFinder
   class CsvReport < Report
     COMMA_SEP = ','.freeze
-    AVAILABLE_COLUMNS = %w[name version authors licenses license_links approved summary description homepage install_path package_manager groups].freeze
+    NEWLINE_SEP = '\@NL'.freeze
+    AVAILABLE_COLUMNS = %w[name version authors licenses license_links approved summary description homepage install_path package_manager groups texts notice].freeze
     MISSING_DEPENDENCY_TEXT = 'This package is not installed. Please install to determine licenses.'.freeze
 
     def initialize(dependencies, options)
       super
       options[:columns] ||= %w[name version licenses]
       @columns = Array(options[:columns]) & self.class::AVAILABLE_COLUMNS
+      @write_headers = options[:write_headers] || false
     end
 
     def to_s
-      CSV.generate(col_sep: self.class::COMMA_SEP) do |csv|
+      CSV.generate(col_sep: self.class::COMMA_SEP, headers: @columns, write_headers: @write_headers) do |csv|
         sorted_dependencies.each do |s|
           csv << format_dependency(s)
         end
@@ -26,6 +28,16 @@ module LicenseFinder
       @columns.map do |column|
         send("format_#{column}", dep)
       end
+    end
+
+    def format_texts(dep)
+      dep.license_files.map { |file| file.text.split(/[\n\r]+/).join(self.class::NEWLINE_SEP) }
+          .join(self.class::NEWLINE_SEP).force_encoding("ISO-8859-1").encode("UTF-8")
+    end
+
+    def format_notice(dep)
+      dep.notice_files.map { |file| file.text.split(/[\n\r]+/).join(self.class::NEWLINE_SEP) }
+          .join(self.class::NEWLINE_SEP).force_encoding("ISO-8859-1").encode("UTF-8")
     end
 
     def format_name(dep)

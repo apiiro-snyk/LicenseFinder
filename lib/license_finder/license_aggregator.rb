@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module LicenseFinder
   class LicenseAggregator
     def initialize(config, aggregate_paths)
@@ -20,25 +22,30 @@ module LicenseFinder
       aggregate_packages.reject(&:approved?)
     end
 
-    def blacklisted
-      aggregate_packages.select(&:blacklisted?)
+    def restricted
+      aggregate_packages.select(&:restricted?)
     end
 
     private
 
     def finders
       return @finders unless @finders.nil?
+
       @finders = if @aggregate_paths.nil?
                    [LicenseFinder::Core.new(@config)]
                  else
                    @aggregate_paths.map do |path|
-                     LicenseFinder::Core.new(@config.merge(project_path: path))
+                     # Passing file paths as values instead of allowing them to evaluate in config
+                     LicenseFinder::Core.new(@config.merge(project_path: path,
+                                                           log_directory: @config.log_directory || @config.project_path,
+                                                           decisions_file: @config.decisions_file_path))
                    end
                  end
     end
 
     def aggregate_packages
       return @packages unless @packages.nil?
+
       all_packages = finders.flat_map do |finder|
         finder.prepare_projects if @config.prepare
         finder.acknowledged.map { |dep| MergedPackage.new(dep, [finder.project_path]) }

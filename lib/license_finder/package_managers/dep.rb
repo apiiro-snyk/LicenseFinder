@@ -1,4 +1,6 @@
-require 'toml'
+# frozen_string_literal: true
+
+require 'tomlrb'
 
 module LicenseFinder
   class Dep < PackageManager
@@ -7,8 +9,11 @@ module LicenseFinder
     end
 
     def current_packages
-      toml = TOML.load_file(detected_package_path)
+      toml = Tomlrb.load_file(detected_package_path)
       projects = toml['projects']
+
+      return [] if projects.nil?
+
       projects.map do |project|
         GoPackage.from_dependency({
                                     'ImportPath' => project['name'],
@@ -22,11 +27,11 @@ module LicenseFinder
       Go15VendorExperiment
     end
 
-    def self.prepare_command
-      'dep ensure'
+    def prepare_command
+      'dep ensure -vendor-only'
     end
 
-    def self.package_management_command
+    def package_management_command
       'dep'
     end
   end

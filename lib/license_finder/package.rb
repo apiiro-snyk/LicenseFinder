@@ -1,5 +1,8 @@
-require 'license_finder/packages/licensing'
-require 'license_finder/packages/license_files'
+# frozen_string_literal: true
+
+require 'license_finder/package_utils/licensing'
+require 'license_finder/package_utils/license_files'
+require 'license_finder/package_utils/notice_files'
 
 module LicenseFinder
   # Super-class that adapts data from different package management
@@ -40,13 +43,14 @@ module LicenseFinder
       @summary = options[:summary] || ''
       @description = options[:description] || ''
       @homepage = options[:homepage] || ''
+      @package_url = options[:package_url].to_s
       @children = options[:children] || []
       @parents = Set.new # will be figured out later by package manager
       @groups = options[:groups] || []
 
       ## APPROVAL
-      @whitelisted = false
-      @blacklisted = false
+      @permitted = false
+      @restricted = false
       @manual_approval = nil
 
       ## LICENSING
@@ -58,8 +62,10 @@ module LicenseFinder
 
     ## DESCRIPTION
 
+    attr_accessor :homepage, :package_url
+
     attr_reader :name, :version, :authors,
-                :summary, :description, :homepage,
+                :summary, :description,
                 :children, :parents, :groups
 
     ## APPROVAL
@@ -73,26 +79,26 @@ module LicenseFinder
     end
 
     def approved?
-      # Question: is `!blacklisted?` redundant?
-      # DecisionApplier does not call `whitelisted!` or `approved_manually!`
-      # if a Package has been blacklisted.
-      (approved_manually? || whitelisted?) && !blacklisted?
+      # Question: is `!restricted?` redundant?
+      # DecisionApplier does not call `permitted!` or `approved_manually!`
+      # if a Package has been restricted.
+      (approved_manually? || permitted?) && !restricted?
     end
 
-    def whitelisted!
-      @whitelisted = true
+    def permitted!
+      @permitted = true
     end
 
-    def whitelisted?
-      @whitelisted
+    def permitted?
+      @permitted
     end
 
-    def blacklisted!
-      @blacklisted = true
+    def restricted!
+      @restricted = true
     end
 
-    def blacklisted?
-      @blacklisted
+    def restricted?
+      @restricted
     end
 
     attr_reader :manual_approval
@@ -102,6 +108,7 @@ module LicenseFinder
     def <=>(other)
       eq_name = name <=> other.name
       return eq_name unless eq_name.zero?
+
       version <=> other.version
     end
 
@@ -119,7 +126,7 @@ module LicenseFinder
     attr_reader :install_path # checked in tests, otherwise private
 
     def licenses
-      @licenses ||= activations.map(&:license).to_set
+      @licenses ||= activations.map(&:license).sort_by(&:name).to_set
     end
 
     def activations
@@ -146,6 +153,10 @@ module LicenseFinder
       LicenseFiles.find(install_path, logger: logger)
     end
 
+    def notice_files
+      NoticeFiles.find(install_path, logger: logger)
+    end
+
     def package_manager
       'unknown'
     end
@@ -168,17 +179,22 @@ module LicenseFinder
 end
 
 require 'license_finder/packages/manual_package'
-require 'license_finder/package_managers/bower_package'
-require 'license_finder/package_managers/go_package'
-require 'license_finder/package_managers/bundler_package'
-require 'license_finder/package_managers/pip_package'
-require 'license_finder/package_managers/npm_package'
-require 'license_finder/package_managers/maven_package'
-require 'license_finder/package_managers/gradle_package'
-require 'license_finder/package_managers/cocoa_pods_package'
-require 'license_finder/package_managers/carthage_package'
-require 'license_finder/package_managers/rebar_package'
-require 'license_finder/package_managers/mix_package'
-require 'license_finder/package_managers/merged_package'
-require 'license_finder/package_managers/nuget_package'
-require 'license_finder/package_managers/conan_package'
+require 'license_finder/packages/bower_package'
+require 'license_finder/packages/go_package'
+require 'license_finder/packages/bundler_package'
+require 'license_finder/packages/pip_package'
+require 'license_finder/packages/npm_package'
+require 'license_finder/packages/maven_package'
+require 'license_finder/packages/gradle_package'
+require 'license_finder/packages/cocoa_pods_package'
+require 'license_finder/packages/carthage_package'
+require 'license_finder/packages/rebar_package'
+require 'license_finder/packages/erlangmk_package'
+require 'license_finder/packages/mix_package'
+require 'license_finder/packages/merged_package'
+require 'license_finder/packages/nuget_package'
+require 'license_finder/packages/conan_package'
+require 'license_finder/packages/yarn_package'
+require 'license_finder/packages/sbt_package'
+require 'license_finder/packages/cargo_package'
+require 'license_finder/packages/composer_package'
