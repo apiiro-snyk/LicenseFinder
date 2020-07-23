@@ -40,7 +40,7 @@ function rails_apps() {
 }
 
 function other_apps() {
-  others="bain daas dollar jubilee reflex"
+  others="bain dollar"
   apps=''
   for app in $others ; do
     apps="${GR_HOME}/${app} ${apps}"
