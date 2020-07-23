@@ -227,6 +227,10 @@ main() {
   done
 }
 
-where_was_i="${PWD}"
-main
-cd "${where_was_i}"
+# Credit to https://stackoverflow.com/questions/2683279/how-to-detect-if-a-script-is-being-sourced
+(return 0 2>/dev/null) && sourced=1 || sourced=0
+if [ $sourced == 0 ] ; then
+  where_was_i="${PWD}"
+  main
+  cd "${where_was_i}"
+fi
