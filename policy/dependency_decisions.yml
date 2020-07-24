@@ -779,3 +779,39 @@
       staying conformant
     :versions: []
     :when: 2018-01-23 22:01:21.197872489 Z
+- - :approve
+  - power_assert
+  - :who: rick@grnds.com
+    :why: Allows use of the Ruby license
+    :versions: []
+    :when: 2020-07-23 23:56:22.933802197 Z
+- - :whitelist
+  - LGPL
+  - :who: rick@grnds.com
+    :why: Our work is a 'work that uses the library' by Clause 5
+    :versions: []
+    :when: 2020-07-24 00:19:40.218307698 Z
+- - :approve
+  - fhir_dstu2_models
+  - :who: rick@grnds.com
+    :why: Github README includes Apache 2.0 license
+    :versions: []
+    :when: 2020-07-24 00:44:54.870930923 Z
+- - :approve
+  - fhir_models
+  - :who: rick@grnds.com
+    :why: Github README includes Apache 2.0 license
+    :versions: []
+    :when: 2020-07-24 00:45:22.965299279 Z
+- - :approve
+  - grnds-auth0
+  - :who: rick@grnds.com
+    :why: ":copy: Grand Rounds, Inc. 2019-2020. All rights reserved."
+    :versions: []
+    :when: 2020-07-24 00:45:35.207611116 Z
+- - :approve
+  - unf
+  - :who: rick@grnds.com
+    :why: License is actually 2-clause BSD, the L is a typo in the the gemspec, AFAICT
+    :versions: []
+    :when: 2020-07-24 00:45:51.670271084 Z
