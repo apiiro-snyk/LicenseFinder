@@ -1,0 +1,50 @@
+actioncable,5.0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,WebSocket framework for Rails.,http://rubyonrails.org
+actionmailer,5.0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"Email composition, delivery, and receiving framework (part of Rails).",http://rubyonrails.org
+actionpack,5.0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,Web-flow and rendering framework putting the VC in MVC (part of Rails).,http://rubyonrails.org
+actionview,5.0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,Rendering framework putting the V in MVC (part of Rails).,http://rubyonrails.org
+activejob,5.0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,Job framework with pluggable queues.,http://rubyonrails.org
+activemodel,5.0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,A toolkit for building modeling frameworks (part of Rails).,http://rubyonrails.org
+activerecord,5.0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,Object-relational mapper framework (part of Rails).,http://rubyonrails.org
+activesupport,5.0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,A toolkit of support libraries and Ruby core extensions extracted from the Rails framework.,http://rubyonrails.org
+arel,7.1.4,MIT,Approved,http://opensource.org/licenses/mit-license,Arel Really Exasperates Logicians  Arel is a SQL AST manager for Ruby,https://github.com/rails/arel
+aws-sdk,2.0.42,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby,http://github.com/aws/aws-sdk-ruby
+aws-sdk-core,2.0.42,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Core,http://github.com/aws/aws-sdk-ruby
+aws-sdk-resources,2.0.42,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Resources,http://github.com/aws/aws-sdk-ruby
+builder,3.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,Builders for MarkUp.,http://onestepback.org
+bundler,1.16.0,MIT,Approved,http://opensource.org/licenses/mit-license,The best way to manage your application's dependencies,http://bundler.io
+concurrent-ruby,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"Modern concurrency tools for Ruby. Inspired by Erlang, Clojure, Scala, Haskell, F#, C#, Java, and classic concurrency patterns.",http://www.concurrent-ruby.com
+erubis,2.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,a fast and extensible eRuby implementation which supports multi-language,http://www.kuwata-lab.com/erubis/
+ffi,1.9.14,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,Ruby FFI,http://wiki.github.com/ffi/ffi
+globalid,0.3.7,MIT,Approved,http://opensource.org/licenses/mit-license,Refer to any model with a URI: gid://app/class/id,http://www.rubyonrails.org
+i18n,0.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,New wave Internationalization support for Ruby,http://github.com/svenfuchs/i18n
+jmespath,1.2.4,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,JMESPath - Ruby Edition,http://github.com/trevorrowe/jmespath.rb
+json_pure,1.8.3,ruby,Approved,http://www.ruby-lang.org/en/LICENSE.txt,JSON Implementation for Ruby,http://flori.github.com/json
+listen,3.1.5,MIT,Approved,http://opensource.org/licenses/mit-license,Listen to file modifications,https://github.com/guard/listen
+loofah,2.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,Loofah is a general library for manipulating and transforming HTML/XML documents and fragments,https://github.com/flavorjones/loofah
+mail,2.6.4,MIT,Approved,http://opensource.org/licenses/mit-license,"Mail provides a nice Ruby DSL for making, sending and reading emails.",https://github.com/mikel/mail
+method_source,0.8.2,MIT,Approved,http://opensource.org/licenses/mit-license,retrieve the sourcecode for a method,http://banisterfiend.wordpress.com
+mime-types,3.1,MIT,Approved,http://opensource.org/licenses/mit-license,The mime-types library provides a library and registry for information about MIME content type definitions,https://github.com/mime-types/ruby-mime-types/
+mime-types-data,3.2016.0521,MIT,Approved,http://opensource.org/licenses/mit-license,mime-types-data provides a registry for information about MIME media type definitions,https://github.com/mime-types/mime-types-data/
+mini_portile2,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,Simplistic port-like solution for developers,http://github.com/flavorjones/mini_portile
+minitest,5.10.1,MIT,Approved,http://opensource.org/licenses/mit-license,"minitest provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking",https://github.com/seattlerb/minitest
+multi_json,1.12.1,MIT,Approved,http://opensource.org/licenses/mit-license,A common interface to multiple JSON libraries.,http://github.com/intridea/multi_json
+mysql2,0.4.5,MIT,Approved,http://opensource.org/licenses/mit-license,"A simple, fast Mysql library for Ruby, binding to libmysql",http://github.com/brianmario/mysql2
+nio4r,1.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,NIO provides a high performance selector API for monitoring IO objects,https://github.com/celluloid/nio4r
+nokogiri,1.6.8.1,MIT,Approved,http://opensource.org/licenses/mit-license,"Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser",http://nokogiri.org
+rack,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,a modular Ruby webserver interface,http://rack.github.io/
+rack-test,0.6.3,MIT,Approved,http://opensource.org/licenses/mit-license,Simple testing API built on Rack,http://github.com/brynary/rack-test
+rails,5.0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,Full-stack web application framework.,http://rubyonrails.org
+rails-dom-testing,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,Dom and Selector assertions for Rails applications,https://github.com/rails/rails-dom-testing
+rails-html-sanitizer,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,This gem is responsible to sanitize HTML fragments in Rails applications.,https://github.com/rails/rails-html-sanitizer
+railties,5.0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"Tools for creating, working with, and running Rails applications.",http://rubyonrails.org
+rake,11.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,Rake is a Make-like program implemented in Ruby,https://github.com/ruby/rake
+rb-fsevent,0.9.8,MIT,Approved,http://opensource.org/licenses/mit-license,Very simple & usable FSEvents API,http://rubygems.org/gems/rb-fsevent
+rb-inotify,0.9.7,MIT,Approved,http://opensource.org/licenses/mit-license,"A Ruby wrapper for Linux's inotify, using FFI",http://github.com/nex3/rb-inotify
+ruby_dep,1.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,Extracts supported Ruby versions from Travis file,https://github.com/e2/ruby_dep
+sprockets,3.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,Rack-based asset packaging system,https://github.com/rails/sprockets
+sprockets-rails,3.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,Sprockets Rails integration,https://github.com/rails/sprockets-rails
+thor,0.19.4,MIT,Approved,http://opensource.org/licenses/mit-license,Thor is a toolkit for building powerful command-line interfaces.,http://whatisthor.com/
+thread_safe,0.3.5,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,A collection of data structures and utilities to make thread-safe programming in Ruby easier,https://github.com/ruby-concurrency/thread_safe
+tzinfo,1.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,Daylight savings aware timezone library,http://tzinfo.github.io
+websocket-driver,0.6.4,MIT,Approved,http://opensource.org/licenses/mit-license,WebSocket protocol handler with pluggable I/O,http://github.com/faye/websocket-driver-ruby
+websocket-extensions,0.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,Generic extension manager for WebSocket connections,http://github.com/faye/websocket-extensions-ruby

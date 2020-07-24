@@ -1,0 +1,133 @@
+actionmailer,3.2.22.5,MIT,Approved,http://opensource.org/licenses/mit-license,"Email composition, delivery, and receiving framework (part of Rails).",http://www.rubyonrails.org
+actionpack,3.2.22.5,MIT,Approved,http://opensource.org/licenses/mit-license,Web-flow and rendering framework putting the VC in MVC (part of Rails).,http://www.rubyonrails.org
+activemodel,3.2.22.5,MIT,Approved,http://opensource.org/licenses/mit-license,A toolkit for building modeling frameworks (part of Rails).,http://www.rubyonrails.org
+activerecord,3.2.22.5,MIT,Approved,http://opensource.org/licenses/mit-license,Object-relational mapper framework (part of Rails).,http://www.rubyonrails.org
+activeresource,3.2.22.5,MIT,Approved,http://opensource.org/licenses/mit-license,REST modeling framework (part of Rails).,http://www.rubyonrails.org
+activesupport,3.2.22.5,MIT,Approved,http://opensource.org/licenses/mit-license,A toolkit of support libraries and Ruby core extensions extracted from the Rails framework.,http://www.rubyonrails.org
+arel,3.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,Arel is a SQL AST manager for Ruby,http://github.com/rails/arel
+aws-record,1.0.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS Record library for Amazon DynamoDB,http://github.com/aws/aws-sdk-ruby-record
+aws-sdk,2.10.38,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby,http://github.com/aws/aws-sdk-ruby
+aws-sdk-core,2.10.38,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Core,http://github.com/aws/aws-sdk-ruby
+aws-sdk-resources,2.10.38,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Resources,http://github.com/aws/aws-sdk-ruby
+aws-sdk-v1,1.67.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby V1,http://aws.amazon.com/sdkforruby
+aws-sigv4,1.0.2,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS Signature Version 4 library.,http://github.com/aws/aws-sdk-ruby
+axiom-types,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,Abstract types for logic programming,https://github.com/dkubb/axiom-types
+blankslate,2.1.2.4,MIT,Approved,http://opensource.org/licenses/mit-license,BlankSlate extracted from Builder.,http://github.com/masover/blankslate
+builder,3.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,Builders for MarkUp.,http://onestepback.org
+bundler,1.16.0,MIT,Approved,http://opensource.org/licenses/mit-license,The best way to manage your application's dependencies,http://bundler.io
+capistrano,2.15.7,MIT,Approved,http://opensource.org/licenses/mit-license,Capistrano - Welcome to easy deployment with Ruby over SSH,http://github.com/capistrano/capistrano
+capistrano-deploytags,0.9.2,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"Add dated, environment-specific tags to your git repo at each deployment.",http://github.com/mydrive/capistrano-deploytags
+capistrano-ext,1.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,Useful task libraries and methods for Capistrano,http://www.capify.org
+coercible,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"Powerful, flexible and configurable coercion library. And nothing more.",https://github.com/solnic/coercible
+coffee-rails,3.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,Coffee Script adapter for the Rails asset pipeline.,""
+coffee-script,2.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,Ruby CoffeeScript Compiler,http://github.com/josh/ruby-coffee-script
+coffee-script-source,1.10.0,MIT,Approved,http://opensource.org/licenses/mit-license,The CoffeeScript Compiler,http://jashkenas.github.com/coffee-script/
+descendants_tracker,0.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,Module that adds descendant tracking to a class,https://github.com/dkubb/descendants_tracker
+diff-lcs,1.2.5,"MIT,Perl Artistic v2,GNU GPL v2",Approved,"http://opensource.org/licenses/mit-license,,",Diff::LCS computes the difference between two Enumerable sequences using the McIlroy-Hunt longest common subsequence (LCS) algorithm,http://diff-lcs.rubyforge.org/
+dynasore,0.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,Rails-ish configuration and add-ons for aws-record,https://github.com/ConsultingMD/dynasore
+enumerable-lazy,0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"provides `lazy' version of map, select, etc. by `.lazy.map'",https://github.com/yhara/enumerable-lazy
+equalizer,0.0.11,MIT,Approved,http://opensource.org/licenses/mit-license,"Module to define equality, equivalence and inspection methods",https://github.com/dkubb/equalizer
+erubis,2.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,a fast and extensible eRuby implementation which supports multi-language,http://www.kuwata-lab.com/erubis/
+excon,0.73.0,MIT,Approved,http://opensource.org/licenses/mit-license,"speed, persistence, http(s)",https://github.com/excon/excon
+execjs,2.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,Run JavaScript code from Ruby,https://github.com/rails/execjs
+facter,2.5.7,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"Facter, a system inventory tool",https://github.com/puppetlabs/facter
+file-tail,1.2.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,File::Tail for Ruby,http://github.com/flori/file-tail
+fog-aws,3.6.3,MIT,Approved,http://opensource.org/licenses/mit-license,Module for the 'fog' gem to support Amazon Web Services.,https://github.com/fog/fog-aws
+fog-core,2.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,Shared classes and tests for fog providers and services.,https://github.com/fog/fog-core
+fog-json,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,JSON parsing for fog providers,http://github.com/fog/fog-json
+fog-xml,0.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,XML parsing for fog providers,https://github.com/fog/fog-xml
+formatador,0.2.5,MIT,Approved,http://opensource.org/licenses/mit-license,Ruby STDOUT text formatting,http://github.com/geemus/formatador
+git,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"Ruby/Git is a Ruby library that can be used to create, read and manipulate Git repositories by wrapping system calls to the git binary.",http://github.com/schacon/ruby-git
+grape,0.16.2,MIT,Approved,http://opensource.org/licenses/mit-license,A simple Ruby framework for building REST-like APIs.,https://github.com/ruby-grape/grape
+grnds-deploy,1.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,Deployment Gem for Grnds applications.  Ensures proper integration with security endpoints.,https://github.com/ConsultingMD/grnds-status
+grnds-imperial,0.0.2,Copyright 2015 Grand Rounds Inc. All rights reserved.,Approved,"",Metric endpoint checks for load-balancer heartbeats.,https://github.com/ConsultingMD/imperial
+grnds-secrets,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,GrandRounds gem to retrieve secret.,https://github.com/ConsultingMD/grnds-secrets
+grnds-service,0.8.0,Copyright 2015-2016 Grand Rounds Inc. All rights reserved.,Approved,"",Microservice communication channel configuration and wrappers for those channels,https://github.com/ConsultingMD/grnds-service
+grnds-service-messaging,0.2.0,Copyright 2015-2017 Grand Rounds Inc. All rights reserved,Approved,"",Inter-service message-oriented transport services for Grand Rounds (Rails) applications,https://github.com/ConsultingMD/grnds-messaging
+grnds-sso,1.1,MIT,Approved,http://opensource.org/licenses/mit-license,SSO for Grand Rounds,""
+grnds-status,0.0.2,Copyright 2015 Grand Rounds Inc. All rights reserved.,Approved,"",Status endpoint checks for load-balancer heartbeats.,https://github.com/ConsultingMD/grnds-status
+haml,4.0.7,MIT,Approved,http://opensource.org/licenses/mit-license,"An elegant, structured (X)HTML/XML templating engine.",http://haml.info/
+hashie,3.4.6,MIT,Approved,http://opensource.org/licenses/mit-license,Your friendly neighborhood hash library.,https://github.com/intridea/hashie
+heroic-sns,1.1.3,Apache,Approved,"",Lightweight Rack middleware for AWS SNS endpoints,https://github.com/benzado/heroic-sns
+highline,1.7.8,ruby,Approved,http://www.ruby-lang.org/en/LICENSE.txt,HighLine is a high-level command-line IO library.,https://github.com/JEG2/highline
+hike,1.2.3,MIT,Approved,http://opensource.org/licenses/mit-license,Find files in a set of paths,http://github.com/sstephenson/hike
+httparty,0.16.2,MIT,Approved,http://opensource.org/licenses/mit-license,"Makes http fun! Also, makes consuming restful web services dead easy.",http://jnunemaker.github.com/httparty
+i18n,0.8.6,MIT,Approved,http://opensource.org/licenses/mit-license,New wave Internationalization support for Ruby,http://github.com/svenfuchs/i18n
+ice_nine,0.11.2,MIT,Approved,http://opensource.org/licenses/mit-license,Deep Freeze Ruby Objects,https://github.com/dkubb/ice_nine
+ipaddress,0.8.3,MIT,Approved,http://opensource.org/licenses/mit-license,IPv4/IPv6 address manipulation library,https://github.com/bluemonk/ipaddress
+jmespath,1.3.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,JMESPath - Ruby Edition,http://github.com/trevorrowe/jmespath.rb
+journey,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,Journey is a router,http://github.com/rails/journey
+jquery-rails,3.1.4,MIT,Approved,http://opensource.org/licenses/mit-license,Use jQuery with Rails 3+,http://rubygems.org/gems/jquery-rails
+json,1.8.6,ruby,Approved,http://www.ruby-lang.org/en/LICENSE.txt,JSON Implementation for Ruby,http://flori.github.com/json
+kgio,2.10.0,LGPL-2.1+,Approved,"","kinder, gentler I/O for Ruby",http://bogomips.org/kgio/
+libv8,3.16.14.19,MIT,Approved,http://opensource.org/licenses/mit-license,Distribution of the V8 JavaScript engine,http://github.com/cowboyd/libv8
+little-plugger,1.1.4,MIT,Approved,http://opensource.org/licenses/mit-license,LittlePlugger is a module that provides Gem based plugin management.,http://gemcutter.org/gems/little-plugger
+logging,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,A flexible and extendable logging library for Ruby,http://rubygems.org/gems/logging
+mail,2.5.5,MIT,Approved,http://opensource.org/licenses/mit-license,"Mail provides a nice Ruby DSL for making, sending and reading emails.",http://github.com/mikel/mail
+mime-types,1.25.1,"MIT,Artistic 2.0,GPL-2",Approved,"http://opensource.org/licenses/mit-license,,",This library allows for the identification of a file's likely MIME content type,http://mime-types.rubyforge.org/
+mini_portile2,2.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,Simplistic port-like solution for developers,http://github.com/flavorjones/mini_portile
+multi_json,1.12.2,MIT,Approved,http://opensource.org/licenses/mit-license,A common interface to multiple JSON libraries.,http://github.com/intridea/multi_json
+multi_xml,0.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,A generic swappable back-end for XML parsing,https://github.com/sferik/multi_xml
+mustermann19,0.4.4,MIT,Approved,http://opensource.org/licenses/mit-license,use patterns like regular expressions,https://github.com/namusyaka/mustermann
+mysql2,0.3.21,MIT,Approved,http://opensource.org/licenses/mit-license,"A simple, fast Mysql library for Ruby, binding to libmysql",http://github.com/brianmario/mysql2
+net-scp,1.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,A pure Ruby implementation of the SCP client protocol,https://github.com/net-ssh/net-scp
+net-sftp,2.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,A pure Ruby implementation of the SFTP client protocol,https://github.com/net-ssh/net-sftp
+net-ssh,3.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,Net::SSH: a pure-Ruby implementation of the SSH2 client protocol.,https://github.com/net-ssh/net-ssh
+net-ssh-gateway,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,A simple library to assist in establishing tunneled Net::SSH connections,https://github.com/net-ssh/net-scp
+newrelic_rpm,5.4.0.347,New Relic,Approved,"",New Relic Ruby Agent,https://github.com/newrelic/rpm
+nokogiri,1.8.1,MIT,Approved,http://opensource.org/licenses/mit-license,"Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser",http://nokogiri.org
+oj,2.17.1,MIT,Approved,http://opensource.org/licenses/mit-license,A fast JSON parser and serializer.,http://www.ohler.com/oj
+parslet,1.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,Parser construction library with great error reporting in Ruby.,http://kschiess.github.com/parslet
+polyglot,0.3.5,MIT,Approved,http://opensource.org/licenses/mit-license,Augment 'require' to load non-Ruby file types,http://github.com/cjheath/polyglot
+power_assert,1.1.3,"2-clause BSDL,Ruby's",Approved,",",Power Assert for Ruby,https://github.com/k-tsj/power_assert
+rack,1.4.7,MIT,Approved,http://opensource.org/licenses/mit-license,a modular Ruby webserver interface,http://rack.github.com/
+rack-accept,0.4.5,MIT,Approved,http://opensource.org/licenses/mit-license,HTTP Accept* for Ruby/Rack,http://mjijackson.github.com/rack-accept
+rack-cache,1.7.1,MIT,Approved,http://opensource.org/licenses/mit-license,HTTP Caching for Rack,https://github.com/rtomayko/rack-cache
+rack-protection,1.5.3,MIT,Approved,http://opensource.org/licenses/mit-license,You should use protection!,http://github.com/rkh/rack-protection
+rack-ssl,1.3.4,MIT,Approved,http://opensource.org/licenses/mit-license,Force SSL/TLS in your app.,https://github.com/josh/rack-ssl
+rack-test,0.6.3,MIT,Approved,http://opensource.org/licenses/mit-license,Simple testing API built on Rack,http://github.com/brynary/rack-test
+rails,3.2.22.5,MIT,Approved,http://opensource.org/licenses/mit-license,Full-stack web application framework.,http://www.rubyonrails.org
+railties,3.2.22.5,MIT,Approved,http://opensource.org/licenses/mit-license,"Tools for creating, working with, and running Rails applications.",http://www.rubyonrails.org
+raindrops,0.16.0,LGPL-2.1+,Approved,"",real-time stats for preforking Rack servers,http://raindrops.bogomips.org/
+rake,12.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,Rake is a Make-like program implemented in Ruby,https://github.com/ruby/rake
+rdoc,3.12.2,rdoc,Approved,"",RDoc produces HTML and command-line documentation for Ruby projects,http://docs.seattlerb.org/rdoc
+ref,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"Library that implements weak, soft, and strong references in Ruby.",http://github.com/ruby-concurrency/ref
+rollbar,2.13.2,MIT,Approved,http://opensource.org/licenses/mit-license,Reports exceptions to Rollbar,https://rollbar.com
+rspec-core,3.5.1,MIT,Approved,http://opensource.org/licenses/mit-license,rspec-core-3.5.1,https://github.com/rspec/rspec-core
+rspec-expectations,3.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,rspec-expectations-3.5.0,https://github.com/rspec/rspec-expectations
+rspec-mocks,3.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,rspec-mocks-3.5.0,https://github.com/rspec/rspec-mocks
+rspec-rails,3.5.1,MIT,Approved,http://opensource.org/licenses/mit-license,RSpec for Rails,https://github.com/rspec/rspec-rails
+rspec-support,3.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,rspec-support-3.5.0,https://github.com/rspec/rspec-support
+ruby2ruby,1.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,ruby2ruby provides a means of generating pure ruby code easily from RubyParser compatible Sexps,https://github.com/seattlerb/ruby2ruby
+ruby_parser,2.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,ruby parser written in pure ruby,https://github.com/seattlerb/ruby_parser
+ruby-prof,0.15.9,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,Fast Ruby profiler,https://github.com/ruby-prof/ruby-prof
+rufus-cloche,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,an open source Ruby workflow engine,http://ruote.rubyforge.org
+rufus-dollar,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,${xxx} substitutions,http://rufus.rubyforge.org
+rufus-json,1.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,"One interface to various JSON ruby libs, with a preference for yajl.",http://github.com/jmettraux/rufus-json
+rufus-mnemo,1.2.3,MIT,Approved,http://opensource.org/licenses/mit-license,Turning (large) integers into japanese sounding words and vice versa,http://github.com/jmettraux/rufus-mnemo/
+rufus-scheduler,3.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"job scheduler for Ruby (at, cron, in and every jobs)",http://github.com/jmettraux/rufus-scheduler
+rufus-treechecker,1.0.8,MIT,Approved,http://opensource.org/licenses/mit-license,"tests strings of Ruby code for unauthorized patterns (exit, eval, ...)",http://rufus.rubyforge.org
+ruote,2.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,an open source Ruby workflow engine,http://ruote.rubyforge.org
+ruote-kit,2.3.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"ruote workflow engine, wrapped in a loving rack embrace",http://github.com/kennethkalmer/ruote-kit
+ruote-sequel,2.3.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,Sequel storage for ruote (a workflow engine),http://ruote.rubyforge.org
+rvm-capistrano,1.5.6,MIT,Approved,http://opensource.org/licenses/mit-license,RVM / Capistrano Integration Gem,https://github.com/wayneeseguin/rvm-capistrano
+sass,3.4.22,MIT,Approved,http://opensource.org/licenses/mit-license,A powerful but elegant CSS compiler that makes CSS fun again.,http://sass-lang.com/
+sass-rails,3.2.6,MIT,Approved,http://opensource.org/licenses/mit-license,Sass adapter for the Rails asset pipeline.,""
+sequel,4.36.0,MIT,Approved,http://opensource.org/licenses/mit-license,The Database Toolkit for Ruby,http://sequel.jeremyevans.net
+sexp_processor,3.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,sexp_processor branches from ParseTree bringing all the generic sexp processing tools with it,https://github.com/seattlerb/sexp_processor
+sinatra,1.4.6,MIT,Approved,http://opensource.org/licenses/mit-license,Classy web-development dressed in a DSL,http://www.sinatrarb.com/
+sinatra-respond_to,0.9.0,MIT,Approved,http://opensource.org/licenses/mit-license,A respond_to style Rails block for baked-in web service support in Sinatra,http://github.com/cehoffman/sinatra-respond_to
+sourcify,0.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,Workarounds before ruby-core officially supports Proc#to_source (& friends),http://github.com/ngty/sourcify
+sprockets,2.2.3,MIT,Approved,http://opensource.org/licenses/mit-license,Rack-based asset packaging system,http://getsprockets.org/
+test-unit,3.2.9,"ruby,PSFL",Approved,"http://www.ruby-lang.org/en/LICENSE.txt,",An xUnit family unit testing framework for Ruby.,http://test-unit.github.io/
+therubyracer,0.12.2,MIT,Approved,http://opensource.org/licenses/mit-license,Embed the V8 JavaScript interpreter into Ruby,http://github.com/cowboyd/therubyracer
+thor,0.20.0,MIT,Approved,http://opensource.org/licenses/mit-license,Thor is a toolkit for building powerful command-line interfaces.,http://whatisthor.com/
+thread_safe,0.3.5,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,A collection of data structures and utilities to make thread-safe programming in Ruby easier,https://github.com/ruby-concurrency/thread_safe
+tilt,1.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,Generic interface to multiple Ruby template engines,http://github.com/rtomayko/tilt/
+tins,1.16.3,MIT,Approved,http://opensource.org/licenses/mit-license,Useful stuff.,https://github.com/flori/tins
+treetop,1.4.15,MIT,Approved,http://opensource.org/licenses/mit-license,A Ruby-based text parsing and interpretation DSL,https://github.com/cjheath/treetop
+tzinfo,0.3.53,MIT,Approved,http://opensource.org/licenses/mit-license,Daylight-savings aware timezone library,http://tzinfo.github.io
+uglifier,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,Ruby wrapper for UglifyJS JavaScript compressor,http://github.com/lautis/uglifier
+unicorn,5.1.0,"GPL-2.0+,Ruby-1.8",Approved,",",Rack HTTP server for fast clients and Unix,http://unicorn.bogomips.org/
+vault,0.13.0,Mozilla Public License 2.0,Approved,https://www.mozilla.org/media/MPL/2.0/index.815ca599c9df.txt,Vault is a Ruby API client for interacting with a Vault server.,https://github.com/hashicorp/vault-ruby
+virtus,1.0.5,MIT,Approved,http://opensource.org/licenses/mit-license,Attributes on Steroids for Plain Old Ruby Objects,https://github.com/solnic/virtus
