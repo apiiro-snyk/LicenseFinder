@@ -785,7 +785,7 @@
     :why: Allows use of the Ruby license
     :versions: []
     :when: 2020-07-23 23:56:22.933802197 Z
-- - :whitelist
+- - :permit
   - LGPL
   - :who: rick@grnds.com
     :why: Our work is a 'work that uses the library' by Clause 5
