@@ -1,0 +1,12 @@
+Checked in 'GEM_PATH=/usr/local/rvm/gems/ruby-2.4.1:/usr/local/rvm/gems/ruby-2.4.1@global', execute `gem env` for more information
+	from /usr/local/rvm/gems/ruby-2.4.1/bin/license_finder:23:in `<main>'
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/site_ruby/2.4.0/rubygems.rb:309:in `activate_bin_path'
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/site_ruby/2.4.0/rubygems.rb:309:in `synchronize'
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/site_ruby/2.4.0/rubygems.rb:310:in `block in activate_bin_path'
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/site_ruby/2.4.0/rubygems/specification.rb:1435:in `activate'
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/site_ruby/2.4.0/rubygems/specification.rb:1453:in `activate_dependencies'
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/site_ruby/2.4.0/rubygems/specification.rb:1453:in `each'
+	from /usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/site_ruby/2.4.0/rubygems/specification.rb:1464:in `block in activate_dependencies'
+To install the missing version, run `gem install bundler:2.1.4`
+To update to the lastest version installed on your system, run `bundle update --bundler`.
+/usr/local/rvm/rubies/ruby-2.4.1/lib/ruby/site_ruby/2.4.0/rubygems/dependency.rb:312:in `to_specs': Could not find 'bundler' (2.1.4) required by your /scan/Gemfile.lock. (Gem::MissingSpecVersionError)
