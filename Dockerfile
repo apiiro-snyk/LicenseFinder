@@ -108,10 +108,4 @@ RUN apt-get install -y  libmagic-dev
 COPY . /LicenseFinder
 RUN bash -lc "cd /LicenseFinder && bundle install -j4 && rake install"
 
-# Add other rubies necessary for our repos
-RUN rvm install ruby 2.5.1
-RUN rvm install ruby 2.5.3
-RUN rvm install ruby 2.6.0
-RUN rvm install ruby 2.6.3
-
 WORKDIR /
