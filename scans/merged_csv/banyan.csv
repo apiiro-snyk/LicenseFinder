@@ -1,0 +1,1563 @@
+abab,1.0.4,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/jsdom/abab#readme
+abbrev,1.1.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+accepts,1.3.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+acorn,3.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/ternjs/acorn
+acorn,4.0.13,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/ternjs/acorn
+acorn,5.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/acornjs/acorn
+acorn,5.7.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/acornjs/acorn
+acorn-dynamic-import,2.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/kesne/acorn-dynamic-import
+acorn-globals,4.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+acorn-jsx,3.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/RReverser/acorn-jsx
+actionmailer,4.2.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,"Email composition, delivery, and receiving framework (part of Rails).",http://www.rubyonrails.org
+actionpack,4.2.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,Web-flow and rendering framework putting the VC in MVC (part of Rails).,http://www.rubyonrails.org
+actionview,4.2.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,Rendering framework putting the V in MVC (part of Rails).,http://www.rubyonrails.org
+activejob,4.2.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,Job framework with pluggable queues.,http://www.rubyonrails.org
+activemodel,4.2.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,A toolkit for building modeling frameworks (part of Rails).,http://www.rubyonrails.org
+activerecord,4.2.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,Object-relational mapper framework (part of Rails).,http://www.rubyonrails.org
+activesupport,4.2.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,A toolkit of support libraries and Ruby core extensions extracted from the Rails framework.,http://www.rubyonrails.org
+addressable,2.4.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,URI Implementation,https://github.com/sporkmonger/addressable
+ahoy_matey,1.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"Simple, powerful visit tracking for Rails",https://github.com/ankane/ahoy
+ajv,4.11.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/epoberezkin/ajv
+ajv,5.5.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/epoberezkin/ajv
+ajv,6.10.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/epoberezkin/ajv
+ajv-keywords,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/epoberezkin/ajv-keywords#readme
+ajv-keywords,3.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/epoberezkin/ajv-keywords#readme
+align-text,0.1.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/align-text
+amdefine,1.0.1,BSD-3-Clause OR MIT,Approved,"","",http://github.com/jrburke/amdefine
+andand,1.3.3,MIT,Approved,http://opensource.org/licenses/mit-license,The Maybe Monad in idiomatic Ruby,http://github.com/raganwald/andand/
+ansi-escapes,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+ansi-html,0.0.7,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://github.com/Tjatse/ansi-html
+ansi-regex,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+ansi-regex,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+ansi-styles,2.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+ansi-styles,3.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+anymatch,1.3.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/es128/anymatch
+anymatch,2.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/micromatch/anymatch
+apollo-cache,1.1.13,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollographql/apollo-client#readme
+apollo-cache-inmemory,1.2.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollographql/apollo-client#readme
+apollo-client,2.3.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+apollo-link,1.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollographql/apollo-link#readme
+apollo-link-batch,1.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollographql/apollo-link#readme
+apollo-link-batch-http,1.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollographql/apollo-link#readme
+apollo-link-dedup,1.0.9,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollographql/apollo-link#readme
+apollo-link-http,1.5.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollographql/apollo-link#readme
+apollo-link-http-common,0.2.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollographql/apollo-link#readme
+apollo-test-utils,0.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollostack/apollo-test-utils#readme
+apollo-utilities,1.0.17,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollographql/apollo-client#readme
+append-transform,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/jamestalmage
+aproba,1.2.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/iarna/aproba
+arel,6.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,Arel Really Exasperates Logicians  Arel is a SQL AST manager for Ruby,https://github.com/rails/arel
+are-we-there-yet,1.1.5,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/iarna/are-we-there-yet
+argparse,1.0.10,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+array-equal,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://jongleberry.com
+array-find-index,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+array-flatten,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/blakeembrey/array-flatten
+array-union,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+array-uniq,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+array-unique,0.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/array-unique
+array-unique,0.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/array-unique
+arr-diff,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/arr-diff
+arr-diff,4.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/arr-diff
+arr-flatten,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/arr-flatten
+arrify,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+arr-union,3.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/arr-union
+asap,2.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+asap,2.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+asn1,0.2.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",joyent.com
+asn1.js,4.10.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/asn1.js
+assert,1.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/browserify/commonjs-assert
+assertion-error,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://qualiancy.com
+assert-plus,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+assign-symbols,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/assign-symbols
+astral-regex,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/kevva
+async,1.5.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+async,2.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://caolan.github.io/async/
+async,2.6.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://caolan.github.io/async/
+async-each,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/paulmillr/async-each/
+async-foreach,0.1.3,MIT*,Approved,"","",http://github.com/cowboy/javascript-sync-async-foreach
+asynckit,0.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/alexindigo/asynckit#readme
+async-limiter,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+atob,2.1.2,(MIT OR Apache-2.0),Not approved,"","",https://git.coolaj86.com/coolaj86/atob.js.git
+autoprefixer-rails,6.3.6.1,MIT,Approved,http://opensource.org/licenses/mit-license,Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website.,https://github.com/ai/autoprefixer-rails
+aws4,1.8.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/mhart
+aws-eventstream,1.0.3,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS Event Stream Library,https://github.com/aws/aws-sdk-ruby
+aws-partitions,1.278.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"Provides information about AWS partitions, regions, and services.",https://github.com/aws/aws-sdk-ruby
+aws-sdk,3.0.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby,http://github.com/aws/aws-sdk-ruby
+aws-sdk-acm,1.14.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - ACM,http://github.com/aws/aws-sdk-ruby
+aws-sdk-acmpca,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - ACM-PCA,http://github.com/aws/aws-sdk-ruby
+aws-sdk-alexaforbusiness,1.15.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Alexa For Business,http://github.com/aws/aws-sdk-ruby
+aws-sdk-amplify,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amplify,http://github.com/aws/aws-sdk-ruby
+aws-sdk-apigateway,1.23.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon API Gateway,http://github.com/aws/aws-sdk-ruby
+aws-sdk-apigatewaymanagementapi,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AmazonApiGatewayManagementApi,http://github.com/aws/aws-sdk-ruby
+aws-sdk-apigatewayv2,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AmazonApiGatewayV2,http://github.com/aws/aws-sdk-ruby
+aws-sdk-applicationautoscaling,1.18.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Application Auto Scaling,http://github.com/aws/aws-sdk-ruby
+aws-sdk-applicationdiscoveryservice,1.10.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Application Discovery Service,http://github.com/aws/aws-sdk-ruby
+aws-sdk-appmesh,1.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS App Mesh,http://github.com/aws/aws-sdk-ruby
+aws-sdk-appstream,1.21.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon AppStream,http://github.com/aws/aws-sdk-ruby
+aws-sdk-appsync,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWSAppSync,http://github.com/aws/aws-sdk-ruby
+aws-sdk-athena,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Athena,http://github.com/aws/aws-sdk-ruby
+aws-sdk-autoscaling,1.13.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Auto Scaling,http://github.com/aws/aws-sdk-ruby
+aws-sdk-autoscalingplans,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Auto Scaling Plans,http://github.com/aws/aws-sdk-ruby
+aws-sdk-backup,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Backup,http://github.com/aws/aws-sdk-ruby
+aws-sdk-batch,1.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Batch,http://github.com/aws/aws-sdk-ruby
+aws-sdk-budgets,1.15.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWSBudgets,http://github.com/aws/aws-sdk-ruby
+aws-sdk-chime,1.3.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Chime,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cloud9,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Cloud9,http://github.com/aws/aws-sdk-ruby
+aws-sdk-clouddirectory,1.11.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon CloudDirectory,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cloudformation,1.14.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS CloudFormation,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cloudfront,1.11.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - CloudFront,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cloudhsm,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - CloudHSM,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cloudhsmv2,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - CloudHSM V2,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cloudsearch,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon CloudSearch,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cloudsearchdomain,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon CloudSearch Domain,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cloudtrail,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - CloudTrail,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cloudwatch,1.13.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - CloudWatch,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cloudwatchevents,1.13.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon CloudWatch Events,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cloudwatchlogs,1.13.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon CloudWatch Logs,http://github.com/aws/aws-sdk-ruby
+aws-sdk-codebuild,1.27.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS CodeBuild,http://github.com/aws/aws-sdk-ruby
+aws-sdk-codecommit,1.13.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - CodeCommit,http://github.com/aws/aws-sdk-ruby
+aws-sdk-codedeploy,1.13.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - CodeDeploy,http://github.com/aws/aws-sdk-ruby
+aws-sdk-codepipeline,1.11.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - CodePipeline,http://github.com/aws/aws-sdk-ruby
+aws-sdk-codestar,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - CodeStar,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cognitoidentity,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Cognito Identity,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cognitoidentityprovider,1.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Cognito Identity Provider,http://github.com/aws/aws-sdk-ruby
+aws-sdk-cognitosync,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Cognito Sync,http://github.com/aws/aws-sdk-ruby
+aws-sdk-comprehend,1.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Comprehend,http://github.com/aws/aws-sdk-ruby
+aws-sdk-comprehendmedical,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - ComprehendMedical,http://github.com/aws/aws-sdk-ruby
+aws-sdk-configservice,1.21.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Config Service,http://github.com/aws/aws-sdk-ruby
+aws-sdk-connect,1.10.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Connect,http://github.com/aws/aws-sdk-ruby
+aws-sdk-core,3.90.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Core,https://github.com/aws/aws-sdk-ruby
+aws-sdk-costandusagereportservice,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Cost and Usage Report Service,http://github.com/aws/aws-sdk-ruby
+aws-sdk-costexplorer,1.16.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Cost Explorer,http://github.com/aws/aws-sdk-ruby
+aws-sdk-databasemigrationservice,1.16.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Database Migration Service,http://github.com/aws/aws-sdk-ruby
+aws-sdk-datapipeline,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Data Pipeline,http://github.com/aws/aws-sdk-ruby
+aws-sdk-datasync,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - DataSync,http://github.com/aws/aws-sdk-ruby
+aws-sdk-dax,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon DAX,http://github.com/aws/aws-sdk-ruby
+aws-sdk-devicefarm,1.16.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Device Farm,http://github.com/aws/aws-sdk-ruby
+aws-sdk-directconnect,1.10.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Direct Connect,http://github.com/aws/aws-sdk-ruby
+aws-sdk-directoryservice,1.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Directory Service,http://github.com/aws/aws-sdk-ruby
+aws-sdk-dlm,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon DLM,http://github.com/aws/aws-sdk-ruby
+aws-sdk-docdb,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon DocDB,http://github.com/aws/aws-sdk-ruby
+aws-sdk-dynamodb,1.21.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - DynamoDB,http://github.com/aws/aws-sdk-ruby
+aws-sdk-dynamodbstreams,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon DynamoDB Streams,http://github.com/aws/aws-sdk-ruby
+aws-sdk-ec2,1.70.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon EC2,http://github.com/aws/aws-sdk-ruby
+aws-sdk-ecr,1.11.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon ECR,http://github.com/aws/aws-sdk-ruby
+aws-sdk-ecs,1.57.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon ECS,https://github.com/aws/aws-sdk-ruby
+aws-sdk-efs,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - EFS,http://github.com/aws/aws-sdk-ruby
+aws-sdk-eks,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon EKS,http://github.com/aws/aws-sdk-ruby
+aws-sdk-elasticache,1.10.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon ElastiCache,http://github.com/aws/aws-sdk-ruby
+aws-sdk-elasticbeanstalk,1.15.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Elastic Beanstalk,http://github.com/aws/aws-sdk-ruby
+aws-sdk-elasticloadbalancing,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Elastic Load Balancing,http://github.com/aws/aws-sdk-ruby
+aws-sdk-elasticloadbalancingv2,1.20.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Elastic Load Balancing v2,http://github.com/aws/aws-sdk-ruby
+aws-sdk-elasticsearchservice,1.16.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Elasticsearch Service,http://github.com/aws/aws-sdk-ruby
+aws-sdk-elastictranscoder,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Elastic Transcoder,http://github.com/aws/aws-sdk-ruby
+aws-sdk-emr,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon EMR,http://github.com/aws/aws-sdk-ruby
+aws-sdk-firehose,1.11.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Firehose,http://github.com/aws/aws-sdk-ruby
+aws-sdk-fms,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - FMS,http://github.com/aws/aws-sdk-ruby
+aws-sdk-fsx,1.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon FSx,http://github.com/aws/aws-sdk-ruby
+aws-sdk-gamelift,1.11.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon GameLift,http://github.com/aws/aws-sdk-ruby
+aws-sdk-glacier,1.14.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Glacier,http://github.com/aws/aws-sdk-ruby
+aws-sdk-globalaccelerator,1.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Global Accelerator,http://github.com/aws/aws-sdk-ruby
+aws-sdk-glue,1.23.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Glue,http://github.com/aws/aws-sdk-ruby
+aws-sdk-greengrass,1.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Greengrass,http://github.com/aws/aws-sdk-ruby
+aws-sdk-guardduty,1.11.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon GuardDuty,http://github.com/aws/aws-sdk-ruby
+aws-sdk-health,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWSHealth,http://github.com/aws/aws-sdk-ruby
+aws-sdk-iam,1.13.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - IAM,http://github.com/aws/aws-sdk-ruby
+aws-sdk-importexport,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Import/Export,http://github.com/aws/aws-sdk-ruby
+aws-sdk-inspector,1.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Inspector,http://github.com/aws/aws-sdk-ruby
+aws-sdk-iot,1.24.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS IoT,http://github.com/aws/aws-sdk-ruby
+aws-sdk-iot1clickdevicesservice,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS IoT 1-Click Devices Service,http://github.com/aws/aws-sdk-ruby
+aws-sdk-iot1clickprojects,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS IoT 1-Click Projects,http://github.com/aws/aws-sdk-ruby
+aws-sdk-iotanalytics,1.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS IoT Analytics,http://github.com/aws/aws-sdk-ruby
+aws-sdk-iotdataplane,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS IoT Data Plane,http://github.com/aws/aws-sdk-ruby
+aws-sdk-iotjobsdataplane,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS IoT Jobs Data Plane,http://github.com/aws/aws-sdk-ruby
+aws-sdk-kafka,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Kafka,http://github.com/aws/aws-sdk-ruby
+aws-sdk-kinesis,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Kinesis,http://github.com/aws/aws-sdk-ruby
+aws-sdk-kinesisanalytics,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Kinesis Analytics,http://github.com/aws/aws-sdk-ruby
+aws-sdk-kinesisanalyticsv2,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Kinesis Analytics V2,http://github.com/aws/aws-sdk-ruby
+aws-sdk-kinesisvideo,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Kinesis Video,http://github.com/aws/aws-sdk-ruby
+aws-sdk-kinesisvideoarchivedmedia,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Kinesis Video Archived Media,http://github.com/aws/aws-sdk-ruby
+aws-sdk-kinesisvideomedia,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Kinesis Video Media,http://github.com/aws/aws-sdk-ruby
+aws-sdk-kms,1.13.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - KMS,http://github.com/aws/aws-sdk-ruby
+aws-sdk-lambda,1.18.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Lambda,http://github.com/aws/aws-sdk-ruby
+aws-sdk-lambdapreview,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Lambda,http://github.com/aws/aws-sdk-ruby
+aws-sdk-lex,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Lex Runtime Service,http://github.com/aws/aws-sdk-ruby
+aws-sdk-lexmodelbuildingservice,1.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Lex Model Building Service,http://github.com/aws/aws-sdk-ruby
+aws-sdk-licensemanager,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS License Manager,http://github.com/aws/aws-sdk-ruby
+aws-sdk-lightsail,1.14.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Lightsail,http://github.com/aws/aws-sdk-ruby
+aws-sdk-machinelearning,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Machine Learning,http://github.com/aws/aws-sdk-ruby
+aws-sdk-macie,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Macie,http://github.com/aws/aws-sdk-ruby
+aws-sdk-marketplacecommerceanalytics,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Marketplace Commerce Analytics,http://github.com/aws/aws-sdk-ruby
+aws-sdk-marketplaceentitlementservice,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Marketplace Entitlement Service,http://github.com/aws/aws-sdk-ruby
+aws-sdk-marketplacemetering,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWSMarketplace Metering,http://github.com/aws/aws-sdk-ruby
+aws-sdk-mediaconnect,1.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS MediaConnect,http://github.com/aws/aws-sdk-ruby
+aws-sdk-mediaconvert,1.19.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - MediaConvert,http://github.com/aws/aws-sdk-ruby
+aws-sdk-medialive,1.20.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - MediaLive,http://github.com/aws/aws-sdk-ruby
+aws-sdk-mediapackage,1.11.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - MediaPackage,http://github.com/aws/aws-sdk-ruby
+aws-sdk-mediastore,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - MediaStore,http://github.com/aws/aws-sdk-ruby
+aws-sdk-mediastoredata,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - MediaStore Data,http://github.com/aws/aws-sdk-ruby
+aws-sdk-mediatailor,1.10.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - MediaTailor,http://github.com/aws/aws-sdk-ruby
+aws-sdk-migrationhub,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Migration Hub,http://github.com/aws/aws-sdk-ruby
+aws-sdk-mobile,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Mobile,http://github.com/aws/aws-sdk-ruby
+aws-sdk-mq,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AmazonMQ,http://github.com/aws/aws-sdk-ruby
+aws-sdk-mturk,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon MTurk,http://github.com/aws/aws-sdk-ruby
+aws-sdk-neptune,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Neptune,http://github.com/aws/aws-sdk-ruby
+aws-sdk-opsworks,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS OpsWorks,http://github.com/aws/aws-sdk-ruby
+aws-sdk-opsworkscm,1.11.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - OpsWorksCM,http://github.com/aws/aws-sdk-ruby
+aws-sdk-organizations,1.17.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Organizations,http://github.com/aws/aws-sdk-ruby
+aws-sdk-pi,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS PI,http://github.com/aws/aws-sdk-ruby
+aws-sdk-pinpoint,1.15.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Pinpoint,http://github.com/aws/aws-sdk-ruby
+aws-sdk-pinpointemail,1.2.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Pinpoint Email,http://github.com/aws/aws-sdk-ruby
+aws-sdk-pinpointsmsvoice,1.3.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Pinpoint SMS Voice,http://github.com/aws/aws-sdk-ruby
+aws-sdk-polly,1.15.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Polly,http://github.com/aws/aws-sdk-ruby
+aws-sdk-pricing,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Pricing,http://github.com/aws/aws-sdk-ruby
+aws-sdk-quicksight,1.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon QuickSight,http://github.com/aws/aws-sdk-ruby
+aws-sdk-ram,1.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - RAM,http://github.com/aws/aws-sdk-ruby
+aws-sdk-rds,1.43.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon RDS,http://github.com/aws/aws-sdk-ruby
+aws-sdk-rdsdataservice,1.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS RDS DataService,http://github.com/aws/aws-sdk-ruby
+aws-sdk-redshift,1.18.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Redshift,http://github.com/aws/aws-sdk-ruby
+aws-sdk-rekognition,1.18.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Rekognition,http://github.com/aws/aws-sdk-ruby
+aws-sdk-resourcegroups,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Resource Groups,http://github.com/aws/aws-sdk-ruby
+aws-sdk-resourcegroupstaggingapi,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Resource Groups Tagging API,http://github.com/aws/aws-sdk-ruby
+aws-sdk-resources,3.39.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby,http://github.com/aws/aws-sdk-ruby
+aws-sdk-robomaker,1.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - RoboMaker,http://github.com/aws/aws-sdk-ruby
+aws-sdk-route53,1.17.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Route 53,http://github.com/aws/aws-sdk-ruby
+aws-sdk-route53domains,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Route 53 Domains,http://github.com/aws/aws-sdk-ruby
+aws-sdk-route53resolver,1.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Route53Resolver,http://github.com/aws/aws-sdk-ruby
+aws-sdk-s3,1.30.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon S3,http://github.com/aws/aws-sdk-ruby
+aws-sdk-s3control,1.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS S3 Control,http://github.com/aws/aws-sdk-ruby
+aws-sdk-sagemaker,1.28.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - SageMaker,http://github.com/aws/aws-sdk-ruby
+aws-sdk-sagemakerruntime,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon SageMaker Runtime,http://github.com/aws/aws-sdk-ruby
+aws-sdk-secretsmanager,1.21.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Secrets Manager,http://github.com/aws/aws-sdk-ruby
+aws-sdk-securityhub,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS SecurityHub,http://github.com/aws/aws-sdk-ruby
+aws-sdk-serverlessapplicationrepository,1.11.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWSServerlessApplicationRepository,http://github.com/aws/aws-sdk-ruby
+aws-sdk-servicecatalog,1.16.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Service Catalog,http://github.com/aws/aws-sdk-ruby
+aws-sdk-servicediscovery,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - ServiceDiscovery,http://github.com/aws/aws-sdk-ruby
+aws-sdk-ses,1.14.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon SES,http://github.com/aws/aws-sdk-ruby
+aws-sdk-shield,1.10.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Shield,http://github.com/aws/aws-sdk-ruby
+aws-sdk-signer,1.5.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - signer,http://github.com/aws/aws-sdk-ruby
+aws-sdk-simpledb,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon SimpleDB,http://github.com/aws/aws-sdk-ruby
+aws-sdk-sms,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - SMS,http://github.com/aws/aws-sdk-ruby
+aws-sdk-snowball,1.11.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Snowball,http://github.com/aws/aws-sdk-ruby
+aws-sdk-sns,1.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon SNS,http://github.com/aws/aws-sdk-ruby
+aws-sdk-sqs,1.10.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon SQS,http://github.com/aws/aws-sdk-ruby
+aws-sdk-ssm,1.36.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon SSM,http://github.com/aws/aws-sdk-ruby
+aws-sdk-states,1.10.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS SFN,http://github.com/aws/aws-sdk-ruby
+aws-sdk-storagegateway,1.14.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Storage Gateway,http://github.com/aws/aws-sdk-ruby
+aws-sdk-support,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Support,http://github.com/aws/aws-sdk-ruby
+aws-sdk-swf,1.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon SWF,http://github.com/aws/aws-sdk-ruby
+aws-sdk-transcribeservice,1.13.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Transcribe Service,http://github.com/aws/aws-sdk-ruby
+aws-sdk-transfer,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS Transfer,http://github.com/aws/aws-sdk-ruby
+aws-sdk-translate,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon Translate,http://github.com/aws/aws-sdk-ruby
+aws-sdk-v1,1.67.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby V1,http://aws.amazon.com/sdkforruby
+aws-sdk-waf,1.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - WAF,http://github.com/aws/aws-sdk-ruby
+aws-sdk-wafregional,1.13.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - WAF Regional,http://github.com/aws/aws-sdk-ruby
+aws-sdk-workdocs,1.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon WorkDocs,http://github.com/aws/aws-sdk-ruby
+aws-sdk-worklink,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - WorkLink,http://github.com/aws/aws-sdk-ruby
+aws-sdk-workmail,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon WorkMail,http://github.com/aws/aws-sdk-ruby
+aws-sdk-workspaces,1.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - Amazon WorkSpaces,http://github.com/aws/aws-sdk-ruby
+aws-sdk-xray,1.10.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS SDK for Ruby - AWS X-Ray,http://github.com/aws/aws-sdk-ruby
+aws-sign2,0.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",http://www.futurealoof.com
+aws-sigv2,1.0.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS Signature Version 2 library.,http://github.com/aws/aws-sdk-ruby
+aws-sigv4,1.1.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,AWS Signature Version 4 library.,https://github.com/aws/aws-sdk-ruby
+babel-cli,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-code-frame,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/code-frame,7.0.0-beta.40,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/code-frame,7.0.0-beta.51,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-core,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-eslint,8.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/babel/babel-eslint
+babel-generator,6.26.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/generator,7.0.0-beta.40,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/generator,7.0.0-beta.51,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-helper-bindify-decorators,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-builder-binary-assignment-operator-visitor,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-builder-react-jsx,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-call-delegate,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-define-map,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-explode-assignable-expression,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-explode-class,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-function-name,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+@babel/helper-function-name,7.0.0-beta.40,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+@babel/helper-function-name,7.0.0-beta.51,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-get-function-arity,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+@babel/helper-get-function-arity,7.0.0-beta.40,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+@babel/helper-get-function-arity,7.0.0-beta.51,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-hoist-variables,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-optimise-call-expression,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-regex,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-remap-async-to-generator,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helper-replace-supers,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-helpers,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/helper-split-export-declaration,7.0.0-beta.51,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+@babel/highlight,7.0.0-beta.40,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/highlight,7.0.0-beta.51,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-jest,22.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-jest,23.4.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-loader,6.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/babel/babel-loader
+babel-messages,6.23.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/parser,7.0.0-beta.51,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-plugin-check-es2015-constants,6.22.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-inline-import-graphql-ast,1.3.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-istanbul,4.1.5,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/babel-plugin-istanbul#readme
+babel-plugin-istanbul,4.1.6,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/babel-plugin-istanbul#readme
+babel-plugin-jest-hoist,22.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-jest-hoist,23.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-react-transform,2.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/gaearon/babel-plugin-react-transform#readme
+babel-plugin-syntax-async-functions,6.13.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-syntax-async-generators,6.13.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-syntax-class-properties,6.13.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-syntax-decorators,6.13.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-syntax-dynamic-import,6.18.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-syntax-exponentiation-operator,6.13.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-syntax-flow,6.18.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-syntax-jsx,6.18.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-syntax-object-rest-spread,6.13.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-syntax-trailing-function-commas,6.22.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-async-generator-functions,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-async-to-generator,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-class-properties,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-decorators,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-arrow-functions,6.22.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-block-scoped-functions,6.22.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-block-scoping,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-classes,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-computed-properties,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-destructuring,6.23.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-duplicate-keys,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-for-of,6.23.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-function-name,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-literals,6.22.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-modules-amd,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-modules-commonjs,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-modules-systemjs,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-modules-umd,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-object-super,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-parameters,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-shorthand-properties,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-spread,6.22.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-sticky-regex,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-template-literals,6.22.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-typeof-symbol,6.23.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-es2015-unicode-regex,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-exponentiation-operator,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-flow-strip-types,6.22.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-object-rest-spread,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-react-display-name,6.25.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-react-jsx,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-react-jsx-self,6.22.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-react-jsx-source,6.22.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-plugin-transform-regenerator,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-regenerator
+babel-plugin-transform-strict-mode,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-polyfill,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-preset-es2015,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-preset-flow,6.23.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-preset-jest,22.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-preset-jest,23.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-preset-react,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-preset-stage-2,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-preset-stage-3,6.24.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-register,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-runtime,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+@babel/runtime,7.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+babel-template,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/template,7.0.0-beta.40,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/template,7.0.0-beta.51,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-traverse,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/traverse,7.0.0-beta.40,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/traverse,7.0.0-beta.51,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babel-types,6.26.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/types,7.0.0-beta.40,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+@babel/types,7.0.0-beta.51,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babylon,6.18.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+babylon,7.0.0-beta.40,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://babeljs.io/
+balanced-match,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/juliangruber/balanced-match
+base,0.11.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/node-base/base
+Base64,1.0.1,(Apache-2.0 OR WTFPL),Not approved,"","",Unknown
+base64-js,1.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/beatgammit/base64-js
+batch,0.6.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+bcrypt-pbkdf,1.0.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+big.js,3.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+big.js,5.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+binary-extensions,1.13.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+block-stream,0.0.9,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+bn.js,4.11.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/bn.js
+body-parser,1.18.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+boolbase,1.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/fb55/boolbase
+bootstrap_form,2.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,Rails form builder that makes it easy to style forms using Twitter Bootstrap 3+,http://github.com/bootstrap-ruby/rails-bootstrap-forms
+bootstrap-sass,3.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"bootstrap-sass is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications.",https://github.com/twbs/bootstrap-sass
+brace-expansion,1.1.11,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/juliangruber/brace-expansion
+braces,1.8.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/braces
+braces,2.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/micromatch/braces
+brorand,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/brorand
+browser,2.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,Do some browser detection with Ruby.,http://github.com/fnando/browser
+browserify-aes,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/browserify-aes
+browserify-cipher,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+browserify-des,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/browserify-des#readme
+browserify-rsa,4.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+browserify-sign,4.0.4,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+browserify-zlib,0.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/devongovett/browserify-zlib
+browser-process-hrtime,0.1.2,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",Unknown
+browser-resolve,1.11.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+bser,2.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://facebook.github.io/watchman/docs/bser.html
+buffer,4.9.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/feross/buffer
+buffer-from,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+buffer-xor,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/buffer-xor
+builder,3.2.3,MIT,Approved,http://opensource.org/licenses/mit-license,Builders for MarkUp.,http://onestepback.org
+builtin-modules,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+builtin-status-codes,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",bendrucker.me
+bundler,1.16.0,MIT,Approved,http://opensource.org/licenses/mit-license,The best way to manage your application's dependencies,http://bundler.io
+bytes,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://tjholowaychuk.com
+cache-base,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/cache-base
+caller-path,0.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+callsites,0.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+callsites,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+camelcase,1.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+camelcase,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+camelcase,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+camelcase,4.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+camelcase-keys,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+cancan,1.6.10,MIT,Approved,http://opensource.org/licenses/mit-license,Simple authorization solution for Rails.,http://github.com/ryanb/cancan
+capistrano,2.15.4,MIT,Approved,http://opensource.org/licenses/mit-license,Capistrano - Welcome to easy deployment with Ruby over SSH,http://github.com/capistrano/capistrano
+caseless,0.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",Unknown
+center-align,0.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/center-align
+chai,4.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://chaijs.com/
+chain-function,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jquense/chain-function#readme
+chalk,1.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+chalk,2.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+chalk,2.4.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+change-emitter,0.1.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/acdlite/change-emitter#readme
+chardet,0.4.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/runk/node-chardet
+check-error,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://alogicalparadox.com
+cheerio,1.0.0-rc.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",mat.io
+chokidar,1.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/paulmillr/chokidar
+chokidar,2.1.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/paulmillr/chokidar
+chownr,1.1.3,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+ci-info,1.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/watson/ci-info
+cipher-base,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/cipher-base#readme
+circular-json,0.3.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/WebReflection/circular-json
+circular-json-es6,2.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/yyx990803/circular-json-es6#readme
+class-autobind,0.1.4,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/kodefox/class-autobind#readme
+classnames,2.2.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+classnames,2.2.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+class-utils,0.3.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/class-utils
+cli-cursor,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+cliui,2.1.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+cliui,3.2.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+cliui,4.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+cli-width,2.2.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/knownasilya/cli-width
+clone-deep,2.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/clone-deep
+co,4.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+code-point-at,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+coffee-rails,4.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,CoffeeScript adapter for the Rails asset pipeline.,https://github.com/rails/coffee-rails
+coffee-script,2.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,Ruby CoffeeScript Compiler,http://github.com/josh/ruby-coffee-script
+coffee-script-source,1.10.0,MIT,Approved,http://opensource.org/licenses/mit-license,The CoffeeScript Compiler,http://jashkenas.github.com/coffee-script/
+collection-visit,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/collection-visit
+color-convert,1.9.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+color-name,1.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/dfcreative/color-name
+colors,0.5.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+combined-stream,1.0.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/felixge/node-combined-stream
+commander,2.14.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+commander,2.20.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+commondir,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://substack.net
+compare-versions,3.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/omichelsen/compare-versions#readme
+component-emitter,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+compressible,2.0.13,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+compression,1.7.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+concat-map,0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://substack.net
+concat-stream,1.6.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+concurrent-ruby,1.1.5,MIT,Approved,http://opensource.org/licenses/mit-license,"Modern concurrency tools for Ruby. Inspired by Erlang, Clojure, Scala, Haskell, F#, C#, Java, and classic concurrency patterns.",http://www.concurrent-ruby.com
+connect-history-api-fallback,1.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://bripkens.de
+connection_pool,2.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,Generic connection pool for Ruby,https://github.com/mperham/connection_pool
+console-browserify,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Raynos/console-browserify
+console-control-strings,1.1.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://re-becca.org/
+constants-browserify,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/juliangruber/constants-browserify
+contains-path,0.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/contains-path
+content-disposition,0.5.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+content-type,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+content-type-parser,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://domenic.me/
+convert-source-map,1.5.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/thlorenz/convert-source-map
+cookie,0.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+cookie-signature,1.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+copy-descriptor,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/copy-descriptor
+core-js,1.2.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+core-js,1.2.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+core-js,2.5.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+core-util-is,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://blog.izs.me/
+cosmiconfig,2.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/davidtheclark/cosmiconfig#readme
+crass,1.0.5,MIT,Approved,http://opensource.org/licenses/mit-license,CSS parser based on the CSS Syntax Level 3 spec.,https://github.com/rgrove/crass/
+create-ecdh,4.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/createECDH
+create-hash,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/createHash
+create-hmac,1.1.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/createHmac
+create-react-class,15.6.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://facebook.github.io/react/
+create-react-context,0.2.3,SEE LICENSE IN LICENSE,Not approved,"","",Unknown
+cross-spawn,3.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://indigounited.com
+cross-spawn,5.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://indigounited.com
+crypto-browserify,3.12.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/crypto-browserify
+cssesc,0.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://mths.be/cssesc
+css-loader,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack-contrib/css-loader
+cssom,0.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+css-select,1.2.0,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",Unknown
+css-selector-tokenizer,0.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/css-modules/css-selector-tokenizer
+cssstyle,0.2.37,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/chad3814/CSSStyleDeclaration
+css-what,2.1.0,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",http://feedic.com
+currently-unhandled,0.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/jamestalmage
+d,1.0.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://www.medikoo.com/
+dashdash,1.14.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://trentm.com
+date-now,0.1.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Colingo/date-now
+debounce,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+debug,2.6.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+debug,2.6.9,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+debug,3.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+debug,3.2.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+decamelize,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+decode-uri-component,0.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/SamVerschueren
+deep-eql,2.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+deep-equal,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://substack.net
+deep-equal-ident,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/fkling/deep-equal-ident
+deep-extend,0.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/unclechu/node-deep-extend
+deep-is,0.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://thlorenz.com
+deepmerge,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/KyleAMathews/deepmerge
+default-require-extensions,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/jamestalmage
+define-properties,1.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+define-property,0.2.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/define-property
+define-property,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/define-property
+define-property,2.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/define-property
+del,2.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+delayed-stream,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/felixge/node-delayed-stream
+delegates,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+depd,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+depd,1.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+deprecated-decorator,0.1.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/vilic/deprecated-decorator#readme
+des.js,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/des.js#readme
+destroy,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://jongleberry.com
+detect-indent,4.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+detect-libc,1.0.3,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",Unknown
+detect-newline,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+detect-node,2.0.3,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/iliakan/detect-node
+diff,3.5.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+diffie-hellman,5.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/diffie-hellman
+diffy,3.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,A convenient way to diff string in ruby,http://github.com/samg/diffy
+discontinuous-range,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/dtudury/discontinuous-range
+doctrine,1.5.0,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",https://github.com/eslint/doctrine
+doctrine,2.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://github.com/eslint/doctrine
+domain-browser,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/bevry/domain-browser
+domelementtype,1.1.3,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",Unknown
+domelementtype,1.3.0,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",Unknown
+domexception,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://domenic.me/
+domhandler,2.4.1,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",Unknown
+dom-helpers,3.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+dom-serializer,0.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+domutils,1.5.1,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",Unknown
+domutils,1.7.0,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",Unknown
+dom-walk,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Raynos/dom-walk
+draft-js,0.10.5,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",http://draftjs.org/
+draft-js-export-html,1.2.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/sstur/draft-js-utils/blob/master/packages/draft-js-export-html/README.md
+draft-js-export-markdown,1.2.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/sstur/draft-js-utils/blob/master/packages/draft-js-export-markdown/README.md
+draft-js-import-element,1.2.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/sstur/draft-js-utils/blob/master/packages/draft-js-import-element/README.md
+draft-js-import-html,1.2.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/sstur/draft-js-utils/blob/master/packages/draft-js-import-html/README.md
+draft-js-import-markdown,1.2.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/sstur/draft-js-utils/blob/master/packages/draft-js-import-markdown/README.md
+draft-js-utils,1.2.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/sstur/draft-js-utils/blob/master/packages/draft-js-utils/README.md
+ecc-jsbn,0.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/quartzjer/ecc-jsbn
+ee-first,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://jongleberry.com
+elliptic,6.5.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/elliptic
+emojis-list,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Kikobeats/emojis-list
+encodeurl,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+encoding,0.1.12,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+encoding,0.1.12,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+enhanced-resolve,3.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/webpack/enhanced-resolve
+entities,1.1.1,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",Unknown
+enzyme,3.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://airbnb.io/enzyme/
+enzyme-adapter-react-16,1.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://airbnb.io/enzyme/
+enzyme-adapter-utils,1.6.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://airbnb.io/enzyme/
+enzyme-matchers,4.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/FormidableLabs/enzyme-matchers/packages/enzyme-matchers#readme
+enzyme-to-json,3.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/adriantoine/enzyme-to-json#readme
+errbase,0.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,Common exception reporting for a variety of services,https://github.com/ankane/errbase
+errno,0.1.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+error-ex,1.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+erubis,2.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,a fast and extensible eRuby implementation which supports multi-language,http://www.kuwata-lab.com/erubis/
+es5-ext,0.10.51,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://www.medikoo.com/
+es5-shim,4.5.10,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/es-shims/es5-shim/
+es6-iterator,2.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://www.medikoo.com/
+es6-map,0.1.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://www.medikoo.com/
+es6-set,0.1.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://www.medikoo.com/
+es6-symbol,3.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://www.medikoo.com/
+es6-symbol,3.1.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://www.medikoo.com/
+es6-weak-map,2.0.3,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://www.medikoo.com/
+es-abstract,1.10.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://ljharb.codes
+escape-html,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+escape-string-regexp,1.0.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+escodegen,1.9.1,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",http://github.com/estools/escodegen
+escope,3.6.0,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",http://github.com/estools/escope
+eslint,4.18.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://eslint.org/
+eslint-config-prettier,2.9.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+eslint-import-resolver-node,0.2.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/benmosher/eslint-plugin-import
+eslint-loader,1.7.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+eslint-module-utils,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/benmosher/eslint-plugin-import#readme
+eslint-plugin-import,2.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/benmosher/eslint-plugin-import
+eslint-plugin-jest,21.13.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",jkimbo.com
+eslint-plugin-prettier,2.6.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/prettier/eslint-plugin-prettier#readme
+eslint-plugin-react,7.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/yannickcr/eslint-plugin-react
+eslint-scope,3.7.1,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",http://github.com/eslint/eslint-scope
+eslint-visitor-keys,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://github.com/eslint/eslint-visitor-keys#readme
+espree,3.5.4,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",https://github.com/eslint/espree
+esprima,3.1.3,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",http://esprima.org/
+esprima,4.0.0,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",http://esprima.org/
+esquery,1.0.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+esrecurse,4.2.1,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",https://github.com/estools/esrecurse
+es-to-primitive,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+estraverse,4.2.0,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",https://github.com/estools/estraverse
+estraverse,4.3.0,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",https://github.com/estools/estraverse
+esutils,2.0.2,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",https://github.com/estools/esutils
+etag,1.8.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+event-emitter,0.3.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://www.medikoo.com/
+eventemitter3,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+events,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://jeditoolkit.com
+eventsource,0.1.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/aslakhellesoy/eventsource-node
+evp_bytestokey,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/EVP_BytesToKey
+execa,0.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+execjs,2.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,Run JavaScript code from Ruby,https://github.com/rails/execjs
+exec-sh,0.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+exenv,1.2.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/JedWatson/exenv
+exit,0.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/cowboy/node-exit
+expand-brackets,0.1.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/expand-brackets
+expand-brackets,2.1.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/expand-brackets
+expand-range,1.8.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/expand-range
+expect,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+expose-loader,0.7.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack-contrib/expose-loader
+express,4.16.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://expressjs.com/
+extend,3.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://www.justmoon.net
+extend-shallow,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/extend-shallow
+extend-shallow,3.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/extend-shallow
+external-editor,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/mrkmg/node-external-editor#readme
+extglob,0.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/extglob
+extglob,2.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/micromatch/extglob
+extract-text-webpack-plugin,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/webpack/extract-text-webpack-plugin
+extsprintf,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+extsprintf,1.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+facter,2.5.7,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"Facter, a system inventory tool",https://github.com/puppetlabs/facter
+faker,4.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+fast-deep-equal,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/epoberezkin/fast-deep-equal#readme
+fast-deep-equal,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/epoberezkin/fast-deep-equal#readme
+fast-diff,1.1.2,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",Unknown
+fast-json-stable-stringify,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/epoberezkin/fast-json-stable-stringify
+fast-levenshtein,2.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://www.hiddentao.com/
+fastparse,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack/fastparse
+faye-websocket,0.10.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/faye/faye-websocket-node
+faye-websocket,0.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/faye/faye-websocket-node
+fbjs,0.8.16,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+fbjs,0.8.16,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+fbjs,0.8.17,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+fb-watchman,2.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://facebook.github.io/watchman/
+ffi,1.9.25,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,Ruby FFI,http://wiki.github.com/ffi/ffi
+figures,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+file-entry-cache,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://royriojas.com
+filename-regex,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/regexhq/filename-regex
+fileset,2.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/mklabs/node-fileset
+fill-range,2.2.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/fill-range
+fill-range,4.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/fill-range
+finalhandler,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+find-cache-dir,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/jamestalmage
+find-up,1.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+find-up,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+flat-cache,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://royriojas.com
+@flopflip/launchdarkly-adapter,2.3.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/tdeekens/flopflip#readme
+@flopflip/react,6.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/tdeekens/flopflip#readme
+@flopflip/react-broadcast,7.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/tdeekens/flopflip#readme
+@flopflip/types,1.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/tdeekens/flopflip#readme
+font-awesome-rails,4.6.3.0,"MIT,SIL Open Font License",Approved,"http://opensource.org/licenses/mit-license,",an asset gemification of the font-awesome icon font library,https://github.com/bokmann/font-awesome-rails
+foreach,2.0.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+forever-agent,0.6.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",http://www.futurealoof.com
+for-in,0.1.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/for-in
+for-in,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/for-in
+form-data,2.3.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://debuggable.com/
+for-own,0.1.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/for-own
+for-own,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/for-own
+forwarded,0.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+fragment-cache,0.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/fragment-cache
+fresh,0.5.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://tjholowaychuk.com
+fsevents,1.2.9,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+fs-extra,0.30.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jprichardson/node-fs-extra
+fs-minipass,1.2.7,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/npm/fs-minipass#readme
+fs-readdir-recursive,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://jongleberry.com
+fs.realpath,1.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+fstream,1.0.12,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+functional-red-black-tree,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+function-bind,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Raynos/function-bind
+function.prototype.name,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+gauge,2.7.4,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/iarna/gauge
+gaze,1.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/shama/gaze
+geocoder,1.4.4,MIT,Approved,http://opensource.org/licenses/mit-license,Complete geocoding solution for Ruby.,http://www.rubygeocoder.com
+get-caller-file,1.0.3,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/stefanpenner/get-caller-file#readme
+get-func-name,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://alogicalparadox.com
+getpass,0.1.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+get-stdin,4.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+get-stdin,5.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+get-stream,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+get-value,2.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/get-value
+git,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"Ruby/Git is a Ruby library that can be used to create, read and manipulate Git repositories by wrapping system calls to the git binary.",http://github.com/schacon/ruby-git
+glob,6.0.4,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+glob,7.1.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+glob,7.1.5,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+global,4.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Raynos/global
+globalid,0.4.2,MIT,Approved,http://opensource.org/licenses/mit-license,Refer to any model with a URI: gid://app/class/id,http://www.rubyonrails.org
+globals,11.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+globals,9.18.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+glob-base,0.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/glob-base
+globby,5.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+glob-parent,2.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/es128/glob-parent
+glob-parent,3.1.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/es128/glob-parent
+globule,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/cowboy/node-globule
+graceful-fs,4.1.11,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+graceful-fs,4.2.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+graphql,0.10.5,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/graphql/graphql-js
+graphql,0.9.6,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/graphql/graphql-js
+graphql-anywhere,4.1.15,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+graphql-tag,2.8.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollostack/graphql-tag#readme
+graphql-tools,1.2.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/apollostack/graphql-tools#readme
+grnds-journal,0.1.5,Grand Rounds,Approved,"",Module used to track metrics and send data to Warehouse.,https://github.com/ConsultingMD/journal
+grnds-secrets,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,GrandRounds gem to retrieve secret.,https://github.com/ConsultingMD/grnds-secrets
+grnds-service,0.7.5,Copyright 2015-2016 Grand Rounds Inc. All rights reserved.,Approved,"",Microservice communication channel configuration and wrappers for those channels,https://github.com/ConsultingMD/grnds-service
+grnds-sso,1.1,MIT,Approved,http://opensource.org/licenses/mit-license,SSO for Grand Rounds,""
+grnds-status,0.0.2,Copyright 2015 Grand Rounds Inc. All rights reserved.,Approved,"",Status endpoint checks for load-balancer heartbeats.,https://github.com/ConsultingMD/grnds-status
+growly,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://ibrahimalrajhi.com/
+gud,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+handlebars,4.0.14,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://www.handlebarsjs.com/
+handlebars_assets,0.23.0,MIT,Approved,http://opensource.org/licenses/mit-license,Compile Handlebars templates in the Rails asset pipeline.,https://github.com/leshill/handlebars_assets
+handle-thing,1.2.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/handle-thing#readme
+harmony-reflect,1.6.0,(Apache-2.0 OR MPL-1.1),Approved,"","",https://github.com/tvcutsem/harmony-reflect
+har-schema,2.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/ahmadnassri/har-schema
+har-validator,5.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/ahmadnassri/node-har-validator
+has,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/tarruda/has
+has-ansi,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+has-flag,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+has-flag,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+has-flag,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+hash-base,3.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/hash-base
+hashie,3.5.7,MIT,Approved,http://opensource.org/licenses/mit-license,Your friendly neighborhood hash library.,https://github.com/intridea/hashie
+hash.js,1.1.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/hash.js
+has-symbols,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://ljharb.codes
+has-unicode,2.0.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/iarna/has-unicode
+has-value,0.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/has-value
+has-value,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/has-value
+has-values,0.1.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/has-values
+has-values,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/has-values
+highline,1.7.8,ruby,Approved,http://www.ruby-lang.org/en/LICENSE.txt,HighLine is a high-level command-line IO library.,https://github.com/JEG2/highline
+history,4.7.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+history,4.7.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+hmac-drbg,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/hmac-drbg#readme
+hoist-non-react-statics,1.2.0,BSD*,Approved,"","",Unknown
+hoist-non-react-statics,2.3.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+hoist-non-react-statics,2.5.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+hoist-non-react-statics,2.5.5,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+home-or-tmp,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+hosted-git-info,2.8.5,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/npm/hosted-git-info
+hpack.js,2.1.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/hpack.js#readme
+html-encoding-sniffer,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://domenic.me/
+html-entities,1.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+htmlparser2,3.9.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+httparty,0.18.0,MIT,Approved,http://opensource.org/licenses/mit-license,"Makes http fun! Also, makes consuming restful web services dead easy.",https://github.com/jnunemaker/httparty
+http-deceiver,1.2.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/http-deceiver#readme
+http-errors,1.6.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://jongleberry.com
+http-parser-js,0.4.10,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/creationix
+http-proxy,1.16.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+http-proxy-middleware,0.17.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/chimurai/http-proxy-middleware
+https-browserify,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/substack/https-browserify
+http-signature,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/joyent/node-http-signature/
+i18n,0.9.5,MIT,Approved,http://opensource.org/licenses/mit-license,New wave Internationalization support for Ruby,http://github.com/svenfuchs/i18n
+i18n-js,0.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+i18n-js,3.0.5,MIT,Approved,http://opensource.org/licenses/mit-license,It's a small library to provide the Rails I18n translations on the Javascript.,http://rubygems.org/gems/i18n-js
+iconv-lite,0.4.19,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/ashtuchkin/iconv-lite
+iconv-lite,0.4.19,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/ashtuchkin/iconv-lite
+iconv-lite,0.4.24,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/ashtuchkin/iconv-lite
+icss-replace-symbols,1.1.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/css-modules/icss-replace-symbols#readme
+icss-utils,2.1.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/css-modules/icss-utils#readme
+identity-obj-proxy,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/keyanzhang/identity-obj-proxy#readme
+ieee754,1.1.13,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",http://feross.org
+ignore,3.3.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+ignore-walk,3.0.3,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+immutable,3.7.6,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/facebook/immutable-js
+immutable,3.8.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://facebook.github.com/immutable-js
+import-local,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+imports-loader,0.7.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+imurmurhash,0.1.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jensyt/imurmurhash-js
+indent-string,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+inflight,1.0.6,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/isaacs/inflight
+inherits,2.0.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+inherits,2.0.3,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+inherits,2.0.4,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+ini,1.3.5,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+in-publish,2.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/iarna/in-publish
+inquirer,3.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+interpret,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://gulpjs.com/
+invariant,2.2.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+invariant,2.2.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+invariant,2.2.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+invert-kv,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+ipaddr.js,1.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+is-accessor-descriptor,0.1.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-accessor-descriptor
+is-accessor-descriptor,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-accessor-descriptor
+isarray,0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/juliangruber/isarray
+isarray,0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/juliangruber/isarray
+isarray,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/juliangruber/isarray
+is-arrayish,0.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/qix-
+is-binary-path,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+is-boolean-object,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+is-buffer,1.1.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://feross.org/
+is-builtin-module,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+is-callable,1.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://ljharb.codes
+is-ci,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/watson/is-ci
+is-data-descriptor,0.1.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-data-descriptor
+is-data-descriptor,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-data-descriptor
+is-date-object,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+is-descriptor,0.1.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-descriptor
+is-descriptor,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-descriptor
+is-directory,0.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-directory
+is-dotfile,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-dotfile
+is-equal-shallow,0.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-equal-shallow
+isexe,2.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/isaacs/isexe#readme
+is-extendable,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-extendable
+is-extendable,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-extendable
+is-extglob,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-extglob
+is-extglob,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-extglob
+is-finite,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+is-fullwidth-code-point,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+is-fullwidth-code-point,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+is-generator-fn,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+is-glob,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-glob
+is-glob,3.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-glob
+is-glob,4.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/micromatch/is-glob
+is-number,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-number
+is-number,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-number
+is-number-object,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+isobject,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/isobject
+isobject,3.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/isobject
+isomorphic-fetch,2.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/matthew-andrews/isomorphic-fetch/issues
+isomorphic-fetch,2.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/matthew-andrews/isomorphic-fetch/issues
+is-path-cwd,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+is-path-in-cwd,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+is-path-inside,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+is-plain-object,2.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-plain-object
+is-posix-bracket,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-posix-bracket
+is-primitive,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-primitive
+is-promise,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+is-regex,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/ljharb/is-regex
+is-resolvable,1.1.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/shinnn
+isstream,0.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/rvagg/isstream
+is-stream,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+is-stream,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+is-string,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+is-subset,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+is-symbol,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+istanbul-api,1.3.6,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/istanbuljs#readme
+istanbul-lib-coverage,1.1.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/istanbuljs
+istanbul-lib-coverage,1.2.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/istanbuljs
+istanbul-lib-coverage,2.0.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/istanbuljs
+istanbul-lib-hook,1.2.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/istanbuljs#readme
+istanbul-lib-instrument,1.10.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/istanbuljs
+istanbul-lib-instrument,1.9.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/istanbuljs
+istanbul-lib-instrument,2.3.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/istanbuljs
+istanbul-lib-report,1.1.4,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/istanbuljs
+istanbul-lib-source-maps,1.2.5,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/istanbuljs#readme
+istanbul-reports,1.5.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/istanbuljs/istanbuljs
+is-typedarray,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/hughsk/is-typedarray
+is-utf8,0.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+is-windows,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/is-windows
+iterall,1.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/leebyron/iterall
+jbuilder,2.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,Create JSON structures via a Builder-style DSL,https://github.com/rails/jbuilder
+jest,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://jestjs.io/
+jest-changed-files,23.4.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-cli,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://jestjs.io/
+jest-config,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-diff,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-docblock,21.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-docblock,23.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-each,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",mattphillips
+jest-environment-jsdom,23.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-environment-node,23.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-enzyme,4.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/FormidableLabs/enzyme-matchers/blob/master/packages/jest-enzyme#readme
+jest-fetch-mock,1.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jefflau/jest-fetch-mock#readme
+jest-get-type,22.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-haste-map,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-jasmine2,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-junit,3.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",Unknown
+jest-leak-detector,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-localstorage-mock,2.2.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/clarkbw/jest-localstorage-mock
+jest-matcher-utils,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-message-util,23.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-mock,23.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-regex-util,23.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-resolve,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-resolve-dependencies,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-runner,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-runtime,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-serializer,23.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-snapshot,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-transform-graphql,2.1.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/remind101/jest-transform-graphql#readme
+jest-util,23.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-validate,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jest-watcher,23.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://jestjs.io/
+jest-worker,23.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jmespath,1.4.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,JMESPath - Ruby Edition,http://github.com/trevorrowe/jmespath.rb
+jquery,3.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://jquery.com/
+jquery-rails,4.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,Use jQuery with Rails 4+,http://rubygems.org/gems/jquery-rails
+jquery-ujs,1.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/rails/jquery-ujs#readme
+js-base64,2.4.3,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+jsbn,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jsdom,11.6.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jsesc,0.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://mths.be/jsesc
+jsesc,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://mths.be/jsesc
+jsesc,2.5.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://mths.be/jsesc
+json,1.8.6,ruby,Approved,http://www.ruby-lang.org/en/LICENSE.txt,JSON Implementation for Ruby,http://flori.github.com/json
+json3,3.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://bestiejs.github.io/json3
+json5,0.5.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://json5.org/
+json5,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://json5.org/
+jsonfile,2.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jsonify,0.0.0,Public Domain,Approved,"","",http://crockford.com/
+json-loader,0.5.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+json-parse-better-errors,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+json-schema,0.2.3,BSD*,Approved,"","",Unknown
+json-schema-traverse,0.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/epoberezkin/json-schema-traverse#readme
+json-schema-traverse,0.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/epoberezkin/json-schema-traverse#readme
+json-stable-stringify,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/substack/json-stable-stringify
+json-stable-stringify-without-jsonify,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/samn/json-stable-stringify
+json-stringify-safe,5.0.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/isaacs/json-stringify-safe
+jsprim,1.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+js-tokens,3.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+js-tokens,3.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+jstz,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",iansinnott.com
+jsx-ast-utils,1.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+js-yaml,3.13.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/nodeca/js-yaml
+just-extend,1.1.27,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+keycode,2.1.9,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/timoxley/keycode
+kgio,2.10.0,LGPL-2.1+,Approved,"","kinder, gentler I/O for Ruby",http://bogomips.org/kgio/
+kind-of,3.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/kind-of
+kind-of,4.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/kind-of
+kind-of,5.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/kind-of
+kind-of,6.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/kind-of
+klaw,1.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jprichardson/node-klaw#readme
+kleur,2.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",lukeed.com
+lazy-cache,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/lazy-cache
+lcid,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+ldclient-js,2.5.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",Unknown
+left-pad,1.2.0,WTFPL,Approved,"","",Unknown
+leven,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+levn,0.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/gkz/levn
+little-plugger,1.1.4,MIT,Approved,http://opensource.org/licenses/mit-license,LittlePlugger is a module that provides Gem based plugin management.,http://gemcutter.org/gems/little-plugger
+loader-fs-cache,1.0.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+loader-runner,2.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack/loader-runner#readme
+loader-utils,0.2.17,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+loader-utils,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+loader-utils,1.2.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+load-json-file,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+load-json-file,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+load-json-file,4.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+locate-path,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+lodash,4.17.15,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash._baseisequal,3.0.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash._bindcallback,3.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.camelcase,4.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.clonedeep,4.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.cond,4.5.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash-es,4.17.15,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/custom-builds
+lodash.escaperegexp,4.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.flattendeep,4.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.get,4.4.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash._getnative,3.9.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.intersection,4.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.isarguments,3.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.isarray,3.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.isequal,3.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.isequal,4.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.isnil,4.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.isplainobject,4.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.isstring,4.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.istypedarray,3.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.keys,3.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.memoize,4.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.mergewith,4.6.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.omit,4.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.sortby,4.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+lodash.tail,4.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lodash.com/
+logging,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,A flexible and extendable logging library for Ruby,http://rubygems.org/gems/logging
+lolex,2.7.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",http://github.com/sinonjs/lolex
+longest,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/longest
+loofah,2.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri",https://github.com/flavorjones/loofah
+loose-envify,1.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/zertosh/loose-envify
+loose-envify,1.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/zertosh/loose-envify
+loud-rejection,1.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+lru-cache,4.1.5,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+mail,2.7.1,MIT,Approved,http://opensource.org/licenses/mit-license,"Mail provides a nice Ruby DSL for making, sending and reading emails.",https://github.com/mikel/mail
+makeerror,1.0.11,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+map-cache,0.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/map-cache
+map-obj,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+map-visit,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/map-visit
+md5.js,1.3.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/md5.js
+media-typer,0.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+mem,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+memory-fs,0.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack/memory-fs
+meow,3.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+merge,1.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/yeikos/js.merge
+merge-descriptors,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://jongleberry.com
+merge-stream,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+methods,1.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+micromatch,2.3.11,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/micromatch
+micromatch,3.1.10,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/micromatch/micromatch
+miller-rabin,4.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/miller-rabin
+mime,1.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/broofa
+mime,1.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/broofa
+mime-db,1.33.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+mime-db,1.40.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+mime-types,2.1.18,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+mime-types,2.1.24,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+mime-types,3.1,MIT,Approved,http://opensource.org/licenses/mit-license,The mime-types library provides a library and registry for information about MIME content type definitions,https://github.com/mime-types/ruby-mime-types/
+mime-types-data,3.2016.0521,MIT,Approved,http://opensource.org/licenses/mit-license,mime-types-data provides a registry for information about MIME media type definitions,https://github.com/mime-types/mime-types-data/
+mimic-fn,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+min-document,2.19.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Raynos/min-document
+minimalistic-assert,1.0.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/calvinmetcalf/minimalistic-assert
+minimalistic-crypto-utils,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/minimalistic-crypto-utils#readme
+minimatch,3.0.4,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me
+mini_mime,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,A lightweight mime type lookup toy,https://github.com/discourse/mini_mime
+minimist,0.0.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/substack/minimist
+minimist,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/substack/minimist
+minipass,2.9.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+mini_portile2,2.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,Simplistic port-like solution for developers,http://github.com/flavorjones/mini_portile
+minitest,5.12.2,MIT,Approved,http://opensource.org/licenses/mit-license,"minitest provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking",https://github.com/seattlerb/minitest
+minizlib,1.3.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://blog.izs.me/
+mixin-deep,1.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/mixin-deep
+mixin-object,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/mixin-object
+mkdirp,0.5.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://substack.net
+moment,2.21.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://momentjs.com/
+moment-timezone,0.5.14,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://momentjs.com/timezone/
+moo,0.4.3,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+ms,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+ms,2.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+multi_json,1.12.1,MIT,Approved,http://opensource.org/licenses/mit-license,A common interface to multiple JSON libraries.,http://github.com/intridea/multi_json
+multi_xml,0.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,A generic swappable back-end for XML parsing,https://github.com/sferik/multi_xml
+mute-stream,0.0.7,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+nan,2.14.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+nanomatch,1.2.13,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/micromatch/nanomatch
+natural-compare,1.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/litejs/natural-compare-lite
+nearley,2.12.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+needle,2.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+negotiator,0.6.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+neo-async,2.6.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/suguru03/neo-async
+net-scp,1.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,A pure Ruby implementation of the SCP client protocol,https://github.com/net-ssh/net-scp
+net-sftp,2.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,A pure Ruby implementation of the SFTP client protocol,https://github.com/net-ssh/net-sftp
+net-ssh,3.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,Net::SSH: a pure-Ruby implementation of the SSH2 client protocol.,https://github.com/net-ssh/net-ssh
+net-ssh-gateway,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,A simple library to assist in establishing tunneled Net::SSH connections,https://github.com/net-ssh/net-scp
+newrelic_rpm,5.5.0.348,New Relic,Approved,"",New Relic Ruby Agent,https://github.com/newrelic/rpm
+next-tick,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://www.medikoo.com/
+nise,1.4.3,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+node-fetch,1.7.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/bitinn/node-fetch
+node-fetch,1.7.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/bitinn/node-fetch
+node-gyp,3.8.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://tootallnate.net
+node-int64,0.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+node-libs-browser,2.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/webpack/node-libs-browser
+node-notifier,5.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/mikaelbr/node-notifier#readme
+node-pre-gyp,0.12.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+node-pre-gyp,0.14.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",Unknown
+node-sass,4.13.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/sass/node-sass
+nokogiri,1.10.4,MIT,Approved,http://opensource.org/licenses/mit-license,"Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser",""
+nomnom,1.6.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+nopt,3.0.6,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+nopt,4.0.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+normalize-package-data,2.4.0,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",Unknown
+normalize-package-data,2.5.0,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",Unknown
+normalize-path,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/normalize-path
+normalize-path,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/normalize-path
+npm-bundled,1.0.6,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+npmlog,4.1.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+npm-packlist,1.4.6,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://www.npmjs.com/package/npm-packlist
+npm-run-path,2.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+nth-check,1.0.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"",https://github.com/fb55/nth-check
+number-is-nan,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+nwmatcher,1.4.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://javascript.nwbox.com/NWMatcher/
+oauth-sign,0.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",http://www.futurealoof.com
+object.assign,4.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+object-assign,4.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+object-assign,4.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+object-copy,0.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/object-copy
+object.entries,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+object.getownpropertydescriptors,2.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+object-hash,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/puleos/object-hash
+object-inspect,1.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/substack/object-inspect
+object-is,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/ljharb/object-is
+object-keys,1.0.11,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://ljharb.codes
+object.omit,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/object.omit
+object.pick,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/object.pick
+object.values,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+object-visit,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/object-visit
+obuf,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/offset-buffer
+once,1.4.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+onetime,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+on-finished,2.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+on-headers,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+opn,4.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+optimist,0.6.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://substack.net
+optionator,0.8.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/gkz/optionator
+original,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+os-browserify,0.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+osenv,0.1.5,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+os-homedir,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+os-locale,1.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+os-locale,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+os-tmpdir,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+output-file-sync,1.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/shinnn
+pako,1.0.10,(MIT AND Zlib),Not approved,"","",https://github.com/nodeca/pako
+parse5,3.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/inikulin/parse5
+parse5,4.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/inikulin/parse5
+parse-asn1,5.1.5,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+parse-glob,3.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/parse-glob
+parse-json,2.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+parse-json,4.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+parseurl,1.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+pascalcase,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/pascalcase
+path-browserify,0.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/substack/path-browserify
+path-dirname,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+path-exists,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+path-exists,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+path-is-absolute,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+path-is-inside,1.0.2,(WTFPL OR MIT),Approved,"","",https://domenic.me
+path-key,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+path-parse,1.0.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jbgutierrez/path-parse#readme
+path-parse,1.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jbgutierrez/path-parse#readme
+path-to-regexp,0.1.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+path-to-regexp,1.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+path-to-regexp,1.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+path-type,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+path-type,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+path-type,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+pathval,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/chaijs/pathval
+pbkdf2,3.0.17,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/pbkdf2
+performance-now,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/braveg1rl/performance-now
+p-finally,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+pify,2.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+pify,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+pinkie,2.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/floatdrop
+pinkie-promise,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/floatdrop
+pkg-dir,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+pkg-dir,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+p-limit,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+p-locate,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+pluralize,7.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://blakeembrey.me
+pn,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+popper.js,1.12.9,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://popper.js.org/
+popper.js,1.13.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://popper.js.org/
+portfinder,1.0.13,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+posix-character-classes,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/posix-character-classes
+postcss,6.0.19,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://postcss.org/
+postcss,6.0.23,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://postcss.org/
+postcss-load-config,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/michael-ciniawsky/postcss-load-config#readme
+postcss-loader,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/postcss/postcss-loader#readme
+postcss-load-options,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/michael-ciniawsky/postcss-load-options#readme
+postcss-load-plugins,2.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/michael-ciniawsky/postcss-load-plugins#readme
+postcss-modules-extract-imports,1.2.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/css-modules/postcss-modules-extract-imports
+postcss-modules-local-by-default,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+postcss-modules-scope,1.1.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/css-modules/postcss-modules-scope
+postcss-modules-values,1.3.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/css-modules/postcss-modules-values#readme
+postcss-value-parser,3.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/TrySound/postcss-value-parser
+prelude-ls,1.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://preludels.com/
+preserve,0.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/preserve
+pretender,0.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"Easy to switch back and forth between roles, minimal code changes, and plays nicely with auditing tools",http://ankane.github.com/pretender/
+prettier,1.13.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://prettier.io/
+pretty-format,23.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+private,0.1.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/benjamn/private
+process,0.11.10,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+process,0.5.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+process-nextick-args,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/calvinmetcalf/process-nextick-args
+progress,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+promise,7.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+promise,7.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+prompts,0.1.14,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/terkelg/prompts
+prop-types,15.5.10,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://facebook.github.io/react/
+prop-types,15.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://facebook.github.io/react/
+prop-types,15.6.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://facebook.github.io/react/
+prop-types,15.6.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://facebook.github.io/react/
+prop-types-extra,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/react-bootstrap/react-prop-types#readme
+proxy-addr,2.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+prr,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/rvagg/prr
+pseudomap,1.0.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/isaacs/pseudomap#readme
+psl,1.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://lupomontero.com/
+p-try,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+public-encrypt,4.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/publicEncrypt
+punycode,1.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://mths.be/punycode
+punycode,1.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://mths.be/punycode
+punycode,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://mths.be/punycode
+qs,6.5.1,BSD 3-Clause,Approved,"","",https://github.com/ljharb/qs
+qs,6.5.2,BSD 3-Clause,Approved,"","",https://github.com/ljharb/qs
+querystring,0.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+query-string,5.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+querystring-es3,0.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+querystringify,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/unshiftio/querystringify
+rack,1.6.11,MIT,Approved,http://opensource.org/licenses/mit-license,a modular Ruby webserver interface,http://rack.github.io/
+rack-attack,5.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,Block & throttle abusive requests,http://github.com/kickstarter/rack-attack
+rack-test,0.6.3,MIT,Approved,http://opensource.org/licenses/mit-license,Simple testing API built on Rack,http://github.com/brynary/rack-test
+raf,3.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+railroad-diagrams,1.0.0,CC0-1.0,Approved,"","",https://github.com/tabatkins/railroad-diagrams
+rails,4.2.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,Full-stack web application framework.,http://www.rubyonrails.org
+rails-deprecated_sanitizer,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,Deprecated sanitizer API extracted from Action View.,https://github.com/rails/rails-deprecated_sanitizer
+rails-dom-testing,1.0.9,MIT,Approved,http://opensource.org/licenses/mit-license,Dom and Selector assertions for Rails applications,https://github.com/rails/rails-dom-testing
+rails-html-sanitizer,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,This gem is responsible to sanitize HTML fragments in Rails applications.,https://github.com/rails/rails-html-sanitizer
+railties,4.2.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,"Tools for creating, working with, and running Rails applications.",http://www.rubyonrails.org
+rainbow,2.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,Colorize printed text on ANSI terminals,https://github.com/sickill/rainbow
+raindrops,0.16.0,LGPL-2.1+,Approved,"",real-time stats for preforking Rack servers,http://raindrops.bogomips.org/
+rake,13.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,Rake is a Make-like program implemented in Ruby,https://github.com/ruby/rake
+randexp,0.4.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://fent.github.io/randexp.js/
+randomatic,1.1.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/randomatic
+randombytes,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/randombytes
+randomfill,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/crypto-browserify/randomfill
+range-parser,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://tjholowaychuk.com
+raw-body,2.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://jongleberry.com
+rc,1.2.8,(BSD-2-Clause OR MIT OR Apache-2.0),Approved,"","",dominictarr.com
+react,16.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://reactjs.org/
+react,16.4.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://reactjs.org/
+react-apollo,2.1.9,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+react-bootstrap,0.32.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://react-bootstrap.github.io/
+react-bootstrap-typeahead,2.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+react-datepicker,0.64.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Hacker0x01/react-datepicker
+react-datepicker,0.64.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Hacker0x01/react-datepicker
+react-deep-force-update,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/gaearon/react-deep-force-update
+react-dom,16.4.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://reactjs.org/
+react-ga,2.5.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://github.com/react-ga/react-ga
+react-helmet,5.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+react-infinite-scroller,1.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+react-input-autosize,2.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+react-is,16.4.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://reactjs.org/
+react-lifecycles-compat,3.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+react-onclickoutside,6.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Pomax/react-onclickoutside
+react-onclickoutside,6.7.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Pomax/react-onclickoutside
+react-on-rails,8.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/shakacode/react_on_rails#readme
+react_on_rails,8.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,Rails with react server rendering with webpack.,https://github.com/shakacode/react_on_rails
+react-overlays,0.8.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+react-popper,0.7.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/souporserious/react-popper
+react-popper,0.7.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/souporserious/react-popper
+react-prop-types,0.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/react-bootstrap/react-prop-types#readme
+react-proxy,1.1.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/gaearon/react-proxy
+react-redux,5.0.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/gaearon/react-redux
+react-router,4.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+react-router,4.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+react-router-bootstrap,0.24.4,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://github.com/react-bootstrap/react-router-bootstrap
+react-router-dom,4.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+react-rte,0.15.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/sstur/react-rte#readme
+react-s-alert,1.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/juliancwirko/react-s-alert
+react-select,1.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+react-show-more,2.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/One-com/react-show-more
+react-side-effect,1.1.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/gaearon/react-side-effect
+react-test-renderer,16.4.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://reactjs.org/
+react-textarea-autosize,5.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",httsps://andreypopp.com/
+react-transform-hmr,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/gaearon/react-transform-hmr#readme
+react-transition-group,2.2.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/reactjs/react-transition-group#readme
+react-truncate,2.4.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/One-com/react-truncate
+readable-stream,2.3.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+readable-stream,2.3.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+readdirp,2.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/paulmillr/readdirp
+read-pkg,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+read-pkg,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+read-pkg,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+read-pkg-up,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+read-pkg-up,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+read-pkg-up,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+realpath-native,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+recompose,0.30.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/acdlite/recompose
+redent,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+redux,3.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://redux.js.org/
+redux-thunk,2.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/gaearon/redux-thunk
+referer-parser,0.3.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Library for extracting marketing attribution data (e.g. search terms) from referer (sic) URLs. This is used by Snowplow (http://github.com/snowplow/snowplow). Our hope is that this library (and referers.yml) will be extended by anyone interested in parsing referer URLs.,http://github.com/snowplow/referer-parser
+regenerate,1.3.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://mths.be/regenerate
+regenerator-runtime,0.10.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+regenerator-runtime,0.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+regenerator-runtime,0.12.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+regenerator-transform,0.10.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"",Unknown
+regex-cache,0.4.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/regex-cache
+regex-not,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/regex-not
+regexpu-core,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://mths.be/regexpu
+regexpu-core,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://mths.be/regexpu
+regjsgen,0.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/d10/regjsgen
+regjsparser,0.1.5,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",https://github.com/jviereck/regjsparser
+remove-trailing-separator,1.1.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/darsain/remove-trailing-separator#readme
+repeat-element,1.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/repeat-element
+repeating,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+repeat-string,1.6.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/repeat-string
+representable,2.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"Renders and parses JSON/XML/YAML documents from and to Ruby objects. Includes plain properties, collections, nesting, coercion and more.",https://github.com/apotonick/representable/
+request,2.88.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",Unknown
+request-promise-core,1.1.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/request/promise-core#readme
+request-promise-native,1.0.5,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/request/request-promise-native#readme
+request_store,1.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,RequestStore gives you per-request global storage.,http://github.com/steveklabnik/request_store
+require-directory,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/troygoode/node-require-directory/
+require-from-string,1.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/floatdrop
+require-main-filename,1.0.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/yargs/require-main-filename#readme
+requires-port,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/unshiftio/requires-port
+require-uncached,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+resolve,1.12.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://substack.net
+resolve,1.1.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://substack.net
+resolve,1.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://substack.net
+resolve-cwd,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+resolve-from,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+resolve-from,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+resolve-pathname,2.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+resolve-pathname,2.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+resolve-url,0.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+responders,2.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,A set of Rails responders to dry up your application,http://github.com/plataformatec/responders
+restore-cursor,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+ret,0.1.15,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/fent
+right-align,0.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/right-align
+rimraf,2.6.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+rimraf,2.7.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+ripemd160,2.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+roar,1.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,Parse and render REST API documents using representers.,http://rubygems.org/gems/roar
+roar-rails,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,Use Roar in Rails.,""
+rollbar,2.13.1,MIT,Approved,http://opensource.org/licenses/mit-license,Reports exceptions to Rollbar,https://rollbar.com
+rst-selector-parser,2.2.3,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",http://gajus.com
+run-async,2.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+rvm-capistrano,1.3.4,MIT,Approved,http://opensource.org/licenses/mit-license,RVM / Capistrano Integration Gem,https://github.com/wayneeseguin/rvm-capistrano
+rx-lite,4.0.8,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://github.com/Reactive-Extensions/RxJS
+rx-lite-aggregates,4.0.8,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://github.com/Reactive-Extensions/RxJS
+safe-buffer,5.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/feross/safe-buffer
+safe-buffer,5.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/feross/safe-buffer
+safe-buffer,5.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/feross/safe-buffer
+safely_block,0.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,Awesome exception handling,https://github.com/ankane/safely
+safer-buffer,2.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/ChALkeR
+safe-regex,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/substack/safe-regex
+samsam,1.3.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",http://docs.busterjs.org/en/latest/modules/samsam/
+sane,2.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/amasad/sane
+sanitize-html,1.18.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+sass,3.4.22,MIT,Approved,http://opensource.org/licenses/mit-license,A powerful but elegant CSS compiler that makes CSS fun again.,http://sass-lang.com/
+sassc,2.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,Use libsass with Ruby!,https://github.com/sass/sassc-ruby
+sass-graph,2.2.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+sass-loader,6.0.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack-contrib/sass-loader
+sass-rails,5.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,Sass adapter for the Rails asset pipeline.,https://github.com/rails/sass-rails
+sass-resources-loader,1.3.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+sax,1.2.4,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+schema-utils,0.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack-contrib/schema-utils#readme
+schema-utils,0.4.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack-contrib/schema-utils
+scss-tokenizer,0.2.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/sasstools/scss-tokenizer
+select-hose,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/select-hose#readme
+semver,5.3.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+semver,5.5.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+semver,5.5.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+semver,5.7.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+send,0.16.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+serve-index,1.9.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+serve-static,1.13.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+set-blocking,2.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/yargs/set-blocking#readme
+setimmediate,1.0.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+setimmediate,1.0.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+setprototypeof,1.0.3,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/wesleytodd/setprototypeof
+setprototypeof,1.1.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/wesleytodd/setprototypeof
+set-value,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/set-value
+sha.js,2.4.11,(MIT AND BSD-3-Clause),Not approved,"","",https://github.com/crypto-browserify/sha.js
+shallow-clone,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/shallow-clone
+shallowequal,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/dashed
+shebang-command,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/kevva
+shebang-regex,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+shellwords,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jimmycuadra/shellwords
+signal-exit,3.0.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/tapjs/signal-exit
+sinon,6.1.5,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://sinonjs.org/
+@sinonjs/commons,1.0.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/sinonjs/commons#readme
+@sinonjs/formatio,2.0.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",http://busterjs.org/docs/formatio/
+@sinonjs/samsam,2.0.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",http://sinonjs.github.io/samsam/
+sisteransi,0.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/terkelg/sisteransi
+slash,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+slice-ansi,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+slim,3.0.7,MIT,Approved,http://opensource.org/licenses/mit-license,Slim is a template language.,http://slim-lang.com/
+slim-rails,3.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,Slim templates generator for Rails 3 and 4,https://github.com/slim-template/slim-rails
+snapdragon,0.8.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/snapdragon
+snapdragon-node,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/snapdragon-node
+snapdragon-util,3.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/snapdragon-util
+sockjs,0.3.18,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/sockjs/sockjs-node
+sockjs-client,1.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sockjs.org/
+source-list-map,0.1.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack/source-list-map
+source-list-map,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack/source-list-map
+source-map,0.4.4,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/mozilla/source-map
+source-map,0.5.7,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/mozilla/source-map
+source-map,0.6.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/mozilla/source-map
+source-map-resolve,0.5.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+source-map-support,0.4.18,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+source-map-support,0.5.9,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+source-map-url,0.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+spdx-correct,3.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://kemitchell.com
+spdx-exceptions,2.2.0,CC-BY-3.0,Approved,"","",Unknown
+spdx-expression-parse,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://kemitchell.com
+spdx-license-ids,3.0.5,CC0-1.0,Approved,"","",https://github.com/shinnn
+spdy,3.4.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/node-spdy
+spdy-transport,2.0.20,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/spdy-http2/spdy-transport
+split-string,3.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/split-string
+sprintf-js,1.0.3,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",http://alexei.ro/
+sprockets,3.7.2,MIT,Approved,http://opensource.org/licenses/mit-license,Rack-based asset packaging system,https://github.com/rails/sprockets
+sprockets-rails,3.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,Sprockets Rails integration,https://github.com/rails/sprockets-rails
+srcset,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+sshpk,1.16.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/arekinath/node-sshpk#readme
+stack-utils,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/jamestalmage
+static-extend,0.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/static-extend
+statuses,1.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+stdout-stream,1.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+stealthy-require,1.1.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/analog-nico/stealthy-require#readme
+stream-browserify,2.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/browserify/stream-browserify
+stream-http,2.8.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jhiesey/stream-http#readme
+strict-uri-encode,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",github.com/kevva
+string_decoder,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/rvagg/string_decoder
+string_decoder,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/nodejs/string_decoder
+string_decoder,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/nodejs/string_decoder
+string-length,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+string-width,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+string-width,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+strip-ansi,3.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+strip-ansi,4.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+strip-bom,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+strip-bom,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+strip-eof,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+strip-indent,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+strip-json-comments,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+style-loader,0.19.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+supports-color,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+supports-color,3.2.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+supports-color,4.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+supports-color,5.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+supports-color,5.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+symbol-observable,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+symbol-tree,3.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jsdom/js-symbol-tree#symbol-tree
+synthetic-dom,1.2.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/sstur/draft-js-utils/blob/master/packages/synthetic-dom/README.md
+table,4.0.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",http://gajus.com
+tapable,0.2.9,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack/tapable
+tar,2.2.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+tar,4.4.13,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+temple,0.7.7,MIT,Approved,http://opensource.org/licenses/mit-license,Template compilation framework in Ruby,https://github.com/judofyr/temple
+test-exclude,4.2.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/istanbuljs/istanbuljs#readme
+test-exclude,4.2.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/istanbuljs/istanbuljs#readme
+test_xml,0.1.7,MIT,Approved,http://opensource.org/licenses/mit-license,"Test your XML with Test::Unit, MiniTest, RSpec, or Cucumber.",http://github.com/alovak/test_xml
+text-encoding,0.6.4,Unlicense,Approved,"","",https://github.com/inexorabletash/text-encoding
+text-table,0.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/substack/text-table
+thor,0.20.3,MIT,Approved,http://opensource.org/licenses/mit-license,Thor is a toolkit for building powerful command-line interfaces.,http://whatisthor.com/
+thread_safe,0.3.6,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Thread-safe collections and utilities for Ruby,https://github.com/ruby-concurrency/thread_safe
+throat,4.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+through,2.3.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/dominictarr/through
+tilt,2.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,Generic interface to multiple Ruby template engines,http://github.com/rtomayko/tilt/
+timers-browserify,2.0.11,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jryans/timers-browserify
+time-stamp,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/time-stamp
+tinymce-rails,4.5.7,MIT,Approved,http://opensource.org/licenses/mit-license,Rails asset pipeline integration for TinyMCE.,https://github.com/spohlenz/tinymce-rails
+tmp,0.0.33,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/raszi/node-tmp
+tmpl,1.0.4,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/nshah/nodejs-tmpl
+to-arraybuffer,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jhiesey/to-arraybuffer#readme
+to-fast-properties,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+to-fast-properties,2.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+to-object-path,0.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/to-object-path
+to-regex,3.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/to-regex
+to-regex-range,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/micromatch/to-regex-range
+tough-cookie,2.3.4,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/salesforce/tough-cookie
+tough-cookie,2.4.3,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/salesforce/tough-cookie
+tr46,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+trim-newlines,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+trim-right,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+true-case-path,1.0.2,Apache version 2.0,Not approved,"","",https://github.com/barsh/true-case-path#readme
+tty-browserify,0.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/substack/tty-browserify
+tunnel-agent,0.6.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",http://www.futurealoof.com
+turbolinks,2.5.3,MIT,Approved,http://opensource.org/licenses/mit-license,Turbolinks makes following links in your web application faster (use with Rails Asset Pipeline),https://github.com/rails/turbolinks/
+tweetnacl,0.14.5,Unlicense,Approved,"","",https://tweetnacl.js.org/
+type,1.2.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://www.medikoo.com/
+type-check,0.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/gkz/type-check
+typedarray,0.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/substack/typedarray
+type-detect,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://alogicalparadox.com
+type-detect,4.0.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://alogicalparadox.com
+type-is,1.6.16,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+@types/async,2.0.49,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+@types/graphql,0.12.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+@types/graphql,0.9.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+@types/node,9.4.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+@types/zen-observable,0.8.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+tzinfo,1.2.5,MIT,Approved,http://opensource.org/licenses/mit-license,Daylight savings aware timezone library,http://tzinfo.github.io
+ua-parser-js,0.7.17,(GPL-2.0 OR MIT),Approved,"","",http://github.com/faisalman/ua-parser-js
+ua-parser-js,0.7.17,(GPL-2.0 OR MIT),Approved,"","",http://github.com/faisalman/ua-parser-js
+ua-parser-js,0.7.18,(GPL-2.0 OR MIT),Approved,"","",http://github.com/faisalman/ua-parser-js
+uber,0.0.15,MIT,Approved,http://opensource.org/licenses/mit-license,"Gem-authoring tools like class method inheritance in modules, dynamic options and more.",https://github.com/apotonick/uber
+uglifier,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,Ruby wrapper for UglifyJS JavaScript compressor,http://github.com/lautis/uglifier
+uglify-js,2.8.29,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",http://lisperator.net/uglifyjs
+uglify-js,3.6.5,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",http://lisperator.net/
+uglifyjs-webpack-plugin,0.4.6,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack-contrib/uglifyjs-webpack-plugin
+uglify-to-browserify,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+uncontrollable,4.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+underscore,1.4.4,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://underscorejs.org/
+unicorn,5.0.1,"GPL-2.0+,Ruby-1.8",Approved,",",Rack HTTP server for fast clients and Unix,http://unicorn.bogomips.org/
+union-value,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/union-value
+universal-cookie,2.0.8,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/reactivestack/cookies/packages/universal-cookie/#readme
+unpipe,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+unset-value,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/unset-value
+upath,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/anodynos/upath/
+uri-js,4.2.2,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",https://github.com/garycourt/uri-js
+urix,0.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+url,0.11.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+url-parse,1.4.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+use,3.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/use
+user_agent_parser,2.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"A simple, comprehensive Ruby gem for parsing user agent strings with the help of BrowserScope's UA database",https://github.com/ua-parser/uap-ruby
+user-home,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://sindresorhus.com
+util,0.10.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/defunctzombie/node-util
+util,0.11.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/defunctzombie/node-util
+util-deprecate,1.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/TooTallNate/util-deprecate
+util.promisify,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/ljharb/util.promisify#readme
+utils-merge,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://www.jaredhanson.net/
+uuid,2.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+uuid,3.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+uuid,3.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+uuid,3.3.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+uuidtools,2.1.5,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,UUID generator,https://github.com/sporkmonger/uuidtools
+v8flags,2.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/tkellen/node-v8flags
+validate-npm-package-license,3.0.4,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://kemitchell.com
+value-equal,0.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+value-equal,0.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+vary,1.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+vault,0.13.0,Mozilla Public License 2.0,Approved,https://www.mozilla.org/media/MPL/2.0/index.815ca599c9df.txt,Vault is a Ruby API client for interacting with a Vault server.,https://github.com/hashicorp/vault-ruby
+verror,1.10.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+vm-browserify,1.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://substack.net
+w3c-hr-time,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+walker,1.0.7,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://github.com/daaku/nodejs-walker
+warning,3.0.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/BerkeleyTrue/warning
+warning,3.0.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",https://github.com/BerkeleyTrue/warning
+warning,4.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/BerkeleyTrue/warning
+watch,0.18.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://github.com/mikeal/watch
+watchpack,1.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack/watchpack
+wbuf,1.7.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/indutny/wbuf
+webidl-conversions,4.0.2,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",https://domenic.me/
+webpack,3.12.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack/webpack
+webpack-dev-middleware,1.12.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/webpack/webpack-dev-middleware
+webpack-dev-server,2.4.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/webpack/webpack-dev-server
+webpacker_lite,2.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,Asset Helpers for Webpack,https://github.com/shakacode/webpacker_lite
+webpack-manifest-plugin,1.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/danethurber/webpack-manifest-plugin
+webpack-notifier,1.5.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+webpack-sources,0.1.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack/webpack-sources#readme
+webpack-sources,1.4.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/webpack/webpack-sources#readme
+websocket-driver,0.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/faye/websocket-driver-node
+websocket-extensions,0.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/faye/websocket-extensions-node
+whatwg-encoding,1.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://domenic.me/
+whatwg-fetch,2.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+whatwg-fetch,2.0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+whatwg-url,6.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",Unknown
+which,1.3.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me
+which,1.3.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me
+which-module,1.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/nexdrew/which-module#readme
+which-module,2.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/nexdrew/which-module#readme
+wide-align,1.1.3,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://re-becca.org/
+will_paginate,3.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,Pagination plugin for web frameworks and other apps,https://github.com/mislav/will_paginate/wiki
+window-size,0.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/window-size
+wordwrap,0.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://substack.net
+wordwrap,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://substack.net
+wrap-ansi,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",sindresorhus.com
+wrappy,1.0.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/npm/wrappy
+write,0.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/jonschlinkert/write
+write-file-atomic,2.3.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/iarna/write-file-atomic
+ws,4.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/websockets/ws
+xml,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://github.com/dylang/node-xml
+xml-name-validator,3.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",https://domenic.me/
+xtend,4.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/Raynos/xtend
+y18n,3.2.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",https://github.com/yargs/y18n
+yallist,2.1.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+yallist,3.1.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",http://blog.izs.me/
+yargs,11.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://yargs.js.org/
+yargs,3.10.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://CodeTunnel.com
+yargs,6.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://yargs.js.org/
+yargs,7.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://yargs.js.org/
+yargs,8.0.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",http://yargs.js.org/
+yargs-parser,4.2.1,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+yargs-parser,5.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+yargs-parser,7.0.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+yargs-parser,9.0.2,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",Unknown
+zen-observable,0.8.9,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/zenparsing/zen-observable
+zen-observable-ts,0.8.9,MIT,Approved,http://opensource.org/licenses/mit-license,"",https://github.com/zenparsing/zen-observable
