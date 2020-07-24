@@ -46,8 +46,8 @@ faker,1.8.4,MIT,Approved,http://opensource.org/licenses/mit-license,Easily gener
 faraday,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,HTTP/REST API client library.,https://lostisland.github.io/faraday
 ffi,1.13.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,Ruby FFI,https://github.com/ffi/ffi/wiki
 fhir_client,3.1.3,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,A Gem for handling FHIR client requests in ruby,https://github.com/fhir-crucible/fhir_client
-fhir_dstu2_models,1.0.10,unknown,Not approved,"",A Gem for handling FHIR DSTU2 models in ruby,https://github.com/fhir-crucible/fhir_dstu2_models
-fhir_models,3.0.4,unknown,Not approved,"",A Gem for handling FHIR models in ruby,https://github.com/fhir-crucible/fhir_models
+fhir_dstu2_models,1.0.10,unknown,Approved,"",A Gem for handling FHIR DSTU2 models in ruby,https://github.com/fhir-crucible/fhir_dstu2_models
+fhir_models,3.0.4,unknown,Approved,"",A Gem for handling FHIR models in ruby,https://github.com/fhir-crucible/fhir_models
 flipper,0.17.2,MIT,Approved,http://opensource.org/licenses/mit-license,Feature flipper for ANYTHING,https://github.com/jnunemaker/flipper
 flipper-active_record,0.17.2,MIT,Approved,http://opensource.org/licenses/mit-license,ActiveRecord adapter for Flipper,https://github.com/jnunemaker/flipper
 fog-aws,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,Module for the 'fog' gem to support Amazon Web Services.,https://github.com/fog/fog-aws
@@ -64,7 +64,7 @@ grape-roar,0.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,Enable 
 grape-swagger,0.25.2,MIT,Approved,http://opensource.org/licenses/mit-license,Add auto generated documentation to your Grape API that can be displayed with Swagger.,https://github.com/ruby-grape/grape-swagger
 grape-swagger-rails,0.3.1,MIT,Approved,http://opensource.org/licenses/mit-license,Swagger UI as Rails Engine for grape-swagger gem,https://github.com/ruby-grape/grape-swagger-rails
 grape-swagger-representable,0.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,Grape swagger adapter to support representable object parsing,https://github.com/Bugagazavr/grape-swagger-representable
-grnds-auth0,3.0.0,unknown,Not approved,"",Wrapper for Auth0 Token generation/management,https://grandrounds.com/
+grnds-auth0,3.0.0,unknown,Approved,"",Wrapper for Auth0 Token generation/management,https://grandrounds.com/
 grnds-deploy,1.0.6,MIT,Approved,http://opensource.org/licenses/mit-license,Deployment Gem for Grnds applications.  Ensures proper integration with security endpoints.,https://github.com/ConsultingMD/grnds-status
 grnds-ediot,0.2.0,"Copyright (c) 2016 Grand Rounds Inc, all rights reserved",Approved,"",EDI Online Transformer,https://github.com/ConsultingMD/ediot
 grnds-feature_flag,0.3.2,MIT,Approved,http://opensource.org/licenses/mit-license,Gem to use LaunchDarkly,https://github.com/ConsultingMD/feature-flag
@@ -129,7 +129,7 @@ railties,4.2.11,MIT,Approved,http://opensource.org/licenses/mit-license,"Tools f
 rainbow,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,Colorize printed text on ANSI terminals,https://github.com/sickill/rainbow
 raindrops,0.19.1,LGPL-2.1+,Approved,"",real-time stats for preforking Rack servers,https://yhbt.net/raindrops/
 rake,13.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,Rake is a Make-like program implemented in Ruby,https://github.com/ruby/rake
-rchardet,1.8.0,LGPL,Not approved,http://www.gnu.org/licenses/lgpl.txt,Character encoding auto-detection in Ruby. As smart as your browser. Open source.,https://github.com/jmhodges/rchardet
+rchardet,1.8.0,LGPL,Approved,http://www.gnu.org/licenses/lgpl.txt,Character encoding auto-detection in Ruby. As smart as your browser. Open source.,https://github.com/jmhodges/rchardet
 rdoc,4.3.0,rdoc,Approved,"",RDoc produces HTML and command-line documentation for Ruby projects,http://docs.seattlerb.org/rdoc
 representable,2.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,"Renders and parses JSON/XML/YAML documents from and to Ruby objects. Includes plain properties, collections, nesting, coercion and more.",https://github.com/apotonick/representable/
 rest-client,2.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"Simple HTTP and REST client for Ruby, inspired by microframework syntax for specifying actions.",https://github.com/rest-client/rest-client
@@ -159,7 +159,7 @@ typhoeus,1.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,Parallel 
 tzinfo,1.2.6,MIT,Approved,http://opensource.org/licenses/mit-license,Daylight savings aware timezone library,http://tzinfo.github.io
 tzinfo-data,1.2019.3,MIT,Approved,http://opensource.org/licenses/mit-license,Timezone Data for TZInfo,http://tzinfo.github.io
 uber,0.0.15,MIT,Approved,http://opensource.org/licenses/mit-license,"Gem-authoring tools like class method inheritance in modules, dynamic options and more.",https://github.com/apotonick/uber
-unf,0.1.4,2-clause BSDL,Not approved,"",A wrapper library to bring Unicode Normalization Form support to Ruby/JRuby,https://github.com/knu/ruby-unf
+unf,0.1.4,2-clause BSDL,Approved,"",A wrapper library to bring Unicode Normalization Form support to Ruby/JRuby,https://github.com/knu/ruby-unf
 unf_ext,0.0.7.7,MIT,Approved,http://opensource.org/licenses/mit-license,Unicode Normalization Form support library for CRuby,https://github.com/knu/ruby-unf_ext
 unicorn,5.5.3,"GPL-2.0+,Ruby-1.8",Approved,",",Rack HTTP server for fast clients and Unix,https://yhbt.net/unicorn/
 uri_template,0.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,A templating system for URIs.,http://github.com/hannesg/uri_template

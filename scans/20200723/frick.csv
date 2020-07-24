@@ -79,7 +79,7 @@ nokogiri,1.8.1,MIT,Approved,http://opensource.org/licenses/mit-license,"Nokogiri
 oj,2.17.1,MIT,Approved,http://opensource.org/licenses/mit-license,A fast JSON parser and serializer.,http://www.ohler.com/oj
 parslet,1.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,Parser construction library with great error reporting in Ruby.,http://kschiess.github.com/parslet
 polyglot,0.3.5,MIT,Approved,http://opensource.org/licenses/mit-license,Augment 'require' to load non-Ruby file types,http://github.com/cjheath/polyglot
-power_assert,1.1.3,"2-clause BSDL,Ruby's",Not approved,",",Power Assert for Ruby,https://github.com/k-tsj/power_assert
+power_assert,1.1.3,"2-clause BSDL,Ruby's",Approved,",",Power Assert for Ruby,https://github.com/k-tsj/power_assert
 rack,1.4.7,MIT,Approved,http://opensource.org/licenses/mit-license,a modular Ruby webserver interface,http://rack.github.com/
 rack-accept,0.4.5,MIT,Approved,http://opensource.org/licenses/mit-license,HTTP Accept* for Ruby/Rack,http://mjijackson.github.com/rack-accept
 rack-cache,1.7.1,MIT,Approved,http://opensource.org/licenses/mit-license,HTTP Caching for Rack,https://github.com/rtomayko/rack-cache
