@@ -143,21 +143,6 @@ function s3_upload() {
   fi
 }
 
-# Jubilee is really more than one project, but this captures the stuff that I
-# think we're using in topk;  there are lots of aborted little projects in
-# there that prevent --recursive from working.  Also: it doesn't go after all
-# the stuff in Hadoop or Spark; they have their own conclusive/inclusive
-# license files (of dozens of contributions), so I decided to review and
-# approve those separately.
-function jubilee_license_finder() {
-  echo "license_finder report -p ${license_finder_report}"
-}
-
-# Reflex fails to find some dependencies in --recursive mode.
-function reflex_license_finder() {
-  echo "license_finder report -p ${license_finder_report}"
-}
-
 function banyan_prepare() {
   echo "bundle install && yarn && cd client && npm install && cd .."
 }
