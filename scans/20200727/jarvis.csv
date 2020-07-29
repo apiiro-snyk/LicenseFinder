@@ -1,0 +1,32 @@
+
+	10: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:51:in `block in aggregate_packages'
+	11: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:49:in `each'
+	12: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:49:in `flat_map'
+	13: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:49:in `aggregate_packages'
+	14: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:11:in `dependencies'
+	15: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/cli/main.rb:151:in `report'
+	16: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/command.rb:27:in `run'
+	17: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/invocation.rb:127:in `invoke_command'
+	18: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor.rb:392:in `dispatch'
+	19: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/base.rb:485:in `start'
+	 1: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/package_managers/composer.rb:48:in `dependency_list'
+[1m   - authors[0] : The property web is not defined and the definition does not allow additional properties  [m
+[1m  "./composer.json" does not match the expected JSON schema:                                               [m
+[1m  [Composer\\Json\\JsonValidationException]                                                                  [m
+[1m                                                                                                           [m
+[1m                                                                                                           [m
+[1mTraceback[m (most recent call last):
+	20: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/bin/license_finder:6:in `<top (required)>'
+	21: from /usr/share/rvm/gems/ruby-2.7.1/bin/license_finder:23:in `load'
+	22: from /usr/share/rvm/gems/ruby-2.7.1/bin/license_finder:23:in `<main>'
+	 2: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/package_managers/composer.rb:14:in `current_packages'
+	 3: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/package_manager.rb:101:in `current_packages_with_relations'
+	 4: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/scanner.rb:36:in `each'
+	 5: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/scanner.rb:36:in `flat_map'
+	 6: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/scanner.rb:36:in `active_packages'
+	 7: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/core.rb:83:in `current_packages'
+	 8: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/core.rb:78:in `decision_applier'
+	 9: from /usr/share/rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0/forwardable.rb:229:in `acknowledged'
+/usr/share/rvm/gems/ruby-2.7.1/gems/bundler-1.17.3/lib/bundler/rubygems_integration.rb:200: warning: constant Gem::ConfigMap is deprecated
+/usr/share/rvm/gems/ruby-2.7.1/gems/bundler-1.17.3/lib/bundler/rubygems_integration.rb:200: warning: constant Gem::ConfigMap is deprecated
+/usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/package_managers/composer.rb:54:in `composer_json': [1mCommand 'composer licenses --format=json' failed to execute:  ([1;4mRuntimeError[m[1m)[m

@@ -815,3 +815,86 @@
     :why: License is actually 2-clause BSD, the L is a typo in the the gemspec, AFAICT
     :versions: []
     :when: 2020-07-24 00:45:51.670271084 Z
+- - :ignore
+  - jquery.scrollto
+  - :who: rick@grnds.com
+    :why: composer.json does not validate. MIT license
+    :versions: []
+    :when: 2020-07-28 19:42:30.023525667 Z
+- - :approve
+  - gr-coverage
+  - :who: rick@grnds.com
+    :why: ":copy: Grand Rounds"
+    :versions: []
+    :when: 2020-07-28 20:59:11.315116124 Z
+- - :approve
+  - grnds-sendbird
+  - :who: rick@grnds.com
+    :why: ":copy: Grand Rounds"
+    :versions:
+    - 0.4.0
+    :when: 2020-07-28 21:47:17.020873032 Z
+- - :permit
+  - LGPL-3+
+  - :who: rick@grnds.com
+    :why: Non-viral, especially for SaaS providers; attribution requirements met by
+      our license pages
+    :versions: []
+    :when: 2020-07-28 22:02:21.836248666 Z
+- - :approve
+  - sidekiq-ent
+  - :who: rick@grnds.com
+    :why: Commercially licensed
+    :versions: []
+    :when: 2020-07-28 22:04:30.917760717 Z
+- - :approve
+  - sidekiq-pro
+  - :who: rick@grnds.com
+    :why: Commercially licensed
+    :versions: []
+    :when: 2020-07-28 22:04:38.484185018 Z
+- - :approve
+  - create-react-context
+  - :who: rick@grnds.com
+    :why: actually MIT
+    :versions:
+    - 0.2.3
+    :when: 2020-07-29 00:35:39.280861857 Z
+- - :approve
+  - isnumeric
+  - :who: rick@grnds.com
+    :why: later versions are MIT. See also https://grandrounds.atlassian.net/browse/MX-1828
+    :versions:
+    - 0.2.0
+    :when: 2020-07-29 00:39:42.546465008 Z
+- - :approve
+  - pako
+  - :who: rick@grnds.com
+    :why: MIT license with careful attribution of zlib
+    :versions: []
+    :when: 2020-07-29 00:42:46.107108325 Z
+- - :approve
+  - rgb
+  - :who: rick@grnds.com
+    :why: MIT license, just oddly included in npm file
+    :versions:
+    - 0.1.0
+    :when: 2020-07-29 00:43:43.180466954 Z
+- - :approve
+  - scriptjs
+  - :who: rick@grnds.com
+    :why: MIT license. LicenseFinder just does not find it.
+    :versions: []
+    :when: 2020-07-29 00:46:11.373742614 Z
+- - :approve
+  - sendbird
+  - :who: rick@grnds.com
+    :why: Commercial (SDK is open, but requires TOS, which we agree too)
+    :versions: []
+    :when: 2020-07-29 00:49:55.281525810 Z
+- - :permit
+  - Apache version 2.0
+  - :who: rick@grnds.com
+    :why: Yet another spelling of this license
+    :versions: []
+    :when: 2020-07-29 00:51:01.893740698 Z

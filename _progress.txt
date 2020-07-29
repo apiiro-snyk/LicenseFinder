@@ -1,0 +1,15 @@
+bain    done    Two problems. Can't fix interactively; license_finder json parse output of PIP is failing in interactive container. May need to hack approvals in; they're both fine. GSheet updated.
+banyan done     GSheet updated
+black   doens't bundle, minitest-5.14, may need later Ruby?
+chat    needs bundler 2.1.4 installed?
+dollar  ruby done, needs Java side.
+domino  done    GSheet done
+frick   done    one to approve, decided to rerun. done and in GSheet
+hermes  could not find rake-13.0.1; node is too old; probably needs ruby-2.5.1
+jarvis  done    <Not GSheeted, not HTML'ed>
+rogers  done    GSheet done
+stone   done    GSheet done
+tim     could not find grape; have never managed to bundle on the host, may have to do Ruby gem integration to get report.
+tp      could not find zache-0.12.0, DOES need ruby 2.5.1? (can't bundle in ruby-2.4.1)
+warehouse       could not find sprockets-4.0.0 (bundling)
+
