@@ -1,3 +1,12 @@
+## Thursday 2020-07-30
+
+Focused on embedding license_finder again, after writing PRD/POA yesterday.
+Successfully embedded in `black`, with modern LF and .circle-ci calling to the
+inherited dependency file.
+
+* Slow: check_licenses takes ~3:30 where the build_tng is only 1:30 (probably because of layer caching, really)
+* Does not solve the inventory problem.
+
 ## Tuesday  2020-07-28
 
 Extended the `gr_license` hack for Jarvis to clean up the problem with
