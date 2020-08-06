@@ -898,3 +898,10 @@
     :why: Yet another spelling of this license
     :versions: []
     :when: 2020-07-29 00:51:01.893740698 Z
+- - :approve
+  - github.com/jmespath/go-jmespath
+  - :who: rick@grnds.com
+    :why: later versions are Apache 2.0
+    :versions:
+    - v0.3.0
+    :when: 2020-08-06 05:12:56.163519893 Z
