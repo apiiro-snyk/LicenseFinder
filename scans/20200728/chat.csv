@@ -1,0 +1,32 @@
+[0m
+	10: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/command.rb:27:in `run'
+	11: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/invocation.rb:127:in `invoke_command'
+	12: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor.rb:392:in `dispatch'
+	13: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/base.rb:485:in `start'
+	14: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/bin/license_finder:6:in `<top (required)>'
+	15: from /usr/share/rvm/gems/ruby-2.7.1/bin/license_finder:23:in `load'
+	16: from /usr/share/rvm/gems/ruby-2.7.1/bin/license_finder:23:in `<main>'
+	 1: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/core.rb:64:in `block in prepare_projects'
+[1m[DEPRECATED] The `--path` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set path 'lf-bundler-gems-e5f4ee9b-79ed-4f1a-a23b-9ecbb1ae9661'`, and stop using this flag[m
+[1m[DEPRECATED] The `--without` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set without 'test development dev devDependencies optionalDependencies'`, and stop using this flag[m
+[1mDon't run Bundler as root. Bundler can ask for sudo if it is needed, and[m
+[1minstalling your bundle as root will break this application for all non-root[m
+[1mTraceback[m (most recent call last):
+[1musers on this machine.[m
+[1mYour Ruby version is 2.7.1, but your Gemfile specified 2.6.3[m
+	 2: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/core.rb:62:in `each'
+	 3: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/core.rb:62:in `prepare_projects'
+	 4: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:50:in `block in aggregate_packages'
+	 5: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:49:in `each'
+	 6: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:49:in `flat_map'
+	 7: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:49:in `aggregate_packages'
+	 8: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:11:in `dependencies'
+	 9: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/cli/main.rb:151:in `report'
+bundle install --without test development dev devDependencies optionalDependencies --path lf-bundler-gems-fc109367-fa66-4eb8-bfd4-c8942e803787: [31m[DEPRECATED] The `--path` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set path 'lf-bundler-gems-e5f4ee9b-79ed-4f1a-a23b-9ecbb1ae9661'`, and stop using this flag
+bundle install --without test development dev devDependencies optionalDependencies --path lf-bundler-gems-fc109367-fa66-4eb8-bfd4-c8942e803787: [31mdid not succeed.[0m
+[DEPRECATED] The `--without` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set without 'test development dev devDependencies optionalDependencies'`, and stop using this flag
+Don't run Bundler as root. Bundler can ask for sudo if it is needed, and
+installing your bundle as root will break this application for all non-root
+users on this machine.
+/usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/package_manager.rb:92:in `prepare': [1mPrepare command 'bundle install --without test development dev devDependencies optionalDependencies --path lf-bundler-gems-9829e6da-5f95-4e92-ad3d-c3877a384271' failed ([1;4mRuntimeError[m[1m)[m
+Your Ruby version is 2.7.1, but your Gemfile specified 2.6.3
