@@ -170,11 +170,11 @@ function banyan_license_finder() {
 }
 
 function potluck_prepare() {
-  echo "${GR_HOME}/LicenseFinder/bin/dependencies_yaml_to_pom maven_dependencies.yaml > pom.xml"
+  echo "dependencies_yaml_to_pom maven_dependencies.yaml > pom.xml"
 }
 
 function bobs_prepare() {
-  echo "${GR_HOME}/LicenseFinder/bin/dependencies_yaml_to_pom maven_dependencies.yaml > pom.xml
+  echo "dependencies_yaml_to_pom maven_dependencies.yaml > pom.xml"
 }
 
 # Don't use `--recursive` for "black".
