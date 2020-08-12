@@ -905,3 +905,65 @@
     :versions:
     - v0.3.0
     :when: 2020-08-06 05:12:56.163519893 Z
+- - :permit
+  - BSD 3 Clause
+  - :who: rick@grnds.com
+    :why: Another spelling of BSD 3-Clause
+    :versions: []
+    :when: 2020-08-11 23:55:35.262346615 Z
+- - :permit
+  - 3-Clause BSD License
+  - :who: rick@grnds.com
+    :why: Another spelling of BSD 3-Clause
+    :versions: []
+    :when: 2020-08-11 23:56:07.224388784 Z
+- - :permit
+  - BSD 2-Clause license
+  - :who: rick@grnds.com
+    :why: Another spelling of BSD 2-clause
+    :versions: []
+    :when: 2020-08-11 23:58:18.406660416 Z
+- - :permit
+  - Apache License (v2.0)
+  - :who: rick@grnds.com
+    :why: Another spelling of ASL 2.0
+    :versions: []
+    :when: 2020-08-11 23:59:24.874032695 Z
+- - :permit
+  - the Apache License, ASL Version 2.0
+  - :who: rick@grnds.com
+    :why: Another spelling of ASL 2.0
+    :versions: []
+    :when: 2020-08-11 23:59:45.654335671 Z
+- - :permit
+  - Three-clause BSD-style
+  - :who: rick@grnds.com
+    :why: Another spelling of BSD 3-Clause
+    :versions: []
+    :when: 2020-08-12 00:00:16.894481387 Z
+- - :permit
+  - Bouncy Castle License
+  - :who: rick@grnds.com
+    :why: Word-for-word identical to MIT
+    :versions: []
+    :when: 2020-08-12 00:03:59.281844462 Z
+- - :approve
+  - scalacheck_2.12
+  - :who: rick@grnds.com
+    :why: Github recognizes license as 3-clause BSD
+    :versions:
+    - 1.13.5
+    :when: 2020-08-12 00:07:25.928223911 Z
+- - :approve
+  - redshift-jdbc42
+  - :who: rick@grnds.com
+    :why: Commercial license allows redistribution with notice, equivalent commercial
+      restriction & inclusion of open source licenses
+    :versions: []
+    :when: 2020-08-12 00:13:37.040486091 Z
+- - :approve
+  - newrelic-api
+  - :who: rick@grnds.com
+    :why: Commercial, same as other New Relic client licenses
+    :versions: []
+    :when: 2020-08-12 00:14:43.034016211 Z
