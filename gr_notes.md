@@ -1,6 +1,12 @@
+## Wednesday 2020-08-12
+
+* Completed the reporting & scan for bobs / potluck. 4 components flagged, 3 bugs filed (one for 2 comps).
+* Need to rescan banyan & jarvis b/c js licenses that should be approved aren't.
+
 ## Tuesday 2020-08-11
 
-* Wrote maven\_dependencies.yml -> xml.pom filter, worked well enough on the 'potluck' repo.
+* Wrote maven\_dependencies.yml -> xml.pom filter, worked well enough on the
+  `potluck` repo. Also ran on `bobs`.
 
 ## Friday 2020-08-07
 

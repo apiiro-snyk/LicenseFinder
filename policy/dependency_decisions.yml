@@ -967,3 +967,198 @@
     :why: Commercial, same as other New Relic client licenses
     :versions: []
     :when: 2020-08-12 00:14:43.034016211 Z
+- - :permit
+  - CDDL License
+  - :who: rick@grnds.com
+    :why: Another spelling of CDDL
+    :versions: []
+    :when: 2020-08-12 17:51:52.426805207 Z
+- - :permit
+  - Bouncy Castle License
+  - :who: rick@grnds.com
+    :why: Identical to MIT
+    :versions: []
+    :when: 2020-08-12 17:52:20.817100103 Z
+- - :permit
+  - GNU Lesser Public License
+  - :who: rick@grnds.com
+    :why: Another spelling of LGPL
+    :versions: []
+    :when: 2020-08-12 17:53:18.157774101 Z
+- - :permit
+  - COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
+  - :who: rick@grnds.com
+    :why: Another spelling of CDDL
+    :versions: []
+    :when: 2020-08-12 17:53:42.924389541 Z
+- - :permit
+  - Go License
+  - :who: rick@grnds.com
+    :why: Allowed as part of scanning protean-operator
+    :versions: []
+    :when: 2020-08-12 17:54:17.339332104 Z
+- - :permit
+  - CC0
+  - :who: rick@grnds.com
+    :why: Universal public-domain license
+    :versions: []
+    :when: 2020-08-12 17:56:27.738591310 Z
+- - :permit
+  - Bouncy Castle Licence
+  - :who: rick@grnds.com
+    :why: British spelling of Bouncy Castle License, identical to MIT
+    :versions: []
+    :when: 2020-08-12 17:57:49.077971249 Z
+- - :approve
+  - activation
+  - :who: rick@grnds.com
+    :why: Licensed under CDDL, but spells it in a way LicenseFinder does not handle
+    :versions: []
+    :when: 2020-08-12 17:59:21.785547796 Z
+- - :permit
+  - BSD 2-Clause License
+  - :who: rick@grnds.com
+    :why: Another spelling of BSD 2-clause
+    :versions: []
+    :when: 2020-08-12 18:00:55.349703562 Z
+- - :permit
+  - Apache Software License 2.0
+  - :who: rick@grnds.com
+    :why: how many spellings can ASL 2.0 have?
+    :versions: []
+    :when: 2020-08-12 20:01:14.642593040 Z
+- - :permit
+  - GNU Library General Public License v2.1 or later
+  - :who: rick@grnds.com
+    :why: aka LGPLv2+
+    :versions: []
+    :when: 2020-08-12 21:12:03.806564622 Z
+- - :permit
+  - Eclipse Public License, Version 1.0, GNU Lesser General Public License, Version
+    2.1
+  - :who: rick@grnds.com
+    :why: we choose the Eclipse Public License V1
+    :versions: []
+    :when: 2020-08-12 21:12:49.646048505 Z
+- - :permit
+  - GNU Lesser General Public License v2.1 or later
+  - :who: rick@grnds.com
+    :why: aka LGPLv2.1+
+    :versions: []
+    :when: 2020-08-12 21:14:08.657178166 Z
+- - :approve
+  - c3p0
+  - :who: rick@grnds.com
+    :why: Allows either EPL1 or LGPL2.1, we prefer the EPL1 side.
+    :versions: []
+    :when: 2020-08-12 21:32:33.990926487 Z
+- - :approve
+  - h2
+  - :who: rick@grnds.com
+    :why: Allows either EPL1 or MPL, we prefer the EPL1 side.
+    :versions: []
+    :when: 2020-08-12 21:33:15.552095065 Z
+- - :permit
+  - EDL 1.0
+  - :who: rick@grnds.com
+    :why: aka Eclipse Distribution License
+    :versions: []
+    :when: 2020-08-12 21:34:16.047015159 Z
+- - :permit
+  - Eclipse Distribution License - v 1.0
+  - :who: rick@grnds.com
+    :why: Very similar to MIT license
+    :versions: []
+    :when: 2020-08-12 21:35:14.996447978 Z
+- - :approve
+  - javax.activation
+  - :who: rick@grnds.com
+    :why: Allws CDDL or GPLv2+CE; we choose CDDL
+    :versions: []
+    :when: 2020-08-12 21:36:18.751582417 Z
+- - :approve
+  - jaxws-api
+  - :who: rick@grnds.com
+    :why: Allows CDDL v1.1 or GPLv2; we choose CDDL
+    :versions: []
+    :when: 2020-08-12 21:37:16.189823739 Z
+- - :approve
+  - jboss-transaction-api_1.2_spec
+  - :who: rick@grnds.com
+    :why: Allows CDDL or GPLv2+CE; we choose CDDL
+    :versions: []
+    :when: 2020-08-12 21:38:06.913671622 Z
+- - :approve
+  - jsr181-api
+  - :who: rick@grnds.com
+    :why: Allows CDDL or GPLv2+CE; we choose CDDL
+    :versions: []
+    :when: 2020-08-12 21:38:58.923974489 Z
+- - :approve
+  - mchange-commons-java
+  - :who: rick@grnds.com
+    :why: Allows EPLv1 or GPLv2+CE; we choose EPLv1
+    :versions: []
+    :when: 2020-08-12 21:39:44.442742009 Z
+- - :approve
+  - stax-api
+  - :who: rick@grnds.com
+    :why: Allows CDDL or GPL, we shoose CDDL
+    :versions: []
+    :when: 2020-08-12 21:41:04.243646476 Z
+- - :approve
+  - stax-ex
+  - :who: rick@grnds.com
+    :why: Allows CDDLv1.1 or GPLv2, we choose CDDL
+    :versions: []
+    :when: 2020-08-12 21:41:35.583754653 Z
+- - :approve
+  - javax.persistence-api
+  - :who: rick@grnds.com
+    :why: Allows EDLv1 or EPLv1, we choose EDLv1
+    :versions: []
+    :when: 2020-08-12 21:44:08.904003316 Z
+- - :permit
+  - Indiana University Extreme! Lab Software License, vesion 1.1.1
+  - :who: rick@grnds.com
+    :why: Similar to MPL
+    :versions: []
+    :when: 2020-08-12 21:47:11.659950932 Z
+- - :approve
+  - commons-codec
+  - :who: rick@grnds.com
+    :why: Maven reports this as being licensed under the original Apache (v1.1) license.
+      We do not advertise features of this software, so are not covered by the wacky
+      old attribution requirement. We do attribute on our license page, but not in
+      a compliant way (we do not use the terms required in the license).
+    :versions:
+    - '1.1'
+    :when: 2020-08-12 22:16:40.111532608 Z
+- - :license
+  - xbean-asm6-shaded
+  - Apache 2.0
+  - :who: rick@grnds.com
+    :why: Brad found the license, see https://grandrounds.atlassian.net/browse/LASIK-597
+    :versions: []
+    :when: 2020-08-12 22:59:55.855129381 Z
+- - :license
+  - jinjava
+  - Apache 2.0
+  - :who: rick@grnds.com
+    :why: Brad found the license, see https://grandrounds.atlassian.net/browse/LASIK-597
+    :versions: []
+    :when: 2020-08-12 23:00:46.817919790 Z
+- - :license
+  - jsp-api
+  - CDDL+GPL License
+  - :who: rick@grnds.com
+    :why: mvnrepository reports as CDDL or GPL, we choose CDDL
+    :versions:
+    - '2.1'
+    :when: 2020-08-12 23:03:53.567475039 Z
+- - :approve
+  - idna
+  - :who: 
+    :why: Slightly off-format BSD 3-clause license
+    :versions: []
+    :when: 2020-08-12 23:25:05.136562677 Z
