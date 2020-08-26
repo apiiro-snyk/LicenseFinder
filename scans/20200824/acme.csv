@@ -1,0 +1,112 @@
+alabaster,0.7.12,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A configurable sidebar-enabled Sphinx theme,https://alabaster.readthedocs.io
+arviz,0.9.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Exploratory analysis of Bayesian models,http://github.com/arviz-devs/arviz
+attrs,20.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,Classes Without Boilerplate,https://www.attrs.org/
+babel,2.8.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Internationalization utilities,http://babel.pocoo.org/
+blas,1.0,unknown,Not approved,"","",""
+ca-certificates,2020.6.24,MPL 2.0,Not approved,"","",""
+cachetools,4.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,Extensible memoizing collections and decorators,https://github.com/tkem/cachetools/
+certifi,2020.6.20,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",""
+cffi,1.14.2,MIT,Approved,http://opensource.org/licenses/mit-license,Foreign Function Interface for Python calling C code.,http://cffi.readthedocs.org
+cftime,1.2.1,GNU General Public License v3 (GPLv3),Not approved,"",Time-handling functionality from netcdf4-python,""
+chardet,3.0.4,LGPL,Approved,http://www.gnu.org/licenses/lgpl.txt,Universal encoding detector for Python 2 and 3,https://github.com/chardet/chardet
+colorama,0.4.3,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Cross-platform colored terminal text.,https://github.com/tartley/colorama
+commonmark,0.9.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,Python parser for the CommonMark Markdown spec,https://github.com/rtfd/commonmark.py
+cycler,0.10.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Composable style cycles,http://github.com/matplotlib/cycler
+docutils,0.16,"BSD,GNU General Public License (GPL),Public Domain,Python Software Foundation License",Approved,"http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,,,http://hg.python.org/cpython/raw-file/89ce323357db/LICENSE",Docutils -- Python Documentation Utilities,http://docutils.sourceforge.net/
+fastprogress,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,A nested progress with plotting options for fastai,https://github.com/fastai/fastprogress
+gitdb,4.0.5,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Git Object Database,https://github.com/gitpython-developers/gitdb
+gitpython,3.1.7,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Python Git Library,https://github.com/gitpython-developers/GitPython
+google-api-core,1.22.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google API client core library,https://github.com/googleapis/python-api-core
+google-api-python-client,1.10.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google API Client Library for Python,https://github.com/googleapis/google-api-python-client/
+googleapis-common-protos,1.52.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Common protobufs used in Google APIs,https://github.com/googleapis/python-api-common-protos
+google-auth,1.20.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google Authentication Library,https://github.com/googleapis/google-auth-library-python
+google-auth-httplib2,0.0.4,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google Authentication Library: httplib2 transport,https://github.com/GoogleCloudPlatform/google-auth-library-python-httplib2
+google-auth-oauthlib,0.4.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google Authentication Library,https://github.com/GoogleCloudPlatform/google-auth-library-python-oauthlib
+google-cloud-bigquery,1.27.2,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google BigQuery API client library,https://github.com/googleapis/python-bigquery
+google-cloud-core,1.4.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google Cloud API client core library,https://github.com/googleapis/python-cloud-core
+google-crc32c,0.1.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,A python wrapper of the C library 'Google CRC32C',https://github.com/googleapis/python-crc32c
+google-resumable-media,0.7.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Utilities for Google Media Downloads and Resumable Uploads,https://github.com/googleapis/google-resumable-media-python
+h5py,2.10.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Read and write HDF5 files from Python,http://www.h5py.org
+httplib2,0.18.1,MIT,Approved,http://opensource.org/licenses/mit-license,A comprehensive HTTP client library.,https://github.com/httplib2/httplib2
+idna,2.10,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Internationalized Domain Names in Applications (IDNA),https://github.com/kjd/idna
+imagesize,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,Getting image size from png/jpeg/jpeg2000/gif file,https://github.com/shibukawa/imagesize_py
+importlib-metadata,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Read metadata from Python packages,http://importlib-metadata.readthedocs.io/
+iniconfig,1.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,iniconfig: brain-dead simple config-ini parsing,http://github.com/RonnyPfannschmidt/iniconfig
+intel-openmp,2020.1,proprietary - Intel,Not approved,"","",""
+jinja2,2.8,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A small but fast and easy to use stand-alone template engine written in pure python.,http://jinja.pocoo.org/
+joblib,0.16.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Lightweight pipelining: using Python functions as pipeline jobs.,https://joblib.readthedocs.io
+kiwisolver,1.2.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A fast implementation of the Cassowary constraint solver,https://github.com/nucleic/kiwi
+libedit,3.1.20191231,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",""
+libffi,3.2.1,Custom,Not approved,"","",""
+_libgcc_mutex,0.1,unknown,Not approved,"","",""
+libgcc-ng,9.1.0,GPL,Not approved,"","",""
+libgfortran-ng,7.3.0,GPL,Not approved,"","",""
+libopenblas,0.3.6,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"",""
+libstdcxx-ng,9.1.0,GPL3 with runtime exception,Not approved,"","",""
+livy,0.7.2,MIT,Approved,http://opensource.org/licenses/mit-license,A Python client for Apache Livy,https://github.com/acroz/pylivy
+markdown,3.2.2,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Python implementation of Markdown.,https://Python-Markdown.github.io/
+markupsafe,1.1.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,Safely add untrusted strings to HTML/XML markup.,https://palletsprojects.com/p/markupsafe/
+matplotlib,3.3.1,Python Software Foundation License,Not approved,http://hg.python.org/cpython/raw-file/89ce323357db/LICENSE,Python plotting package,https://matplotlib.org
+mkl,2020.1,proprietary - Intel,Not approved,"","",""
+mkl_fft,1.1.0,BSD 3-Clause,Approved,"","",""
+mkl_random,1.1.1,BSD 3-Clause,Approved,"","",""
+mkl-service,2.3.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+more-itertools,8.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"More routines for operating on iterables, beyond itertools",https://github.com/more-itertools/more-itertools
+ncurses,6.2,Free software (MIT-like),Not approved,"","",""
+netcdf4,1.5.4,OSI Approved,Not approved,"",Provides an object-oriented python interface to the netCDF version 4 library.,http://github.com/Unidata/netcdf4-python
+numpy,1.19.1,BSD 3-Clause,Approved,"","",""
+numpy-base,1.19.1,BSD 3-Clause,Approved,"","",""
+oauthlib,3.1.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"A generic, spec-compliant, thorough implementation of the OAuth request-signing logic",https://github.com/oauthlib/oauthlib
+openssl,1.1.1g,OpenSSL,Not approved,"","",""
+packaging,20.4,"Apache 2.0,Simplified BSD",Approved,"http://www.apache.org/licenses/LICENSE-2.0.txt,http://opensource.org/licenses/bsd-license",Core utilities for Python packages,https://github.com/pypa/packaging
+pandas,1.1.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"Powerful data structures for data analysis, time series, and statistics",https://pandas.pydata.org
+pandas-gbq,0.13.2,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Pandas interface to Google BigQuery,https://github.com/pydata/pandas-gbq
+patsy,0.5.1,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,A Python package for describing statistical models and for building design matrices.,https://github.com/pydata/patsy
+pillow,7.2.0,Historical Permission Notice and Disclaimer (HPND),Not approved,"",Python Imaging Library (Fork),https://python-pillow.org
+pip,20.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+pluggy,0.13.1,MIT,Approved,http://opensource.org/licenses/mit-license,plugin and hook calling mechanisms for python,https://github.com/pytest-dev/pluggy
+pockets,0.9.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A collection of helpful Python tools!,http://pockets.readthedocs.org
+protobuf,3.13.0,unknown,Not approved,"",Protocol Buffers,https://developers.google.com/protocol-buffers/
+py,1.9.0,MIT,Approved,http://opensource.org/licenses/mit-license,"library with cross-python path, ini-parsing, io, code, log facilities",https://py.readthedocs.io/
+pyasn1,0.4.8,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,ASN.1 types and codecs,https://github.com/etingof/pyasn1
+pyasn1-modules,0.2.8,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,A collection of ASN.1-based protocols modules.,https://github.com/etingof/pyasn1-modules
+pycparser,2.20,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,C parser in Python,https://github.com/eliben/pycparser
+pydata-google-auth,1.1.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,PyData helpers for authenticating to Google APIs,https://github.com/pydata/pydata-google-auth
+pygments,2.6.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Pygments is a syntax highlighting package written in Python.,https://pygments.org/
+pymc3,3.9.3,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Probabilistic Programming in Python: Bayesian Modeling and Probabilistic Machine Learning with Theano,http://github.com/pymc-devs/pymc3
+pyparsing,2.4.7,MIT,Approved,http://opensource.org/licenses/mit-license,Python parsing module,https://github.com/pyparsing/pyparsing/
+pytest,6.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,pytest: simple powerful testing with Python,https://docs.pytest.org/en/latest/
+python,3.7.3,Python Software Foundation License,Not approved,http://hg.python.org/cpython/raw-file/89ce323357db/LICENSE,"",""
+python-dateutil,2.8.1,"Apache 2.0,BSD",Approved,"http://www.apache.org/licenses/LICENSE-2.0.txt,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29",Extensions to the standard Python datetime module,https://dateutil.readthedocs.io
+pytz,2020.1,MIT,Approved,http://opensource.org/licenses/mit-license,"World timezone definitions, modern and historical",http://pythonhosted.org/pytz
+readline,7.0,GPL-3.0,Not approved,"","",""
+recommonmark,0.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"A docutils-compatibility bridge to CommonMark, enabling you to write CommonMark inside of Docutils & Sphinx projects.",https://github.com/rtfd/recommonmark
+requests,2.24.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Python HTTP for Humans.,https://requests.readthedocs.io
+requests-oauthlib,1.3.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,OAuthlib authentication support for Requests.,https://github.com/requests/requests-oauthlib
+rsa,4.6,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Pure-Python RSA implementation,https://stuvel.eu/rsa
+scikit-learn,0.23.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,A set of python modules for machine learning and data mining,http://scikit-learn.org
+scipy,1.5.2,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,SciPy: Scientific Library for Python,https://www.scipy.org
+setuptools,49.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+six,1.15.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+smmap,3.0.4,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A pure Python implementation of a sliding window memory map manager,https://github.com/gitpython-developers/smmap
+snowballstemmer,2.0.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,This package provides 26 stemmers for 25 languages generated from Snowball algorithms.,https://github.com/snowballstem/snowball
+sphinx,1.7.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Python documentation generator,http://sphinx-doc.org/
+sphinxcontrib-napoleon,0.7,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"Sphinx ""napoleon"" extension.",https://sphinxcontrib-napoleon.readthedocs.io
+sphinxcontrib-serializinghtml,1.1.4,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"sphinxcontrib-serializinghtml is a sphinx extension which outputs ""serialized"" HTML files (json and pickle).",http://sphinx-doc.org/
+sphinxcontrib-websupport,1.2.4,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Sphinx API for Web Apps,http://sphinx-doc.org/
+sphinx-markdown-tables,0.0.15,GNU General Public License v3 (GPLv3),Not approved,"",A Sphinx extension for rendering tables written in markdown,https://github.com/ryanfox/sphinx-markdown-tables
+sphinx-rtd-theme,0.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,Read the Docs theme for Sphinx,https://github.com/rtfd/sphinx_rtd_theme/
+sqlite,3.33.0,Public-Domain (http://www.sqlite.org/copyright.html),Not approved,"","",""
+structlog,20.1.0,"Apache 2.0,MIT",Approved,"http://www.apache.org/licenses/LICENSE-2.0.txt,http://opensource.org/licenses/mit-license",Structured Logging for Python,https://www.structlog.org/
+theano,1.0.5,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs.,http://deeplearning.net/software/theano/
+threadpoolctl,2.1.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,threadpoolctl,https://github.com/joblib/threadpoolctl
+tk,8.6.10,Tcl/Tk,Not approved,"","",""
+toml,0.10.1,MIT,Approved,http://opensource.org/licenses/mit-license,"Python Library for Tom's Obvious, Minimal Language",https://github.com/uiri/toml
+typing-extensions,3.7.4.3,Python Software Foundation License,Not approved,http://hg.python.org/cpython/raw-file/89ce323357db/LICENSE,Backported and Experimental Type Hints for Python 3.5+,https://github.com/python/typing/blob/master/typing_extensions/README.rst
+uritemplate,3.0.1,"Apache 2.0,New BSD",Approved,"http://www.apache.org/licenses/LICENSE-2.0.txt,http://opensource.org/licenses/BSD-3-Clause",URI templates,https://uritemplate.readthedocs.org
+urllib3,1.25.10,MIT,Approved,http://opensource.org/licenses/mit-license,"HTTP library with thread-safe connection pooling, file post, and more.",https://urllib3.readthedocs.io/
+wheel,0.34.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+xarray,0.16.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,N-D labeled arrays and datasets in Python,https://github.com/pydata/xarray
+xz,5.2.5,LGPL-2.1 and GPL-2.0,Not approved,"","",""
+zipp,3.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,Backport of pathlib-compatible object wrapper for zip files,https://github.com/jaraco/zipp
+zlib,1.2.11,zlib,Not approved,"","",""

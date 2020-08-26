@@ -1162,3 +1162,130 @@
     :why: Slightly off-format BSD 3-clause license
     :versions: []
     :when: 2020-08-12 23:25:05.136562677 Z
+- - :approve
+  - libgcc-ng
+  - &1
+    :who: rick@grnds.com
+    :why: actually GPL3 with runtime exception. Read code at https://github.com/gcc-mirror/gcc/tree/master/libgcc
+    :versions: []
+    :when: 2020-08-25 23:11:10.209134055 Z
+- - :approve
+  - 9.1.0
+  - *1
+- - :permit
+  - BSL-1.0
+  - :who: rick@grnds.com
+    :why: Boost Shared License 1.0 is not viral, requires no more attribution than
+      we do
+    :versions: []
+    :when: 2020-08-25 23:16:12.434698279 Z
+- - :permit
+  - bzip2
+  - :who: rick@grnds.com
+    :why: license is not viral, requires no more attribution than we do
+    :versions: []
+    :when: 2020-08-25 23:16:39.135547322 Z
+- - :permit
+  - MPL 2.0
+  - :who: rick@grnds.com
+    :why: aka Mozilla Public License 2.0, already approved
+    :versions: []
+    :when: 2020-08-25 23:17:03.991958253 Z
+- - :permit
+  - GNU Lesser General Public License v3 or later (LGPLv3+)
+  - :who: rick@grnds.com
+    :why: another of the 9 million names of LGPLv3+
+    :versions: []
+    :when: 2020-08-25 23:17:32.381307645 Z
+- - :permit
+  - PSF 2.0
+  - :who: rick@grnds.com
+    :why: Python Software Foundation license much like Apache 2.0
+    :versions: []
+    :when: 2020-08-25 23:18:03.806423231 Z
+- - :license
+  - libffi
+  - MIT
+  - :who: rick@grnds.com
+    :why: Text of the license is MIT
+    :versions: []
+    :when: 2020-08-25 23:21:57.670732560 Z
+- - :permit
+  - GPL3 with runtime exception
+  - :who: rick@grnds.com
+    :why: we only use the library, we don't modify, so runtime exception covers us
+    :versions: []
+    :when: 2020-08-25 23:23:09.455851093 Z
+- - :permit
+  - Python Software Foundation License
+  - :who: rick@grnds.com
+    :why: aka PSF 2.0, very like Apache 2.0
+    :versions: []
+    :when: 2020-08-25 23:24:02.413458118 Z
+- - :approve
+  - ncurses
+  - :who: rick@grnds.com
+    :why: It is one of the MIT-X11 licenses, and if you want a horrible history of
+      licensing, read its license page
+    :versions: []
+    :when: 2020-08-26 00:23:45.036321580 Z
+- - :permit
+  - OpenSSL
+  - :who: rick@grnds.com
+    :why: Apache-like license; later versions use Apache 2.0
+    :versions: []
+    :when: 2020-08-26 00:25:12.812832353 Z
+- - :approve
+  - packaging
+  - :who: rick@grnds.com
+    :why: Allows BSD 2-clause or Apache 2.0, both approved
+    :versions: []
+    :when: 2020-08-26 00:26:12.120120182 Z
+- - :permit
+  - Historical Permission Notice and Disclaimer (HPND)
+  - :who: rick@grnds.com
+    :why: A classic template for OSS, OSI approved, not viral
+    :versions: []
+    :when: 2020-08-26 00:29:19.073327245 Z
+- - :permit
+  - Mozilla Public License 2.0 (MPL 2.0)
+  - :who: rick@grnds.com
+    :why: aka MPL 2.0
+    :versions: []
+    :when: 2020-08-26 00:30:17.819710961 Z
+- - :approve
+  - sqlite
+  - :who: rick@grnds.com
+    :why: Licensing claims public-domain; that works OK in the US
+    :versions: []
+    :when: 2020-08-26 00:31:45.829678877 Z
+- - :permit
+  - Tcl/Tk
+  - :who: rick@grnds.com
+    :why: Extended BSD license (to cover scriptics & sun in addition to UCB)
+    :versions: []
+    :when: 2020-08-26 00:32:57.537294592 Z
+- - :approve
+  - xz
+  - :who: rick@grnds.com
+    :why: Allows use of LGPL-2.1
+    :versions: []
+    :when: 2020-08-26 00:33:20.067080501 Z
+- - :approve
+  - zlib
+  - :who: rick@grnds.com
+    :why: Super easy to comply with, makes MIT look restrictive
+    :versions: []
+    :when: 2020-08-26 00:35:21.126959763 Z
+- - :permit
+  - LGPL 3
+  - :who: rick@grnds.com
+    :why: Yet another spelling of LGPLv3
+    :versions: []
+    :when: 2020-08-26 00:45:19.891296344 Z
+- - :approve
+  - pyphen
+  - :who: rick@grnds.com
+    :why: Allows MPL 1.1 and LGPLv2+, either one of which is OK for us
+    :versions: []
+    :when: 2020-08-26 00:53:13.970523827 Z

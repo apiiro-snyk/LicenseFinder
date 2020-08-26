@@ -1,3 +1,40 @@
+## Tuesday 2020-08-25
+
+Went through licenses for Cortex and approved the OSI ones I recognized.
+
+## Monday 2020-08-24
+
+#### Metropolis
+* Metropolis doesn't scan at the top level because it's a monorepo and needs --recursive
+* Running recursive blows up for pip2 / python2.7 problems in the container:
+```
+root@1b78781a6879:/scan# license_finder --recursive -p
+LicenseFinder::Pip: is active
+LicenseFinder::Conda: is active
+pip2 install: did not succeed.
+pip2 install: DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Invalid requirement: '"--editable=git+https://github.com/ConsultingMD/pygrounds.git@ebcb0e65e452079a21b7f5929072102da8ae050b#egg=pygrounds"'
+It looks like a path. File '"--editable=git+https://github.com/ConsultingMD/pygrounds.git@ebcb0e65e452079a21b7f5929072102da8ae050b#egg=pygrounds"' does not exist.
+You are using pip version 19.0.2, however version 20.2.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+
+Traceback (most recent call last):
+	14: from /usr/share/rvm/gems/ruby-2.7.1/bin/license_finder:23:in `<main>'
+	13: from /usr/share/rvm/gems/ruby-2.7.1/bin/license_finder:23:in `load'
+	12: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.8.1/bin/license_finder:6:in `<top (required)>'
+	11: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/base.rb:485:in `start'
+	10: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor.rb:392:in `dispatch'
+	 9: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/invocation.rb:127:in `invoke_command'
+	 8: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/command.rb:27:in `run'
+	 7: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.8.1/lib/license_finder/cli/main.rb:110:in `action_items'
+	 6: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.8.1/lib/license_finder/license_aggregator.rb:15:in `any_packages?'
+	 5: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.8.1/lib/license_finder/license_aggregator.rb:15:in `map'
+	 4: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.8.1/lib/license_finder/license_aggregator.rb:16:in `block in any_packages?'
+	 3: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.8.1/lib/license_finder/core.rb:62:in `prepare_projects'
+	 2: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.8.1/lib/license_finder/core.rb:62:in `each'
+	 1: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.8.1/lib/license_finder/core.rb:64:in `block in prepare_projects'
+/usr/share/rvm/gems/ruby-2.7.
+```
 ## Wednesday 2020-08-12
 
 * Completed the reporting & scan for bobs / potluck. 4 components flagged, 3 bugs filed (one for 2 comps).

@@ -40,7 +40,18 @@ function rails_apps() {
 }
 
 function other_apps() {
-  others="bain dollar potluck bobs"
+  others='
+    bain
+    dollar
+    potluck
+    bobs
+    cortex
+    match_engine
+    me-services
+    metropolis
+    pygrounds
+    acme
+  '
   apps=''
   for app in $others ; do
     apps="${GR_HOME}/${app} ${apps}"
