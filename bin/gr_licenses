@@ -49,7 +49,6 @@ function other_apps() {
     match_engine
     me-services
     metropolis
-    pygrounds
     acme
   '
   apps=''

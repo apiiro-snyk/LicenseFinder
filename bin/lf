@@ -1,2 +1,5 @@
-#!/bin/bash
-license_finder "${@}" --decisions-file=/policy/dependency_decisions.yml
+#!/usr/bin/env ruby
+arguments=ARGV.join("' '")
+system <<FOO
+echo #{arguments} --decisions-file=/policy/dependency_decisions.yml
+FOO
