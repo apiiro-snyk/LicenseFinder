@@ -1,0 +1,91 @@
+alabaster,0.7.12,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A configurable sidebar-enabled Sphinx theme,https://alabaster.readthedocs.io
+attrs,20.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,Classes Without Boilerplate,https://www.attrs.org/
+babel,2.8.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Internationalization utilities,http://babel.pocoo.org/
+blas,1.0,unknown,Not approved,"","",""
+boto3,1.6.7,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,The AWS SDK for Python,https://github.com/boto/boto3
+botocore,1.9.7,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"Low-level, data-driven core of boto 3.",https://github.com/boto/botocore
+bottle,0.12.13,MIT,Approved,http://opensource.org/licenses/mit-license,Fast and simple WSGI-framework for small web-applications.,http://bottlepy.org/
+bottle-swagger,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,Swagger integration for Bottle,https://github.com/ampedandwired/bottle-swagger
+bravado-core,5.17.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,Library for adding Swagger support to clients and servers,https://github.com/Yelp/bravado-core
+ca-certificates,2020.7.22,MPL 2.0,Approved,"","",""
+certifi,2018.8.24,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",""
+chardet,3.0.4,LGPL,Approved,http://www.gnu.org/licenses/lgpl.txt,Universal encoding detector for Python 2 and 3,https://github.com/chardet/chardet
+cherrypy,8.9.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Object-Oriented HTTP framework,http://www.cherrypy.org
+coverage,4.5.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Code coverage measurement for Python,https://bitbucket.org/ned/coveragepy
+deprecated,1.2.10,MIT,Approved,http://opensource.org/licenses/mit-license,"Python @deprecated decorator to deprecate old python classes, functions or methods.",https://github.com/tantale/deprecated
+docutils,0.16,"BSD,GNU General Public License (GPL),Public Domain,Python Software Foundation License",Approved,"http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,,,http://hg.python.org/cpython/raw-file/89ce323357db/LICENSE",Docutils -- Python Documentation Utilities,http://docutils.sourceforge.net/
+hiredis,0.2.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Python wrapper for hiredis,https://github.com/redis/hiredis-py
+hvac,0.3.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,HashiCorp Vault API client,https://github.com/ianunruh/hvac
+idna,2.10,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Internationalized Domain Names in Applications (IDNA),https://github.com/kjd/idna
+imagesize,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,Getting image size from png/jpeg/jpeg2000/gif file,https://github.com/shibukawa/imagesize_py
+importlib-metadata,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Read metadata from Python packages,http://importlib-metadata.readthedocs.io/
+intel-openmp,2020.2,LicenseRef-ProprietaryIntel,Not approved,"","",""
+jinja2,2.11.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,A very fast and expressive template engine.,https://palletsprojects.com/p/jinja/
+jmespath,0.10.0,MIT,Approved,http://opensource.org/licenses/mit-license,JSON Matching Expressions,https://github.com/jmespath/jmespath.py
+jsonpointer,2.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Identify specific nodes in a JSON document (RFC 6901),https://github.com/stefankoegl/python-json-pointer
+jsonref,0.2,MIT,Approved,http://opensource.org/licenses/mit-license,An implementation of JSON Reference for Python,https://github.com/gazpachoking/jsonref
+jsonschema,3.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,An implementation of JSON Schema validation for Python,https://github.com/Julian/jsonschema
+_libgcc_mutex,0.1,unknown,Not approved,"","",""
+libgcc-ng,9.1.0,GPL,Approved,"","",""
+libgfortran-ng,7.3.0,GPL,Not approved,"","",""
+libpq,9.6.6,PostgreSQL,Not approved,"","",""
+libstdcxx-ng,9.1.0,GPL3 with runtime exception,Approved,"","",""
+markupsafe,1.1.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,Safely add untrusted strings to HTML/XML markup.,https://palletsprojects.com/p/markupsafe/
+mkl,2018.0.3,proprietary - Intel,Not approved,"","",""
+msgpack,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,MessagePack (de)serializer.,https://msgpack.org/
+ncurses,5.9,Free software (MIT-like License),Approved,"","",""
+nose,1.3.7,GNU Library or Lesser General Public License (LGPL),Not approved,"",nose extends unittest to make testing easier,http://readthedocs.org/docs/nose/
+numpy,1.14.1,BSD 3-Clause,Approved,"","",""
+openssl,1.0.2u,OpenSSL,Approved,"","",""
+packaging,20.4,"Apache 2.0,Simplified BSD",Approved,"http://www.apache.org/licenses/LICENSE-2.0.txt,http://opensource.org/licenses/bsd-license",Core utilities for Python packages,https://github.com/pypa/packaging
+pandas,0.23.1,BSD 3-clause,Approved,"","",""
+pip,10.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+pockets,0.9.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A collection of helpful Python tools!,http://pockets.readthedocs.org
+psycopg2,2.7.3.2,"LGPL, BSD-like, ZPL",Not approved,"","",""
+pygithub,1.43.8,GNU Library or Lesser General Public License (LGPL),Not approved,"",Use the full Github API v3,http://pygithub.readthedocs.io/en/latest/
+pygments,2.6.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Pygments is a syntax highlighting package written in Python.,https://pygments.org/
+pyjwt,1.7.1,MIT,Approved,http://opensource.org/licenses/mit-license,JSON Web Token implementation in Python,http://github.com/jpadilla/pyjwt
+pyparsing,2.4.7,MIT,Approved,http://opensource.org/licenses/mit-license,Python parsing module,https://github.com/pyparsing/pyparsing/
+pyrsistent,0.16.0,MIT,Approved,http://opensource.org/licenses/mit-license,Persistent/Functional/Immutable data structures,http://github.com/tobgu/pyrsistent/
+python,3.5.2,Python Software Foundation License,Approved,http://hg.python.org/cpython/raw-file/89ce323357db/LICENSE,"",""
+python-dateutil,2.8.1,BSD 3 Clause,Approved,"","",""
+pytz,2020.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+pyyaml,3.12,MIT,Approved,http://opensource.org/licenses/mit-license,YAML parser and emitter for Python,http://pyyaml.org/wiki/PyYAML
+readline,6.2,GPL3,Not approved,"","",""
+redis,2.10.6,MIT,Approved,http://opensource.org/licenses/mit-license,Python client for Redis key-value store,http://github.com/andymccurdy/redis-py
+redis-py-cluster,1.3.5,MIT,Approved,http://opensource.org/licenses/mit-license,Cluster library for redis 3.0.0 built on top of redis-py lib,http://github.com/grokzen/redis-py-cluster
+requests,2.24.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Python HTTP for Humans.,https://requests.readthedocs.io
+rfc3987,1.3.8,GNU General Public License v3 or later (GPLv3+),Not approved,"",Parsing and validation of URIs (RFC 3986) and IRIs (RFC 3987),http://pypi.python.org/pypi/rfc3987
+rollbar,0.13.18,MIT,Approved,http://opensource.org/licenses/mit-license,"Easy and powerful exception tracking with Rollbar. Send messages and exceptions with arbitrary context, get back aggregates, and debug production issues quickly.",http://github.com/rollbar/pyrollbar
+s3transfer,0.1.13,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,An Amazon S3 Transfer Manager,https://github.com/boto/s3transfer
+scikit-learn,0.19.1,BSD 3-Clause,Approved,"","",""
+scipy,0.19.1,BSD 3-Clause,Approved,"","",""
+setuptools,40.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+simplejson,3.17.2,MIT,Approved,http://opensource.org/licenses/mit-license,"Simple, fast, extensible JSON encoder/decoder for Python",https://github.com/simplejson/simplejson
+six,1.15.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+snowballstemmer,2.0.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,This package provides 26 stemmers for 25 languages generated from Snowball algorithms.,https://github.com/snowballstem/snowball
+sphinx,3.2.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Python documentation generator,http://sphinx-doc.org/
+sphinxcontrib-applehelp,1.0.2,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,sphinxcontrib-applehelp is a sphinx extension which outputs Apple help books,http://sphinx-doc.org/
+sphinxcontrib-devhelp,1.0.2,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document.,http://sphinx-doc.org/
+sphinxcontrib-htmlhelp,1.0.3,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,sphinxcontrib-htmlhelp is a sphinx extension which renders HTML help files,http://sphinx-doc.org/
+sphinxcontrib-jsmath,1.0.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A sphinx extension which renders display math in HTML via JavaScript,http://sphinx-doc.org/
+sphinxcontrib-napoleon,0.7,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"Sphinx ""napoleon"" extension.",https://sphinxcontrib-napoleon.readthedocs.io
+sphinxcontrib-qthelp,1.0.3,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,sphinxcontrib-qthelp is a sphinx extension which outputs QtHelp document.,http://sphinx-doc.org/
+sphinxcontrib-serializinghtml,1.1.4,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"sphinxcontrib-serializinghtml is a sphinx extension which outputs ""serialized"" HTML files (json and pickle).",http://sphinx-doc.org/
+sphinx-rtd-theme,0.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,Read the Docs theme for Sphinx,https://github.com/rtfd/sphinx_rtd_theme/
+splitstream,1.2.2,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"Splitting of (XML, JSON) objects from a continuous stream",https://github.com/rickardp/splitstream
+sqlalchemy,1.2.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+sqlite,3.9.2,Public-Domain (http://www.sqlite.org/copyright.html),Approved,"","",""
+statsd,3.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,A simple statsd client.,https://github.com/jsocol/pystatsd
+strict-rfc3339,0.7,GPLv3,Not approved,http://www.gnu.org/licenses/gpl-3.0.txt,"Strict, simple, lightweight RFC3339 functions",http://www.danielrichman.co.uk/libraries/strict-rfc3339.html
+swagger-spec-validator,2.7.3,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Validation of Swagger specifications,http://github.com/Yelp/swagger_spec_validator
+time-uuid,0.2.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A sensible class for dealing with UUIDv1,http://github.com/samuraisam/time_uuid
+tk,8.5.19,Tcl/Tk,Approved,"","",""
+ujson,1.35,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Ultra fast JSON encoder and decoder for Python,http://www.esn.me
+urllib3,1.25.10,MIT,Approved,http://opensource.org/licenses/mit-license,"HTTP library with thread-safe connection pooling, file post, and more.",https://urllib3.readthedocs.io/
+webcolors,1.11.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A library for working with color names and color values formats defined by HTML and CSS.,https://github.com/ubernostrum/webcolors
+wheel,0.35.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+wrapt,1.12.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"Module for decorators, wrappers and monkey patching.",https://github.com/GrahamDumpleton/wrapt
+xz,5.0.5,LGPL-2.1 and GPL-2.0,Approved,"","",""
+zipp,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,Backport of pathlib-compatible object wrapper for zip files,https://github.com/jaraco/zipp
+zlib,1.2.11,zlib,Approved,"","",""
