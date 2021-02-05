@@ -1,0 +1,9 @@
+boto,2.34.0,MIT,Approved,http://opensource.org/licenses/mit-license,Amazon Web Services Library,https://github.com/boto/boto/
+bottle,0.12.18,MIT,Approved,http://opensource.org/licenses/mit-license,Fast and simple WSGI-framework for small web-applications.,http://bottlepy.org/
+certifi,2020.6.20,Mozilla Public License 2.0,Approved,https://www.mozilla.org/media/MPL/2.0/index.815ca599c9df.txt,Python package for providing Mozilla's CA Bundle.,https://certifiio.readthedocs.io/en/latest/
+chardet,3.0.4,LGPL,Approved,http://www.gnu.org/licenses/lgpl.txt,Universal encoding detector for Python 2 and 3,https://github.com/chardet/chardet
+gunicorn,19.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,WSGI HTTP Server for UNIX,http://gunicorn.org
+idna,2.8,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Internationalized Domain Names in Applications (IDNA),https://github.com/kjd/idna
+pycrypto,2.6.1,Public Domain,Approved,"",Cryptographic modules for Python.,http://www.pycrypto.org/
+requests,2.21.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Python HTTP for Humans.,http://python-requests.org
+urllib3,1.24.3,MIT,Approved,http://opensource.org/licenses/mit-license,"HTTP library with thread-safe connection pooling, file post, and more.",https://urllib3.readthedocs.io/

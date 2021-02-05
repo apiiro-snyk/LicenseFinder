@@ -1,0 +1,129 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'builder'
+
+class YamlDepsToPom
+  attr_reader :yaml_file
+
+  def initialize(yaml_file)
+    @yaml_file = yaml_file
+  end
+
+  def metadata
+    @metadata ||= YAML.load_file(yaml_file)
+  end
+
+  def dependencies
+    metadata['dependencies']
+  end
+
+  def options
+    metadata['options']
+  end
+
+  def resolvers
+    options['resolvers']
+  end
+
+  def repo_name
+    "potluck"
+  end
+
+  def repo_version
+    1
+  end
+
+  # Ran into trouble with Builder and trying to use general keys from flat_hash
+  # (since even `send` is done with undefined_method), so hardcoded build for
+  # now.
+  def build_entries(builder, flat_hash)
+    builder.groupId flat_hash[:groupId]
+    builder.artifactId flat_hash[:artifactId]
+    builder.version flat_hash[:version]
+  end
+
+  def to_xml
+    xml = Builder::XmlMarkup.new(indent: 2)
+
+    xml.project(
+      xmlns: "http://maven.apache.org/POM/4.0.0",
+      "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+      "xsi:schemaLocation": "http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+    ) do |project|
+      project.modelVersion  "4.0.0"
+      project.groupId  "com.grandrounds.#{repo_name}"
+      project.artifactId  repo_name
+      project.version  repo_version
+
+      project.repositories do |repos_builder|
+        resolvers.each do |resolver|
+          repos_builder.repository do |rep|
+            rep.id resolver['id']
+            rep.url resolver['url']
+          end
+        end
+      end
+
+      project.dependencies do |dependencies_builder|
+        dependencies.map do |group,libraries|
+          libraries.each_pair do |library, details|
+            flat_module_list(group, library, details).each do |flat_module|
+              dependencies_builder.dependency {|d| build_entries(d, pomify(flat_module)) }
+            end
+          end
+        end
+      end
+    end
+  end
+
+  def flat_module_list(group, library, details)
+    deets = details.clone
+
+    modules = deets.delete('modules') || [ nil ]
+
+    modules.map do |mod|
+      deets.merge(
+        'group' => group,
+        'module' => mod,
+        'library' => library
+      )
+    end
+  end
+
+  def pomify(flat_module)
+    {
+      groupId: flat_module['group'],
+      artifactId: artifact_id(flat_module),
+      version: flat_module['version']
+    }
+  end
+
+  def artifact_id(flat_module)
+    artifact = flat_module['library']
+
+    artifact += "-#{flat_module['module']}" if flat_module['module']
+
+    artifact += scala_minor if flat_module['lang'] == 'scala'
+
+    artifact
+  end
+
+  def scala_minor
+    @scala_minor ||= begin
+      scala = options['languages'].find {|l| l =~ (/^scala/)}
+      return nil unless scala
+
+      _language, version = scala.split(':')
+      version_detail = version.split('.')
+
+      case version_detail.length
+      when 0 then raise "Scala version can't be resolved from #{scala}"
+      when 1 then "_#{version_detail[0]}"
+      else "_#{version_detail[0]}.#{version_detail[1]}"
+      end
+    end
+  end
+end
+
+puts YamlDepsToPom.new(ARGV.first).to_xml

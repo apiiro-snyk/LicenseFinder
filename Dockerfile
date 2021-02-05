@@ -167,6 +167,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4F4EA0AAE5
     php -r "unlink('composer-setup.php');" &&\
     mv composer.phar /usr/bin/composer
 
+
 # install miniconda
 # See https://docs.conda.io/en/latest/miniconda_hashes.html
 # for latest versions and SHAs.
@@ -178,6 +179,20 @@ RUN  \
   sha=`openssl sha256 "${conda_installer}" | cut -d' ' -f2` &&\
   ([ "$sha" = "${ref}" ] || (echo "Verification failed: ${sha} != ${ref}"; false)) &&\
   (echo; echo "yes") | sh "${conda_installer}"
+ 
+# install libraries that most services will need, even to bundle or its equivalent
+RUN apt-get install -y  mysql-client postgresql-client libmysqlclient-dev libxml2-dev libpq-dev
+
+# more libraries our services rely on
+RUN apt-get install -y  libmagickwand-dev imagemagick libdmtx-dev rng-tools memcached facter
+
+# and
+RUN apt-get install -y  libmagic-dev
+
+# Most of our apps still pin back to 1.17.  Probably need to adjust LicenseFinder
+# itself to install correct bundler based on Gemfile, or move all Rails apps
+# to using LF in library form (better long-term answer anyway)
+RUN gem install bundler --version=1.17.3
 
 # install license_finder
 COPY . /LicenseFinder

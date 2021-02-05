@@ -70,6 +70,33 @@ task :update_pipeline, [:slack_url, :slack_channel] do |_, args|
   system(cmd)
 end
 
+def docker_image
+  File.read("#{File.dirname(__FILE__)}/config/docker_image").chomp
+end
+
+# TODO: Move docker image to ECR from public dockerhub
+desc 'Build docker image'
+task :docker_build do |_|
+  cmd="docker build -t #{docker_image} ."
+  system(cmd)
+end
+#
+desc 'Push docker image to public dockerhub'
+task :docker_push do |_|
+  system("docker push #{docker_image}")
+end
+#
+desc 'Get the docker image' do |_|
+  system("docker pull #{docker_image}")
+end
+#
+# task dlf: [ :docker_pull ]
+# task docker: [ :docker_build, :docker_push ]
+# task spec: :check_dependencies
+# task features: :check_dependencies
+#
+# task default: %i[spec features dlf]
+# =======
 task default: %i[spec features]
 task spec: :check_dependencies
 task features: :check_dependencies

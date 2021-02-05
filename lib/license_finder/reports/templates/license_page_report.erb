@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+  <style type="text/css"><%= bootstrap %></style>
+  <style type="text/css">
+    body {
+      margin: 50px;
+    }
+    .dependencies blockquote {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="dependencies">
+    <% sorted_dependencies.each do |dependency| -%>
+      <div id="<%= dependency.name %>" class="clearfix <%= dependency.approved? ? "approved" : "unapproved" %>">
+        <blockquote class="pull-right">
+          <% if dependency.approved_manually? -%>
+            <p>
+            <%= license_links(dependency) %>
+              <span class="badge badge-success">&#x2713;</span>
+            </p>
+            <p><%= dependency.manual_approval.why.sub(':copy:','&copy;') %></p>
+            <small>
+              <% if dependency.manual_approval.who -%>
+                <%= dependency.manual_approval.who %>,
+              <% end -%>
+              <time datetime="<%= dependency.manual_approval.safe_when.utc.iso8601 %>"><%= dependency.manual_approval.safe_when.to_date %></time>
+            </small>
+          <% elsif dependency.whitelisted? -%>
+            <p>
+              <%= license_links(dependency) %>
+              <span class="badge badge-success">&#x2713;</span>
+            </p>
+          <% else -%>
+            <p>
+            <%= license_links(dependency) %>
+            In Progress
+            <span class="badge badge-important">&#x2717;</span>
+            </p>
+          <% end -%>
+        </blockquote>
+        <h2>
+          <%= link_to_dependency(dependency) %>
+        </h2>
+      </div>
+    <% end -%>
+  </div>
+</div>
+</body>
+</html>

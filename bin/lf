@@ -1,0 +1,2 @@
+#!/bin/bash
+license_finder "${@}" --decisions-file=/policy/dependency_decisions.yml

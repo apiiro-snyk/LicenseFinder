@@ -7,6 +7,9 @@ Gemfile.lock
 pkg/*
 tmp/
 features/fixtures/maven-wrapper/target
+features/fixtures/build
+features/fixtures/target
+scans/*/*.txt
 *~
 features/fixtures/sbt/target
 features/fixtures/sbt/project/target

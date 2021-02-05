@@ -1,0 +1,253 @@
+#!/bin/bash
+#
+# Scans every production repo for its libraries and what licenses they provide.
+# By default, provides a report (.csv) for each repo. Can take a while, since
+# it does the analysis in a docker container, where it needs to bundle (and
+# yarn client, and pip -r...) the repo first.
+#
+# Some repos are more difficult than others.  See the confluence page to
+# get details of all the special cases.
+#
+# The report is based on ../policy/dependency_decisions.yml; if you need to
+# work with that, the best thing to do at the moment is to use `dlf
+# "license_finder -p && bash"` to get into a Docker container with the product
+# in question, then use license_finder's commands to add licenses, whitelist
+# them, or approve individual libraries.
+#
+# There is a companion Confluence page https://grandrounds.atlassian.net/wiki/x/F4C9DQ
+#
+# Dollar's Java code is too difficult to do at all right now. LicenseFinder
+# doesn't do `ivy`, *and* `ivy` doesn't report many licenses -- sometimes
+# because the packages used are so old, and sometimes because `ivy` doesn't
+# seem to be getting everything maven has.
+#
+# Does *NOT* synchronize master in the repos in question; it just uses whatever
+# clone you have.
+#
+scandir=${GR_HOME}/LicenseFinder/scans/$(date +'%Y%m%d')
+mkdir -p ${scandir}
+
+function rails_apps() {
+  local rails=$(ls ${GR_HOME}/*/{bin,script}/rails | sed -e '/\*/d' -e 's;/\(bin\|script\)/.*$;;g')
+  apps=''
+  for app in $rails ; do
+    if [ -f ${app}/*.gemspec ] ; then
+      continue
+    fi
+    apps="${app} ${apps}"
+  done
+  echo $apps
+}
+
+function other_apps() {
+  others="bain dollar potluck bobs"
+  apps=''
+  for app in $others ; do
+    apps="${GR_HOME}/${app} ${apps}"
+  done
+  echo $apps
+}
+
+default_list=true
+format="csv"
+default_projects="$(rails_apps) $(other_apps)"
+report_file_extension="csv"
+
+function usage() {
+    cat << EOF
+Usage: ${0} [options] <project name> <project name> <project name>
+
+Scans projects for licenses for all their libraries and prepares appropriate reports about them.
+
+Options:
+
+-h, -?, --help        Output usage information
+--s3                  Copy scan results to s3 grnds-<env>-licenses. Current aws environment will be used.
+
+Use one of the following flags to specify report format:
+
+--compliance-report   Use csv format for report (default).
+--html                Use html format for report.
+--license-page        Use license page format for report (with commercial licenses filtered out).
+
+Project directories to scan defaults to:
+$(echo $default_projects | tr ' ' '\012')
+
+None of these reports is exactly what you want as a 'linter' run.  For that you don't want
+the `report` command to license_finder, you want the default `action_items` command.
+EOF
+    exit 1
+}
+
+function s3_init() {
+  aws_environment=${1:-${AWS_ENVIRONMENT}}
+
+  if [[ -z $aws_environment ]]; then
+      echo No environment. Use aws-environment.
+      exit 1
+  fi
+}
+
+while [ $# -gt 0 ] ; do
+  case $1 in
+  -h | -? | --help)
+    usage
+    ;;
+  --s3)
+    s3_init
+    ;;
+  --compliance-report)
+    format="csv"
+    report_file_extension="csv"
+    ;;
+  --html)
+    format="html"
+    report_file_extension="html"
+    ;;
+  --license-page)
+    format="license-page"
+    report_file_extension="html"
+    ;;
+  -*)
+    usage
+    ;;
+  *)
+    projects="${projects} ${GR_HOME}/$1"
+    ;;
+  esac
+  shift
+done
+
+license_finder_report="--format=$format --decisions_file=/policy/dependency_decisions.yml --columns=name version licenses approved license_links summary homepage"
+
+if [ -z "${projects}" ] ; then
+  projects=${default_projects}
+fi
+
+function make_csv_or_html() {
+  # Remove everything before and after result tags,
+  # Remove result tags and debug info,
+  # Sort if format is csv
+  sed -n -e '/<result>/,/<\/result>/p' "$1.txt" |\
+    sed -e '/^<result>/d' -e '/^<\/result>/d' -e '/^LicenseFinder::/d' |\
+    (test $format == "csv" && sort || cat) > "$1.$report_file_extension"
+}
+
+function s3_name() {
+  local filename=$(basename ${1?'Missing filename argument to s3_name'})
+  echo $filename | openssl md5 | cut -d' ' -f2
+}
+
+function s3_upload() {
+  if [ -n "${aws_environment}" ] ; then
+    local path="$1.$report_file_extension"
+    local filename="$2.$report_file_extension"
+    local s3_name="$(s3_name $filename).$report_file_extension"
+    aws s3 cp "${path}" "s3://grnds-${aws_environment}-licenses/${s3_name}" --acl public-read && \
+      echo "Scan result for '$2' uploaded to https://grnds-${aws_environment}-licenses.s3.amazonaws.com/${s3_name}"
+  fi
+}
+
+function banyan_prepare() {
+  echo "gem install bundler:1.17.3 && bundle install && yarn && cd client && npm install && cd .."
+}
+
+function bain_prepare() {
+  echo "rm -f Gemfile* && pip install -r requirements.txt"
+}
+
+function bain_license_finder() {
+  echo "license_finder report ${license_finder_report}"
+}
+
+# Simply couldn't get npm all the way right in banyan, so can't run
+# --recursive. List seems comprehensive after doing this.
+function banyan_license_finder() {
+  echo "license_finder report ${license_finder_report} &&
+    cd client &&
+    license_finder report ${license_finder_report}
+    "
+}
+
+function potluck_prepare() {
+  echo "dependencies_yaml_to_pom maven_dependencies.yaml > pom.xml"
+}
+
+function bobs_prepare() {
+  echo "dependencies_yaml_to_pom maven_dependencies.yaml > pom.xml"
+}
+
+# Don't use `--recursive` for "black".
+# See https://www.pivotaltracker.com/n/projects/1554097/stories/154689192
+function black_license_finder() {
+   echo "license_finder report -p ${license_finder_report}"
+}
+
+function default_prepare() {
+  echo "gem install --no-document bundler:1.17.3"
+}
+
+function jarvis_prepare() {
+  # jquery.scrollto has invalid properties in its author list, according
+  # to the Composer plugin in LF.
+  cat <<CMD
+  bin/install-libarrow &&\
+  gem install --no-document bundler:1.17.3 &&\
+  sed -i '/ "web": /d' node_modules/jquery.scrollto/composer.json
+CMD
+}
+
+# I can't seem to get the yarn / npm dependencies into the Jarvis report
+# without `-p`. Using `--recursive` gets me into trouble with Rake after about
+# 30m of runtime. One more time.
+function jarvis_license_finder() {
+  echo "license_finder report -p ${license_finder_report}"
+}
+
+# Use --recursive if you're in a monorepo. If you're *not*, it only causes
+# more trouble. Also: see banyan
+function default_license_finder() {
+   echo "license_finder report -p ${license_finder_report}"
+}
+
+function dispatch() {
+  project=$1
+  method=$2
+  shift
+  shift
+
+  if type -t ${project}_${method} >/dev/null ; then
+    ${project}_${method} $@
+  else
+    default_${method} $@
+  fi
+}
+
+main() {
+  for project_directory in $projects ; do
+    cd ${project_directory}
+    local project=$(basename $PWD)
+
+    local prepare="$(dispatch ${project} prepare)"
+    local license_finder="$(dispatch ${project} license_finder)"
+
+    dlf "
+      ${prepare} &&
+      echo '<result>' &&
+      ${license_finder} &&
+      echo '</result>'
+      " | tee ${scandir}/${project}.txt
+
+    local basename="${scandir}/${project}"
+    make_csv_or_html ${basename}
+    s3_upload ${basename} ${project}
+  done
+}
+
+# Credit to https://stackoverflow.com/questions/2683279/how-to-detect-if-a-script-is-being-sourced
+(return 0 2>/dev/null) && sourced=1 || sourced=0
+if [ $sourced == 0 ] ; then
+  where_was_i="${PWD}"
+  main
+  cd "${where_was_i}"
+fi

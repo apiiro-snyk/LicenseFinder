@@ -1,10 +1,61 @@
 #!/bin/bash
+IMAGE="pivotal/license_finder"
+
+function bash_directory() {
+  local SOURCE="${BASH_SOURCE[0]}"
+  local DIR
+
+  while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+    DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+    SOURCE="$(readlink "$SOURCE")"
+    [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+  done
+  ( cd -P "$( dirname "$SOURCE" )" && pwd )
+}
+
+DOCKER_TAG_FILE="$(bash_directory)/config/docker_image"
+if [ -f $DOCKER_TAG_FILE ] ; then
+  IMAGE=`cat $DOCKER_TAG_FILE`
+fi
+
+NOLOGIN=true
+
+while [ $# -gt 0 ] ; do
+  case $1 in
+  -x) NOLOGIN=bash ;;
+  -? | -h) echo "Usage: ${0} [-x] [-?] some command for the container" ; exit 1;;
+  *) break ;;
+  esac
+  shift
+done
+
+if [[ ! -d ~/.ssh/docker_ssh ]] ; then
+  cat <<-ERR
+    You must set up a ~/.ssh/docker_ssh directory with your ssh private key
+    available in it, so bundler (and its ilk) can pull private gems into the
+    docker container for analysis.  In Linux, it must be owned by *root*,
+    permissioned 0700, and have your private key in a file owned by *root* with
+    mode 0600.
+
+    This may not be necessary in MacOS (you may be able to just map your ~/.ssh
+    to the container's /root/.ssh); modify $0 accordingly if that proves true.
+
+    This is an old kludge. Feel free to do the right things to make the docker
+    image take GITHUB_USER & GITHUB_TOKEN env vars and for `dlf` to pass them in.
+ERR
+  exit 1
+fi
+#
 if `which docker > /dev/null`; then
-	if [ $# -eq 0 ]; then
-  		docker run -v $PWD:/scan -it licensefinder/license_finder
-	else
-  		docker run -v $PWD:/scan -it licensefinder/license_finder /bin/bash -lc "cd /scan && `echo $@`"
-	fi
+  docker run \
+    -v $PWD:/scan \
+    --mount type=bind,source=${HOME}/.npmrc,target=/root/.npmrc \
+    -v ${GR_HOME}/LicenseFinder/policy:/policy \
+    -v ~/.ssh/docker_ssh:/root/.ssh \
+    -v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK) \
+    -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK \
+    -it ${IMAGE} /bin/bash \
+    -lc "cd /scan && $(echo $@) && ${NOLOGIN}"
 else
   echo "You do not have docker installed. Please install it:"
   echo "    https://docs.docker.com/engine/installation/"
