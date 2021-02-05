@@ -1,3 +1,25 @@
+## Thursday 2020-08-06
+
+Hiroshima Day.  No big bombs here yet. No victory, either.
+* LicenseFinder -> see issue https://github.com/pivotal/LicenseFinder/issues/772 .
+  I think the answer is to use the Gem in the .circle-ci workflow to avoid version
+  differences with the measured system.  Since I've filed the issue, however,
+  I should create a repro repo for the LF team to test with.
+* POA: Specifically call out the NOTIFY workflow and how `licensed` is native
+  for it, vs. we would need enhancements for LF.
+* `licensed`: Need to followup on the issue filed there, too, for good
+  citizenship. I suspect it's caused by LF wanting to rebundle in its own
+  bundle path.
+
+## Thursday 2020-07-30
+
+Focused on embedding license_finder again, after writing PRD/POA yesterday.
+Successfully embedded in `black`, with modern LF and .circle-ci calling to the
+inherited dependency file.
+
+* Slow: check_licenses takes ~3:30 where the build_tng is only 1:30 (probably because of layer caching, really)
+* Does not solve the inventory problem.
+
 ## Tuesday  2020-07-28
 
 Extended the `gr_license` hack for Jarvis to clean up the problem with

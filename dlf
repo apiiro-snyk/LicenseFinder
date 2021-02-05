@@ -39,6 +39,9 @@ if [[ ! -d ~/.ssh/docker_ssh ]] ; then
 
     This may not be necessary in MacOS (you may be able to just map your ~/.ssh
     to the container's /root/.ssh); modify $0 accordingly if that proves true.
+
+    This is an old kludge. Feel free to do the right things to make the docker
+    image take GITHUB_USER & GITHUB_TOKEN env vars and for `dlf` to pass them in.
 ERR
   exit 1
 fi

@@ -1,0 +1,43 @@
+
+
+[0m
+	10: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/command.rb:27:in `run'
+	11: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/invocation.rb:127:in `invoke_command'
+	12: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor.rb:392:in `dispatch'
+	13: from /usr/share/rvm/gems/ruby-2.7.1/gems/thor-1.0.1/lib/thor/base.rb:485:in `start'
+	14: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/bin/license_finder:6:in `<top (required)>'
+	15: from /usr/share/rvm/gems/ruby-2.7.1/bin/license_finder:23:in `load'
+	16: from /usr/share/rvm/gems/ruby-2.7.1/bin/license_finder:23:in `<main>'
+	 1: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/core.rb:64:in `block in prepare_projects'
+[1mallow it, with the message: root cert /CN=ryand-ruby/DC=zenspider/DC=com is not[m
+[1mDon't run Bundler as root. Bundler can ask for sudo if it is needed, and[m
+[1mFetching concurrent-ruby 1.1.6[m
+[1mFetching gem metadata from https://rubygems.org/...........[m
+[1mFetching git@github.com:ConsultingMD/grnds-deploy.git[m
+[1mFetching git@github.com:ConsultingMD/grnds-sso.git[m
+[1mFetching git@github.com:ConsultingMD/grnds-status.git[m
+[1mFetching git@github.com:ConsultingMD/secrets.git[m
+[1mFetching git@github.com:ConsultingMD/service.git[m
+[1mFetching i18n 0.9.5[m
+[1mFetching minitest 5.14.0[m
+[1mFetching rake 13.0.1[m
+[1mInstalling concurrent-ruby 1.1.6[m
+[1mInstalling i18n 0.9.5[m
+[1mInstalling rake 13.0.1[m
+[1minstalling your bundle as root will break this application for all non-root[m
+[1mThe gem minitest-5.14.0 can't be installed because the security policy didn't[m
+[1mTraceback[m (most recent call last):
+[1mtrusted[m
+[1musers on this machine.[m
+[1m/usr/share/rvm/gems/ruby-2.7.1/gems/bundler-1.17.3/lib/bundler/rubygems_integration.rb:200: warning: constant Gem::ConfigMap is deprecated[m
+	 2: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/core.rb:62:in `each'
+	 3: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/core.rb:62:in `prepare_projects'
+	 4: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:50:in `block in aggregate_packages'
+	 5: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:49:in `each'
+	 6: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:49:in `flat_map'
+	 7: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:49:in `aggregate_packages'
+	 8: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/license_aggregator.rb:11:in `dependencies'
+	 9: from /usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/cli/main.rb:151:in `report'
+bundle install --without test development dev devDependencies optionalDependencies --path lf-bundler-gems-47420f3d-a62e-4c5e-a9c0-a2349e222637: [31mdid not succeed.[0m
+bundle install --without test development dev devDependencies optionalDependencies --path lf-bundler-gems-47420f3d-a62e-4c5e-a9c0-a2349e222637: [31m/usr/share/rvm/gems/ruby-2.7.1/gems/bundler-1.17.3/lib/bundler/rubygems_integration.rb:200: warning: constant Gem::ConfigMap is deprecated
+/usr/share/rvm/gems/ruby-2.7.1/gems/license_finder-6.6.2/lib/license_finder/package_manager.rb:92:in `prepare': [1mPrepare command 'bundle install --without test development dev devDependencies optionalDependencies --path lf-bundler-gems-699cb530-ad53-4b39-ad62-5f28ea66d278' failed ([1;4mRuntimeError[m[1m)[m
