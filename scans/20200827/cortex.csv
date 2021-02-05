@@ -1,0 +1,261 @@
+aiohttp,3.6.2,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Async http client/server framework (asyncio),https://github.com/aio-libs/aiohttp
+alabaster,0.7.12,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A configurable sidebar-enabled Sphinx theme,https://alabaster.readthedocs.io
+alembic,1.4.2,MIT,Approved,http://opensource.org/licenses/mit-license,A database migration tool for SQLAlchemy.,https://alembic.sqlalchemy.org
+amqp,2.6.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Low-level AMQP client for Python (fork of amqplib).,http://github.com/celery/py-amqp
+apipkg,1.5,MIT,Approved,http://opensource.org/licenses/mit-license,apipkg: namespace control and lazy-import mechanism,https://github.com/pytest-dev/apipkg
+argon2-cffi,20.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+arrow-cpp,0.14.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+async-timeout,3.0.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Timeout context manager for asyncio programs,https://github.com/aio-libs/async_timeout/
+atomicwrites,1.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,Atomic file writes.,https://github.com/untitaker/python-atomicwrites
+attrs,19.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,Classes Without Boilerplate,https://www.attrs.org/
+babel,2.8.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Internationalization utilities,http://babel.pocoo.org/
+backcall,0.2.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+bcrypt,3.2.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Modern password hashing for your software and your servers,https://github.com/pyca/bcrypt/
+beautifulsoup4,4.9.1,MIT,Approved,http://opensource.org/licenses/mit-license,Screen-scraping library,http://www.crummy.com/software/BeautifulSoup/bs4/
+billiard,3.6.3.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Python multiprocessing fork with improvements and bugfixes,https://github.com/celery/billiard
+blas,2.11,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+bleach,3.1.5,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+boost-cpp,1.70.0,BSL-1.0,Approved,"","",""
+boto,2.49.0,MIT,Approved,http://opensource.org/licenses/mit-license,Amazon Web Services Library,https://github.com/boto/boto/
+boto3,1.14.50,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,The AWS SDK for Python,https://github.com/boto/boto3
+botocore,1.17.50,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"Low-level, data-driven core of boto 3.",https://github.com/boto/botocore
+brotli,1.0.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+bzip2,1.0.8,bzip2,Approved,"","",""
+ca-certificates,2020.7.22,MPL 2.0,Approved,"","",""
+cachetools,4.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,Extensible memoizing collections and decorators,https://github.com/tkem/cachetools/
+cairocffi,1.1.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,cffi-based cairo bindings for Python,https://github.com/Kozea/cairocffi
+cairosvg,2.4.2,GNU Lesser General Public License v3 or later (LGPLv3+),Approved,"",A Simple SVG Converter based on Cairo,http://www.cairosvg.org/
+c-ares,1.15.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+celery,4.3.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Distributed Task Queue.,http://celeryproject.org
+certifi,2020.6.20,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",""
+cffi,1.14.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+chardet,3.0.4,LGPL,Approved,http://www.gnu.org/licenses/lgpl.txt,Universal encoding detector for Python 2 and 3,https://github.com/chardet/chardet
+click,7.1.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,Composable command line interface toolkit,https://palletsprojects.com/p/click/
+clipboard,0.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,"A cross platform clipboard operation library of Python. Works for Windows, Mac and Linux.",https://github.com/terryyin/clipboard
+colorama,0.4.3,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Cross-platform colored terminal text.,https://github.com/tartley/colorama
+commonmark,0.9.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,Python parser for the CommonMark Markdown spec,https://github.com/rtfd/commonmark.py
+coverage,5.2.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Code coverage measurement for Python,https://github.com/nedbat/coveragepy
+cryptography,3.1,"Apache 2.0,BSD",Approved,"http://www.apache.org/licenses/LICENSE-2.0.txt,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29",cryptography is a package which provides cryptographic recipes and primitives to Python developers.,https://github.com/pyca/cryptography
+cssselect2,0.3.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,CSS selectors for Python ElementTree,https://cssselect2.readthedocs.io/
+cvxpy,1.1.4,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+cvxpy-base,1.1.4,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+cycler,0.10.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Composable style cycles,http://github.com/matplotlib/cycler
+dataclasses-json,0.5.2,MIT,Approved,http://opensource.org/licenses/mit-license,Easily serialize dataclasses to and from JSON,https://github.com/lidatong/dataclasses-json
+decorator,4.4.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+defusedxml,0.6.0,PSF 2.0,Approved,"","",""
+dill,0.3.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+docker,4.3.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,A Python library for the Docker Engine API.,https://github.com/docker/docker-py
+docutils,0.16,"BSD,GNU General Public License (GPL),Public Domain,Python Software Foundation License",Approved,"http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,,,http://hg.python.org/cpython/raw-file/89ce323357db/LICENSE",Docutils -- Python Documentation Utilities,http://docutils.sourceforge.net/
+double-conversion,3.1.5,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+ecos,2.0.7.post1,GPL-3.0,Not approved,"","",""
+editdistance,0.5.3,MIT,Approved,http://opensource.org/licenses/mit-license,Fast implementation of the edit distance(Levenshtein distance),https://www.github.com/aflc/editdistance
+entrypoints,0.3,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+execnet,1.7.1,MIT,Approved,http://opensource.org/licenses/mit-license,execnet: rapid multi-Python deployment,https://execnet.readthedocs.io/en/latest/
+fastavro,1.0.0.post1,MIT,Approved,http://opensource.org/licenses/mit-license,Fast read/write of AVRO files,https://github.com/fastavro/fastavro
+findspark,1.3.0,unknown,Not approved,"",Find pyspark to make it importable.,https://github.com/minrk/findspark
+flask,1.0.4,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,A simple framework for building complex web applications.,https://palletsprojects.com/p/flask/
+future,0.18.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+gflags,2.2.2,BSD 3-Clause,Approved,"","",""
+gitdb,4.0.5,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Git Object Database,https://github.com/gitpython-developers/gitdb
+gitpython,3.1.7,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Python Git Library,https://github.com/gitpython-developers/GitPython
+glog,0.4.0,BSD 3-Clause,Approved,"","",""
+gnupg,2.3.1,GNU General Public License v3 or later (GPLv3+),Not approved,"",A Python wrapper for GnuPG,https://github.com/isislovecruft/python-gnupg
+google-api-core,1.22.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google API client core library,https://github.com/googleapis/python-api-core
+googleapis-common-protos,1.52.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Common protobufs used in Google APIs,https://github.com/googleapis/python-api-common-protos
+google-auth,1.21.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google Authentication Library,https://github.com/googleapis/google-auth-library-python
+google-auth-oauthlib,0.4.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google Authentication Library,https://github.com/GoogleCloudPlatform/google-auth-library-python-oauthlib
+google-cloud-bigquery,1.27.2,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google BigQuery API client library,https://github.com/googleapis/python-bigquery
+google-cloud-core,1.4.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google Cloud API client core library,https://github.com/googleapis/python-cloud-core
+google-cloud-storage,1.31.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Google Cloud Storage API client library,https://github.com/googleapis/python-storage
+google-crc32c,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,A python wrapper of the C library 'Google CRC32C',https://github.com/googleapis/python-crc32c
+google-resumable-media,1.0.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Utilities for Google Media Downloads and Resumable Uploads,https://github.com/googleapis/google-resumable-media-python
+grpc-cpp,1.25.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+gunicorn,20.0.4,MIT,Approved,http://opensource.org/licenses/mit-license,WSGI HTTP Server for UNIX,http://gunicorn.org
+html5lib,1.1,MIT,Approved,http://opensource.org/licenses/mit-license,HTML parser based on the WHATWG HTML specification,https://github.com/html5lib/html5lib-python
+hvac,0.10.5,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,HashiCorp Vault API client,https://github.com/hvac/hvac
+icu,67.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+idna,2.10,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Internationalized Domain Names in Applications (IDNA),https://github.com/kjd/idna
+imagesize,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,Getting image size from png/jpeg/jpeg2000/gif file,https://github.com/shibukawa/imagesize_py
+importlib_metadata,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+importlib-metadata,1.7.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+ipykernel,5.3.4,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+ipython,7.17.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+ipython_genutils,0.2.0,BSD 3-Clause,Approved,"","",""
+ipywidgets,7.5.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,IPython HTML widgets for Jupyter,http://ipython.org
+itsdangerous,1.1.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Various helpers to pass data to untrusted environments and back.,https://palletsprojects.com/p/itsdangerous/
+jedi,0.17.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+jinja2,2.8,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A small but fast and easy to use stand-alone template engine written in pure python.,http://jinja.pocoo.org/
+jmespath,0.10.0,MIT,Approved,http://opensource.org/licenses/mit-license,JSON Matching Expressions,https://github.com/jmespath/jmespath.py
+joblib,0.16.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Lightweight pipelining: using Python functions as pipeline jobs.,https://joblib.readthedocs.io
+jsonschema,3.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+jupyter_client,6.1.6,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+jupyter_core,4.6.3,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+jupyterhub,0.8.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,JupyterHub: A multi-user server for Jupyter notebooks,http://jupyter.org
+jupyterlab,0.35.5,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+jupyterlab_server,0.2.0,BSD 3-Clause,Approved,"","",""
+kerberos,1.3.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Kerberos high-level interface,https://github.com/apple/ccs-pykerberos
+kiwisolver,1.2.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A fast implementation of the Cassowary constraint solver,https://github.com/nucleic/kiwi
+kombu,4.6.11,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Messaging library for Python.,https://kombu.readthedocs.io
+krb5,1.18.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+libblas,3.8.0,BSD 3-clause,Approved,"","",""
+libcblas,3.8.0,BSD 3-clause,Approved,"","",""
+libedit,3.1.20191231,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",""
+libevent,2.1.10,BSD 3-Clause,Approved,"","",""
+libffi,3.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+_libgcc_mutex,0.1,unknown,Not approved,"","",""
+libgcc-ng,9.1.0,GPL,Approved,"","",""
+libgfortran-ng,7.3.0,GPL,Not approved,"","",""
+liblapack,3.8.0,BSD 3-clause,Approved,"","",""
+liblapacke,3.8.0,BSD 3-clause,Approved,"","",""
+libopenblas,0.3.6,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"",""
+libprotobuf,3.8.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+libsodium,1.0.18,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",""
+libstdcxx-ng,9.1.0,GPL3 with runtime exception,Approved,"","",""
+libuv,1.38.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+livy,0.7.2,MIT,Approved,http://opensource.org/licenses/mit-license,A Python client for Apache Livy,https://github.com/acroz/pylivy
+lz4-c,1.8.3,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",""
+mako,1.1.3,MIT,Approved,http://opensource.org/licenses/mit-license,A super-fast templating language that borrows the  best ideas from the existing templating languages.,https://www.makotemplates.org/
+markupsafe,1.1.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+marshmallow,3.7.1,MIT,Approved,http://opensource.org/licenses/mit-license,A lightweight library for converting complex datatypes to and from native Python datatypes.,https://github.com/marshmallow-code/marshmallow
+marshmallow-enum,1.5.1,MIT,Approved,http://opensource.org/licenses/mit-license,Enum field for Marshmallow,""
+matplotlib,3.3.1,Python Software Foundation License,Approved,http://hg.python.org/cpython/raw-file/89ce323357db/LICENSE,Python plotting package,https://matplotlib.org
+mistune,0.8.4,BSD 3-Clause,Approved,"","",""
+more-itertools,8.4.0,MIT,Approved,http://opensource.org/licenses/mit-license,"More routines for operating on iterables, beyond itertools",https://github.com/more-itertools/more-itertools
+multidict,4.7.6,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,multidict implementation,https://github.com/aio-libs/multidict
+multiprocess,0.70.10,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+mypy-extensions,0.4.3,MIT,Approved,http://opensource.org/licenses/mit-license,Experimental type system extensions for programs checked with the mypy typechecker.,https://github.com/python/mypy_extensions
+nbconvert,5.6.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+nbformat,5.0.7,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+ncurses,6.2,Free software (MIT-like),Approved,"","",""
+networkx,2.5,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Python package for creating and manipulating graphs and networks,http://networkx.github.io/
+nodejs,14.8.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+notebook,6.1.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+numpy,1.19.1,BSD 3-Clause,Approved,"","",""
+numpy-base,1.19.1,BSD 3-Clause,Approved,"","",""
+oauthlib,3.1.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"A generic, spec-compliant, thorough implementation of the OAuth request-signing logic",https://github.com/oauthlib/oauthlib
+openssl,1.1.1g,OpenSSL,Approved,"","",""
+osqp,0.6.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+packaging,20.4,Apache 2.0 or BSD 2-Clause,Approved,"","",""
+pamela,1.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,PAM interface using ctypes,https://github.com/minrk/pamela
+pandas,1.1.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+pandas-gbq,0.13.2,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Pandas interface to Google BigQuery,https://github.com/pydata/pandas-gbq
+pandoc,2.10.1,GPL-2.0,Not approved,"","",""
+pandocfilters,1.4.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+paramiko,2.7.1,LGPL,Approved,http://www.gnu.org/licenses/lgpl.txt,SSH2 protocol library,https://github.com/paramiko/paramiko/
+parquet-cpp,1.5.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+parso,0.7.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+pexpect,4.8.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",""
+pickleshare,0.7.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+pillow,7.2.0,Historical Permission Notice and Disclaimer (HPND),Approved,"",Python Imaging Library (Fork),https://python-pillow.org
+pip,20.2.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+plotly,4.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,"An open-source, interactive graphing library for Python",https://plot.ly/python/
+plotly-orca,1.2.1,unknown,Not approved,"","",""
+pluggy,0.13.1,MIT,Approved,http://opensource.org/licenses/mit-license,plugin and hook calling mechanisms for python,https://github.com/pytest-dev/pluggy
+pockets,0.9.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A collection of helpful Python tools!,http://pockets.readthedocs.org
+prometheus_client,0.8.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+prompt-toolkit,3.0.5,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+protobuf,3.9.2,unknown,Not approved,"",Protocol Buffers,https://developers.google.com/protocol-buffers/
+psutil,5.7.2,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Cross-platform lib for process and system monitoring in Python.,https://github.com/giampaolo/psutil
+ptyprocess,0.6.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,"",""
+py,1.9.0,MIT,Approved,http://opensource.org/licenses/mit-license,"library with cross-python path, ini-parsing, io, code, log facilities",https://py.readthedocs.io/
+py4j,0.10.7,BSD 3-Clause,Approved,"","",""
+pyarrow,0.14.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+pyasn1,0.4.8,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,ASN.1 types and codecs,https://github.com/etingof/pyasn1
+pyasn1-modules,0.2.8,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,A collection of ASN.1-based protocols modules.,https://github.com/etingof/pyasn1-modules
+pycparser,2.20,BSD 3-clause,Approved,"","",""
+pydata-google-auth,1.1.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,PyData helpers for authenticating to Google APIs,https://github.com/pydata/pydata-google-auth
+pydot,1.4.1,MIT,Approved,http://opensource.org/licenses/mit-license,Python interface to Graphviz's Dot,https://github.com/pydot/pydot
+pygments,2.6.1,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",""
+pynacl,1.4.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Python binding to the Networking and Cryptography (NaCl) library,https://github.com/pyca/pynacl/
+pyparsing,2.4.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+pyperclip,1.8.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A cross-platform clipboard module for Python. (Only handles plain text for now.),https://github.com/asweigart/pyperclip
+pyphen,0.9.5,"GNU General Public License v2 or later (GPLv2+),GNU Lesser General Public License v2 or later (LGPLv2+),Mozilla Public License 1.1 (MPL 1.1)",Approved,",,",Pure Python module to hyphenate text,https://github.com/Kozea/Pyphen
+pyrsistent,0.16.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+pyspark,2.4.5,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+pytest,5.2.1,MIT,Approved,http://opensource.org/licenses/mit-license,pytest: simple powerful testing with Python,https://docs.pytest.org/en/latest/
+pytest-cov,2.10.1,MIT,Approved,http://opensource.org/licenses/mit-license,Pytest plugin for measuring coverage.,https://github.com/pytest-dev/pytest-cov
+pytest-cover,3.0.0,MIT,Approved,http://opensource.org/licenses/mit-license,Pytest plugin for measuring coverage. Forked from `pytest-cov`.,https://github.com/ionelmc/pytest-cover
+pytest-coverage,0.0,unknown,Not approved,"",Pytest plugin for measuring coverage. Forked from `pytest-cov`.,https://pypi.python.org/pypi/pytest-cover/
+pytest-forked,1.3.0,MIT,Approved,http://opensource.org/licenses/mit-license,run tests in isolated forked subprocesses,https://github.com/pytest-dev/pytest-forked
+pytest-rerunfailures,9.1,Mozilla Public License 2.0 (MPL 2.0),Approved,"",pytest plugin to re-run tests to eliminate flaky failures,https://github.com/pytest-dev/pytest-rerunfailures
+pytest-xdist,1.27.0,MIT,Approved,http://opensource.org/licenses/mit-license,pytest xdist plugin for distributed testing and loop-on-failing modes,https://github.com/pytest-dev/pytest-xdist
+python,3.7.3,Python Software Foundation License,Approved,http://hg.python.org/cpython/raw-file/89ce323357db/LICENSE,"",""
+python_abi,3.7,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+python-dateutil,2.8.1,BSD 3 Clause,Approved,"","",""
+python-editor,1.0.4,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"Programmatically open an editor, capture the result.",https://github.com/fmoo/python-editor
+python-gnupg,0.4.6,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A wrapper for the Gnu Privacy Guard (GPG or GnuPG),https://docs.red-dove.com/python-gnupg/
+python-oauth2,1.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,OAuth 2.0 provider for python,https://github.com/wndhydrnt/python-oauth2
+pytz,2020.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+pyyaml,5.1.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+pyzmq,19.0.1,BSD 3-clause,Approved,"","",""
+re2,2019.08.01,BSD 3-clause,Approved,"","",""
+readline,7.0,GPL-3.0,Not approved,"","",""
+recommonmark,0.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"A docutils-compatibility bridge to CommonMark, enabling you to write CommonMark inside of Docutils & Sphinx projects.",https://github.com/rtfd/recommonmark
+recordtype,1.3,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"Similar to namedtuple, but instances are mutable.",https://bitbucket.org/ericvsmith/recordtype
+redis,3.5.3,MIT,Approved,http://opensource.org/licenses/mit-license,Python client for Redis key-value store,https://github.com/andymccurdy/redis-py
+redlock,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,Distributed locks with Redis,https://github.com/glasslion/redlock
+requests,2.24.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Python HTTP for Humans.,https://requests.readthedocs.io
+requests-oauthlib,1.3.0,ISC,Approved,http://en.wikipedia.org/wiki/ISC_license,OAuthlib authentication support for Requests.,https://github.com/requests/requests-oauthlib
+retrying,1.3.3,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Retrying,https://github.com/rholder/retrying
+rollbar,0.15.0,MIT,Approved,http://opensource.org/licenses/mit-license,"Easy and powerful exception tracking with Rollbar. Send messages and exceptions with arbitrary context, get back aggregates, and debug production issues quickly.",http://github.com/rollbar/pyrollbar
+rsa,4.6,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Pure-Python RSA implementation,https://stuvel.eu/rsa
+s3nb,0.0.5,Python Software Foundation License,Approved,http://hg.python.org/cpython/raw-file/89ce323357db/LICENSE,s3 backed notebook manager for ipython 2.0+,https://github.com/monetate/s3nb
+s3transfer,0.3.3,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,An Amazon S3 Transfer Manager,https://github.com/boto/s3transfer
+scikit-learn,0.23.2,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,A set of python modules for machine learning and data mining,http://scikit-learn.org
+scipy,1.5.2,BSD 3-Clause,Approved,"","",""
+scp,0.13.2,LGPL,Approved,http://www.gnu.org/licenses/lgpl.txt,scp module for paramiko,https://github.com/jbardin/scp.py
+scs,2.1.2,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+seaborn,0.10.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,seaborn: statistical data visualization,https://seaborn.pydata.org
+send2trash,1.5.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+setuptools,49.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+six,1.15.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+sklearn,0.0,unknown,Not approved,"",A set of python modules for machine learning and data mining,https://pypi.python.org/pypi/scikit-learn/
+slackclient,2.8.0,MIT,Approved,http://opensource.org/licenses/mit-license,Slack API clients for Web API and RTM API,https://github.com/slackapi/python-slackclient
+smmap,3.0.4,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A pure Python implementation of a sliding window memory map manager,https://github.com/gitpython-developers/smmap
+snappy,1.1.8,BSD 3-clause,Approved,"","",""
+snowballstemmer,2.0.0,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,This package provides 26 stemmers for 25 languages generated from Snowball algorithms.,https://github.com/snowballstem/snowball
+soupsieve,2.0.1,MIT,Approved,http://opensource.org/licenses/mit-license,A modern CSS selector implementation for Beautiful Soup.,https://github.com/facelessuser/soupsieve
+sphinx,3.2.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Python documentation generator,http://sphinx-doc.org/
+sphinxcontrib-applehelp,1.0.2,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,sphinxcontrib-applehelp is a sphinx extension which outputs Apple help books,http://sphinx-doc.org/
+sphinxcontrib-devhelp,1.0.2,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document.,http://sphinx-doc.org/
+sphinxcontrib-htmlhelp,1.0.3,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,sphinxcontrib-htmlhelp is a sphinx extension which renders HTML help files,http://sphinx-doc.org/
+sphinxcontrib-jsmath,1.0.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A sphinx extension which renders display math in HTML via JavaScript,http://sphinx-doc.org/
+sphinxcontrib-napoleon,0.7,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"Sphinx ""napoleon"" extension.",https://sphinxcontrib-napoleon.readthedocs.io
+sphinxcontrib-qthelp,1.0.3,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,sphinxcontrib-qthelp is a sphinx extension which outputs QtHelp document.,http://sphinx-doc.org/
+sphinxcontrib-serializinghtml,1.1.4,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"sphinxcontrib-serializinghtml is a sphinx extension which outputs ""serialized"" HTML files (json and pickle).",http://sphinx-doc.org/
+sphinx-rtd-theme,0.5.0,MIT,Approved,http://opensource.org/licenses/mit-license,Read the Docs theme for Sphinx,https://github.com/rtfd/sphinx_rtd_theme/
+sqlalchemy,1.3.19,MIT,Approved,http://opensource.org/licenses/mit-license,Database Abstraction Library,http://www.sqlalchemy.org
+sqlite,3.33.0,Public-Domain (http://www.sqlite.org/copyright.html),Approved,"","",""
+sqlparse,0.3.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Non-validating SQL parser,https://github.com/andialbrecht/sqlparse
+sshtunnel,0.1.5,MIT,Approved,http://opensource.org/licenses/mit-license,Pure python SSH tunnels,https://github.com/pahaz/sshtunnel
+stringcase,1.2.0,MIT,Approved,http://opensource.org/licenses/mit-license,String case converter.,https://github.com/okunishinishi/python-stringcase
+structlog,20.1.0,"Apache 2.0,MIT",Approved,"http://www.apache.org/licenses/LICENSE-2.0.txt,http://opensource.org/licenses/mit-license",Structured Logging for Python,https://www.structlog.org/
+terminado,0.8.3,Simplified BSD,Approved,http://opensource.org/licenses/bsd-license,"",""
+testpath,0.4.4,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+threadpoolctl,2.1.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,threadpoolctl,https://github.com/joblib/threadpoolctl
+thrift-cpp,0.12.0,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"",""
+time-uuid,0.2.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,A sensible class for dealing with UUIDv1,http://github.com/samuraisam/time_uuid
+tinycss2,1.0.2,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Low-level CSS parser for Python,https://tinycss2.readthedocs.io/
+tk,8.6.10,Tcl/Tk,Approved,"","",""
+tornado,6.0.3,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,"Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed.",http://www.tornadoweb.org/
+traitlets,4.3.3,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+typing-extensions,3.7.4.3,Python Software Foundation License,Approved,http://hg.python.org/cpython/raw-file/89ce323357db/LICENSE,Backported and Experimental Type Hints for Python 3.5+,https://github.com/python/typing/blob/master/typing_extensions/README.rst
+typing-inspect,0.6.0,MIT,Approved,http://opensource.org/licenses/mit-license,Runtime inspection utilities for typing module.,https://github.com/ilevkivskyi/typing_inspect
+ujson,3.1.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,Ultra fast JSON encoder and decoder for Python,https://github.com/ultrajson/ultrajson
+uriparser,0.9.3,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,"",""
+urllib3,1.25.10,MIT,Approved,http://opensource.org/licenses/mit-license,"HTTP library with thread-safe connection pooling, file post, and more.",https://urllib3.readthedocs.io/
+vine,1.3.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,"Promises, promises, promises.",http://github.com/celery/vine
+wcwidth,0.2.5,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+weasyprint,51,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,The Awesome Document Factory,https://weasyprint.org/
+webencodings,0.5.1,BSD 3-Clause,Approved,"","",""
+websocket-client,0.57.0,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,WebSocket client for Python. hybi13 is supported.,https://github.com/websocket-client/websocket-client.git
+werkzeug,1.0.1,New BSD,Approved,http://opensource.org/licenses/BSD-3-Clause,The comprehensive WSGI web application library.,https://palletsprojects.com/p/werkzeug/
+wheel,0.35.1,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+widgetsnbextension,3.5.1,BSD,Approved,http://en.wikipedia.org/wiki/BSD_licenses#4-clause_license_.28original_.22BSD_License.22.29,IPython HTML widgets for Jupyter,http://ipython.org
+xz,5.2.5,LGPL-2.1 and GPL-2.0,Approved,"","",""
+yaml,0.1.7,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+yarl,1.5.1,Apache 2.0,Approved,http://www.apache.org/licenses/LICENSE-2.0.txt,Yet another URL library,https://github.com/aio-libs/yarl/
+zeromq,4.3.2,LGPL 3,Approved,"","",""
+zipp,3.1.0,MIT,Approved,http://opensource.org/licenses/mit-license,"",""
+zlib,1.2.11,zlib,Approved,"","",""
+zstd,1.4.4,BSD 3-Clause,Approved,"","",""
