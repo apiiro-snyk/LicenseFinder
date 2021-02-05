@@ -1,3 +1,19 @@
+## Wednesday 2020-08-12
+
+* Completed the reporting & scan for bobs / potluck. 4 components flagged, 3 bugs filed (one for 2 comps).
+* Need to rescan banyan & jarvis b/c js licenses that should be approved aren't.
+
+## Tuesday 2020-08-11
+
+* Wrote maven\_dependencies.yml -> xml.pom filter, worked well enough on the
+  `potluck` repo. Also ran on `bobs`.
+
+## Friday 2020-08-07
+
+* LicenseFinder repro repo (disaster, don't know enough to) *done*
+* Try LF in a FHIR repo
+* Try a Conda -> Pip hack
+
 ## Thursday 2020-08-06
 
 Hiroshima Day.  No big bombs here yet. No victory, either.
@@ -13,11 +29,11 @@ Hiroshima Day.  No big bombs here yet. No victory, either.
 
 ## Thursday 2020-07-30
 
-Focused on embedding license_finder again, after writing PRD/POA yesterday.
+Focused on embedding `license_finder` again, after writing PRD/POA yesterday.
 Successfully embedded in `black`, with modern LF and .circle-ci calling to the
 inherited dependency file.
 
-* Slow: check_licenses takes ~3:30 where the build_tng is only 1:30 (probably because of layer caching, really)
+* Slow: `check_licenses` takes ~3:30 where the `build_tng` is only 1:30 (probably because of layer caching, really)
 * Does not solve the inventory problem.
 
 ## Tuesday  2020-07-28

@@ -40,7 +40,7 @@ function rails_apps() {
 }
 
 function other_apps() {
-  others="bain dollar"
+  others="bain dollar potluck bobs"
   apps=''
   for app in $others ; do
     apps="${GR_HOME}/${app} ${apps}"
@@ -149,7 +149,7 @@ function s3_upload() {
 }
 
 function banyan_prepare() {
-  echo "bundle install && yarn && cd client && npm install && cd .."
+  echo "gem install bundler:1.17.3 && bundle install && yarn && cd client && npm install && cd .."
 }
 
 function bain_prepare() {
@@ -167,6 +167,14 @@ function banyan_license_finder() {
     cd client &&
     license_finder report ${license_finder_report}
     "
+}
+
+function potluck_prepare() {
+  echo "dependencies_yaml_to_pom maven_dependencies.yaml > pom.xml"
+}
+
+function bobs_prepare() {
+  echo "dependencies_yaml_to_pom maven_dependencies.yaml > pom.xml"
 }
 
 # Don't use `--recursive` for "black".

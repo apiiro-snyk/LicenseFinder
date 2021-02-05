@@ -49,6 +49,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'tomlrb', '~> 1.3.0'
   s.add_dependency 'with_env', '1.1.0'
   s.add_dependency 'xml-simple', '~> 1.1.5'
+  s.add_dependency 'builder'
 
   s.add_development_dependency 'addressable', '2.7.0'
   s.add_development_dependency 'capybara', '~> 3.15.0'
@@ -66,6 +67,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rack', '~> 2.2.2'
   s.add_development_dependency 'rack-test', '~> 1.1.0', '> 0.7'
 
-  s.files         = `git ls-files`.split("\n").reject { |f| f.start_with?('spec', 'features') }
+  s.files         = `git ls-files`.split("\n").reject { |f| f.start_with?('spec', 'features', 'scans') }
   s.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
 end
