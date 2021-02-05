@@ -154,16 +154,32 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsof
   sudo apt-get update &&\
   sudo apt-get install -y dotnet-runtime-2.1 dotnet-sdk-2.1 dotnet-sdk-2.2 dotnet-sdk-3.0 dotnet-sdk-3.1
 
+# install Composer
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4F4EA0AAE5267A6C &&\
     echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main" | sudo tee /etc/apt/sources.list.d/php.list &&\
     apt-get update &&\
     apt-get install -y php7.4-cli &&\
+    EXPECTED_COMPOSER_INSTALLER_CHECKSUM="$(curl --silent https://composer.github.io/installer.sig)" &&\
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&\
-    php -r "if (hash_file('sha384', 'composer-setup.php') === 'e5325b19b381bfd88ce90a5ddb7823406b2a38cff6bb704b0acc289a09c8128d4a8ce2bbafcd1fcbdc38666422fe2806') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" &&\
+    ACTUAL_COMPOSER_INSTALLER_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")" &&\
+    test "${ACTUAL_COMPOSER_INSTALLER_CHECKSUM}" = "${EXPECTED_COMPOSER_INSTALLER_CHECKSUM}" || (echo "ERROR: Invalid installer checksum" >&2; false) &&\
     php composer-setup.php &&\
     php -r "unlink('composer-setup.php');" &&\
     mv composer.phar /usr/bin/composer
 
+
+# install miniconda
+# See https://docs.conda.io/en/latest/miniconda_hashes.html
+# for latest versions and SHAs.
+WORKDIR /tmp
+RUN  \
+  conda_installer=Miniconda3-py38_4.9.2-Linux-x86_64.sh &&\
+  ref='1314b90489f154602fd794accfc90446111514a5a72fe1f71ab83e07de9504a7' &&\
+  wget -q https://repo.anaconda.com/miniconda/${conda_installer} &&\
+  sha=`openssl sha256 "${conda_installer}" | cut -d' ' -f2` &&\
+  ([ "$sha" = "${ref}" ] || (echo "Verification failed: ${sha} != ${ref}"; false)) &&\
+  (echo; echo "yes") | sh "${conda_installer}"
+ 
 # install libraries that most services will need, even to bundle or its equivalent
 RUN apt-get install -y  mysql-client postgresql-client libmysqlclient-dev libxml2-dev libpq-dev
 
