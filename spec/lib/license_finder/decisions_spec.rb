@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module LicenseFinder
@@ -89,6 +91,23 @@ module LicenseFinder
       end
     end
 
+    describe '.homepage' do
+      it 'will report homepage for a dependency' do
+        homepage = subject
+                     .homepage('dep', 'home-page/dep')
+                     .homepage_of('dep')
+        expect(homepage).to eq 'home-page/dep'
+      end
+
+      it 'will report overwritten homepages' do
+        homepages = subject
+                      .homepage('dep', 'home-page/dep')
+                      .homepage('dep', 'other-page/dep')
+                      .homepage_of('dep')
+        expect(homepages).to eq 'other-page/dep'
+      end
+    end
+
     describe '.approve' do
       it 'will report a dependency as approved' do
         decisions = subject.approve('dep')
@@ -115,85 +134,85 @@ module LicenseFinder
       end
     end
 
-    describe '.whitelist' do
-      it 'will report the given license as approved' do
-        decisions = subject.whitelist('MIT')
-        expect(decisions).to be_whitelisted(License.find_by_name('MIT'))
+    describe '.permit' do
+      it 'will report the given license as permitted' do
+        decisions = subject.permit('MIT')
+        expect(decisions).to be_permitted(License.find_by_name('MIT'))
       end
 
       it 'adapts names' do
-        decisions = subject.whitelist('Expat')
-        expect(decisions).to be_whitelisted(License.find_by_name('MIT'))
+        decisions = subject.permit('Expat')
+        expect(decisions).to be_permitted(License.find_by_name('MIT'))
       end
 
       it 'adds to list' do
-        decisions = subject.whitelist('MIT')
-        expect(decisions.whitelisted).to eq(Set.new([License.find_by_name('MIT')]))
+        decisions = subject.permit('MIT')
+        expect(decisions.permitted).to eq(Set.new([License.find_by_name('MIT')]))
       end
     end
 
-    describe '.unwhitelist' do
-      it 'will not report the given license as approved' do
+    describe '.unpermit' do
+      it 'will not report the given license as permitted' do
         decisions = subject
-                    .whitelist('MIT')
-                    .unwhitelist('MIT')
-        expect(decisions).not_to be_whitelisted(License.find_by_name('MIT'))
+                    .permit('MIT')
+                    .unpermit('MIT')
+        expect(decisions).not_to be_permitted(License.find_by_name('MIT'))
       end
 
       it 'is cumulative' do
         decisions = subject
-                    .whitelist('MIT')
-                    .unwhitelist('MIT')
-                    .whitelist('MIT')
-        expect(decisions).to be_whitelisted(License.find_by_name('MIT'))
+                    .permit('MIT')
+                    .unpermit('MIT')
+                    .permit('MIT')
+        expect(decisions).to be_permitted(License.find_by_name('MIT'))
       end
 
       it 'adapts names' do
         decisions = subject
-                    .whitelist('MIT')
-                    .unwhitelist('Expat')
-        expect(decisions).not_to be_whitelisted(License.find_by_name('MIT'))
+                    .permit('MIT')
+                    .unpermit('Expat')
+        expect(decisions).not_to be_permitted(License.find_by_name('MIT'))
       end
     end
 
-    describe '.blacklist' do
-      it 'will report the given license as blacklisted' do
-        decisions = subject.blacklist('MIT')
-        expect(decisions).to be_blacklisted(License.find_by_name('MIT'))
+    describe '.restrict' do
+      it 'will report the given license as restricted' do
+        decisions = subject.restrict('MIT')
+        expect(decisions).to be_restricted(License.find_by_name('MIT'))
       end
 
       it 'adapts names' do
-        decisions = subject.blacklist('Expat')
-        expect(decisions).to be_blacklisted(License.find_by_name('MIT'))
+        decisions = subject.restrict('Expat')
+        expect(decisions).to be_restricted(License.find_by_name('MIT'))
       end
 
       it 'adds to list' do
-        decisions = subject.blacklist('MIT')
-        expect(decisions.blacklisted).to eq(Set.new([License.find_by_name('MIT')]))
+        decisions = subject.restrict('MIT')
+        expect(decisions.restricted).to eq(Set.new([License.find_by_name('MIT')]))
       end
     end
 
-    describe '.unblacklist' do
-      it 'will not report the given license as blacklisted' do
+    describe '.unrestrict' do
+      it 'will not report the given license as restricted' do
         decisions = subject
-                    .blacklist('MIT')
-                    .unblacklist('MIT')
-        expect(decisions).not_to be_blacklisted(License.find_by_name('MIT'))
+                    .restrict('MIT')
+                    .unrestrict('MIT')
+        expect(decisions).not_to be_restricted(License.find_by_name('MIT'))
       end
 
       it 'is cumulative' do
         decisions = subject
-                    .blacklist('MIT')
-                    .unblacklist('MIT')
-                    .blacklist('MIT')
-        expect(decisions).to be_blacklisted(License.find_by_name('MIT'))
+                    .restrict('MIT')
+                    .unrestrict('MIT')
+                    .restrict('MIT')
+        expect(decisions).to be_restricted(License.find_by_name('MIT'))
       end
 
       it 'adapts names' do
         decisions = subject
-                    .blacklist('MIT')
-                    .unblacklist('Expat')
-        expect(decisions).not_to be_blacklisted(License.find_by_name('MIT'))
+                    .restrict('MIT')
+                    .unrestrict('Expat')
+        expect(decisions).not_to be_restricted(License.find_by_name('MIT'))
       end
     end
 
@@ -261,6 +280,68 @@ module LicenseFinder
       end
     end
 
+    describe '.inherit_from' do
+      let(:yml) { YAML.dump([[:permit, 'MIT']]) }
+
+      it 'inheritates rules from local decision file' do
+        allow_any_instance_of(Pathname).to receive(:read).and_return(yml)
+        decisions = subject.inherit_from('./config/inherit.yml')
+        expect(decisions).to be_permitted(License.find_by_name('MIT'))
+      end
+
+      it 'inheritates rules from remote decision file' do
+        stub_request(:get, 'https://example.com/config/inherit.yml').to_return(status: 200, body: yml, headers: {})
+        decisions = subject.inherit_from('https://example.com/config/inherit.yml')
+        expect(decisions).to be_permitted(License.find_by_name('MIT'))
+      end
+
+      it 'inheritates rules from remote decision file with new config format' do
+        stub_request(:get, 'https://example.com/config/inherit.yml').to_return(status: 200, body: yml, headers: {})
+        decisions = subject.inherit_from({ 'url' => 'https://example.com/config/inherit.yml' })
+        expect(decisions).to be_permitted(License.find_by_name('MIT'))
+      end
+
+      it 'inheritates rules from gem decision file' do
+        gem_spec = OpenStruct.new(gem_dir: 'gem-name')
+        allow(Gem::Specification).to receive(:find_by_name).with('gem-name').and_return(gem_spec)
+        allow_any_instance_of(Pathname).to receive(:read).and_return(yml)
+
+        decisions = subject.inherit_from({ 'gem' => 'gem-name', 'path' => 'doc/decisions.yml' })
+        expect(decisions).to be_permitted(License.find_by_name('MIT'))
+      end
+
+      it 'inheritates rules from a private remote decision file' do
+        stub_request(:get, 'https://example.com/config/inherit.yml')
+          .with(headers: { 'Authorization' => 'Bearer Token' })
+          .to_return(status: 200, body: yml, headers: {})
+        decisions = subject.inherit_from({ 'url' => 'https://example.com/config/inherit.yml', 'authorization' => 'Bearer Token' })
+        expect(decisions).to be_permitted(License.find_by_name('MIT'))
+      end
+
+      it 'inheritates rules from a private remote decision file with token in an env variable' do
+        allow(ENV).to receive(:[])
+        allow(ENV).to receive(:[]).with('TOKEN_ENV').and_return('Token')
+
+        stub_request(:get, 'https://example.com/config/inherit.yml')
+          .with(headers: { 'Authorization' => 'Bearer Token' })
+          .to_return(status: 200, body: yml, headers: {})
+
+        decisions = subject.inherit_from({ 'url' => 'https://example.com/config/inherit.yml', 'authorization' => 'Bearer $TOKEN_ENV' })
+        expect(decisions).to be_permitted(License.find_by_name('MIT'))
+      end
+    end
+
+    describe '.remove_inheritance' do
+      it 'reports inheritanced decisions' do
+        allow_any_instance_of(Pathname).to receive(:read).and_return('---')
+        decisions = subject.inherit_from('./config/inherit.yml')
+        expect(decisions.inherited_decisions).to include('./config/inherit.yml')
+
+        decisions = subject.remove_inheritance('./config/inherit.yml')
+        expect(decisions.inherited_decisions).to be_empty
+      end
+    end
+
     describe 'persistence' do
       def roundtrip(decisions)
         described_class.restore(decisions.persist)
@@ -300,14 +381,44 @@ module LicenseFinder
         expect(licenses).to eq [License.find_by_name('GPL')].to_set
       end
 
-      it 'can restore approvals' do
+      it 'can restore homepage' do
+        homepage = roundtrip(
+          subject.homepage('dep', 'home-page/dep')
+        ).homepage_of('dep')
+        expect(homepage).to eq 'home-page/dep'
+      end
+
+      it 'can restore overwritten homepages' do
+        homepage = roundtrip(
+          subject
+            .homepage('dep', 'home-page/dep')
+            .homepage('dep', 'other-page/dep')
+        ).homepage_of('dep')
+        expect(homepage).to eq 'other-page/dep'
+      end
+
+      it 'can restore approvals without versions' do
         time = Time.now.getutc
-        decisions = roundtrip(subject.approve('dep', who: 'Somebody', why: 'Some reason', when: time))
-        expect(decisions).to be_approved('dep')
-        approval = decisions.approval_of('dep')
+        roundtrip(subject.approve('dep', who: 'Somebody', why: 'Some reason', when: time))
+
+        approval = subject.approval_of('dep')
         expect(approval.who).to eq 'Somebody'
         expect(approval.why).to eq 'Some reason'
         expect(approval.safe_when).to eq time
+        expect(approval.safe_versions).to eq []
+      end
+
+      it 'can restore approvals with versions' do
+        time = Time.now.getutc
+        roundtrip(subject.approve('dep', who: 'Somebody', why: 'Some reason', when: time, versions: ['1.0']))
+        roundtrip(subject.approve('dep', who: 'Somebody', why: 'Some reason', when: time, versions: ['2.0']))
+        roundtrip(subject.approve('dep', who: 'Somebody', why: 'Some reason', when: time, versions: ['3.0']))
+
+        approval = subject.approval_of('dep', '1.0')
+        expect(approval.who).to eq 'Somebody'
+        expect(approval.why).to eq 'Some reason'
+        expect(approval.safe_when).to eq time
+        expect(approval.safe_versions).to eq ['1.0', '2.0', '3.0']
       end
 
       it 'can restore unapprovals' do
@@ -319,36 +430,36 @@ module LicenseFinder
         expect(decisions).not_to be_approved('dep')
       end
 
-      it 'can restore whitelists' do
+      it 'can restore permitted licenses' do
         decisions = roundtrip(
-          subject.whitelist('MIT')
+          subject.permit('MIT')
         )
-        expect(decisions).to be_whitelisted(License.find_by_name('MIT'))
+        expect(decisions).to be_permitted(License.find_by_name('MIT'))
       end
 
-      it 'can restore un-whitelists' do
+      it 'can restore un-permitted licenses' do
         decisions = roundtrip(
           subject
-            .whitelist('MIT')
-            .unwhitelist('MIT')
+            .permit('MIT')
+            .unpermit('MIT')
         )
-        expect(decisions).not_to be_whitelisted(License.find_by_name('MIT'))
+        expect(decisions).not_to be_permitted(License.find_by_name('MIT'))
       end
 
-      it 'can restore blacklists' do
+      it 'can restore restricted licenses' do
         decisions = roundtrip(
-          subject.blacklist('MIT')
+          subject.restrict('MIT')
         )
-        expect(decisions).to be_blacklisted(License.find_by_name('MIT'))
+        expect(decisions).to be_restricted(License.find_by_name('MIT'))
       end
 
-      it 'can restore un-blacklists' do
+      it 'can restore un-restricted licenses' do
         decisions = roundtrip(
           subject
-            .blacklist('MIT')
-            .unblacklist('MIT')
+            .restrict('MIT')
+            .unrestrict('MIT')
         )
-        expect(decisions).not_to be_blacklisted(License.find_by_name('MIT'))
+        expect(decisions).not_to be_restricted(License.find_by_name('MIT'))
       end
 
       it 'can restore ignorals' do
@@ -395,6 +506,21 @@ module LicenseFinder
             .unname_project
         )
         expect(decisions.project_name).to be_nil
+      end
+
+      it 'can restore inherited decisions' do
+        allow_any_instance_of(Pathname).to receive(:read).and_return(YAML.dump([[:permit, 'MIT']]))
+        decisions = roundtrip(
+          subject
+            .inherit_from('./config/inherit.yml')
+        )
+        expect(decisions.inherited_decisions).to include('./config/inherit.yml')
+      end
+
+      it 'does not store decisions from inheritance' do
+        allow_any_instance_of(Pathname).to receive(:read).and_return(YAML.dump([[:permit, 'MIT']]))
+        decisions = subject.inherit_from('./config/inherit.yml')
+        expect(decisions.persist).to eql(YAML.dump([[:inherit_from, './config/inherit.yml']]))
       end
 
       it 'ignores empty or missing persisted decisions' do

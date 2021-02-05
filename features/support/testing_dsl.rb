@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'delegate'
 require 'English'
+require 'json'
 
 module LicenseFinder
   module TestingDSL
@@ -33,7 +36,7 @@ module LicenseFinder
       end
 
       def execute_command_outside_project(command)
-        execute_command_in_path(command, Paths.root)
+        execute_command_in_path(command, Paths.tmpdir)
       end
 
       def seeing?(content)
@@ -71,7 +74,7 @@ module LicenseFinder
     require 'forwardable'
     class Project
       extend Forwardable
-      def_delegators :project_dir, :shell_out, :add_to_file, :install_fixture
+      def_delegators :project_dir, :shell_out, :add_to_file, :remove_lines_with_value, :install_fixture
 
       attr_reader :name
 
@@ -95,9 +98,14 @@ module LicenseFinder
         Paths.project(name)
       end
 
+      def clone_go_project(fixture_name)
+        FileUtils.mkpath(Paths.project.join('src', fixture_name))
+        FileUtils.cp_r(Paths.fixtures.join(fixture_name), Paths.project.join('src'))
+      end
+
       def clone(fixture_name)
-        FileUtils.mkpath(Paths.my_app.join(fixture_name))
-        FileUtils.cp_r(Paths.fixtures.join(fixture_name), Paths.my_app)
+        FileUtils.mkpath(Paths.project.join(fixture_name))
+        FileUtils.cp_r(Paths.fixtures.join(fixture_name), Paths.project)
       end
     end
 
@@ -109,18 +117,52 @@ module LicenseFinder
         add_to_file('requirements.txt', 'rsa==3.1.4')
       end
 
+      def add_dep_with_platform(platform)
+        add_to_file('requirements.txt', "colorama==0.3.9;platform_system==\"#{platform}\"")
+      end
+
       def install
         shell_out('pip install -r requirements.txt --user')
       end
     end
 
+    class PipenvProject < Project
+      def add_dep
+        content = ::JSON.pretty_generate(
+          "_meta": {
+            "hash": { "sha256": '' },
+            "pipfile-spec": 6,
+            "requires": { "python_version": '3.8' },
+            "sources": [{ "name": 'pypi', "url": 'https://pypi.org/simple', "verify_ssl": true }]
+          },
+          "default": { "six": { "hashes": ['', ''], "index": 'pypi', "version": '==1.13.0' } },
+          "develop": {}
+        )
+        add_to_file('Pipfile.lock', content)
+      end
+
+      def install
+        shell_out('ls')
+      end
+    end
+
     class NpmProject < Project
       def add_dep
-        add_to_file('package.json', '{"dependencies" : {"http-server": "0.6.1"}}')
+        add_to_file('package.json', '{"dependencies" : {"http-server": "0.11.1"}}')
       end
 
       def install
         shell_out('npm install 2>/dev/null')
+      end
+    end
+
+    class NpmProjectWithInvalidDependency < Project
+      def add_dep
+        add_to_file('package.json', '{"dependencies" : {"gertie-watch": "0.11.1"}}')
+      end
+
+      def install
+        # no install since this should crash.
       end
     end
 
@@ -134,10 +176,20 @@ module LicenseFinder
       end
     end
 
+    class ComposerProject < Project
+      def add_dep
+        install_fixture('composer.json')
+      end
+
+      def install
+        shell_out('composer install')
+      end
+    end
+
     class YarnProject < Project
       def add_dep
         add_to_file('yarn.lock', '')
-        add_to_file('package.json', '{"dependencies" : {"http-server": "0.6.1"}}')
+        add_to_file('package.json', '{"dependencies" : {"http-server": "0.11.1"}}')
       end
     end
 
@@ -148,6 +200,20 @@ module LicenseFinder
 
       def install
         shell_out('mvn install')
+      end
+    end
+
+    class SbtProject < Project
+      def add_dep
+        install_fixture('sbt')
+      end
+
+      def install
+        shell_out('sbt update')
+      end
+
+      def shell_out(command)
+        ProjectDir.new(Paths.project.join('sbt')).shell_out(command)
       end
     end
 
@@ -181,6 +247,12 @@ module LicenseFinder
       end
     end
 
+    class KtsBuildFileGradleProject < Project
+      def add_dep
+        clone('kts-build-file-gradle')
+      end
+    end
+
     class GoProject < Project
       def add_dep
         clone('gopath')
@@ -194,46 +266,97 @@ module LicenseFinder
       end
 
       def shell_out(command)
-        ProjectDir.new(Paths.root.join('tmp', 'projects', 'my_app', 'gopath', 'src', 'github.com', 'pivotal', 'foo')).shell_out(command)
+        ProjectDir.new(Paths.project.join('gopath', 'src', 'github.com', 'pivotal', 'foo')).shell_out(command)
+      end
+    end
+
+    class GoModulesProject < Project
+      def add_dep
+        clone('go_modules')
+      end
+
+      def install
+        shell_out('go mod vendor')
+      end
+
+      def shell_out(command)
+        ProjectDir.new(Paths.project.join('go_modules')).shell_out(command)
       end
     end
 
     class GlideProject < Project
       def add_dep
-        clone('gopath_glide')
+        clone_go_project('gopath_glide')
       end
 
       def install
         orig_gopath = ENV['GOPATH']
-        ENV['GOPATH'] = "#{project_dir}/gopath_glide"
+        ENV['GOPATH'] = project_dir.to_s
         shell_out('glide install')
         ENV['GOPATH'] = orig_gopath
       end
 
       def shell_out(command)
-        ProjectDir.new(Paths.root.join('tmp', 'projects', 'my_app', 'gopath_glide', 'src')).shell_out(command)
+        ProjectDir.new(Paths.project.join('src', 'gopath_glide', 'src')).shell_out(command)
       end
     end
 
     class GlideProjectWithoutSrc < Project
       def add_dep
-        clone('gopath_glide_without_src')
+        clone_go_project('gopath_glide_without_src')
       end
 
       def install
-        src_path = File.join(project_dir, 'gopath_glide_without_src', 'src')
-        FileUtils.mkdir_p(src_path)
-
         orig_gopath = ENV['GOPATH']
-        ENV['GOPATH'] = "#{project_dir}/gopath_glide_without_src"
+        ENV['GOPATH'] = project_dir.to_s
         shell_out('glide install')
         ENV['GOPATH'] = orig_gopath
-
-        FileUtils.rmdir(src_path)
       end
 
       def shell_out(command)
-        ProjectDir.new(Paths.root.join('tmp', 'projects', 'my_app', 'gopath_glide_without_src')).shell_out(command)
+        ProjectDir.new(Paths.project.join('src', 'gopath_glide_without_src')).shell_out(command)
+      end
+    end
+
+    class GlideProjectWithRootAndSrc < Project
+      def add_dep
+        clone_go_project('gopath_glide_in_root_and_src')
+      end
+
+      def install
+        orig_gopath = ENV['GOPATH']
+        ENV['GOPATH'] = project_dir.to_s
+        shell_out_root('glide install')
+        shell_out_src('glide install')
+        ENV['GOPATH'] = orig_gopath
+      end
+
+      def shell_out_root(command)
+        ProjectDir.new(Paths.project.join('src', 'gopath_glide_in_root_and_src')).shell_out(command)
+      end
+
+      def shell_out_src(command)
+        ProjectDir.new(Paths.project.join('src', 'gopath_glide_in_root_and_src', 'src')).shell_out(command)
+      end
+    end
+
+    class TrashProject < Project
+      def add_dep
+        clone('gopath_trash')
+      end
+
+      def shell_out(command)
+        ProjectDir.new(Paths.project.join('gopath_trash')).shell_out(command)
+      end
+    end
+
+    class PreparedTrashProject < Project
+      def add_dep
+        clone('gopath_trash_prepared')
+      end
+
+      def shell_out(command)
+        ProjectDir.new(Paths.project.join('gopath_trash_prepared')).shell_out(command)
       end
     end
 
@@ -250,7 +373,7 @@ module LicenseFinder
       end
 
       def shell_out(command)
-        ProjectDir.new(Paths.root.join('tmp', 'projects', 'my_app', 'gopath_gvt', 'src')).shell_out(command)
+        ProjectDir.new(Paths.project.join('gopath_gvt', 'src')).shell_out(command)
       end
     end
 
@@ -267,7 +390,7 @@ module LicenseFinder
       end
 
       def shell_out(command)
-        ProjectDir.new(Paths.root.join('tmp', 'projects', 'my_app', 'gopath_dep', 'src', 'foo-dep')).shell_out(command)
+        ProjectDir.new(Paths.project.join('gopath_dep', 'src', 'foo-dep')).shell_out(command)
       end
     end
 
@@ -279,7 +402,7 @@ module LicenseFinder
       def install; end
 
       def shell_out(command)
-        ProjectDir.new(Paths.root.join('tmp', 'projects', 'my_app', 'gopath_dep', 'src', 'foo-dep')).shell_out(command)
+        ProjectDir.new(Paths.project.join('gopath_dep', 'src', 'foo-dep')).shell_out(command)
       end
     end
 
@@ -296,7 +419,7 @@ module LicenseFinder
       end
 
       def shell_out(command)
-        ProjectDir.new(Paths.root.join('tmp', 'projects', 'my_app', 'gopath_govendor', 'src')).shell_out(command)
+        ProjectDir.new(Paths.project.join('gopath_govendor', 'src')).shell_out(command)
       end
     end
 
@@ -313,7 +436,7 @@ module LicenseFinder
       end
 
       def install
-        shell_out('pod install --no-integrate')
+        shell_out('pod install')
       end
     end
 
@@ -333,7 +456,7 @@ module LicenseFinder
       end
 
       def install
-        shell_out('conan install')
+        shell_out('conan install .')
       end
     end
 
@@ -343,7 +466,17 @@ module LicenseFinder
       end
 
       def install
-        shell_out('rebar get-deps')
+        shell_out('rebar3 get-deps')
+      end
+    end
+
+    class ErlangMkProject < Project
+      def add_dep
+        FileUtils.copy_entry(Paths.fixtures.join('erlangmk'), Paths.project)
+      end
+
+      def install
+        shell_out('make fetch-deps')
       end
     end
 
@@ -360,25 +493,90 @@ module LicenseFinder
       end
     end
 
+    class MixUmbrellaProject < MixProject
+      def add_dep
+        FileUtils.copy_entry(Paths.fixtures.join('mix_umbrella'), Paths.project)
+      end
+    end
+
     class NugetProject < Project
       def add_dep
         clone('nuget')
       end
     end
 
+    class DotnetProject < Project
+      def add_dep
+        clone('dotnet')
+      end
+    end
+
     class BundlerProject < Project
       def add_dep
         add_to_gemfile("source 'https://rubygems.org'")
-        add_gem_to_gemfile('license_finder', path: Paths.root.to_s)
+        add_to_gemfile("gem 'license_finder', path: #{Paths.root.to_s.inspect}")
       end
 
       def install
-        shell_out('bundle install')
+        ::Bundler.with_original_env do
+          shell_out('bundle install')
+        end
       end
 
       def depend_on(gem, bundler_options = {})
         add_gem_to_gemfile(gem.name, bundler_options.merge(path: gem.project_dir.to_s))
         install
+      end
+
+      private
+
+      def add_gem_to_gemfile(gem_name, options)
+        remove_older_gem_from_gemfile(gem_name)
+        add_to_gemfile("gem #{gem_name.inspect}, #{options.inspect}")
+      end
+
+      def remove_older_gem_from_gemfile(gem_name)
+        remove_lines_with_value('Gemfile', gem_name)
+      end
+
+      def add_to_gemfile(content)
+        add_to_file('Gemfile', content)
+      end
+    end
+
+    class VendorBundlerProject < Project
+      def add_dep
+        add_to_gemfile("source 'https://rubygems.org'")
+        add_gem_to_gemfile('rake', '12.3.0')
+      end
+
+      def install
+        ::Bundler.with_original_env do
+          shell_out('bundle install --path="vendor/bundle"')
+        end
+      end
+
+      private
+
+      def add_gem_to_gemfile(gem_name, options)
+        add_to_gemfile("gem #{gem_name.inspect}, #{options.inspect}")
+      end
+
+      def add_to_gemfile(content)
+        add_to_file('Gemfile', content)
+      end
+    end
+
+    class GitBundlerProject < Project
+      def add_dep
+        add_to_gemfile("source 'https://rubygems.org'")
+        add_to_gemfile("gem 'license_finder', git: #{Paths.root.to_s.inspect}")
+      end
+
+      def install
+        ::Bundler.with_original_env do
+          shell_out('bundle install')
+        end
       end
 
       private
@@ -395,7 +593,7 @@ module LicenseFinder
     # lives adjacent to a BundlerProject, so has a different lifecycle from other Projects and doesn't inherit
     class GemProject
       def self.create(name, options)
-        result = new(name)
+        result = new(name, options[:version])
         result.define(options)
         result
       end
@@ -406,23 +604,24 @@ module LicenseFinder
         result
       end
 
-      def initialize(name, path = nil)
+      def initialize(name, version = nil, path = nil)
         @name = name
         @path = path
+        @file_name = version.nil? ? name : "#{name}-#{version}"
         project_dir.make
       end
 
       def define(options)
-        project_dir.write_file("#{name}.gemspec", gemspec_string(options))
+        project_dir.write_file("#{file_name}.gemspec", gemspec_string(options))
       end
 
-      attr_reader :name, :path
+      attr_reader :name, :path, :file_name
 
       def project_dir
         if path
-          Paths.project(path + '/' + name)
+          Paths.project(path + '/' + file_name)
         else
-          Paths.project(name)
+          Paths.project(file_name)
         end
       end
 
@@ -496,6 +695,11 @@ module LicenseFinder
         join(filename).open('w') { |file| file.write content }
       end
 
+      def remove_lines_with_value(filename, value)
+        updated_content = join(filename).open('r').readlines.reject { |line| line.include?(value) }.join
+        write_file(filename, updated_content)
+      end
+
       def install_fixture(fixture_name)
         if RUBY_PLATFORM =~ /mswin|cygwin|mingw/
           FileUtils.cp(Paths.fixtures.join(fixture_name), join(fixture_name))
@@ -510,6 +714,7 @@ module LicenseFinder
     end
 
     require 'pathname'
+    require 'tmpdir'
     module Paths
       extend self
 
@@ -522,12 +727,12 @@ module LicenseFinder
         root.join('features', 'fixtures')
       end
 
-      def projects
-        root.join('tmp', 'projects')
+      def tmpdir
+        ProjectDir.new(Pathname.new(Dir.tmpdir))
       end
 
-      def my_app
-        root.join('tmp', 'projects', 'my_app')
+      def projects
+        tmpdir.join('projects')
       end
 
       def project(name = 'my_app')
@@ -543,7 +748,7 @@ module LicenseFinder
     end
 
     module Shell
-      ERROR_MESSAGE_FORMAT = <<ERRORFORMAT.freeze
+      ERROR_MESSAGE_FORMAT = <<ERRORFORMAT
 Command failed: `%s`
 output: %s
 exit: %d

@@ -1,8 +1,31 @@
-FROM ubuntu:trusty
-RUN apt-get update && apt-get install -y curl git-core build-essential wget unzip
+FROM ubuntu:xenial
+
+# Versioning
+ENV PIP_INSTALL_VERSION 19.0.2
+ENV PIP3_INSTALL_VERSION 8.1.1
+ENV GO_LANG_VERSION 1.14.3
+ENV MAVEN_VERSION 3.6.0
+ENV SBT_VERSION 1.3.3
+ENV GRADLE_VERSION 5.6.4
+ENV RUBY_VERSION 2.7.1
+ENV MIX_VERSION 1.0
+ENV COMPOSER_ALLOW_SUPERUSER 1
+
+# programs needed for building
+RUN apt-get update && apt-get install -y \
+  build-essential \
+  curl \
+  sudo \
+  unzip \
+  wget \
+  gnupg2 \ 
+  software-properties-common \
+  bzr
+
+RUN add-apt-repository ppa:git-core/ppa && apt-get update && apt-get install -y git
 
 # nodejs seems to be required for the one of the gems
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get -y install nodejs
 
 # install yarn
@@ -15,47 +38,54 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && \
 RUN npm install -g bower && \
     echo '{ "allow_root": true }' > /root/.bowerrc
 
-#install java 8
-#http://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04
-RUN cd /tmp && \
-    wget --quiet --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz -O jdk-8.tgz && \
-    tar xf /tmp/jdk-8.tgz && \
-    mkdir -p /usr/lib/jvm && \
-    mv jdk1.8.0_131 /usr/lib/jvm/oracle_jdk8 && \
-    rm /tmp/jdk-8.tgz
-
-ENV J2SDKDIR=/usr/lib/jvm/oracle_jdk8
-ENV J2REDIR=/usr/lib/jvm/oracle_jdk8/jre
-ENV PATH=$PATH:/usr/lib/jvm/oracle_jdk8/bin:/usr/lib/jvm/oracle_jdk8/db/bin:/usr/lib/jvm/oracle_jdk8/jre/bin
-ENV JAVA_HOME=/usr/lib/jvm/oracle_jdk8
-ENV DERBY_HOME=/usr/lib/jvm/oracle_jdk8/db
-
+# install jdk 12
+RUN curl -L -o openjdk12.tar.gz https://download.java.net/java/GA/jdk12.0.2/e482c34c86bd4bf8b56c0b35558996b9/10/GPL/openjdk-12.0.2_linux-x64_bin.tar.gz && \
+    tar xvf openjdk12.tar.gz && \
+    rm openjdk12.tar.gz && \
+    sudo mv jdk-12.0.2 /opt/ && \
+    sudo rm /opt/jdk-12.0.2/lib/src.zip
+ENV JAVA_HOME=/opt/jdk-12.0.2
+ENV PATH=$PATH:$JAVA_HOME/bin
 RUN java -version
 
-# install python and rebar
-RUN apt-get install -y python rebar
+# install rebar3
+RUN curl -o rebar3 https://s3.amazonaws.com/rebar3/rebar3 && \
+    sudo chmod +x rebar3 && \
+    sudo mv rebar3 /usr/local/bin/rebar3
 
-# install and update python-pip
-RUN apt-get install -y python-pip && \
-    pip install --upgrade pip
+# install and update python and python-pip
+RUN apt-get install -y python python-pip python3-pip && \
+    pip2 install --no-cache-dir --upgrade pip==$PIP_INSTALL_VERSION  && \
+    pip3 install --no-cache-dir --upgrade pip==$PIP3_INSTALL_VERSION
 
 # install maven
-RUN curl -O http://www-us.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz && \
-    tar -xf apache-maven-3.5.2-bin.tar.gz; rm -rf apache-maven-3.5.2-bin.tar.gz && \
-    mv apache-maven-3.5.2 /usr/local/lib/maven && \
+RUN curl -O https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz && \
+    tar -xf apache-maven-$MAVEN_VERSION-bin.tar.gz; rm -rf apache-maven-$MAVEN_VERSION-bin.tar.gz && \
+    mv apache-maven-$MAVEN_VERSION /usr/local/lib/maven && \
     ln -s /usr/local/lib/maven/bin/mvn /usr/local/bin/mvn
+
+# install sbt
+RUN mkdir -p /usr/local/share/sbt-launcher-packaging && \
+    curl --progress \
+    --retry 3 \
+    --retry-delay 15 \
+    --location "https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz" \
+    --output "/tmp/sbt-${SBT_VERSION}.tgz" && \
+    tar -xzf "/tmp/sbt-${SBT_VERSION}.tgz" -C /usr/local/share/sbt-launcher-packaging --strip-components=1 && \
+    ln -s /usr/local/share/sbt-launcher-packaging/bin/sbt /usr/local/bin/sbt && \
+    rm -f "/tmp/sbt-${SBT_VERSION}.tgz"
 
 # install gradle
 WORKDIR /tmp
-RUN curl -L -o gradle.zip http://services.gradle.org/distributions/gradle-4.2-bin.zip && \
+RUN curl -L -o gradle.zip https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip && \
     unzip -q gradle.zip && \
     rm gradle.zip && \
-    mv gradle-4.2 /root/gradle
+    mv gradle-$GRADLE_VERSION /root/gradle
 ENV PATH=/root/gradle/bin:$PATH
 
 #install go
 WORKDIR /go
-RUN wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz -O go.tar.gz && tar --strip-components=1 -xf go.tar.gz
+RUN wget https://storage.googleapis.com/golang/go$GO_LANG_VERSION.linux-amd64.tar.gz -O go.tar.gz && tar --strip-components=1 -xf go.tar.gz && rm -f go.tar.gz
 ENV GOROOT /go
 ENV PATH=$PATH:/go/bin
 
@@ -68,22 +98,27 @@ RUN mkdir /gopath && \
   go get github.com/FiloSottile/gvt && \
   go get github.com/Masterminds/glide && \
   go get github.com/kardianos/govendor && \
-  go get github.com/golang/dep/cmd/dep
+  go get github.com/golang/dep/cmd/dep && \
+  go get -u github.com/rancher/trash && \
+  go clean -cache
 
 # Fix the locale
+RUN apt-get install -y locales
 RUN locale-gen en_US.UTF-8
 ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US:en
 ENV LC_ALL=en_US.UTF-8
 
 #install rvm
-RUN gpg --keyserver hkp://pgp.mit.edu --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 && \
-    curl -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/stable/binscripts/rvm-installer | sudo bash -s stable --ruby=2.4.1
-ENV PATH=/usr/local/rvm/bin:$PATH
+RUN apt-add-repository -y ppa:rael-gc/rvm && \
+    apt update && apt install -y rvm && \
+    /usr/share/rvm/bin/rvm install --default $RUBY_VERSION
+ENV PATH=/usr/share/rvm/bin:$PATH
 
 #install mix
-RUN wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && \
-    sudo dpkg -i erlang-solutions_1.0_all.deb && \
+RUN wget https://packages.erlang-solutions.com/erlang-solutions_${MIX_VERSION}_all.deb && \
+    sudo dpkg -i erlang-solutions_${MIX_VERSION}_all.deb && \
+    sudo rm -f erlang-solutions_${MIX_VERSION}_all.deb && \
     sudo apt-get update && \
     sudo apt-get install -y esl-erlang && \
     sudo apt-get install -y elixir
@@ -93,7 +128,41 @@ RUN bash -lc "gem update --system && gem install bundler"
 
 # install conan
 RUN apt-get install -y python-dev && \
-	pip install conan
+	pip install --no-cache-dir --ignore-installed six --ignore-installed colorama \
+	    --ignore-installed requests --ignore-installed chardet \
+	    --ignore-installed urllib3 \
+	    --upgrade setuptools && \
+    pip install --no-cache-dir -Iv conan==1.11.2
+
+# install Cargo
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y --profile minimal
+
+# install NuGet (w. mono)
+# https://docs.microsoft.com/en-us/nuget/install-nuget-client-tools#macoslinux
+RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF &&\
+  echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list &&\
+  apt-get update &&\
+  apt-get install -y mono-complete &&\
+  curl -o "/usr/local/bin/nuget.exe" "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" &&\
+  curl -o "/usr/local/bin/nugetv3.5.0.exe" "https://dist.nuget.org/win-x86-commandline/v3.5.0/nuget.exe"
+
+# install dotnet core
+WORKDIR /tmp
+RUN wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb &&\
+  sudo dpkg -i packages-microsoft-prod.deb &&\
+  rm packages-microsoft-prod.deb &&\
+  sudo apt-get update &&\
+  sudo apt-get install -y dotnet-runtime-2.1 dotnet-sdk-2.1 dotnet-sdk-2.2 dotnet-sdk-3.0 dotnet-sdk-3.1
+
+RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4F4EA0AAE5267A6C &&\
+    echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main" | sudo tee /etc/apt/sources.list.d/php.list &&\
+    apt-get update &&\
+    apt-get install -y php7.4-cli &&\
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&\
+    php -r "if (hash_file('sha384', 'composer-setup.php') === 'e5325b19b381bfd88ce90a5ddb7823406b2a38cff6bb704b0acc289a09c8128d4a8ce2bbafcd1fcbdc38666422fe2806') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" &&\
+    php composer-setup.php &&\
+    php -r "unlink('composer-setup.php');" &&\
+    mv composer.phar /usr/bin/composer
 
 # install libraries that most services will need, even to bundle or its equivalent
 RUN apt-get install -y  mysql-client postgresql-client libmysqlclient-dev libxml2-dev libpq-dev
@@ -104,8 +173,15 @@ RUN apt-get install -y  libmagickwand-dev imagemagick libdmtx-dev rng-tools memc
 # and
 RUN apt-get install -y  libmagic-dev
 
+# Most of our apps still pin back to 1.17.  Probably need to adjust LicenseFinder
+# itself to install correct bundler based on Gemfile, or move all Rails apps
+# to using LF in library form (better long-term answer anyway)
+RUN gem install bundler --version=1.17.3
+
 # install license_finder
 COPY . /LicenseFinder
-RUN bash -lc "cd /LicenseFinder && bundle install -j4 && rake install"
+RUN bash -lc "cd /LicenseFinder && bundle config set no-cache 'true' && bundle install -j4 && rake install"
 
 WORKDIR /
+
+CMD cd /scan && /bin/bash -l

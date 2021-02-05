@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 
 module LicenseFinder
@@ -19,15 +21,15 @@ module LicenseFinder
       end
     end
 
-    def self.package_management_command
+    def package_management_command
       LicenseFinder::Platform.darwin? ? 'pod' : nil
     end
-
-    private
 
     def possible_package_paths
       [project_path.join('Podfile')]
     end
+
+    private
 
     def lockfile_path
       project_path.join('Podfile.lock')
@@ -44,7 +46,10 @@ module LicenseFinder
                       'Pods/Target Support Files/Pods/Pods-acknowledgements.plist',
                       'Pods/Target Support Files/Pods-*/Pods-*-acknowledgements.plist']
 
-      Dir[*search_paths.map { |path| File.join(project_path, path) }].first
+      result = Dir[*search_paths.map { |path| File.join(project_path, path) }].first
+      raise "Found a Podfile but no Pods directory in #{project_path}. Try running pod install before running license_finder." if result.nil?
+
+      result
     end
 
     def read_plist(pathname)

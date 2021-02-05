@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module LicenseFinder
@@ -13,13 +15,13 @@ module LicenseFinder
       end
 
       it 'installed? should be true if go exists on the path' do
-        allow(PackageManager).to receive(:command_exists?).with('go').and_return true
-        expect(described_class.installed?).to eq(true)
+        allow(subject).to receive(:command_exists?).with('go').and_return true
+        expect(subject.installed?).to eq(true)
       end
 
       it 'installed? should be false if go does not exists on the path' do
-        allow(PackageManager).to receive(:command_exists?).with('go').and_return false
-        expect(described_class.installed?(logger)).to eq(false)
+        allow(subject).to receive(:command_exists?).with('go').and_return false
+        expect(subject.installed?(logger)).to eq(false)
       end
     end
 
@@ -252,6 +254,20 @@ HERE
 
         it 'should prefer Godeps over go_workspace' do
           allow(FileTest).to receive(:exist?).with(Pathname(godeps)).and_return(true)
+          expect(subject.active?).to eq(false)
+        end
+      end
+
+      context 'when dep is present' do
+        let(:godep) { instance_double(LicenseFinder::GoDep, active?: false) }
+        let(:dep) { instance_double(LicenseFinder::Dep, active?: true) }
+
+        it 'should prefer deps over go_workspace' do
+          allow(LicenseFinder::GoDep).to receive(:new).and_return(godep)
+          allow(LicenseFinder::Dep).to receive(:new).and_return(dep)
+          allow(subject).to receive(:envrc_path).and_return('some-path')
+          allow(IO).to receive(:read).with('some-path').and_return('GO15VENDOREXPERIMENT')
+
           expect(subject.active?).to eq(false)
         end
       end

@@ -1,7 +1,14 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'fakefs/spec_helpers'
+
 module LicenseFinder
   describe Gradle do
+    SETTINGS_DOT_GRADLE = <<-GRADLE
+    rootProject.buildFileName = 'build-alt.gradle'
+    GRADLE
+
     let(:options) { {} }
 
     subject { Gradle.new(options.merge(project_path: Pathname('/fake/path'))) }
@@ -61,14 +68,14 @@ BUILD SUCCESSFUL in 0s
         end
 
         it 'lists all dependencies' do
-          expect(subject.current_packages.map(&:name)).to eq ['spring-aop', 'spring-core']
+          expect(subject.current_packages.map(&:name)).to eq %w[spring-aop spring-core]
         end
 
         context 'when gradle group ids option is enabled' do
           let(:options) { { gradle_include_groups: true } }
 
           it 'lists the dependencies with the group id' do
-            expect(subject.current_packages.map(&:name)).to eq ['org.springframework:spring-aop', 'org.springframework:spring-core']
+            expect(subject.current_packages.map(&:name)).to eq %w[org.springframework:spring-aop org.springframework:spring-core]
           end
         end
       end
@@ -117,7 +124,7 @@ BUILD SUCCESSFUL in 0s
         end
 
         it 'lists all dependencies' do
-          expect(subject.current_packages.map(&:name)).to eq ['junit', 'mockito-core']
+          expect(subject.current_packages.map(&:name)).to eq %w[junit mockito-core]
         end
 
         context 'and there are duplicate dependencies' do
@@ -136,7 +143,7 @@ BUILD SUCCESSFUL in 0s
           end
 
           it 'removes duplicates' do
-            expect(subject.current_packages.map(&:name)).to eq ['junit', 'mockito-core']
+            expect(subject.current_packages.map(&:name)).to eq %w[junit mockito-core]
           end
         end
       end
@@ -145,35 +152,130 @@ BUILD SUCCESSFUL in 0s
     describe '#active?' do
       include FakeFS::SpecHelpers
 
-      it 'return true if build.gradle exists' do
-        FakeFS do
-          FileUtils.mkdir_p '/fake/path'
-          FileUtils.touch '/fake/path/build.gradle'
+      context 'when dealing with root gradle project' do
+        context "when there's a build.gradle" do
+          it 'returns true' do
+            FakeFS do
+              FileUtils.mkdir_p '/fake/path'
+              FileUtils.touch '/fake/path/build.gradle'
 
-          expect(subject.active?).to be true
+              expect(subject.active?).to be true
+            end
+          end
+        end
+
+        context "when there's no build.gradle or build.gradle.kts" do
+          it 'returns false' do
+            expect(subject.active?).to be false
+          end
+        end
+
+        context "when there's build.gradle.kts" do
+          it 'return true' do
+            FakeFS do
+              FileUtils.mkdir_p '/fake/path'
+              FileUtils.touch '/fake/path/build.gradle.kts'
+
+              expect(subject.active?).to be true
+            end
+          end
+        end
+
+        context "when there's a settings.gradle" do
+          it 'uses the build.gradle referenced inside' do
+            FakeFS do
+              FileUtils.mkdir_p '/fake/path'
+              File.open('/fake/path/settings.gradle', 'w') do |file|
+                file.write SETTINGS_DOT_GRADLE
+              end
+              FileUtils.touch '/fake/path/build-alt.gradle'
+
+              expect(subject.active?).to be true
+            end
+          end
+        end
+      end
+    end
+
+    describe '#project_root??' do
+      include FakeFS::SpecHelpers
+
+      context 'when dealing with root gradle project' do
+        context "when there's a build.gradle" do
+          it 'returns true' do
+            FakeFS do
+              FileUtils.mkdir_p '/fake/path'
+              FileUtils.touch '/fake/path/build.gradle'
+
+              expect(SharedHelpers::Cmd).to receive(:run).with("gradle -Dorg.gradle.jvmargs=-Xmx6144m properties | grep 'parent: '").and_call_original
+
+              expect(subject.project_root?).to be true
+            end
+          end
+        end
+
+        context "when there's no build.gradle or build.gradle.kts" do
+          it 'returns false' do
+            FakeFS do
+              FileUtils.mkdir_p '/fake/path'
+              expect(SharedHelpers::Cmd).not_to receive(:run).with("gradle -Dorg.gradle.jvmargs=-Xmx6144m properties | grep 'parent: '")
+              expect(subject.project_root?).to be false
+            end
+          end
+        end
+
+        context "when there's build.gradle.kts" do
+          it 'return true' do
+            FakeFS do
+              FileUtils.mkdir_p '/fake/path'
+              FileUtils.touch '/fake/path/build.gradle.kts'
+
+              expect(SharedHelpers::Cmd).to receive(:run).with("gradle -Dorg.gradle.jvmargs=-Xmx6144m properties | grep 'parent: '").and_call_original
+
+              expect(subject.project_root?).to be true
+            end
+          end
+        end
+
+        context "when there's a settings.gradle" do
+          it 'uses the build.gradle referenced inside' do
+            FakeFS do
+              FileUtils.mkdir_p '/fake/path'
+              File.open('/fake/path/settings.gradle', 'w') do |file|
+                file.write SETTINGS_DOT_GRADLE
+              end
+              FileUtils.touch '/fake/path/build-alt.gradle'
+
+              expect(SharedHelpers::Cmd).to receive(:run).with("gradle -Dorg.gradle.jvmargs=-Xmx6144m properties | grep 'parent: '").and_call_original
+
+              expect(subject.project_root?).to be true
+            end
+          end
         end
       end
 
-      context "when there's no build.gradle" do
+      context 'when dealing with a gradle subproject' do
         it 'returns false' do
-          expect(subject.active?).to be false
-        end
-      end
-
-      context "when there's a settings.gradle" do
-        it 'uses the build.gradle referenced inside' do
-          SETTINGS_DOT_GRADLE = <<-GRADLE.freeze
-rootProject.buildFileName = 'build-alt.gradle'
-          GRADLE
-
           FakeFS do
             FileUtils.mkdir_p '/fake/path'
-            File.open('/fake/path/settings.gradle', 'w') do |file|
-              file.write SETTINGS_DOT_GRADLE
-            end
-            FileUtils.touch '/fake/path/build-alt.gradle'
+            FileUtils.touch '/fake/path/build.gradle'
 
-            expect(subject.active?).to be true
+            expect(SharedHelpers::Cmd).to receive(:run).with("gradle -Dorg.gradle.jvmargs=-Xmx6144m properties | grep 'parent: '")
+                                            .and_return(["parent: root project 'parent-gradle-project'\n", nil, cmd_success])
+            expect(subject.project_root?).to eq(false)
+          end
+        end
+      end
+
+      context 'when fetching module properties fail' do
+        it 'raises an error' do
+          FakeFS do
+            FileUtils.mkdir_p '/fake/path'
+            FileUtils.touch '/fake/path/build.gradle'
+
+            expect(SharedHelpers::Cmd).to receive(:run).with("gradle -Dorg.gradle.jvmargs=-Xmx6144m properties | grep 'parent: '").and_return([nil, 'error', cmd_failure])
+
+            expect { subject.project_root? }.to raise_error(%r{Command 'gradle -Dorg.gradle.jvmargs=-Xmx6144m properties \| grep 'parent: '' failed to execute in /fake/path: error})
           end
         end
       end

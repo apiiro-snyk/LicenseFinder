@@ -1,3 +1,348 @@
+# [6.6.2] / 2020-07-09
+
+### Added
+* support for rebar3 - [b20e7444](https://github.com/pivotal/LicenseFinder/commit/b20e7444c147d8dbfa46eb4e8e549e03be751e02) - Jeff Jun
+* Support for Go modules projects outside of the current working directory - [56b3bec6](https://github.com/pivotal/LicenseFinder/commit/56b3bec632b3884ce4cad538742b4a13c55fd7c5)
+
+### Changed
+* Change Go modules to only report imported packages (as with other Go package managers) - [34361fda](https://github.com/pivotal/LicenseFinder/commit/34361fdab2dc3f197f7aec6408175018dee3b453) and [dffae4ab](https://github.com/pivotal/LicenseFinder/commit/dffae4ab95e34115b6a54bf681fc0966a8611f01)
+* Detect Go modules based on `go.mod` (instead of `go.sum`) - [667f6be7](https://github.com/pivotal/LicenseFinder/commit/667f6be716504a53ccc2824daae08af085566546)
+
+### Fixed
+* handle empty case for mix dependencies [#173637843] - [fc34b281](https://github.com/pivotal/LicenseFinder/commit/fc34b2813925a709addde675849e199b05fc4a23) - Jeff Jun
+
+### Removed
+* support for rebar2 [#173637980] - [b20e7444](https://github.com/pivotal/LicenseFinder/commit/b20e7444c147d8dbfa46eb4e8e549e03be751e02) - Jeff Jun
+* Removed the unnecessary prepare command for Go modules - [284cc5c8](https://github.com/pivotal/LicenseFinder/commit/284cc5c821270a6e56275e32bac836a3e451f46b)
+
+# [6.6.1] / 2020-06-30
+
+### Changed
+* Handle multiple solution files for nuget [#173021333] - [040d9559](https://github.com/pivotal/LicenseFinder/commit/040d9559a4bda07490255cc34c1a7891081bc511) 
+* matches license names from pypi api call with known licenses to avoid returning misformatted licenses [#173421573] - [6b96d746](https://github.com/pivotal/LicenseFinder/commit/6b96d74600034abcacee6ed2b322aa3abfaa0992) - Jeff Jun
+* Update Nuget Package Manager prepare command - [6ac07066](https://github.com/pivotal/LicenseFinder/commit/6ac070668955bc034da1647658440ce5bb0d9bd2) - Jason Smith
+
+# [6.6.0] / 2020-06-22
+
+# [6.5.0] / 2020-06-01
+
+### Added
+* Support legacy nuget projects [#172950097] - [0cccbcf9](https://github.com/pivotal/LicenseFinder/commit/0cccbcf9aa92f4297ef0174242bdb19da1babc65) 
+
+### Changed
+* Upgrade to golang 1.14.3. Update dotnet-sdk to 3.1 - [0969e98f](https://github.com/pivotal/LicenseFinder/commit/0969e98fde4a82f8931601baa4dd96dc01300a14) 
+
+# [6.4.0] / 2020-05-22
+
+Big shout out to @forelabs for introducing many new features and improvements for this release. Thanks again!!
+
+### Added
+* Introducing new inherited_decisions command - [3453feb](https://github.com/pivotal/LicenseFinder/commit/3453feb659a6c3c6e5aa444e3755ddd5d32f3664) - Sven Dunemann
+* Decision Applier: Merge manual and system packages - [c690532](https://github.com/pivotal/LicenseFinder/commit/c690532ec8addab16bef4edd390f05ceb353435f) - Sven Dunemann
+* Introduce package_url to packages - [18972f7](https://github.com/pivotal/LicenseFinder/commit/18972f7b3a04340e1b7bb560780130b68696b8a2) - Sven Dunemann
+* Add --write-headers option for csv exports - [18e01f8](https://github.com/pivotal/LicenseFinder/commit/18e01f8728a9dc525d7567292cc1e2f390ec854d) - Sven Dunemann
+* Yarn: Add authors & install_path - [08a0f67](https://github.com/pivotal/LicenseFinder/commit/08a0f67837a218231217767561f2282c1b3a890a) - Sven Dunemann
+* install path for nuget dependencies [#172251374] - [ad73c946](https://github.com/pivotal/LicenseFinder/commit/ad73c946113846f8f548adfc73542aebb3763175) - Jeff Jun
+* new Rubocop cops - [c4cc6b8b](https://github.com/pivotal/LicenseFinder/commit/c4cc6b8b13273db17b65cecaf24c9053e4989ea1) - Jeff Jun
+
+### Fixed
+* Separate lines in license text with LF when exported to JSON - [baddb976](https://github.com/pivotal/LicenseFinder/commit/baddb976e7a8683c5cc320eddc8c2712dfb16c15) - Robert Huitl
+
+### Changed
+* Go15VendorExperiment: Detect go only if vendor includes go files - [0f8e609](https://github.com/pivotal/LicenseFinder/commit/0f8e609f0921937c6187deccd80e4bc4b7d67ee4) - Sven Dunemann
+* Bump PHP version to 7.4 - [cbe45c5](https://github.com/pivotal/LicenseFinder/commit/cbe45c5cdb3ec200ea215086a3b3eb879e83222a) - Yivan
+* Significantly improve the license text matching file to be more dynamic - [acf5705](https://github.com/pivotal/LicenseFinder/commit/acf570573b4a2414d9c43212dea5d4ecb157319e)
+* Update Ruby version to 2.7.1 [#172295831] - [475e2948](https://github.com/pivotal/LicenseFinder/commit/475e2948ec1ad859aee59e77aa9ce2a51e1a5029) 
+
+# [6.3.0] / 2020-05-06
+
+### Added
+* OFL License - [d475bbb1](https://github.com/pivotal/LicenseFinder/commit/d475bbb1380e217f154f262caaa73c12f5b9792b) - Sven Dunemann
+* WTFPL License - [ec629170](https://github.com/pivotal/LicenseFinder/commit/ec6291702c28789a33478041dbf6524d603c12ff) - Sven Dunemann
+
+* Find the install path for sbt, cargo and composer [#171649609] - [0d525cbf](https://github.com/pivotal/LicenseFinder/commit/0d525cbf5208db5a977f2f3d922d07b5ea6a8b16) 
+
+### Changed
+* Bump PHP version to 7.3 - [1c3c3271](https://github.com/pivotal/LicenseFinder/commit/1c3c3271b977a6c8d24e4159a6b8098a51086522) 
+* Remove +compatible in Go package versions [#171754392] - [5cba5801](https://github.com/pivotal/LicenseFinder/commit/5cba5801f4f276482f01bfeea46fde0dbbcce7b1) 
+
+### Fixed
+* Fixed Maven Package manager Groups check - [5058d90](https://github.com/pivotal/LicenseFinder/commit/5058d90246a25ca15c72e0eed8e19ebbf7e39998) - Ravi Soni 
+* GoModules: fix compute with vendor mod - [067eb19](https://github.com/pivotal/LicenseFinder/commit/067eb1916ce024039631bdbd4114ababa6c02c3a) - forelabs
+* Do not set Bundle path. Bundler will figure it out. - [6319a7a](https://github.com/pivotal/LicenseFinder/commit/6319a7a281bd9cc997c08c903674ab51fcc6545e) - mvz
+
+# [6.2.0] / 2020-04-07
+
+### Fixed
+* Break dependency of specs on released license_finder gem - [ef69fa00](https://github.com/pivotal/LicenseFinder/commit/ef69fa00deb7a8f8ebd74312afa9f130be2d9fda) - Matijs van Zuijlen
+* Replace toml parser with tomlrb - [8b9b34b4](https://github.com/pivotal/LicenseFinder/commit/8b9b34b48d5bdadc679c0d072117b092d080fb81) - Matijs van Zuijlen
+
+### Changed
+* Run glide install in folder containing glide.lock - [cec3ff47](https://github.com/pivotal/LicenseFinder/commit/cec3ff4759f1c06df2cd0c39ac8004fcd156a6e6) - Jeff Jun
+* specify path for bundle install [#168042947] - [431355dc](https://github.com/pivotal/LicenseFinder/commit/431355dc1d0172c65444d2f4bcb5b4416fc52af7) 
+
+# [6.1.2] / 2020-03-16
+
+# [6.1.0] / 2020-02-21
+
+### Fixed
+* Testing dsl now correctly creates gem project - [6158d767](https://github.com/pivotal/LicenseFinder/commit/6158d76758f4232f3efd652729a83aa632a67dee) - Jeff Jun
+
+### Changed
+* Upgrade golang version to 1.13.3 - [51ecbcbc](https://github.com/pivotal/LicenseFinder/commit/51ecbcbc7992366c1baed2e8b805a7f820f70160) 
+* Uses correct package management command for pip based on options that are passed in - [3f4034ab](https://github.com/pivotal/LicenseFinder/commit/3f4034ab3479da23088174ad8cf56828b3cda9ad) 
+
+# [6.0.0] / 2020-01-22
+
+### Added
+* License Finder now recognizes pip requirement markers - [99fbc184](https://github.com/pivotal/LicenseFinder/commit/99fbc18463ef45f920ad506a72dc0b3a93d0f5bf) - Jason Smith
+* Add ruby 2.7.0 and update to latest patch levels - [65efe96](https://github.com/pivotal/LicenseFinder/commit/65efe96aeef600a398f1465c01ed28b51bda456a) - mokhan
+* Add support for Pipfile.lock - [566fb39c](https://github.com/pivotal/LicenseFinder/commit/566fb39c4077fb5271707a94894998a585cde8dd) - mokhan
+
+### Fixed
+* Bundler ignored groups failure - [bf2c03e3](https://github.com/pivotal/LicenseFinder/commit/bf2c03e375e91e8418967a593362313487f2f0d0) 
+* No longer crashes when python package requirement is missing - [80e4b360](https://github.com/pivotal/LicenseFinder/commit/80e4b360b95de126e7dc139c25de56c948a01f1e) - Jason Smith
+* Longest common paths returning incorrect single directory [#169276334] - [f1d5423b](https://github.com/pivotal/LicenseFinder/commit/f1d5423b04f892d1d1e0595993c9bebb0a7c1b6d) 
+* python 2 projects using incorrect CLI command - [5655f60e](https://github.com/pivotal/LicenseFinder/commit/5655f60e671dc4c247bb05138ed35b05cda9cdc7) 
+
+### Changed
+* Bump jdk version to 13 - [74c9aca6](https://github.com/pivotal/LicenseFinder/commit/74c9aca6358c9dd9262790edbba2e42e84b58bd9) - Debbie Chen
+* Bump sbt version to 1.3.3 with java 12 - [d825599a](https://github.com/pivotal/LicenseFinder/commit/d825599a9b1ac12d874eda66c17bc877bb9af555) - Debbie Chen
+* Bump to openjdk 11 - [499f8ab3](https://github.com/pivotal/LicenseFinder/commit/499f8ab3af7cd8ca37e429f2ed78323ad796d123) - Debbie Chen
+* Bump to openjdk 12 - [09c781a7](https://github.com/pivotal/LicenseFinder/commit/09c781a70787d9461722d5d03d1bc624b644311a) - Debbie Chen
+* Bundler prepare commands with now exclude dependencies in the ignored groups [#169611326] - [e58b2870](https://github.com/pivotal/LicenseFinder/commit/e58b2870b64d2c88be7027b152a423fdb921baca) 
+* Change version to be required for dependency add and updated cli options [#168705017] - [b10383d3](https://github.com/pivotal/LicenseFinder/commit/b10383d3d1990b6ad0d608044511352f13924be3) - Debbie Chen
+* Ensure composer always installs the packages - [70b5e7a](https://github.com/pivotal/LicenseFinder/commit/70b5e7a42943c85bbd1d2825b2ffe94eec89020f) - kaystrobach 
+
+* **BREAKING:** Replaced whitelist/blacklist terminology with permitted_licenses/restricted_licenses - [a40b22f](https://github.com/pivotal/LicenseFinder/commit/a40b22fda11b3a0efbb3c0a021381534bc998dd9) - grantbdev  
+
+### Deprecated
+* Remove support for jruby 9.1* [#169590215] - [81e75f8c](https://github.com/pivotal/LicenseFinder/commit/81e75f8cd61ca35e30562352dee2579b1b6c991e) 
+
+# [5.11.1] / 2019-11-05
+
+### Fixed
+* Crash when gradle runs with project roots recursive [#169465210] - [08e0df85](https://github.com/pivotal/LicenseFinder/commit/08e0df857c7fa4273eb6e2e4a7c01bb46550a91f) 
+
+### Changed
+* Bump docker ruby version to 2.6.5 [#169539985] - [26b6d4b2](https://github.com/pivotal/LicenseFinder/commit/26b6d4b25133fa50dbf92265a20bed2350305245) 
+* Gradle version updated to 5.6.4 - [9e32228f](https://github.com/pivotal/LicenseFinder/commit/9e32228fae3dacae38e7827946a0e0412a20ccb0) 
+
+# [5.11.0] / 2019-10-24
+
+### Fixed
+* Fix crash in LF for null deps in godep - [aec335e5](https://github.com/pivotal/LicenseFinder/commit/aec335e574b65c1e9927787e88fb95f1296cdd26) 
+
+### Changed
+* Exclude Gradle subprojects from project roots - [4efea4c8](https://github.com/pivotal/LicenseFinder/commit/4efea4c8892f48c24ed6ec46a4be85cb06dc6672) - Jason Smith
+* project_roots will skip maven subprojects - [61b88513](https://github.com/pivotal/LicenseFinder/commit/61b885135bd02cf2b5c6be4bc1fba85020d42f6a) - Peter Tran
+
+# [5.10.2] / 2019-09-03
+
+### Added
+* Added bzr app to image - [8fd43f01](https://github.com/pivotal/LicenseFinder/commit/8fd43f01a5de575596c92bcfc38a5e9ba7bf6b3d) 
+
+# [5.10.1] / 2019-08-28
+
+### Fixed
+* Mix bailing early when elixir is not installed - [13b120e](https://github.com/pivotal/LicenseFinder/commit/13b120ed7c121243be987f449cc29d00ec6e6450) 
+
+# [5.10.0] / 2019-08-26
+
+### Changed
+* Dotnet projects only detected if csproj is at root level - [b9f810d](https://github.com/pivotal/LicenseFinder/commit/b9f810d96f92f458fcfe4855307fdddfb7f1082b) 
+* sha for composer-setup.php - [64b782a](https://github.com/pivotal/LicenseFinder/commit/64b782a137a287980a317fcb48f595b6e93f85d0) - Debbie Chen
+
+# [5.9.2] / 2019-07-02
+
+### Changed
+* Bump ruby version to 2.6.3 - [dcdcc1c](https://github.com/pivotal/LicenseFinder/commit/dcdcc1c3e4fd29ec4d180a54fb67b2aa07e932de) 
+
+# [5.9.1] / 2019-06-10
+
+# [5.9.0] / 2019-06-10
+
+### Added
+* composer PHP support - [c671309](https://github.com/pivotal/LicenseFinder/commit/c671309d89c54a4dfac3ac40aab1bf70e3c3f6a2) 
+* composer support - [13ecaab](https://github.com/pivotal/LicenseFinder/commit/13ecaab7ee55c95ca973b74950fb10c3daea0784) - Zachary Knight
+* --homepage option to `dependencies add` - [b7f7ef8](https://github.com/pivotal/LicenseFinder/commit/b7f7ef8b81d193b5535cb3c48b9244ecd446057f) 
+
+### Fixed
+* 'dotnet restore' failing - [dee1045](https://github.com/pivotal/LicenseFinder/commit/dee104517e0cf8ce769405910f46607a66017f40) 
+* Reporting extra paths for gvt projects - [ba7d1bd](https://github.com/pivotal/LicenseFinder/commit/ba7d1bdd90282e7d127c3ddaf68b51f98b402000) 
+
+### Changed
+* Fix license definition tests - [15b524f](https://github.com/pivotal/LicenseFinder/commit/15b524fa52f63e04a82d160a7fc3d49c288d01e8) 
+
+# [5.8.0] / 2019-05-22
+
+### Added
+* Trash Package Manager - [3a3d854](https://github.com/pivotal/LicenseFinder/commit/3a3d8541c4ea64607df6b120111aff324f93778d) 
+
+### Fixed
+* Prefer to use `origin` over `path` for govendor - [31c6041](https://github.com/pivotal/LicenseFinder/commit/31c6041926a27b61c35c05c6433a87d0af78c1e5) 
+
+# [5.7.1] / 2019-03-08
+
+# [5.7.0] / 2019-03-01
+
+### Added
+* Ruby 2.6.1 support - [8d60ed1](https://github.com/pivotal/LicenseFinder/commit/8d60ed13f99b830cc1352900f90e2b298105f518) 
+
+### Changed
+* Conan version is locked to 1.11.2 to avoid breaking changes - [72b766a](https://github.com/pivotal/LicenseFinder/commit/72b766a948be5b0f8eade75e716796f50ea9ebf3) 
+
+# [5.6.2] / 2019-01-28
+
+# [5.6.1] / 2019-01-25
+
+### Changed
+* Updated GOLANG to 1.11.4 in Docker image [#163424880] - [67e5e1f](https://github.com/pivotal/LicenseFinder/commit/67e5e1ffef19acf3a63cac55c5aa3626fb4c7491)
+
+# [5.6.0] / 2018-12-19
+
+### Added
+* Add support for JSON reports [#161595251] - [5a1f735](https://github.com/pivotal/LicenseFinder/commit/5a1f73515c83cbf8ce17275c4c9d1af43d0db772) 
+* Removed the removal of nested projects - [6e1941c](https://github.com/pivotal/LicenseFinder/commit/6e1941c4d06676988ff8bdad81bd83a4bb5c17e9) 
+* Show verbose errors from prepare commands [#161462746] - [2b14299](https://github.com/pivotal/LicenseFinder/commit/2b142995d06572f772104c39437d0b64f9569f79) 
+
+* Support to find gradle.kts files [#161629958] - [f7cb587](https://github.com/pivotal/LicenseFinder/commit/f7cb587787f4de282c34afe66c0a2d0c1c72a84f) 
+
+### Fixed
+* Go modules reports incorrect install paths - [9ab5aa9](https://github.com/pivotal/LicenseFinder/commit/9ab5aa9aadc9432c5359ed2af2cb32e28fac277a) 
+Revert "* Go modules reports incorrect install paths" - [fcead98](https://github.com/pivotal/LicenseFinder/commit/fcead980ae2cc24f7193a1f38944f4df60a8c3fc) 
+
+* Fix install_paths for go mod now accurately report dependency installation directories  [#161943322 finish] - [ea28c06](https://github.com/pivotal/LicenseFinder/commit/ea28c06898964043f5849b64b4043bde81a2d7cd) 
+* Handle log file names created with whitespaces and slashes - [7d6f9da](https://github.com/pivotal/LicenseFinder/commit/7d6f9da5006e1e7bbb71f594188ab87ee76ddfbb) 
+
+### Changed
+* Updated go-lang to 1.11.2 in the Docker - [d720f9c](https://github.com/pivotal/LicenseFinder/commit/d720f9c16f82044b5024213bec41b8e9f34cf306) 
+
+# [5.5.2] / 2018-10-17
+
+### Fixed
+* go mod prepare command being incorrect - [480c465](https://github.com/pivotal/LicenseFinder/commit/480c4654cde7342456318ed4e28b6cebd4a09e4b) 
+
+# [5.5.1] / 2018-10-16
+
+### Added
+* Documentation for asterisks being added to license names [#158960018] - [154b727](https://github.com/pivotal/LicenseFinder/commit/154b7273b1c18e64afa48799b50588251f99e982) 
+* Document the prepare option on the command line - [c283a38](https://github.com/pivotal/LicenseFinder/commit/c283a38d9e8b9feefc5afe32f1df55b357a33333) 
+
+### Fixed
+* Go modules are forced to be enabled on go mod package managers - [cf9123d](https://github.com/pivotal/LicenseFinder/commit/cf9123d654b98cdef872d3b21631e69960abe365) 
+
+# [5.5.0] / 2018-10-11
+
+### Added
+* Go Module support - [8a20210](https://github.com/pivotal/LicenseFinder/commit/8a202109e942316434978befd33854aa985dd872)
+
+### Changed
+* Lowering gemspec ruby requirement to support jruby 9.1.x - [279bd25](https://github.com/pivotal/LicenseFinder/commit/279bd25bbebbd3851dcc0062c3c47f7c7063dad8)
+* Bumps rubocop to 0.59.2 - [291d335](https://github.com/pivotal/LicenseFinder/commit/291d3358921dbb47bc612b77656353da07e71a2b)
+
+### Fixed
+* 'dlf' with no-args should get a login shell - [2b019fb](https://github.com/pivotal/LicenseFinder/commit/2b019fb1126ec2fcb9cafa092cad6d27b875e5f9) - Kim Dykeman
+* Do not include godep dependencies with common paths - [23e951f](https://github.com/pivotal/LicenseFinder/commit/23e951fae56a43abde52ecefa73e8a5ff73bb688) 
+* Remove uneeded bundle install in dlf [#160758436] - [f44c73f](https://github.com/pivotal/LicenseFinder/commit/f44c73f6c06838a29ff9a75932e08fb1445557ca) 
+
+* dlf gemfile directory issues [#160758436 finish] - [2db3972](https://github.com/pivotal/LicenseFinder/commit/2db397261654bca89771e85984b4ae6819274e55) 
+Revert "* dlf gemfile directory issues [#160758436 finish]" - [6b17ddc](https://github.com/pivotal/LicenseFinder/commit/6b17ddc4202518ffd167c8d38a2045a36eb00144) 
+
+# [5.4.1] / 2018-09-18
+
+### Fixed
+* Extra dependencies showing up for some go projects [#160438065] - [dfb1367](https://github.com/pivotal/LicenseFinder/commit/dfb136724721843c1196e74a6b4c762538af62ba) 
+* remove workspace-aggregator as a yarn dependency [#159612717 finish] - [4e0afd0](https://github.com/pivotal/LicenseFinder/commit/4e0afd0ba79623f5bb4c055d42a76ba77ce1c785) 
+
+# [5.4.0] / 2018-08-20
+
+### Added
+* NuGet + mono installation to Dockerfile
+* Add An all caps version of the 'LICENCE' spelling as a candidate file
+
+### Changed
+* Upgrades Dockerfile base to Xenial
+
+# [5.3.0] / 2018-06-05
+
+### Added
+* Experimental support for Rust dependencies with Cargo - [2ef3129](https://github.com/pivotal/LicenseFinder/commit/2ef31290f7abf51db5b7173302d1e535508bbd7a)
+* Add project roots command to list paths to scan - [b7a22ea](https://github.com/pivotal/LicenseFinder/commit/b7a22eacfac0e1b9334998de606df69ec3156f77)
+
+### Removed
+* Remove HTTParty dependency - [c52d014](https://github.com/pivotal/LicenseFinder/commit/c52d014df1ca9cd3838d03c60daa6fad954c5579) 
+
+# [5.2.3] / 2018-05-14
+
+# [5.2.1] / 2018-05-14
+
+### Changed
+* Updated go-lang to 1.10.2 in the Docker * Updated Maven to 3.5.3 in the Docker - [1decf6a](https://github.com/pivotal/LicenseFinder/commit/1decf6ad27c9edf96b4f5cccd9a7ca0955fed9f2) - Mark Fioravanti
+
+# [5.2.0] / 2018-05-09
+
+### Fixed
+* Support for pip 10.0.1 - [286f679](https://github.com/pivotal/LicenseFinder/commit/286f6790dc71c97c0e93ecdfe0c6fddad75165cc)
+
+# [5.1.1] / 2018-05-08
+
+### Added
+* CC License detection
+
+### Fixed
+* Yarn package manager now handles non-ASCII characters
+* in_umbrella: true dependencies for Mix
+* Pivotal Repo Renamed to pivotal
+
+# [5.1.0] / 2018-04-02
+
+### Added
+* Support for Ruby 2.5.1 - [9c82a84](https://github.com/pivotal/LicenseFinder/commit/9c82a84a3cff0765a45fa28dc2b05ab32880fb00) 
+* Support for Scala build Tool (sbt ) - [2115ddf](https://github.com/pivotal/LicenseFinder/commit/2115ddfe9481d17e6b1d0ac63d6ae1c6143f370c) - Bradford D. Boyle
+* Condense gvt paths with identical shas into their common path - [9e1071d](https://github.com/pivotal/LicenseFinder/commit/9e1071d3c92405a8605727ad1164d6581dc50533)
+
+### Fixed
+* Added back the pip prepare commands [#156376451 finish] - [fdd63fb](https://github.com/pivotal/LicenseFinder/commit/fdd63fb38332230e0cce0ee1b47aa5ccd0eebc36) 
+* Govendor not consolidating common paths from the same SHA - [bdd23c9](https://github.com/pivotal/LicenseFinder/commit/bdd23c94ae6ff09a2466c8875e554de60db6603c) 
+
+### Deprecated
+* Support for Ruby 2.1 
+* Support for Ruby 2.2 
+* Support for jruby - [9c82a84](https://github.com/pivotal/LicenseFinder/commit/9c82a84a3cff0765a45fa28dc2b05ab32880fb00) 
+
+# [5.0.3] / 2018-02-13
+
+### Changed
+* Add the -vendor-only flag to dep-ensure calls - [e305bd1](https://github.com/pivotal/LicenseFinder/commit/e305bd1d5b2d9653f828c3940b59a12903904699) 
+* Update detected paths for Nuget - [3fe8995](https://github.com/pivotal/LicenseFinder/commit/3fe89955d82c3467628abbd2ca9ba159bfeb7df6)
+
+# [5.0.2] / 2018-02-06
+
+### Fixed
+* Add conditional production flag to npm - [533f9b8](https://github.com/pivotal/LicenseFinder/commit/533f9b8fda250655f3613444da49fdce60215237) 
+* conan install & info commands - [322e64c](https://github.com/pivotal/LicenseFinder/commit/322e64c402f4e45d97c6f3bf67c3ffdaabbb359f) 
+* Duplicate approvals in decisions file - [a8e6141](https://github.com/pivotal/LicenseFinder/commit/a8e6141cd7ac7ed2aa10b35c55954a48bacf3523) 
+* log path issues - [9f1bae1](https://github.com/pivotal/LicenseFinder/commit/9f1bae12c88771229e0a919876f4de6bcad31677) 
+
+* Fix yarn not working with --project_path option - [c6ed08d](https://github.com/pivotal/LicenseFinder/commit/c6ed08dd8342dec9fcc3e6377f88d5ef01600928) 
+
+# [5.0.0] / 2018-01-15
+
+### Added
+* NPM prepare - [e7a0d30](https://github.com/pivotal/LicenseFinder/commit/e7a0d30cb77e5503b5a934b26dbd3dc272dc5605) 
+* Specify log directory for prepare - [b9a5991](https://github.com/pivotal/LicenseFinder/commit/b9a599171f3fda2affa9381d998e2158a2bf7fac) 
+
+* Added prepare step for elixir projects - [38b08ea](https://github.com/pivotal/LicenseFinder/commit/38b08eae23b6b0c2bbaa3aea7845ab6a8d9b028b) 
+
+### Fixed
+* Action_items resolves decisions file path - [c2a92ab](https://github.com/pivotal/LicenseFinder/commit/c2a92ab62203efb890dfeb1798d377c8d835feb6) 
+
+* Bower prepare step - [bb11d7f](https://github.com/pivotal/LicenseFinder/commit/bb11d7f07cc5e436381f01245a46033af6bb2d3b) 
+
+### Changed
+* Package Manager will now log if prepare step fails. Instead of erroring out - [54da71e](https://github.com/pivotal/LicenseFinder/commit/54da71e98f14cd199c39dfd7b762030fcac60ccb) 
+
 # [4.0.2] / 2017-11-16
 
 ### Fixed
@@ -519,3 +864,42 @@ Bugfixes:
 [3.0.2]: https://github.com/pivotal/LicenseFinder/compare/v3.0.1...v3.0.2
 [3.0.1]: https://github.com/pivotal/LicenseFinder/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/pivotal/LicenseFinder/compare/v2.1.2...v3.0.0
+[5.0.0]: https://github.com/pivotal/LicenseFinder/compare/v4.0.2...v5.0.0
+[5.0.2]: https://github.com/pivotal/LicenseFinder/compare/v5.0.0...v5.0.2
+[5.0.3]: https://github.com/pivotal/LicenseFinder/compare/v5.0.2...v5.0.3
+[5.1.0]: https://github.com/pivotal/LicenseFinder/compare/v5.0.3...v5.1.0
+[5.1.1]: https://github.com/pivotal/LicenseFinder/compare/v5.1.0...v5.1.1
+[5.1.1]: https://github.com/pivotal/LicenseFinder/compare/v5.1.0...v5.1.1
+[5.2.0]: https://github.com/pivotal/LicenseFinder/compare/v5.1.1...v5.2.0
+[5.2.1]: https://github.com/pivotal/LicenseFinder/compare/v5.2.0...v5.2.1
+[5.2.3]: https://github.com/pivotal/LicenseFinder/compare/v5.2.1...v5.2.3
+[5.3.0]: https://github.com/pivotal/LicenseFinder/compare/v5.2.3...v5.3.0
+[5.4.0]: https://github.com/pivotal/LicenseFinder/compare/v5.3.0...v5.4.0
+[5.4.1]: https://github.com/pivotal/LicenseFinder/compare/v5.4.0...v5.4.1
+[5.5.0]: https://github.com/pivotal/LicenseFinder/compare/v5.4.1...v5.5.0
+[5.5.1]: https://github.com/pivotal/LicenseFinder/compare/v5.5.0...v5.5.1
+[5.5.2]: https://github.com/pivotal/LicenseFinder/compare/v5.5.1...v5.5.2
+[5.6.0]: https://github.com/pivotal/LicenseFinder/compare/v5.5.2...v5.6.0
+[5.6.1]: https://github.com/pivotal/LicenseFinder/compare/v5.6.0...v5.6.1
+[5.6.2]: https://github.com/pivotal/LicenseFinder/compare/v5.6.1...v5.6.2
+[5.7.0]: https://github.com/pivotal/LicenseFinder/compare/v5.6.2...v5.7.0
+[5.7.1]: https://github.com/pivotal/LicenseFinder/compare/v5.7.0...v5.7.1
+[5.8.0]: https://github.com/pivotal/LicenseFinder/compare/v5.7.1...v5.8.0
+[5.9.0]: https://github.com/pivotal/LicenseFinder/compare/v5.8.0...v5.9.0
+[5.9.1]: https://github.com/pivotal/LicenseFinder/compare/v5.9.0...v5.9.1
+[5.9.2]: https://github.com/pivotal/LicenseFinder/compare/v5.9.1...v5.9.2
+[5.10.0]: https://github.com/pivotal/LicenseFinder/compare/v5.9.2...v5.10.0
+[5.10.1]: https://github.com/pivotal/LicenseFinder/compare/v5.10.0...v5.10.1
+[5.10.2]: https://github.com/pivotal/LicenseFinder/compare/v5.10.1...v5.10.2
+[5.11.0]: https://github.com/pivotal/LicenseFinder/compare/v5.10.2...v5.11.0
+[5.11.1]: https://github.com/pivotal/LicenseFinder/compare/v5.11.0...v5.11.1
+[6.0.0]: https://github.com/pivotal/LicenseFinder/compare/v5.11.1...v6.0.0
+[6.1.0]: https://github.com/pivotal/LicenseFinder/compare/v6.0.0...v6.1.0
+[6.1.2]: https://github.com/pivotal/LicenseFinder/compare/v6.1.0...v6.1.2
+[6.2.0]: https://github.com/pivotal/LicenseFinder/compare/v6.1.2...v6.2.0
+[6.3.0]: https://github.com/pivotal/LicenseFinder/compare/v6.2.0...v6.3.0
+[6.4.0]: https://github.com/pivotal/LicenseFinder/compare/v6.3.0...v6.4.0
+[6.5.0]: https://github.com/pivotal/LicenseFinder/compare/v6.4.0...v6.5.0
+[6.6.0]: https://github.com/pivotal/LicenseFinder/compare/v6.5.0...v6.6.0
+[6.6.1]: https://github.com/pivotal/LicenseFinder/compare/v6.6.0...v6.6.1
+[6.6.2]: https://github.com/pivotal/LicenseFinder/compare/v6.6.1...v6.6.2

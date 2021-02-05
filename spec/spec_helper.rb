@@ -1,21 +1,23 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 require 'bundler/setup'
 require 'license_finder'
 
-require 'pry'
 require 'rspec'
 require 'webmock/rspec'
 require 'rspec/its'
 
-Dir[File.join(File.dirname(__FILE__), 'support', '**', '*.rb')].each do |file|
+require 'pry'
+
+Dir[File.join(File.dirname(__FILE__), 'support', '**', '*.rb')].sort.each do |file|
   require file
 end
 
 RSpec.configure do |config|
   config.mock_with :rspec
-end
+  config.filter_run_when_matching :focus
 
-RSpec.configure do |config|
   config.include SharedDefinitions
 
   config.after(:suite) do

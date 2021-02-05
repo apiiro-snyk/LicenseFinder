@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'license_finder/report'
 require 'license_finder/version'
 require 'license_finder/diff'
@@ -5,6 +7,7 @@ require 'license_finder/package_delta'
 require 'license_finder/license_aggregator'
 require 'license_finder/project_finder'
 require 'license_finder/logger'
+
 module LicenseFinder
   module CLI
     class Main < Base
@@ -15,7 +18,9 @@ module LicenseFinder
         'html' => HtmlReport,
         'license-page' => LicensePageReport,
         'markdown' => MarkdownReport,
-        'csv' => CsvReport
+        'csv' => CsvReport,
+        'xml' => XmlReport,
+        'json' => JsonReport
       }.freeze
 
       class_option :go_full_version, desc: 'Whether dependency version should include full version. Only meaningful if used with a Go project. Defaults to false.'
@@ -26,10 +31,13 @@ module LicenseFinder
       class_option :maven_include_groups, desc: 'Whether dependency name should include group id. Only meaningful if used with a Java/maven project. Defaults to false.'
       class_option :maven_options, desc: 'Maven options to append to command. Defaults to empty.'
       class_option :pip_requirements_path, desc: 'Path to python requirements file. Defaults to requirements.txt.'
+      class_option :python_version, desc: 'Python version to invoke pip with. Valid versions: 2 or 3. Default: 2'
       class_option :rebar_command, desc: "Command to use when fetching rebar packages. Only meaningful if used with a Erlang/rebar project. Defaults to 'rebar'."
       class_option :rebar_deps_dir, desc: "Path to rebar dependencies directory. Only meaningful if used with a Erlang/rebar project. Defaults to 'deps'."
+      class_option :elixir_command, desc: "Command to use when parsing package metadata for Mix. Only meaningful if used with a Mix project (i.e., Elixir or Erlang). Defaults to 'elixir'."
       class_option :mix_command, desc: "Command to use when fetching packages through Mix. Only meaningful if used with a Mix project (i.e., Elixir or Erlang). Defaults to 'mix'."
       class_option :mix_deps_dir, desc: "Path to Mix dependencies directory. Only meaningful if used with a Mix project (i.e., Elixir or Erlang). Defaults to 'deps'."
+      class_option :sbt_include_groups, desc: 'Whether dependency name should include group id. Only meaningful if used with a Scala/sbt project. Defaults to false.'
 
       # Method options which are shared between report and action_item
       def self.format_option
@@ -49,6 +57,12 @@ module LicenseFinder
                       aliases: '-p',
                       type: :boolean,
                       desc: 'Prepares the project first for license_finder',
+                      default: false,
+                      required: false
+
+        method_option :prepare_no_fail,
+                      type: :boolean,
+                      desc: 'Prepares the project first for license_finder but carries on despite any potential failures',
                       default: false,
                       required: false
 
@@ -74,6 +88,19 @@ module LicenseFinder
                       type: :array
       end
 
+      desc 'project_roots', 'List project directories to be scanned'
+      shared_options
+      def project_roots
+        config.strict_matching = true
+        project_path = config.project_path.to_s || Pathname.pwd.to_s
+        paths = aggregate_paths
+        filtered_project_roots = Scanner.remove_subprojects(paths)
+
+        filtered_project_roots << project_path if aggregate_paths.include?(project_path) && !filtered_project_roots.include?(project_path)
+
+        say(filtered_project_roots)
+      end
+
       desc 'action_items', 'List unapproved dependencies (the default action for `license_finder`)'
       shared_options
       format_option
@@ -81,7 +108,7 @@ module LicenseFinder
         finder = LicenseAggregator.new(config, aggregate_paths)
         any_packages = finder.any_packages?
         unapproved = finder.unapproved
-        blacklisted = finder.blacklisted
+        restricted = finder.restricted
 
         # Ensure to start output on a new line even with dot progress indicators.
         say "\n"
@@ -94,12 +121,12 @@ module LicenseFinder
         if unapproved.empty?
           say 'All dependencies are approved for use', :green
         else
-          unless blacklisted.empty?
-            say 'Blacklisted dependencies:', :red
-            say report_of(blacklisted)
+          unless restricted.empty?
+            say 'Restricted dependencies:', :red
+            say report_of(restricted)
           end
 
-          other_unapproved = unapproved - blacklisted
+          other_unapproved = unapproved - restricted
           unless other_unapproved.empty?
             say 'Dependencies that need approval:', :yellow
             say report_of(other_unapproved)
@@ -114,6 +141,7 @@ module LicenseFinder
       desc 'report', "Print a report of the project's dependencies to stdout"
       shared_options
       format_option
+      method_option :write_headers, type: :boolean, desc: 'Write exported columns as header row (csv).', default: false, required: false
       method_option :save, desc: "Save report to a file. Default: 'license_report.csv' in project root.", lazy_default: 'license_report'
 
       def report
@@ -143,12 +171,13 @@ module LicenseFinder
 
       subcommand 'dependencies', Dependencies, 'Add or remove dependencies that your package managers are not aware of'
       subcommand 'licenses', Licenses, "Set a dependency's licenses, if the licenses found by license_finder are missing or wrong"
-      subcommand 'approvals', Approvals, 'Manually approve dependencies, even if their licenses are not whitelisted'
+      subcommand 'approvals', Approvals, 'Manually approve dependencies, even if their licenses are not permitted'
       subcommand 'ignored_groups', IgnoredGroups, 'Exclude test and development dependencies from action items and reports'
       subcommand 'ignored_dependencies', IgnoredDependencies, 'Exclude individual dependencies from action items and reports'
-      subcommand 'whitelist', Whitelist, 'Automatically approve any dependency that has a whitelisted license'
-      subcommand 'blacklist', Blacklist, 'Forbid approval of any dependency whose licenses are all blacklisted'
+      subcommand 'permitted_licenses', PermittedLicenses, 'Automatically approve any dependency that has a permitted license'
+      subcommand 'restricted_licenses', RestrictedLicenses, 'Forbid approval of any dependency whose licenses are all restricted'
       subcommand 'project_name', ProjectName, 'Set the project name, for display in reports'
+      subcommand 'inherited_decisions', InheritedDecisions, 'Add or remove decision files you want to inherit from'
 
       private
 
@@ -159,13 +188,20 @@ module LicenseFinder
       def aggregate_paths
         check_valid_project_path
         aggregate_paths = config.aggregate_paths
-        project_path = config.project_path || Pathname.pwd
-        aggregate_paths = ProjectFinder.new(project_path).find_projects if config.recursive
-        return aggregate_paths unless aggregate_paths.nil? || aggregate_paths.empty?
-        [config.project_path] unless config.project_path.nil?
+        project_path = config.project_path.to_s || Pathname.pwd.to_s
+        aggregate_paths = ProjectFinder.new(project_path, config.strict_matching).find_projects if config.recursive
+
+        if aggregate_paths.nil? || aggregate_paths.empty?
+          [project_path]
+        else
+          aggregate_paths
+        end
       end
 
       def save_report(content, file_name)
+        dir = File.dirname(file_name)
+        FileUtils.mkdir_p(dir) unless Dir.exist?(dir)
+
         File.open(file_name, 'w') do |f|
           f.write(content)
         end
@@ -174,7 +210,7 @@ module LicenseFinder
       def report_of(content)
         report = FORMATS[config.format] || FORMATS['text']
         report = MergedReport if report == CsvReport && config.aggregate_paths
-        report.of(content, columns: config.columns, project_name: decisions.project_name || config.project_path.basename.to_s)
+        report.of(content, columns: config.columns, project_name: decisions.project_name || config.project_path.basename.to_s, write_headers: config.write_headers)
       end
 
       def save?

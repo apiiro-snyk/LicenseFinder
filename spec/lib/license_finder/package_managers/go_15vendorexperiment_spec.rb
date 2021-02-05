@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'fakefs/spec_helpers'
 
@@ -16,13 +18,13 @@ module LicenseFinder
       it_behaves_like 'a PackageManager'
 
       it 'installed? should be true if go exists on the path' do
-        allow(PackageManager).to receive(:command_exists?).with('go').and_return true
-        expect(described_class.installed?).to eq(true)
+        allow(subject).to receive(:command_exists?).with('go').and_return true
+        expect(subject.installed?).to eq(true)
       end
 
       it 'installed? should be false if go does not exists on the path' do
-        allow(PackageManager).to receive(:command_exists?).with('go').and_return false
-        expect(described_class.installed?(logger)).to eq(false)
+        allow(subject).to receive(:command_exists?).with('go').and_return false
+        expect(subject.installed?(logger)).to eq(false)
       end
     end
 
@@ -35,6 +37,7 @@ module LicenseFinder
         FileUtils.touch File.join(project_path, 'main.go')
         FileUtils.mkdir_p File.join(project_path, 'vendor', 'github.com', 'foo', 'bar')
         FileUtils.mkdir_p File.join(project_path, 'vendor', 'golang.org', 'bar', 'baz')
+        FileUtils.touch File.join(project_path, 'vendor', 'github.com', 'foo', 'bar', 'utils.go')
       end
 
       it 'detects the project as go vendor project' do

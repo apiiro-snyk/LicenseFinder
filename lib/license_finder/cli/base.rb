@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'thor'
 
 module LicenseFinder
@@ -7,6 +9,8 @@ module LicenseFinder
                    desc: 'Path to the project. Defaults to current working directory.'
       class_option :decisions_file,
                    desc: 'Where decisions are saved. Defaults to doc/dependency_decisions.yml.'
+      class_option :log_directory,
+                   desc: 'Where logs are saved. Defaults to ./lf_logs/$PROJECT/prepare_$PACKAGE_MANAGER.log'
 
       no_commands do
         def decisions
@@ -34,16 +38,22 @@ module LicenseFinder
           :maven_include_groups,
           :maven_options,
           :pip_requirements_path,
+          :python_version,
           :rebar_command,
           :rebar_deps_dir,
+          :elixir_command,
           :mix_command,
           :mix_deps_dir,
+          :write_headers,
           :save,
           :prepare,
+          :prepare_no_fail,
+          :log_directory,
           :format,
           :columns,
           :aggregate_paths,
-          :recursive
+          :recursive,
+          :sbt_include_groups
         ).merge(
           logger: logger_mode
         )

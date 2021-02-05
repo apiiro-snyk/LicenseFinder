@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
-describe LicenseFinder::Logger, :focus do
+describe LicenseFinder::Logger do
   let(:system_logger) { double(:logger, :formatter= => true, :level= => true) }
 
   before do

@@ -3,20 +3,21 @@
 [![Code Climate](https://codeclimate.com/github/pivotal/LicenseFinder.png)](https://codeclimate.com/github/pivotal/LicenseFinder)
 
 Build status
-* Ruby 2.1.5 [![Ruby 2.1.5 build status](https://osl.ci.cf-app.com/api/v1/teams/main/pipelines/LicenseFinder/jobs/ruby-2.1.5/badge)](https://osl.ci.cf-app.com/teams/main/pipelines/LicenseFinder)
-* Ruby 2.2.0 [![Ruby 2.2.0 build status](https://osl.ci.cf-app.com/api/v1/teams/main/pipelines/LicenseFinder/jobs/ruby-2.2.0/badge)](https://osl.ci.cf-app.com/teams/main/pipelines/LicenseFinder)
-* Ruby 2.3.0 [![Ruby 2.3.0 build status](https://osl.ci.cf-app.com/api/v1/teams/main/pipelines/LicenseFinder/jobs/ruby-2.3.0/badge)](https://osl.ci.cf-app.com/teams/main/pipelines/LicenseFinder)
-* Ruby 2.4.1 [![Ruby 2.4.1 build status](https://osl.ci.cf-app.com/api/v1/teams/main/pipelines/LicenseFinder/jobs/ruby-2.4.1/badge)](https://osl.ci.cf-app.com/teams/main/pipelines/LicenseFinder)
-* JRuby 9.0.4.0 [![JRuby 9.0.4.0 build status](https://osl.ci.cf-app.com/api/v1/teams/main/pipelines/LicenseFinder/jobs/ruby-jruby-9.0.4.0/badge)](https://osl.ci.cf-app.com/teams/main/pipelines/LicenseFinder)
+* Ruby 2.3.8 [![Ruby 2.3.8 build status](https://norsk.cf-app.com/api/v1/teams/main/pipelines/LicenseFinder/jobs/ruby-2.3.8/badge)](https://norsk.cf-app.com/teams/main/pipelines/LicenseFinder)
+* Ruby 2.4.9 [![Ruby 2.4.9 build status](https://norsk.cf-app.com/api/v1/teams/main/pipelines/LicenseFinder/jobs/ruby-2.4.9/badge)](https://norsk.cf-app.com/teams/main/pipelines/LicenseFinder)
+* Ruby 2.5.7 [![Ruby 2.5.7 build status](https://norsk.cf-app.com/api/v1/teams/main/pipelines/LicenseFinder/jobs/ruby-2.5.7/badge)](https://norsk.cf-app.com/teams/main/pipelines/LicenseFinder)
+* Ruby 2.6.5 [![Ruby 2.6.5 build status](https://norsk.cf-app.com/api/v1/teams/main/pipelines/LicenseFinder/jobs/ruby-2.6.5/badge)](https://norsk.cf-app.com/teams/main/pipelines/LicenseFinder)
+* Ruby 2.7.1 [![Ruby 2.7.1 build status](https://norsk.cf-app.com/api/v1/teams/main/pipelines/LicenseFinder/jobs/ruby-2.7.1/badge)](https://norsk.cf-app.com/teams/main/pipelines/LicenseFinder)
+* JRuby 9.2.9.0 [![JRuby 9.2.9.0 build status](https://norsk.cf-app.com/api/v1/teams/main/pipelines/LicenseFinder/jobs/ruby-jruby-9.2.9.0/badge)](https://norsk.cf-app.com/teams/main/pipelines/LicenseFinder)
 
 
 LicenseFinder works with your package managers to find dependencies,
 detect the licenses of the packages in them, compare those licenses
-against a user-defined whitelist, and give you an actionable exception
-report.
+against a user-defined list of permitted licenses,
+and give you an actionable exception report.
 
 * code: https://github.com/pivotal/LicenseFinder
-* ci: https://osl.ci.cf-app.com/teams/main/pipelines/LicenseFinder
+* ci: https://norsk.cf-app.com/teams/main/pipelines/LicenseFinder
 * docker: [licensefinder/license_finder](https://hub.docker.com/r/licensefinder/license_finder/)
   * the docker image contains all the package managers needed to run `license_finder`
 * support:
@@ -28,30 +29,35 @@ report.
 
 | Project Type | Package Manager | Tested on Version |
 | ------------ | --------------- | -------:|
-| Ruby Gems    | bundler         | 1.15.4  |
-| Python Eggs  | pip             | 9.0.1   |
-| Node.js      | npm             | 5.3.0   |
-| Bower        | bower           | 1.8.0   |
-| Nuget (without license discovery) | nuget | N/A |
-| Godep        | Godep           | 79      |
-| Go workspace (via a `.envrc` file) | Go lang |    1.8.3 |
-| Go submodules | Go lang | 1.8.3 |
-| Java         | maven           | 3.5.0   |
-| Java         | gradle          | 4.2     |
+| Ruby Gems    | bundler         | 1.16.6  |
+| Python 2.7 Eggs  | pip2             | 19.0.2  |
+| Python 3.5 Eggs  | pip3             | 19.0.2  |
+| Node.js      | npm             | 6.4.1   |
+| Bower        | bower           | 1.8.4   |
+| Nuget (without license discovery) | nuget | 4.7.1.5393 |
+| Godep        | Godep           | 80      |
+| Go workspace (via a `.envrc` file) | Go lang | 1.11.5 |
+| Go modules   | Go lang         | 1.11.5  |
+| Java         | maven           | 3.6.0   |
+| Java         | gradle          | 4.10.3  |
 
 ### Experimental project types
 
-* Erlang (via `rebar`)
+* Erlang (via `rebar` and `Erlang.mk`)
 * Objective-C, Swift (via Carthage or CocoaPods \[0.39 and below. See [CocoaPods Specs Repo Sharding](http://blog.cocoapods.org/Sharding/)\])
 * Objective-C (+ CocoaPods 0.39 and below. See [CocoaPods Specs Repo Sharding](http://blog.cocoapods.org/Sharding/))
 * Elixir (via `mix`)
-* Golang (via `gvt`, `glide`,`dep`, and `govendor`)
+* Golang (via `gvt`, `glide`,`dep`, `trash` and `govendor`)
 * JavaScript (via `yarn`)
 * C++/C (via `conan`)
+* Scala (via `sbt`)
+* Rust (via `cargo`)
+* Go Modules (via `go mod`)
+* PHP (via `composer`)
 
 ## Installation
 
-License Finder requires Ruby 1.9.3 or greater to run. If you have an older
+License Finder requires Ruby 2.3.3 or greater to run. If you have an older
 version of Ruby installed, you can update via Homebrew:
 
 ```sh
@@ -114,6 +120,13 @@ dependencies, and where and how each license was discovered. This can
 be useful when you need to track down an unexpected package or
 license.
 
+If you do not want to manually run an individual package manager's prepare
+command (ex: `bundle install`, `npm install`, etc) to ensure your project 
+is fully prepared to be scanned, use the `--prepare` or `-p` option which will run
+each active package manager's prepare command for you. If you would like to continue 
+running `license_finder` even if there is an issue with a prepare step, use the
+`--prepare-no-fail` option which prepares but carries on despite any potential failures.
+
 Run `license_finder help` to see other available commands, and
 `license_finder help [COMMAND]` for detailed help on a specific
 command.
@@ -160,17 +173,24 @@ languages, as long as that language has a package definition in the project dire
 * `build.gradle` (for `gradle`)
 * `settings.gradle` that specifies `rootProject.buildFileName` (for `gradle`)
 * `bower.json` (for `bower`)
-* `Podfile` (for CocoaPods)
-* `Cartfile` (for Carthage)
+* `Podfile` (for `pod`)
+* `Cartfile` (for `carthage`)
 * `rebar.config` (for `rebar`)
+* `Erlang.mk` or `erlang.mk` file (for `Erlang.mk`)
 * `mix.exs` (for `mix`)
-* `packages/` directory (for `Nuget`)
+* `packages/` directory (for `nuget`)
+* `*.csproj` (for `dotnet`)
 * `vendor/manifest` or `*/vendor/manifest` file (for `gvt`)
 * `glide.lock` file (for `glide`)
 * `vendor/vendor.json` file (for `govendor`)
 * `Gopkg.lock` file (for `dep`)
+* `go.mod` file (for `go mod`)
+* `vendor.conf` file (for `trash`)
 * `yarn.lock` file (for `yarn`)
 * `conanfile.txt` file (for `conan`)
+* `build.sbt` file (for `sbt`)
+* `Cargo.lock` file (for `cargo`)
+* `composer.lock` file (for `composer`)
 
 
 ### Continuous Integration
@@ -184,7 +204,7 @@ if someone adds an unapproved dependency to the project.
 
 `license_finder` will inform you whenever you have an unapproved dependency.
 If your business decides this is an acceptable risk, the easiest way to approve
-the dependency is by running `license_finder approval add`.
+the dependency is by running `license_finder approvals add`.
 
 For example, let's assume you've added the `awesome_gpl_gem`
 to your Gemfile, which `license_finder` reports is unapproved:
@@ -199,33 +219,39 @@ Your business tells you that in this case, it's acceptable to use this
 gem. You now run:
 
 ```sh
-$ license_finder approval add awesome_gpl_gem
+$ license_finder approvals add awesome_gpl_gem
 ```
 
 If you rerun `license_finder`, you should no longer see
 `awesome_gpl_gem` in the output.
 
+To approve specific version
+
+```sh
+$ license_finder approvals add awesome_gpl_gem --version=1.0.0
+```
+
 To record who approved the dependency and why:
 
 ```sh
-$ license_finder approval add awesome_gpl_gem --who CTO --why "Go ahead"
+$ license_finder approvals add awesome_gpl_gem --who CTO --why "Go ahead"
 ```
 
-### Whitelisting
+### Permitting Licenses
 
 Approving packages one-by-one can be tedious.  Usually your business has
 blanket policies about which packages are approved.  To tell `license_finder`
 that any package with the MIT license should be approved, run:
 
 ``` sh
-$ license_finder whitelist add MIT
+$ license_finder permitted_licenses add MIT
 ```
 
 Any current or future packages with the MIT license will be excluded from the
 output of `license_finder`.
 
-You can also record `--who` and `--why` when changing the whitelist, or making
-any other decision about your project.
+You can also record `--who` and `--why` when changing permitted licenses,
+or making any other decision about your project.
 
 
 ## Output and Artifacts
@@ -245,7 +271,7 @@ decisions.
 
 You could expect `license_finder`, which is an alias for `license_finder
 action_items` to output something like the following on a Rails project where
-MIT had been whitelisted:
+MIT had been permitted:
 
 ```
 Dependencies that need approval:
@@ -262,6 +288,13 @@ xml-simple, 1.1.1, unknown
 You can customize the format of the output in the same way that you customize
 [output from `report`](#output-from-report).
 
+### Output from `project_roots`
+
+The `license_finder project_roots` command will output the current working directory as a string in an array.
+
+Using the `--recursive` option means the array will include subdirectories that contain a known package manager. With the exception that Gradle and Maven subprojects will not be included.
+
+
 ### Output from `report`
 
 The `license_finder report` command will output human-readable reports that you
@@ -276,6 +309,12 @@ all of your project's dependencies and includes information about which need to
 be approved. The project name at the top of the report can be set with
 `license_finder project_name add`.
 
+### Note:
+When using the yarn package manager, when a node_module's package.json doesn't 
+explicitly declare a license, yarn indicates that it has inferred the license based
+on some keywords in other files by appending an asterisk to the license name. If you
+see a * at the end of the license name, this is intended.
+
 See [CONTRIBUTING.md](https://github.com/pivotal/LicenseFinder/blob/master/CONTRIBUTING.md#adding-reports)
 for advice about adding and customizing reports.
 
@@ -289,11 +328,11 @@ you should manually research what the actual license is.  When you
 have established the real license, you can record it with:
 
 ```sh
-$ license_finder licenses add my_unknown_dependency MIT
+$ license_finder licenses add my_unknown_dependency MIT --homepage="www.unknown-code.org"
 ```
 
 This command would assign the MIT license to the dependency
-`my_unknown_dependency`.
+`my_unknown_dependency`. It will also set its homepage to `wwww.unknown-code.org`.
 
 
 ### Adding Hidden Dependencies
@@ -321,7 +360,7 @@ $ license_finder dependencies remove my_js_dep
 Sometimes a project will have development or test dependencies which
 you don't want to track.  You can exclude theses dependencies by running
 `license_finder ignored_groups`.  (Currently this only works for packages
-managed by Bundler, NPM, and Nuget.)
+managed by Bundler, NPM, Yarn, Maven, Pip2, Pip3, and Nuget.)
 
 On rare occasions a package manager will report an individual dependency
 that you want to exclude from all reports, even though it is approved.
@@ -332,15 +371,35 @@ since it is a common dependency whose version changes from machine to
 machine.  Adding it to the `ignored_dependencies` would prevent it
 (and its oscillating versions) from appearing in reports.
 
-### Blacklisting Licenses
+### Restricting Licenses
 
-Some projects will have a list of licenses that cannot be used.  You can add
-these licenses to the blacklist `license_finder blacklist add`.  Any dependency
-that has exclusively blacklisted licenses will always appear in the action
-items, even if someone attempts to manually approve or whitelist it.  However,
-if a dependency has even one license outside of the blacklist, it can still be
-manually approved or whitelisted.
+Some projects will have a list of licenses that cannot be used.  You can
+restrict these licenses with `license_finder restricted_licenses add`.  Any dependency
+that has exclusively restricted licenses will always appear in the action
+items, even if someone attempts to manually approve or permit it.  However,
+if a dependency has even one license that is not restricted, it can still be
+manually approved or permitted.
 
+## Decision inheritance
+
+Add or remove decision files you want to inherit from - see `license_finder inherited_decisions help` for more information.
+
+This allows you to have a centralized decision file for approved/restricted licenses. If you have multiple projects it's way easier to have one single place where you approved or restricted licenses defined.
+
+Add one or more decision files to the inherited decisions
+```bash
+license_finder inherited_decisions add DECISION_FILE
+```
+
+Remove one or more decision files from the inherited decisions
+```bash
+license_finder inherited_decisions remove DECISION_FILE
+```
+
+List all the inherited decision files
+```bash
+license_finder inherited_decisions list
+```
 
 ## Configuration
 
@@ -348,13 +407,13 @@ Be default, `license_finder` expects the decisions file to be stored at
 `doc/dependency_decisions.yml`.  All commands can be passed `--decisions_file`
 to override this location.
 
-### Of Package Managers
+### Package Manager Configuration
 
 If you have a gradle project, you can invoke gradle with a custom script by
 passing (for example) `--gradle_command gradlew` to `license_finder` or
 `license_finder report`.
 
-Similarly you can invoke a custom rebar script with `--rebar_command rebar2`.
+Similarly you can invoke a custom rebar script with `--rebar_command rebar`.
 If you store rebar dependencies in a custom directory (by setting `deps_dir` in
 `rebar.config`), set `--rebar_deps_dir`.
 
@@ -409,12 +468,27 @@ Ensure that `conan install` does not generate an error.
 ., license* -> ./licenses @ folder=True, ignore_case=True
 ```
 
+### SBT Projects
+
+`license_finder` supports SBT. You need to have installed the sbt-license-report in your project:
+[https://github.com/sbt/sbt-license-report](https://github.com/sbt/sbt-license-report)
+
+By default, `license_finder` will report on SBT's "compile" and "test" dependencies. If
+you want to generate a report for some other dependency configuration, you can specify
+it in your projects's `build.sbt`
+
+```
+licenseConfigurations := Set("compile", "provided")
+```
+
 ## Requirements
 
-`license_finder` requires ruby >= 1.9, or jruby.
+`license_finder` requires ruby >= 1.9.3, or jruby.
 
 
 ## Upgrading
+
+To upgrade to `license_finder` version >= 6.0, you have to replace the terminology `whitelist` with `permit` and  `blacklist` with `restrict` in your `dependency_decisions.yml`. See [Changelog](https://github.com/pivotal/LicenseFinder/blob/master/CHANGELOG.md#600--2020-01-22) for more details.
 
 To upgrade from `license_finder` version 1.2 to 2.0, see
 [`license_finder_upgrade`](https://github.com/mainej/license_finder_upgrade).
@@ -439,6 +513,15 @@ end
 
 And save a `LICENSE` file which contains your license text in your repo.
 
+## Known issues with specific package managers
+
+* Bundler
+   * When using `--project-path`, Bundler cannot find the Gemfile.
+   
+* Yarn
+   * A module that is incompatible with the platform on which 
+     license_finder is run will always be reported to have a license type
+     of "unknown". ([#456](https://github.com/pivotal/LicenseFinder/issues/456))
 
 ## Support
 

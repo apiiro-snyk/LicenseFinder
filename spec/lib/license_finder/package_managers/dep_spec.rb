@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'fakefs/spec_helpers'
 
@@ -28,17 +30,28 @@ module LicenseFinder
           expect(subject.current_packages.last.version).to eq 'ebfc5b4631820b793c9010c87fd8fef0f39eb082'
         end
       end
+
+      context 'the package does not have any projects in its toml' do
+        before do
+          allow(Tomlrb).to receive(:load_file).and_return({})
+        end
+
+        it 'should return an empty array' do
+          expect(subject.current_packages).to eq([])
+        end
+      end
     end
 
     describe '.prepare_command' do
+      subject { Dep.new(project_path: Pathname('/app'), logger: double(:logger, active: nil)) }
       it 'returns the correct prepare method' do
-        expect(described_class.prepare_command).to eq('dep ensure')
+        expect(subject.prepare_command).to eq('dep ensure -vendor-only')
       end
     end
 
     describe '.package_management_command' do
       it 'returns the correct package management command' do
-        expect(described_class.package_management_command).to eq('dep')
+        expect(subject.package_management_command).to eq('dep')
       end
     end
   end

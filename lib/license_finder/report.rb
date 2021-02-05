@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module LicenseFinder
   class Report
     def self.of(dependencies, options)
@@ -27,3 +29,5 @@ require 'license_finder/reports/merged_report'
 require 'license_finder/reports/html_report'
 require 'license_finder/reports/license_page_report'
 require 'license_finder/reports/markdown_report'
+require 'license_finder/reports/xml_report'
+require 'license_finder/reports/json_report'

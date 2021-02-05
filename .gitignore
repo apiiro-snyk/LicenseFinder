@@ -1,6 +1,6 @@
 .bundle
 .gradle/
-.idea/*
+.idea/
 .pairs
 .rvmrc
 Gemfile.lock
@@ -11,3 +11,6 @@ features/fixtures/build
 features/fixtures/target
 scans/*/*.txt
 *~
+features/fixtures/sbt/target
+features/fixtures/sbt/project/target
+features/fixtures/sbt/project/project

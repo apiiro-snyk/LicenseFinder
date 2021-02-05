@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module LicenseFinder
@@ -8,13 +10,19 @@ module LicenseFinder
       expect(subject.to_s).to eq("gem_a,1.0\n")
     end
 
+    it 'accepts write headers option' do
+      dep = Package.new('gem_a', '1.0')
+      subject = described_class.new([dep], columns: %w[name version], write_headers: true)
+      expect(subject.to_s).to eq("name,version\ngem_a,1.0\n")
+    end
+
     it 'understands many columns' do
       dep = Package.new('gem_a', '1.0', authors: 'the authors', description: 'A description', summary: 'A summary', homepage: 'http://homepage.example.com')
       dep.decide_on_license(License.find_by_name('MIT'))
       dep.decide_on_license(License.find_by_name('GPL'))
-      dep.whitelisted!
+      dep.permitted!
       subject = described_class.new([dep], columns: %w[name version authors licenses approved summary description homepage])
-      expect(subject.to_s).to eq("gem_a,1.0,the authors,\"MIT,GPL\",Approved,A summary,A description,http://homepage.example.com\n")
+      expect(subject.to_s).to eq("gem_a,1.0,the authors,\"GPL,MIT\",Approved,A summary,A description,http://homepage.example.com\n")
     end
 
     it 'ignores unknown columns' do
@@ -27,6 +35,20 @@ module LicenseFinder
       dep = Package.new('gem_a', '1.0', install_path: '/tmp/gems/gem_a-1.0')
       subject = described_class.new([dep], columns: %w[name version install_path])
       expect(subject.to_s).to eq("gem_a,1.0,/tmp/gems/gem_a-1.0\n")
+    end
+
+    it 'supports texts and notice columns' do
+      install_path = fixture_path('nested_gem')
+      dep = Package.new('gem_a', '1.0', install_path: install_path)
+      subject = described_class.new([dep], columns: %w[name version texts notice])
+      expect(subject.to_s).to eq("gem_a,1.0,The MIT License,This is a notice.\n")
+    end
+
+    it 'supports multiple license texts' do
+      install_path = fixture_path('license_directory')
+      dep = Package.new('gem_a', '1.0', install_path: install_path)
+      subject = described_class.new([dep], columns: %w[name version texts])
+      expect(subject.to_s).to eq("gem_a,1.0,The MIT License\\@NLThe MIT License\n")
     end
 
     it 'supports package_manager column' do

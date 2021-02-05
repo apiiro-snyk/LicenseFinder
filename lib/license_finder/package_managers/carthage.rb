@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 
 module LicenseFinder
@@ -18,8 +20,12 @@ module LicenseFinder
       end
     end
 
-    def self.package_management_command
+    def package_management_command
       LicenseFinder::Platform.darwin? ? 'carthage' : nil
+    end
+
+    def possible_package_paths
+      [public_dependency_path]
     end
 
     private
@@ -31,10 +37,6 @@ module LicenseFinder
         raise CarthageError, 'No Cartfile.resolved found.
           Please install your dependencies first.'
       end
-    end
-
-    def possible_package_paths
-      [public_dependency_path]
     end
 
     def public_dependency_path

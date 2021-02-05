@@ -1,13 +1,22 @@
+# frozen_string_literal: true
+
+require 'open-uri'
+require 'license_finder/license'
+
 module LicenseFinder
   class Decisions
     ######
     # READ
     ######
 
-    attr_reader :packages, :whitelisted, :blacklisted, :ignored, :ignored_groups, :project_name
+    attr_reader :packages, :permitted, :restricted, :ignored, :ignored_groups, :project_name, :inherited_decisions
 
     def licenses_of(name)
       @licenses[name]
+    end
+
+    def homepage_of(name)
+      @homepages[name]
     end
 
     def approval_of(name, version = nil)
@@ -30,12 +39,15 @@ module LicenseFinder
       end
     end
 
-    def whitelisted?(lic)
-      @whitelisted.include?(lic)
+    def permitted?(lic)
+      return lic.sub_licenses.any? { |sub_lic| @permitted.include?(sub_lic) } if lic.is_a?(OrLicense)
+      return lic.sub_licenses.all? { |sub_lic| @permitted.include?(sub_lic) } if lic.is_a?(AndLicense)
+
+      @permitted.include?(lic)
     end
 
-    def blacklisted?(lic)
-      @blacklisted.include?(lic)
+    def restricted?(lic)
+      @restricted.include?(lic)
     end
 
     def ignored?(name)
@@ -51,8 +63,8 @@ module LicenseFinder
     #######
 
     TXN = Struct.new(:who, :why, :safe_when, :safe_versions) do
-      def self.from_hash(txn)
-        new(txn[:who], txn[:why], txn[:when], txn[:versions].nil? ? [] : txn[:versions])
+      def self.from_hash(txn, versions)
+        new(txn[:who], txn[:why], txn[:when], versions || [])
       end
     end
 
@@ -60,113 +72,192 @@ module LicenseFinder
       @decisions = []
       @packages = Set.new
       @licenses = Hash.new { |h, k| h[k] = Set.new }
+      @homepages = {}
       @approvals = {}
-      @whitelisted = Set.new
-      @blacklisted = Set.new
+      @permitted = Set.new
+      @restricted = Set.new
       @ignored = Set.new
       @ignored_groups = Set.new
+      @inherited_decisions = Set.new
     end
 
     def add_package(name, version, txn = {})
-      @decisions << [:add_package, name, version, txn]
+      add_decision [:add_package, name, version, txn]
       @packages << ManualPackage.new(name, version)
       self
     end
 
     def remove_package(name, txn = {})
-      @decisions << [:remove_package, name, txn]
+      add_decision [:remove_package, name, txn]
       @packages.delete(ManualPackage.new(name))
       self
     end
 
     def license(name, lic, txn = {})
-      @decisions << [:license, name, lic, txn]
+      add_decision [:license, name, lic, txn]
       @licenses[name] << License.find_by_name(lic)
       self
     end
 
     def unlicense(name, lic, txn = {})
-      @decisions << [:unlicense, name, lic, txn]
+      add_decision [:unlicense, name, lic, txn]
       @licenses[name].delete(License.find_by_name(lic))
       self
     end
 
+    def homepage(name, homepage, txn = {})
+      add_decision [:homepage, name, homepage, txn]
+      @homepages[name] = homepage
+      self
+    end
+
     def approve(name, txn = {})
-      @decisions << [:approve, name, txn]
+      add_decision [:approve, name, txn]
 
       versions = []
       versions = @approvals[name][:safe_versions] if @approvals.key?(name)
-
-      @approvals[name] = TXN.from_hash(txn)
-
-      @approvals[name][:safe_versions].concat(versions)
+      @approvals[name] = TXN.from_hash(txn, versions)
+      @approvals[name][:safe_versions].concat(txn[:versions]) unless txn[:versions].nil?
       self
     end
 
     def unapprove(name, txn = {})
-      @decisions << [:unapprove, name, txn]
+      add_decision [:unapprove, name, txn]
       @approvals.delete(name)
       self
     end
 
-    def whitelist(lic, txn = {})
-      @decisions << [:whitelist, lic, txn]
-      @whitelisted << License.find_by_name(lic)
+    def permit(lic, txn = {})
+      add_decision [:permit, lic, txn]
+      @permitted << License.find_by_name(lic)
       self
     end
 
-    def unwhitelist(lic, txn = {})
-      @decisions << [:unwhitelist, lic, txn]
-      @whitelisted.delete(License.find_by_name(lic))
+    def unpermit(lic, txn = {})
+      add_decision [:unpermit, lic, txn]
+      @permitted.delete(License.find_by_name(lic))
       self
     end
 
-    def blacklist(lic, txn = {})
-      @decisions << [:blacklist, lic, txn]
-      @blacklisted << License.find_by_name(lic)
+    def restrict(lic, txn = {})
+      add_decision [:restrict, lic, txn]
+      @restricted << License.find_by_name(lic)
       self
     end
 
-    def unblacklist(lic, txn = {})
-      @decisions << [:unblacklist, lic, txn]
-      @blacklisted.delete(License.find_by_name(lic))
+    def unrestrict(lic, txn = {})
+      add_decision [:unrestrict, lic, txn]
+      @restricted.delete(License.find_by_name(lic))
       self
     end
 
     def ignore(name, txn = {})
-      @decisions << [:ignore, name, txn]
+      add_decision [:ignore, name, txn]
       @ignored << name
       self
     end
 
     def heed(name, txn = {})
-      @decisions << [:heed, name, txn]
+      add_decision [:heed, name, txn]
       @ignored.delete(name)
       self
     end
 
     def ignore_group(name, txn = {})
-      @decisions << [:ignore_group, name, txn]
+      add_decision [:ignore_group, name, txn]
       @ignored_groups << name
       self
     end
 
     def heed_group(name, txn = {})
-      @decisions << [:heed_group, name, txn]
+      add_decision [:heed_group, name, txn]
       @ignored_groups.delete(name)
       self
     end
 
     def name_project(name, txn = {})
-      @decisions << [:name_project, name, txn]
+      add_decision [:name_project, name, txn]
       @project_name = name
       self
     end
 
     def unname_project(txn = {})
-      @decisions << [:unname_project, txn]
+      add_decision [:unname_project, txn]
       @project_name = nil
       self
+    end
+
+    def inherit_from(filepath_info)
+      decisions =
+        if filepath_info.is_a?(Hash)
+          resolve_inheritance(filepath_info)
+        elsif filepath_info =~ %r{^https?://}
+          open_uri(filepath_info).read
+        else
+          Pathname(filepath_info).read
+        end
+
+      add_decision [:inherit_from, filepath_info]
+      @inherited_decisions << filepath_info
+      restore_inheritance(decisions)
+    end
+
+    def resolve_inheritance(filepath_info)
+      if (gem_name = filepath_info['gem'])
+        Pathname(gem_config_path(gem_name, filepath_info['path'])).read
+      else
+        open_uri(filepath_info['url'], filepath_info['authorization']).read
+      end
+    end
+
+    def gem_config_path(gem_name, relative_config_path)
+      spec = Gem::Specification.find_by_name(gem_name)
+      File.join(spec.gem_dir, relative_config_path)
+    rescue Gem::LoadError => e
+      raise Gem::LoadError,
+            "Unable to find gem #{gem_name}; is the gem installed? #{e}"
+    end
+
+    def remove_inheritance(filepath)
+      @decisions -= [[:inherit_from, filepath]]
+      @inherited_decisions.delete(filepath)
+      self
+    end
+
+    def add_decision(decision)
+      @decisions << decision unless @inherited
+    end
+
+    def restore_inheritance(decisions)
+      @inherited = true
+      self.class.restore(decisions, self)
+      @inherited = false
+      self
+    end
+
+    def open_uri(uri, auth = nil)
+      header = {}
+      auth_header = resolve_authorization(auth)
+      header['Authorization'] = auth_header if auth_header
+
+      # ruby < 2.5.0 URI.open is private
+      if Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.5.0')
+        # rubocop:disable Security/Open
+        open(uri, header)
+        # rubocop:enable Security/Open
+      else
+        URI.open(uri, header)
+      end
+    end
+
+    def resolve_authorization(auth)
+      return unless auth
+
+      token_env = auth.match(/\$(\S.*)/)
+      return auth unless token_env
+
+      token = ENV[token_env[1]]
+      auth.sub(token_env[0], token)
     end
 
     #########
@@ -181,8 +272,7 @@ module LicenseFinder
       write!(persist, file)
     end
 
-    def self.restore(persisted)
-      result = new
+    def self.restore(persisted, result = new)
       return result unless persisted
 
       actions = YAML.load(persisted)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module LicenseFinder
@@ -49,7 +51,15 @@ module LicenseFinder
       end
     end
 
-    describe 'decisions_file' do
+    describe '#decisions_file' do
+      it 'has default' do
+        subject = described_class.new(
+          { decisions_file: nil },
+          'decisions_file' => nil
+        )
+        expect(subject.decisions_file_path.to_s).to end_with 'doc/dependency_decisions.yml'
+      end
+
       it 'prefers primary value' do
         subject = described_class.new(
           { decisions_file: 'primary' },
@@ -66,24 +76,79 @@ module LicenseFinder
         expect(subject.decisions_file_path.to_s).to end_with 'secondary'
       end
 
-      it 'has default' do
-        subject = described_class.new(
-          { decisions_file: nil },
-          'decisions_file' => nil
-        )
-        expect(subject.decisions_file_path.to_s).to end_with 'doc/dependency_decisions.yml'
-      end
-
       it 'prepends project path to default path if project_path option is set' do
         subject = described_class.new({ project_path: 'magic_path' }, {})
         expect(subject.decisions_file_path.to_s).to end_with 'magic_path/doc/dependency_decisions.yml'
       end
 
+      it 'prefers decisions_file over project_path' do
+        subject = described_class.new(
+          { project_path: 'magic_path',
+            decisions_file: 'better_path' },
+          'decisions_file' => nil
+        )
+        expect(subject.decisions_file_path.to_s).to end_with 'better_path'
+      end
+    end
+
+    describe 'log_directory' do
+      it 'prefers primary value' do
+        subject = described_class.new(
+          { log_directory: 'primary' },
+          'log_directory' => 'secondary'
+        )
+        expect(subject.log_directory.to_s).to end_with 'primary'
+      end
+
+      it 'accepts saved value' do
+        subject = described_class.new(
+          { log_directory: nil },
+          'log_directory' => 'secondary'
+        )
+        expect(subject.log_directory.to_s).to end_with 'secondary'
+      end
+
+      it 'has default' do
+        subject = described_class.new(
+          { log_directory: nil },
+          'log_directory' => nil
+        )
+        expect(subject.log_directory.to_s).to end_with 'lf_logs'
+      end
+
+      it 'prepends project path to default path if project_path option is set and not recursive' do
+        subject = described_class.new(
+          { project_path: 'magic_path',
+            recursive: false,
+            aggregate_paths: false }, {}
+        )
+        expect(subject.log_directory.to_s).to end_with 'magic_path/lf_logs'
+      end
+
+      it 'prepends project path to default path if project_path option is not set and not recursive' do
+        subject = described_class.new(
+          { project_path: nil,
+            recursive: true,
+            aggregate_paths: true }, {}
+        )
+        expect(subject.log_directory.to_s).to_not end_with 'magic_path/lf_logs'
+        expect(subject.log_directory.to_s).to end_with 'lf_logs'
+      end
+
+      it 'prepends project path to default path if project_path option is set and not recursive' do
+        subject = described_class.new(
+          { project_path: 'magic_path',
+            recursive: true,
+            aggregate_paths: true }, {}
+        )
+        expect(subject.log_directory.to_s).to end_with 'magic_path/lf_logs'
+      end
+
       it 'prepends project path to provided value' do
-        subject = described_class.new({ decisions_file: 'primary',
+        subject = described_class.new({ log_directory: 'primary',
                                         project_path: 'magic_path' },
-                                      'decisions_file' => 'secondary')
-        expect(subject.decisions_file_path.to_s).to end_with 'magic_path/primary'
+                                      'log_directory' => 'secondary')
+        expect(subject.log_directory.to_s).to end_with 'magic_path/primary'
       end
     end
 
@@ -93,12 +158,12 @@ module LicenseFinder
           { rebar_deps_dir: nil },
           'rebar_deps_dir' => nil
         )
-        expect(subject.rebar_deps_dir.to_s).to end_with 'deps'
+        expect(subject.rebar_deps_dir.to_s).to end_with '_build/default/lib'
       end
 
       it 'prepends project path to default path if project_path option is set' do
         subject = described_class.new({ project_path: 'magic_path' }, {})
-        expect(subject.rebar_deps_dir.to_s).to end_with 'magic_path/deps'
+        expect(subject.rebar_deps_dir.to_s).to end_with 'magic_path/_build/default/lib'
       end
 
       it 'prepends project path to provided value' do
@@ -165,6 +230,47 @@ module LicenseFinder
           'mix_command' => 'mix'
         )
         expect(subject.mix_command.to_s).to eq 'newmix'
+      end
+    end
+
+    describe '#prepare' do
+      it 'should return true as long as --prepare or --prepare_no_fail' do
+        subject = described_class.new(
+          { prepare: true },
+          {}
+        )
+        expect(subject.prepare).to be_truthy
+        subject = described_class.new(
+          { prepare_no_fail: true },
+          {}
+        )
+        expect(subject.prepare).to be_truthy
+      end
+
+      it 'should return false if no --prepare AND no --prepare_no_fail' do
+        subject = described_class.new(
+          {},
+          {}
+        )
+        expect(subject.prepare).to be_falsey
+      end
+    end
+
+    describe '#prepare_no_fail' do
+      it 'returns true if --prepare_no_fail' do
+        subject = described_class.new(
+          { prepare_no_fail: true },
+          {}
+        )
+        expect(subject.prepare).to be_truthy
+      end
+
+      it 'returns false if --prepare_no_fail is not set' do
+        subject = described_class.new(
+          {},
+          {}
+        )
+        expect(subject.prepare).to be_falsey
       end
     end
 
