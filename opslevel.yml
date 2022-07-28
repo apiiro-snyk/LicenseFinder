@@ -1,16 +1,5 @@
 ---
 version: 1
-service:
-  name: LicenseFinder
-  lifecycle: generally_available
+repository:
   tier: tier_4
-  product:
   owner: developer-platform
-  language: Ruby
-  framework:
-  description: Identifies FOSS licenses for components and determines our compliance with them
-  aliases:
-  tags:
-  repositories:
-  - name: ConsultingMD/LicenseFinder
-    provider: github
