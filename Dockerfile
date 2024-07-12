@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:xenial-20210416
 
 # Versioning
 ENV PIP_INSTALL_VERSION 19.0.2
